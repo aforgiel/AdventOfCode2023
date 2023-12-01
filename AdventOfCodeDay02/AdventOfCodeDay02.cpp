@@ -10,10 +10,10 @@
 #define TEST_MODE true
 #define COMMENT false
 
-#if( TEST_MODE == false)
-const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay01/sample2.txt";
+#if( TEST_MODE == true)
+const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/sample2.txt";
 #else
-const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay01/input.txt";
+const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/input.txt";
 #endif
 
 const char* digits[] =
@@ -211,7 +211,7 @@ int main()
     double time_taken;
     int64_t result;
 
-    printf("Advent of Code - Day 01\n");
+    printf("Advent of Code - Day 02\n");
 
     error = fopen_s(&input, fileName, "r");
 
