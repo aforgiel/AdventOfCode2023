@@ -1,0 +1,1273 @@
+Advent of Code - Day 02
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/input.txt => 0
+[0000] input: "Game 1: 2 blue, 3 red; 3 green, 3 blue, 6 red; 4 blue, 6 red; 2 green, 2 blue, 9 red; 2 red, 4 blue" game: 1
+        subset 0: {3,0,2}
+        subset 1: {6,3,3}
+        subset 2: {6,0,4}
+        subset 3: {9,2,2}
+        subset 4: {2,0,4}
+        => possible
+[0001] input: "Game 2: 4 red, 1 green; 3 red; 13 green, 5 red, 3 blue; 3 green, 2 red; 3 blue, 5 red, 3 green; 2 red, 3 blue, 12 green" game: 2
+        subset 0: {4,1,0}
+        subset 1: {3,0,0}
+        subset 2: {5,13,3}
+        subset 3: {2,3,0}
+        subset 4: {5,3,3}
+        subset 5: {2,12,3}
+        => possible
+[0002] input: "Game 3: 4 red, 1 green, 1 blue; 1 red, 1 blue; 6 red, 1 green; 6 red, 3 blue, 1 green; 4 red" game: 3
+        subset 0: {4,1,1}
+        subset 1: {1,0,1}
+        subset 2: {6,1,0}
+        subset 3: {6,1,3}
+        subset 4: {4,0,0}
+        => possible
+[0003] input: "Game 4: 4 blue, 12 red, 4 green; 6 green, 3 blue, 19 red; 3 blue, 2 red, 2 green" game: 4
+        subset 0: {12,4,4}
+        subset 1: {19,6,3} => impossible
+        subset 2: {2,2,3}
+[0004] input: "Game 5: 1 red, 5 blue, 16 green; 1 red, 6 green, 3 blue; 2 red, 12 blue; 17 blue, 3 green; 7 green, 2 red, 6 blue" game: 5
+        subset 0: {1,16,5} => impossible
+        subset 1: {1,6,3}
+        subset 2: {2,0,12}
+        subset 3: {0,3,17} => impossible
+        subset 4: {2,7,6}
+[0005] input: "Game 6: 3 green, 1 blue, 5 red; 5 green, 5 red; 2 green, 2 blue, 3 red; 5 green, 2 red; 3 green, 6 red, 3 blue; 5 green, 4 red" game: 6
+        subset 0: {5,3,1}
+        subset 1: {5,5,0}
+        subset 2: {3,2,2}
+        subset 3: {2,5,0}
+        subset 4: {6,3,3}
+        subset 5: {4,5,0}
+        => possible
+[0006] input: "Game 7: 15 blue, 1 red, 6 green; 4 blue, 7 green, 2 red; 14 blue, 5 green, 2 red" game: 7
+        subset 0: {1,6,15} => impossible
+        subset 1: {2,7,4}
+        subset 2: {2,5,14}
+[0007] input: "Game 8: 6 blue, 3 green, 10 red; 2 blue, 1 green, 5 red; 6 blue, 3 green, 12 red; 11 red, 1 green, 1 blue; 5 blue, 14 red, 3 green; 3 red" game: 8
+        subset 0: {10,3,6}
+        subset 1: {5,1,2}
+        subset 2: {12,3,6}
+        subset 3: {11,1,1}
+        subset 4: {14,3,5} => impossible
+        subset 5: {3,0,0}
+[0008] input: "Game 9: 15 red, 3 blue; 1 blue, 16 red; 1 red, 3 blue; 1 blue, 1 green, 9 red" game: 9
+        subset 0: {15,0,3} => impossible
+        subset 1: {16,0,1} => impossible
+        subset 2: {1,0,3}
+        subset 3: {9,1,1}
+[0009] input: "Game 10: 1 red; 1 blue, 7 green; 1 green, 5 blue; 3 blue, 3 green; 1 green" game: 10
+        subset 0: {1,0,0}
+        subset 1: {0,7,1}
+        subset 2: {0,1,5}
+        subset 3: {0,3,3}
+        subset 4: {0,1,0}
+        => possible
+[0010] input: "Game 11: 19 blue, 13 green; 19 blue, 2 green; 10 blue, 3 red, 12 green; 11 blue, 1 red, 6 green" game: 11
+        subset 0: {0,13,19} => impossible
+        subset 1: {0,2,19} => impossible
+        subset 2: {3,12,10}
+        subset 3: {1,6,11}
+[0011] input: "Game 12: 7 green, 5 blue; 6 green, 3 red, 6 blue; 2 red, 5 blue, 15 green; 2 red, 1 blue, 1 green; 4 red, 4 green, 2 blue; 3 blue, 6 green" game: 12
+        subset 0: {0,7,5}
+        subset 1: {3,6,6}
+        subset 2: {2,15,5} => impossible
+        subset 3: {2,1,1}
+        subset 4: {4,4,2}
+        subset 5: {0,6,3}
+[0012] input: "Game 13: 9 red, 2 blue, 2 green; 1 blue, 2 red, 15 green; 9 green, 2 blue, 9 red; 5 blue, 8 green, 5 red; 2 blue, 11 green, 5 red" game: 13
+        subset 0: {9,2,2}
+        subset 1: {2,15,1} => impossible
+        subset 2: {9,9,2}
+        subset 3: {5,8,5}
+        subset 4: {5,11,2}
+[0013] input: "Game 14: 9 blue, 1 red; 10 blue, 4 green, 3 red; 2 red, 6 blue; 4 green, 2 blue, 1 red; 5 green, 2 red, 11 blue; 12 blue, 2 red, 1 green" game: 14
+        subset 0: {1,0,9}
+        subset 1: {3,4,10}
+        subset 2: {2,0,6}
+        subset 3: {1,4,2}
+        subset 4: {2,5,11}
+        subset 5: {2,1,12}
+        => possible
+[0014] input: "Game 15: 9 blue, 7 green, 12 red; 9 red, 17 green, 8 blue; 6 red, 4 blue, 4 green; 5 red, 17 green" game: 15
+        subset 0: {12,7,9}
+        subset 1: {9,17,8} => impossible
+        subset 2: {6,4,4}
+        subset 3: {5,17,0} => impossible
+[0015] input: "Game 16: 5 green, 4 red; 3 blue, 3 red, 14 green; 6 red, 5 blue, 12 green" game: 16
+        subset 0: {4,5,0}
+        subset 1: {3,14,3} => impossible
+        subset 2: {6,12,5}
+[0016] input: "Game 17: 8 blue, 5 green, 2 red; 6 red, 6 blue; 9 red; 5 blue, 2 green, 8 red; 13 red, 4 blue, 4 green; 9 blue, 3 green, 5 red" game: 17
+        subset 0: {2,5,8}
+        subset 1: {6,0,6}
+        subset 2: {9,0,0}
+        subset 3: {8,2,5}
+        subset 4: {13,4,4} => impossible
+        subset 5: {5,3,9}
+[0017] input: "Game 18: 8 green, 1 red, 2 blue; 4 green, 4 red, 1 blue; 6 blue, 2 red" game: 18
+        subset 0: {1,8,2}
+        subset 1: {4,4,1}
+        subset 2: {2,0,6}
+        => possible
+[0018] input: "Game 19: 3 green, 9 blue; 4 blue, 10 red; 6 red, 3 green, 3 blue; 6 red, 4 green, 9 blue" game: 19
+        subset 0: {0,3,9}
+        subset 1: {10,0,4}
+        subset 2: {6,3,3}
+        subset 3: {6,4,9}
+        => possible
+[0019] input: "Game 20: 11 green, 3 blue; 6 green; 3 green, 6 blue; 1 red, 5 green; 6 blue, 7 green" game: 20
+        subset 0: {0,11,3}
+        subset 1: {0,6,0}
+        subset 2: {0,3,6}
+        subset 3: {1,5,0}
+        subset 4: {0,7,6}
+        => possible
+[0020] input: "Game 21: 1 green, 1 blue, 12 red; 6 red, 2 blue; 5 green, 4 red, 2 blue; 11 red, 8 green, 1 blue" game: 21
+        subset 0: {12,1,1}
+        subset 1: {6,0,2}
+        subset 2: {4,5,2}
+        subset 3: {11,8,1}
+        => possible
+[0021] input: "Game 22: 10 red; 1 red, 13 green, 9 blue; 6 blue, 12 red, 12 green; 10 red, 8 blue, 11 green; 2 green, 1 red, 3 blue; 7 red, 1 blue, 8 green" game: 22
+        subset 0: {10,0,0}
+        subset 1: {1,13,9}
+        subset 2: {12,12,6}
+        subset 3: {10,11,8}
+        subset 4: {1,2,3}
+        subset 5: {7,8,1}
+        => possible
+[0022] input: "Game 23: 11 red, 15 blue; 10 blue, 16 red, 1 green; 14 blue, 5 red; 1 green, 9 red, 9 blue; 1 red, 7 blue, 3 green; 6 red, 2 green, 3 blue" game: 23
+        subset 0: {11,0,15} => impossible
+        subset 1: {16,1,10} => impossible
+        subset 2: {5,0,14}
+        subset 3: {9,1,9}
+        subset 4: {1,3,7}
+        subset 5: {6,2,3}
+[0023] input: "Game 24: 6 blue, 11 red; 16 green, 2 red, 1 blue; 8 red, 7 blue; 14 blue, 9 green, 9 red; 13 green, 4 red, 8 blue; 2 red, 7 blue, 1 green" game: 24
+        subset 0: {11,0,6}
+        subset 1: {2,16,1} => impossible
+        subset 2: {8,0,7}
+        subset 3: {9,9,14}
+        subset 4: {4,13,8}
+        subset 5: {2,1,7}
+[0024] input: "Game 25: 2 green, 12 blue, 1 red; 10 blue, 5 red, 5 green; 2 blue, 9 red, 3 green; 5 blue, 4 red, 2 green" game: 25
+        subset 0: {1,2,12}
+        subset 1: {5,5,10}
+        subset 2: {9,3,2}
+        subset 3: {4,2,5}
+        => possible
+[0025] input: "Game 26: 7 blue, 6 red, 1 green; 2 blue, 3 green, 12 red; 2 blue, 6 red, 5 green" game: 26
+        subset 0: {6,1,7}
+        subset 1: {12,3,2}
+        subset 2: {6,5,2}
+        => possible
+[0026] input: "Game 27: 2 green, 3 red; 4 green; 2 red, 1 blue, 1 green; 2 red, 1 green, 2 blue" game: 27
+        subset 0: {3,2,0}
+        subset 1: {0,4,0}
+        subset 2: {2,1,1}
+        subset 3: {2,1,2}
+        => possible
+[0027] input: "Game 28: 11 blue, 1 red, 5 green; 2 blue, 2 red, 4 green; 10 blue, 4 red, 1 green" game: 28
+        subset 0: {1,5,11}
+        subset 1: {2,4,2}
+        subset 2: {4,1,10}
+        => possible
+[0028] input: "Game 29: 6 blue, 17 red, 1 green; 8 blue, 4 red; 14 blue, 1 red, 3 green" game: 29
+        subset 0: {17,1,6} => impossible
+        subset 1: {4,0,8}
+        subset 2: {1,3,14}
+[0029] input: "Game 30: 2 blue, 4 green; 7 green, 1 blue, 1 red; 1 blue, 8 green" game: 30
+        subset 0: {0,4,2}
+        subset 1: {1,7,1}
+        subset 2: {0,8,1}
+        => possible
+[0030] input: "Game 31: 15 blue, 9 green, 2 red; 5 green, 4 blue, 1 red; 1 green, 15 red, 7 blue; 5 red, 2 blue" game: 31
+        subset 0: {2,9,15} => impossible
+        subset 1: {1,5,4}
+        subset 2: {15,1,7} => impossible
+        subset 3: {5,0,2}
+[0031] input: "Game 32: 1 blue, 5 red, 3 green; 3 green, 8 red, 1 blue; 5 green, 1 red; 4 green, 3 blue, 15 red; 2 green, 1 blue; 4 blue, 15 red, 4 green" game: 32
+        subset 0: {5,3,1}
+        subset 1: {8,3,1}
+        subset 2: {1,5,0}
+        subset 3: {15,4,3} => impossible
+        subset 4: {0,2,1}
+        subset 5: {15,4,4} => impossible
+[0032] input: "Game 33: 3 red, 10 blue; 4 red, 9 blue; 1 green, 10 blue" game: 33
+        subset 0: {3,0,10}
+        subset 1: {4,0,9}
+        subset 2: {0,1,10}
+        => possible
+[0033] input: "Game 34: 3 blue, 1 green, 9 red; 4 green, 2 red, 9 blue; 7 blue, 3 red; 6 blue, 13 red; 4 green, 13 blue, 9 red" game: 34
+        subset 0: {9,1,3}
+        subset 1: {2,4,9}
+        subset 2: {3,0,7}
+        subset 3: {13,0,6} => impossible
+        subset 4: {9,4,13}
+[0034] input: "Game 35: 14 red, 1 green; 1 red, 2 green, 4 blue; 3 blue, 10 red, 6 green; 5 blue, 6 red, 7 green; 7 blue, 5 red" game: 35
+        subset 0: {14,1,0} => impossible
+        subset 1: {1,2,4}
+        subset 2: {10,6,3}
+        subset 3: {6,7,5}
+        subset 4: {5,0,7}
+[0035] input: "Game 36: 2 blue, 8 red, 9 green; 9 green, 3 red, 10 blue; 6 red, 8 blue, 1 green; 6 green, 8 red, 4 blue" game: 36
+        subset 0: {8,9,2}
+        subset 1: {3,9,10}
+        subset 2: {6,1,8}
+        subset 3: {8,6,4}
+        => possible
+[0036] input: "Game 37: 10 green, 3 red, 6 blue; 2 blue, 9 red, 5 green; 13 green, 9 red, 10 blue; 2 blue, 4 green, 9 red" game: 37
+        subset 0: {3,10,6}
+        subset 1: {9,5,2}
+        subset 2: {9,13,10}
+        subset 3: {9,4,2}
+        => possible
+[0037] input: "Game 38: 4 red, 14 blue, 12 green; 6 red, 12 green, 18 blue; 6 green, 1 blue, 1 red" game: 38
+        subset 0: {4,12,14}
+        subset 1: {6,12,18} => impossible
+        subset 2: {1,6,1}
+[0038] input: "Game 39: 5 red, 1 blue, 3 green; 1 blue, 3 green, 8 red; 15 red, 1 blue, 5 green; 3 green, 5 red; 1 blue, 14 red; 3 green, 1 blue, 12 red" game: 39
+        subset 0: {5,3,1}
+        subset 1: {8,3,1}
+        subset 2: {15,5,1} => impossible
+        subset 3: {5,3,0}
+        subset 4: {14,0,1} => impossible
+        subset 5: {12,3,1}
+[0039] input: "Game 40: 8 green, 4 blue; 5 blue, 7 red, 8 green; 5 blue, 8 green; 6 green, 3 red, 12 blue; 14 blue, 7 green, 2 red; 1 green, 7 red, 5 blue" game: 40
+        subset 0: {0,8,4}
+        subset 1: {7,8,5}
+        subset 2: {0,8,5}
+        subset 3: {3,6,12}
+        subset 4: {2,7,14}
+        subset 5: {7,1,5}
+        => possible
+[0040] input: "Game 41: 7 red, 10 green; 10 red, 6 green; 9 red, 7 green, 1 blue; 3 red, 1 blue" game: 41
+        subset 0: {7,10,0}
+        subset 1: {10,6,0}
+        subset 2: {9,7,1}
+        subset 3: {3,0,1}
+        => possible
+[0041] input: "Game 42: 3 green, 2 blue, 13 red; 1 blue, 3 red; 11 green, 16 red; 3 green, 1 blue, 16 red; 5 red, 8 green" game: 42
+        subset 0: {13,3,2} => impossible
+        subset 1: {3,0,1}
+        subset 2: {16,11,0} => impossible
+        subset 3: {16,3,1} => impossible
+        subset 4: {5,8,0}
+[0042] input: "Game 43: 12 blue, 9 red; 16 blue, 2 red, 7 green; 4 red, 1 blue, 11 green; 15 blue, 4 red, 9 green" game: 43
+        subset 0: {9,0,12}
+        subset 1: {2,7,16} => impossible
+        subset 2: {4,11,1}
+        subset 3: {4,9,15} => impossible
+[0043] input: "Game 44: 17 green, 5 blue, 2 red; 9 green, 11 blue, 1 red; 20 green, 3 blue, 8 red; 2 red, 13 green, 9 blue; 15 green, 12 blue; 4 blue, 7 green, 9 red" game: 44
+        subset 0: {2,17,5} => impossible
+        subset 1: {1,9,11}
+        subset 2: {8,20,3} => impossible
+        subset 3: {2,13,9}
+        subset 4: {0,15,12} => impossible
+        subset 5: {9,7,4}
+[0044] input: "Game 45: 5 green; 5 green, 1 red; 3 green, 2 blue; 1 green, 1 blue, 1 red" game: 45
+        subset 0: {0,5,0}
+        subset 1: {1,5,0}
+        subset 2: {0,3,2}
+        subset 3: {1,1,1}
+        => possible
+[0045] input: "Game 46: 10 red, 11 green; 16 green, 8 blue, 12 red; 9 green, 9 blue" game: 46
+        subset 0: {10,11,0}
+        subset 1: {12,16,8} => impossible
+        subset 2: {0,9,9}
+[0046] input: "Game 47: 20 green, 17 red, 1 blue; 16 red, 2 blue, 11 green; 3 blue, 19 red, 1 green; 3 blue, 17 red, 17 green; 12 green, 2 blue, 7 red" game: 47
+        subset 0: {17,20,1} => impossible
+        subset 1: {16,11,2} => impossible
+        subset 2: {19,1,3} => impossible
+        subset 3: {17,17,3} => impossible
+        subset 4: {7,12,2}
+[0047] input: "Game 48: 1 red, 4 blue, 6 green; 19 green, 1 red, 1 blue; 16 green, 3 blue, 1 red; 3 blue, 17 green; 4 blue, 12 green" game: 48
+        subset 0: {1,6,4}
+        subset 1: {1,19,1} => impossible
+        subset 2: {1,16,3} => impossible
+        subset 3: {0,17,3} => impossible
+        subset 4: {0,12,4}
+[0048] input: "Game 49: 13 green, 2 blue, 1 red; 1 green, 8 red, 2 blue; 11 red, 11 green, 3 blue; 7 red, 8 green, 4 blue" game: 49
+        subset 0: {1,13,2}
+        subset 1: {8,1,2}
+        subset 2: {11,11,3}
+        subset 3: {7,8,4}
+        => possible
+[0049] input: "Game 50: 11 blue, 1 red, 2 green; 1 green, 10 blue; 1 blue; 6 blue; 1 green, 2 blue" game: 50
+        subset 0: {1,2,11}
+        subset 1: {0,1,10}
+        subset 2: {0,0,1}
+        subset 3: {0,0,6}
+        subset 4: {0,1,2}
+        => possible
+[0050] input: "Game 51: 3 red, 3 green, 1 blue; 3 green, 3 red; 10 green, 4 red; 3 red, 2 green" game: 51
+        subset 0: {3,3,1}
+        subset 1: {3,3,0}
+        subset 2: {4,10,0}
+        subset 3: {3,2,0}
+        => possible
+[0051] input: "Game 52: 1 red, 4 blue; 1 green, 11 blue; 1 green, 3 red, 6 blue; 4 red, 1 green, 4 blue; 9 blue, 1 green; 10 blue, 1 green" game: 52
+        subset 0: {1,0,4}
+        subset 1: {0,1,11}
+        subset 2: {3,1,6}
+        subset 3: {4,1,4}
+        subset 4: {0,1,9}
+        subset 5: {0,1,10}
+        => possible
+[0052] input: "Game 53: 2 blue, 4 green, 1 red; 8 blue, 4 red, 7 green; 9 red, 7 blue, 6 green; 3 red, 7 green, 1 blue; 2 red, 9 blue, 5 green; 1 green, 7 red, 10 blue" game: 53
+        subset 0: {1,4,2}
+        subset 1: {4,7,8}
+        subset 2: {9,6,7}
+        subset 3: {3,7,1}
+        subset 4: {2,5,9}
+        subset 5: {7,1,10}
+        => possible
+[0053] input: "Game 54: 1 red, 1 blue, 5 green; 2 red, 1 green, 2 blue; 3 green, 3 blue, 2 red; 4 red; 12 red, 5 green, 2 blue" game: 54
+        subset 0: {1,5,1}
+        subset 1: {2,1,2}
+        subset 2: {2,3,3}
+        subset 3: {4,0,0}
+        subset 4: {12,5,2}
+        => possible
+[0054] input: "Game 55: 2 red, 11 blue; 16 green, 7 red, 16 blue; 4 blue, 11 green, 7 red; 8 green, 18 blue, 8 red" game: 55
+        subset 0: {2,0,11}
+        subset 1: {7,16,16} => impossible
+        subset 2: {7,11,4}
+        subset 3: {8,8,18} => impossible
+[0055] input: "Game 56: 2 blue, 2 green, 1 red; 1 red, 1 green; 1 red; 4 green; 1 blue; 1 blue, 7 green" game: 56
+        subset 0: {1,2,2}
+        subset 1: {1,1,0}
+        subset 2: {1,0,0}
+        subset 3: {0,4,0}
+        subset 4: {0,0,1}
+        subset 5: {0,7,1}
+        => possible
+[0056] input: "Game 57: 4 blue, 3 green; 16 green, 2 red, 5 blue; 1 red, 13 green, 2 blue; 3 blue, 12 green, 2 red; 2 red, 5 blue, 4 green; 10 green, 2 blue" game: 57
+        subset 0: {0,3,4}
+        subset 1: {2,16,5} => impossible
+        subset 2: {1,13,2}
+        subset 3: {2,12,3}
+        subset 4: {2,4,5}
+        subset 5: {0,10,2}
+[0057] input: "Game 58: 3 blue, 8 green; 4 green, 3 blue; 7 green, 5 blue, 5 red; 8 green; 3 red, 6 blue, 9 green; 2 red, 10 green, 4 blue" game: 58
+        subset 0: {0,8,3}
+        subset 1: {0,4,3}
+        subset 2: {5,7,5}
+        subset 3: {0,8,0}
+        subset 4: {3,9,6}
+        subset 5: {2,10,4}
+        => possible
+[0058] input: "Game 59: 7 blue, 6 green, 5 red; 7 red, 2 blue; 5 red, 11 green, 14 blue; 8 green, 17 red" game: 59
+        subset 0: {5,6,7}
+        subset 1: {7,0,2}
+        subset 2: {5,11,14}
+        subset 3: {17,8,0} => impossible
+[0059] input: "Game 60: 3 green, 8 blue, 2 red; 4 green, 7 blue, 6 red; 13 blue, 8 green, 2 red; 10 red, 6 blue, 5 green; 11 green, 3 blue, 4 red; 9 red, 5 green, 9 blue" game: 60
+        subset 0: {2,3,8}
+        subset 1: {6,4,7}
+        subset 2: {2,8,13}
+        subset 3: {10,5,6}
+        subset 4: {4,11,3}
+        subset 5: {9,5,9}
+        => possible
+[0060] input: "Game 61: 4 red, 18 blue, 13 green; 9 green, 5 red, 3 blue; 4 green, 3 blue, 4 red; 8 red, 4 green, 7 blue; 8 red, 4 blue, 6 green; 10 green, 5 red, 14 blue" game: 61
+        subset 0: {4,13,18} => impossible
+        subset 1: {5,9,3}
+        subset 2: {4,4,3}
+        subset 3: {8,4,7}
+        subset 4: {8,6,4}
+        subset 5: {5,10,14}
+[0061] input: "Game 62: 12 red, 14 blue, 9 green; 9 blue, 6 red, 4 green; 2 red, 5 blue; 1 red, 12 blue" game: 62
+        subset 0: {12,9,14}
+        subset 1: {6,4,9}
+        subset 2: {2,0,5}
+        subset 3: {1,0,12}
+        => possible
+[0062] input: "Game 63: 11 blue, 13 red, 11 green; 4 blue, 9 green; 8 blue, 9 red; 7 red, 11 green, 7 blue" game: 63
+        subset 0: {13,11,11} => impossible
+        subset 1: {0,9,4}
+        subset 2: {9,0,8}
+        subset 3: {7,11,7}
+[0063] input: "Game 64: 10 blue, 8 red, 12 green; 10 red, 12 blue, 9 green; 3 green, 17 red; 12 green, 15 blue, 16 red; 6 green, 15 blue, 1 red; 9 red, 6 blue, 10 green" game: 64
+        subset 0: {8,12,10}
+        subset 1: {10,9,12}
+        subset 2: {17,3,0} => impossible
+        subset 3: {16,12,15} => impossible
+        subset 4: {1,6,15} => impossible
+        subset 5: {9,10,6}
+[0064] input: "Game 65: 7 red, 7 blue; 3 blue, 1 red, 1 green; 3 red, 8 blue" game: 65
+        subset 0: {7,0,7}
+        subset 1: {1,1,3}
+        subset 2: {3,0,8}
+        => possible
+[0065] input: "Game 66: 1 blue, 3 red; 10 green, 5 blue; 4 green; 3 red, 11 green; 3 blue, 15 green, 3 red" game: 66
+        subset 0: {3,0,1}
+        subset 1: {0,10,5}
+        subset 2: {0,4,0}
+        subset 3: {3,11,0}
+        subset 4: {3,15,3} => impossible
+[0066] input: "Game 67: 1 red; 2 blue, 2 green, 1 red; 6 green, 1 blue" game: 67
+        subset 0: {1,0,0}
+        subset 1: {1,2,2}
+        subset 2: {0,6,1}
+        => possible
+[0067] input: "Game 68: 7 red, 4 blue; 4 blue, 6 red, 7 green; 2 green, 19 red, 11 blue; 11 green, 9 red" game: 68
+        subset 0: {7,0,4}
+        subset 1: {6,7,4}
+        subset 2: {19,2,11} => impossible
+        subset 3: {9,11,0}
+[0068] input: "Game 69: 4 blue, 3 green, 1 red; 7 blue, 1 red, 3 green; 5 blue, 1 green; 2 blue, 10 green, 2 red; 2 red, 6 green, 5 blue; 1 red, 4 green, 2 blue" game: 69
+        subset 0: {1,3,4}
+        subset 1: {1,3,7}
+        subset 2: {0,1,5}
+        subset 3: {2,10,2}
+        subset 4: {2,6,5}
+        subset 5: {1,4,2}
+        => possible
+[0069] input: "Game 70: 9 blue, 7 red, 6 green; 19 blue, 4 red, 5 green; 6 blue, 7 red, 4 green; 3 blue, 4 red, 2 green" game: 70
+        subset 0: {7,6,9}
+        subset 1: {4,5,19} => impossible
+        subset 2: {7,4,6}
+        subset 3: {4,2,3}
+[0070] input: "Game 71: 6 green, 12 blue, 4 red; 11 red, 10 green, 11 blue; 3 red, 14 blue, 13 green; 4 blue, 3 green" game: 71
+        subset 0: {4,6,12}
+        subset 1: {11,10,11}
+        subset 2: {3,13,14}
+        subset 3: {0,3,4}
+        => possible
+[0071] input: "Game 72: 2 green, 1 blue, 9 red; 10 red, 3 green, 1 blue; 11 red, 2 green; 2 green, 1 blue, 5 red; 1 red, 1 blue, 3 green; 13 red, 4 blue, 1 green" game: 72
+        subset 0: {9,2,1}
+        subset 1: {10,3,1}
+        subset 2: {11,2,0}
+        subset 3: {5,2,1}
+        subset 4: {1,3,1}
+        subset 5: {13,1,4} => impossible
+[0072] input: "Game 73: 11 green, 6 blue; 7 green, 6 blue, 7 red; 12 green, 8 blue, 11 red; 4 red, 2 blue, 9 green; 4 green, 7 blue, 2 red" game: 73
+        subset 0: {0,11,6}
+        subset 1: {7,7,6}
+        subset 2: {11,12,8}
+        subset 3: {4,9,2}
+        subset 4: {2,4,7}
+        => possible
+[0073] input: "Game 74: 3 blue, 7 red; 3 blue, 5 green, 2 red; 5 red, 1 green, 3 blue; 8 green, 2 blue, 11 red; 3 blue, 8 green, 10 red" game: 74
+        subset 0: {7,0,3}
+        subset 1: {2,5,3}
+        subset 2: {5,1,3}
+        subset 3: {11,8,2}
+        subset 4: {10,8,3}
+        => possible
+[0074] input: "Game 75: 2 green; 5 blue; 1 blue, 1 red; 1 red, 9 blue, 2 green; 2 blue, 2 green" game: 75
+        subset 0: {0,2,0}
+        subset 1: {0,0,5}
+        subset 2: {1,0,1}
+        subset 3: {1,2,9}
+        subset 4: {0,2,2}
+        => possible
+[0075] input: "Game 76: 12 blue, 13 green; 5 red, 11 blue, 9 green; 12 green, 6 red" game: 76
+        subset 0: {0,13,12}
+        subset 1: {5,9,11}
+        subset 2: {6,12,0}
+        => possible
+[0076] input: "Game 77: 1 blue, 15 green, 12 red; 15 green, 5 blue; 14 green, 3 blue, 8 red" game: 77
+        subset 0: {12,15,1} => impossible
+        subset 1: {0,15,5} => impossible
+        subset 2: {8,14,3} => impossible
+[0077] input: "Game 78: 11 green, 8 blue, 1 red; 9 green, 8 blue, 1 red; 13 green, 5 red, 6 blue; 5 red, 7 green, 20 blue; 10 blue, 5 red" game: 78
+        subset 0: {1,11,8}
+        subset 1: {1,9,8}
+        subset 2: {5,13,6}
+        subset 3: {5,7,20} => impossible
+        subset 4: {5,0,10}
+[0078] input: "Game 79: 3 blue; 6 blue, 5 red; 4 red, 1 green, 4 blue; 7 blue, 6 red; 7 red, 1 blue; 1 red, 1 blue, 1 green" game: 79
+        subset 0: {0,0,3}
+        subset 1: {5,0,6}
+        subset 2: {4,1,4}
+        subset 3: {6,0,7}
+        subset 4: {7,0,1}
+        subset 5: {1,1,1}
+        => possible
+[0079] input: "Game 80: 11 green, 3 red, 8 blue; 2 red, 15 green, 2 blue; 5 green, 8 blue, 2 red; 8 blue, 14 green; 2 blue, 13 green" game: 80
+        subset 0: {3,11,8}
+        subset 1: {2,15,2} => impossible
+        subset 2: {2,5,8}
+        subset 3: {0,14,8} => impossible
+        subset 4: {0,13,2}
+[0080] input: "Game 81: 9 red, 4 green; 7 green, 4 red; 2 red, 4 blue, 6 green; 6 red, 4 blue, 9 green; 1 green, 3 red; 6 green, 1 blue, 8 red" game: 81
+        subset 0: {9,4,0}
+        subset 1: {4,7,0}
+        subset 2: {2,6,4}
+        subset 3: {6,9,4}
+        subset 4: {3,1,0}
+        subset 5: {8,6,1}
+        => possible
+[0081] input: "Game 82: 5 blue, 3 red, 3 green; 5 red; 2 red, 3 green, 8 blue" game: 82
+        subset 0: {3,3,5}
+        subset 1: {5,0,0}
+        subset 2: {2,3,8}
+        => possible
+[0082] input: "Game 83: 10 green, 1 red, 1 blue; 3 red, 1 green, 1 blue; 4 red, 10 green" game: 83
+        subset 0: {1,10,1}
+        subset 1: {3,1,1}
+        subset 2: {4,10,0}
+        => possible
+[0083] input: "Game 84: 16 red, 2 green, 6 blue; 6 red, 3 green, 8 blue; 3 green, 10 red, 5 blue; 4 blue, 3 green; 15 red" game: 84
+        subset 0: {16,2,6} => impossible
+        subset 1: {6,3,8}
+        subset 2: {10,3,5}
+        subset 3: {0,3,4}
+        subset 4: {15,0,0} => impossible
+[0084] input: "Game 85: 3 green, 2 red; 5 green, 4 blue; 5 green, 8 red, 3 blue" game: 85
+        subset 0: {2,3,0}
+        subset 1: {0,5,4}
+        subset 2: {8,5,3}
+        => possible
+[0085] input: "Game 86: 7 green, 16 blue, 7 red; 1 green, 12 red, 2 blue; 15 green, 16 blue, 7 red" game: 86
+        subset 0: {7,7,16} => impossible
+        subset 1: {12,1,2}
+        subset 2: {7,15,16} => impossible
+[0086] input: "Game 87: 1 red, 6 green, 5 blue; 2 green, 1 blue; 2 green, 1 red, 1 blue; 5 green, 4 blue" game: 87
+        subset 0: {1,6,5}
+        subset 1: {0,2,1}
+        subset 2: {1,2,1}
+        subset 3: {0,5,4}
+        => possible
+[0087] input: "Game 88: 3 green, 3 red, 4 blue; 1 red, 1 green; 6 blue, 9 red, 1 green; 1 green, 11 red, 3 blue; 7 red, 6 blue" game: 88
+        subset 0: {3,3,4}
+        subset 1: {1,1,0}
+        subset 2: {9,1,6}
+        subset 3: {11,1,3}
+        subset 4: {7,0,6}
+        => possible
+[0088] input: "Game 89: 2 blue, 3 red, 4 green; 5 red, 7 blue, 14 green; 8 blue, 5 red, 16 green; 2 blue, 5 red, 7 green; 5 green, 9 blue, 1 red" game: 89
+        subset 0: {3,4,2}
+        subset 1: {5,14,7} => impossible
+        subset 2: {5,16,8} => impossible
+        subset 3: {5,7,2}
+        subset 4: {1,5,9}
+[0089] input: "Game 90: 1 blue, 3 red, 7 green; 11 green, 4 red, 1 blue; 1 red, 1 blue, 6 green; 2 blue, 2 green; 8 green, 2 blue; 3 red, 2 blue, 4 green" game: 90
+        subset 0: {3,7,1}
+        subset 1: {4,11,1}
+        subset 2: {1,6,1}
+        subset 3: {0,2,2}
+        subset 4: {0,8,2}
+        subset 5: {3,4,2}
+        => possible
+[0090] input: "Game 91: 6 blue, 4 red, 1 green; 8 red, 3 blue, 3 green; 1 green, 2 blue, 5 red; 1 blue, 3 green" game: 91
+        subset 0: {4,1,6}
+        subset 1: {8,3,3}
+        subset 2: {5,1,2}
+        subset 3: {0,3,1}
+        => possible
+[0091] input: "Game 92: 8 green, 1 red, 5 blue; 2 green, 7 blue; 11 blue, 5 green, 8 red; 7 blue, 3 red, 4 green" game: 92
+        subset 0: {1,8,5}
+        subset 1: {0,2,7}
+        subset 2: {8,5,11}
+        subset 3: {3,4,7}
+        => possible
+[0092] input: "Game 93: 3 green, 1 red, 9 blue; 13 red, 5 blue, 8 green; 5 green, 2 red, 7 blue" game: 93
+        subset 0: {1,3,9}
+        subset 1: {13,8,5} => impossible
+        subset 2: {2,5,7}
+[0093] input: "Game 94: 4 green, 10 blue, 8 red; 4 red, 10 blue, 2 green; 2 green, 10 blue, 5 red; 5 green, 2 red, 10 blue" game: 94
+        subset 0: {8,4,10}
+        subset 1: {4,2,10}
+        subset 2: {5,2,10}
+        subset 3: {2,5,10}
+        => possible
+[0094] input: "Game 95: 5 green, 1 blue; 3 blue, 11 green, 8 red; 8 blue, 2 red, 12 green; 4 green, 4 blue, 4 red" game: 95
+        subset 0: {0,5,1}
+        subset 1: {8,11,3}
+        subset 2: {2,12,8}
+        subset 3: {4,4,4}
+        => possible
+[0095] input: "Game 96: 1 blue, 13 green; 8 blue, 3 red, 4 green; 1 red, 3 blue, 10 green" game: 96
+        subset 0: {0,13,1}
+        subset 1: {3,4,8}
+        subset 2: {1,10,3}
+        => possible
+[0096] input: "Game 97: 18 green, 4 red; 1 blue, 2 red, 9 green; 6 red, 3 blue, 10 green; 3 blue, 15 green, 4 red" game: 97
+        subset 0: {4,18,0} => impossible
+        subset 1: {2,9,1}
+        subset 2: {6,10,3}
+        subset 3: {4,15,3} => impossible
+[0097] input: "Game 98: 2 blue, 3 green, 6 red; 1 green, 1 blue, 8 red; 8 red, 3 green, 1 blue; 2 blue; 8 red, 2 green, 2 blue" game: 98
+        subset 0: {6,3,2}
+        subset 1: {8,1,1}
+        subset 2: {8,3,1}
+        subset 3: {0,0,2}
+        subset 4: {8,2,2}
+        => possible
+[0098] input: "Game 99: 1 green, 2 red, 1 blue; 8 green, 4 blue, 1 red; 7 blue, 1 red, 11 green; 9 green, 3 blue; 1 red, 2 blue; 1 red, 6 blue" game: 99
+        subset 0: {2,1,1}
+        subset 1: {1,8,4}
+        subset 2: {1,11,7}
+        subset 3: {0,9,3}
+        subset 4: {1,0,2}
+        subset 5: {1,0,6}
+        => possible
+[0099] input: "Game 100: 7 blue, 9 green, 2 red; 5 red, 9 green; 1 blue, 8 red, 13 green" game: 100
+        subset 0: {2,9,7}
+        subset 1: {5,9,0}
+        subset 2: {8,13,1}
+        => possible
+result 1: 3059
+Elapsed time: 0.052000 seconds
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/input.txt => 0
+[0000] input: "Game 1: 2 blue, 3 red; 3 green, 3 blue, 6 red; 4 blue, 6 red; 2 green, 2 blue, 9 red; 2 red, 4 blue" game: 1
+        subset 0: {3,0,2}
+        subset 1: {6,3,3}
+        subset 2: {6,0,4}
+        subset 3: {9,2,2}
+        subset 4: {2,0,4}
+        minimum set {9,3,4} => score: 108
+[0001] input: "Game 2: 4 red, 1 green; 3 red; 13 green, 5 red, 3 blue; 3 green, 2 red; 3 blue, 5 red, 3 green; 2 red, 3 blue, 12 green" game: 2
+        subset 0: {4,1,0}
+        subset 1: {3,0,0}
+        subset 2: {5,13,3}
+        subset 3: {2,3,0}
+        subset 4: {5,3,3}
+        subset 5: {2,12,3}
+        minimum set {5,13,3} => score: 195
+[0002] input: "Game 3: 4 red, 1 green, 1 blue; 1 red, 1 blue; 6 red, 1 green; 6 red, 3 blue, 1 green; 4 red" game: 3
+        subset 0: {4,1,1}
+        subset 1: {1,0,1}
+        subset 2: {6,1,0}
+        subset 3: {6,1,3}
+        subset 4: {4,0,0}
+        minimum set {6,1,3} => score: 18
+[0003] input: "Game 4: 4 blue, 12 red, 4 green; 6 green, 3 blue, 19 red; 3 blue, 2 red, 2 green" game: 4
+        subset 0: {12,4,4}
+        subset 1: {19,6,3}
+        subset 2: {2,2,3}
+        minimum set {19,6,4} => score: 456
+[0004] input: "Game 5: 1 red, 5 blue, 16 green; 1 red, 6 green, 3 blue; 2 red, 12 blue; 17 blue, 3 green; 7 green, 2 red, 6 blue" game: 5
+        subset 0: {1,16,5}
+        subset 1: {1,6,3}
+        subset 2: {2,0,12}
+        subset 3: {0,3,17}
+        subset 4: {2,7,6}
+        minimum set {2,16,17} => score: 544
+[0005] input: "Game 6: 3 green, 1 blue, 5 red; 5 green, 5 red; 2 green, 2 blue, 3 red; 5 green, 2 red; 3 green, 6 red, 3 blue; 5 green, 4 red" game: 6
+        subset 0: {5,3,1}
+        subset 1: {5,5,0}
+        subset 2: {3,2,2}
+        subset 3: {2,5,0}
+        subset 4: {6,3,3}
+        subset 5: {4,5,0}
+        minimum set {6,5,3} => score: 90
+[0006] input: "Game 7: 15 blue, 1 red, 6 green; 4 blue, 7 green, 2 red; 14 blue, 5 green, 2 red" game: 7
+        subset 0: {1,6,15}
+        subset 1: {2,7,4}
+        subset 2: {2,5,14}
+        minimum set {2,7,15} => score: 210
+[0007] input: "Game 8: 6 blue, 3 green, 10 red; 2 blue, 1 green, 5 red; 6 blue, 3 green, 12 red; 11 red, 1 green, 1 blue; 5 blue, 14 red, 3 green; 3 red" game: 8
+        subset 0: {10,3,6}
+        subset 1: {5,1,2}
+        subset 2: {12,3,6}
+        subset 3: {11,1,1}
+        subset 4: {14,3,5}
+        subset 5: {3,0,0}
+        minimum set {14,3,6} => score: 252
+[0008] input: "Game 9: 15 red, 3 blue; 1 blue, 16 red; 1 red, 3 blue; 1 blue, 1 green, 9 red" game: 9
+        subset 0: {15,0,3}
+        subset 1: {16,0,1}
+        subset 2: {1,0,3}
+        subset 3: {9,1,1}
+        minimum set {16,1,3} => score: 48
+[0009] input: "Game 10: 1 red; 1 blue, 7 green; 1 green, 5 blue; 3 blue, 3 green; 1 green" game: 10
+        subset 0: {1,0,0}
+        subset 1: {0,7,1}
+        subset 2: {0,1,5}
+        subset 3: {0,3,3}
+        subset 4: {0,1,0}
+        minimum set {1,7,5} => score: 35
+[0010] input: "Game 11: 19 blue, 13 green; 19 blue, 2 green; 10 blue, 3 red, 12 green; 11 blue, 1 red, 6 green" game: 11
+        subset 0: {0,13,19}
+        subset 1: {0,2,19}
+        subset 2: {3,12,10}
+        subset 3: {1,6,11}
+        minimum set {3,13,19} => score: 741
+[0011] input: "Game 12: 7 green, 5 blue; 6 green, 3 red, 6 blue; 2 red, 5 blue, 15 green; 2 red, 1 blue, 1 green; 4 red, 4 green, 2 blue; 3 blue, 6 green" game: 12
+        subset 0: {0,7,5}
+        subset 1: {3,6,6}
+        subset 2: {2,15,5}
+        subset 3: {2,1,1}
+        subset 4: {4,4,2}
+        subset 5: {0,6,3}
+        minimum set {4,15,6} => score: 360
+[0012] input: "Game 13: 9 red, 2 blue, 2 green; 1 blue, 2 red, 15 green; 9 green, 2 blue, 9 red; 5 blue, 8 green, 5 red; 2 blue, 11 green, 5 red" game: 13
+        subset 0: {9,2,2}
+        subset 1: {2,15,1}
+        subset 2: {9,9,2}
+        subset 3: {5,8,5}
+        subset 4: {5,11,2}
+        minimum set {9,15,5} => score: 675
+[0013] input: "Game 14: 9 blue, 1 red; 10 blue, 4 green, 3 red; 2 red, 6 blue; 4 green, 2 blue, 1 red; 5 green, 2 red, 11 blue; 12 blue, 2 red, 1 green" game: 14
+        subset 0: {1,0,9}
+        subset 1: {3,4,10}
+        subset 2: {2,0,6}
+        subset 3: {1,4,2}
+        subset 4: {2,5,11}
+        subset 5: {2,1,12}
+        minimum set {3,5,12} => score: 180
+[0014] input: "Game 15: 9 blue, 7 green, 12 red; 9 red, 17 green, 8 blue; 6 red, 4 blue, 4 green; 5 red, 17 green" game: 15
+        subset 0: {12,7,9}
+        subset 1: {9,17,8}
+        subset 2: {6,4,4}
+        subset 3: {5,17,0}
+        minimum set {12,17,9} => score: 1836
+[0015] input: "Game 16: 5 green, 4 red; 3 blue, 3 red, 14 green; 6 red, 5 blue, 12 green" game: 16
+        subset 0: {4,5,0}
+        subset 1: {3,14,3}
+        subset 2: {6,12,5}
+        minimum set {6,14,5} => score: 420
+[0016] input: "Game 17: 8 blue, 5 green, 2 red; 6 red, 6 blue; 9 red; 5 blue, 2 green, 8 red; 13 red, 4 blue, 4 green; 9 blue, 3 green, 5 red" game: 17
+        subset 0: {2,5,8}
+        subset 1: {6,0,6}
+        subset 2: {9,0,0}
+        subset 3: {8,2,5}
+        subset 4: {13,4,4}
+        subset 5: {5,3,9}
+        minimum set {13,5,9} => score: 585
+[0017] input: "Game 18: 8 green, 1 red, 2 blue; 4 green, 4 red, 1 blue; 6 blue, 2 red" game: 18
+        subset 0: {1,8,2}
+        subset 1: {4,4,1}
+        subset 2: {2,0,6}
+        minimum set {4,8,6} => score: 192
+[0018] input: "Game 19: 3 green, 9 blue; 4 blue, 10 red; 6 red, 3 green, 3 blue; 6 red, 4 green, 9 blue" game: 19
+        subset 0: {0,3,9}
+        subset 1: {10,0,4}
+        subset 2: {6,3,3}
+        subset 3: {6,4,9}
+        minimum set {10,4,9} => score: 360
+[0019] input: "Game 20: 11 green, 3 blue; 6 green; 3 green, 6 blue; 1 red, 5 green; 6 blue, 7 green" game: 20
+        subset 0: {0,11,3}
+        subset 1: {0,6,0}
+        subset 2: {0,3,6}
+        subset 3: {1,5,0}
+        subset 4: {0,7,6}
+        minimum set {1,11,6} => score: 66
+[0020] input: "Game 21: 1 green, 1 blue, 12 red; 6 red, 2 blue; 5 green, 4 red, 2 blue; 11 red, 8 green, 1 blue" game: 21
+        subset 0: {12,1,1}
+        subset 1: {6,0,2}
+        subset 2: {4,5,2}
+        subset 3: {11,8,1}
+        minimum set {12,8,2} => score: 192
+[0021] input: "Game 22: 10 red; 1 red, 13 green, 9 blue; 6 blue, 12 red, 12 green; 10 red, 8 blue, 11 green; 2 green, 1 red, 3 blue; 7 red, 1 blue, 8 green" game: 22
+        subset 0: {10,0,0}
+        subset 1: {1,13,9}
+        subset 2: {12,12,6}
+        subset 3: {10,11,8}
+        subset 4: {1,2,3}
+        subset 5: {7,8,1}
+        minimum set {12,13,9} => score: 1404
+[0022] input: "Game 23: 11 red, 15 blue; 10 blue, 16 red, 1 green; 14 blue, 5 red; 1 green, 9 red, 9 blue; 1 red, 7 blue, 3 green; 6 red, 2 green, 3 blue" game: 23
+        subset 0: {11,0,15}
+        subset 1: {16,1,10}
+        subset 2: {5,0,14}
+        subset 3: {9,1,9}
+        subset 4: {1,3,7}
+        subset 5: {6,2,3}
+        minimum set {16,3,15} => score: 720
+[0023] input: "Game 24: 6 blue, 11 red; 16 green, 2 red, 1 blue; 8 red, 7 blue; 14 blue, 9 green, 9 red; 13 green, 4 red, 8 blue; 2 red, 7 blue, 1 green" game: 24
+        subset 0: {11,0,6}
+        subset 1: {2,16,1}
+        subset 2: {8,0,7}
+        subset 3: {9,9,14}
+        subset 4: {4,13,8}
+        subset 5: {2,1,7}
+        minimum set {11,16,14} => score: 2464
+[0024] input: "Game 25: 2 green, 12 blue, 1 red; 10 blue, 5 red, 5 green; 2 blue, 9 red, 3 green; 5 blue, 4 red, 2 green" game: 25
+        subset 0: {1,2,12}
+        subset 1: {5,5,10}
+        subset 2: {9,3,2}
+        subset 3: {4,2,5}
+        minimum set {9,5,12} => score: 540
+[0025] input: "Game 26: 7 blue, 6 red, 1 green; 2 blue, 3 green, 12 red; 2 blue, 6 red, 5 green" game: 26
+        subset 0: {6,1,7}
+        subset 1: {12,3,2}
+        subset 2: {6,5,2}
+        minimum set {12,5,7} => score: 420
+[0026] input: "Game 27: 2 green, 3 red; 4 green; 2 red, 1 blue, 1 green; 2 red, 1 green, 2 blue" game: 27
+        subset 0: {3,2,0}
+        subset 1: {0,4,0}
+        subset 2: {2,1,1}
+        subset 3: {2,1,2}
+        minimum set {3,4,2} => score: 24
+[0027] input: "Game 28: 11 blue, 1 red, 5 green; 2 blue, 2 red, 4 green; 10 blue, 4 red, 1 green" game: 28
+        subset 0: {1,5,11}
+        subset 1: {2,4,2}
+        subset 2: {4,1,10}
+        minimum set {4,5,11} => score: 220
+[0028] input: "Game 29: 6 blue, 17 red, 1 green; 8 blue, 4 red; 14 blue, 1 red, 3 green" game: 29
+        subset 0: {17,1,6}
+        subset 1: {4,0,8}
+        subset 2: {1,3,14}
+        minimum set {17,3,14} => score: 714
+[0029] input: "Game 30: 2 blue, 4 green; 7 green, 1 blue, 1 red; 1 blue, 8 green" game: 30
+        subset 0: {0,4,2}
+        subset 1: {1,7,1}
+        subset 2: {0,8,1}
+        minimum set {1,8,2} => score: 16
+[0030] input: "Game 31: 15 blue, 9 green, 2 red; 5 green, 4 blue, 1 red; 1 green, 15 red, 7 blue; 5 red, 2 blue" game: 31
+        subset 0: {2,9,15}
+        subset 1: {1,5,4}
+        subset 2: {15,1,7}
+        subset 3: {5,0,2}
+        minimum set {15,9,15} => score: 2025
+[0031] input: "Game 32: 1 blue, 5 red, 3 green; 3 green, 8 red, 1 blue; 5 green, 1 red; 4 green, 3 blue, 15 red; 2 green, 1 blue; 4 blue, 15 red, 4 green" game: 32
+        subset 0: {5,3,1}
+        subset 1: {8,3,1}
+        subset 2: {1,5,0}
+        subset 3: {15,4,3}
+        subset 4: {0,2,1}
+        subset 5: {15,4,4}
+        minimum set {15,5,4} => score: 300
+[0032] input: "Game 33: 3 red, 10 blue; 4 red, 9 blue; 1 green, 10 blue" game: 33
+        subset 0: {3,0,10}
+        subset 1: {4,0,9}
+        subset 2: {0,1,10}
+        minimum set {4,1,10} => score: 40
+[0033] input: "Game 34: 3 blue, 1 green, 9 red; 4 green, 2 red, 9 blue; 7 blue, 3 red; 6 blue, 13 red; 4 green, 13 blue, 9 red" game: 34
+        subset 0: {9,1,3}
+        subset 1: {2,4,9}
+        subset 2: {3,0,7}
+        subset 3: {13,0,6}
+        subset 4: {9,4,13}
+        minimum set {13,4,13} => score: 676
+[0034] input: "Game 35: 14 red, 1 green; 1 red, 2 green, 4 blue; 3 blue, 10 red, 6 green; 5 blue, 6 red, 7 green; 7 blue, 5 red" game: 35
+        subset 0: {14,1,0}
+        subset 1: {1,2,4}
+        subset 2: {10,6,3}
+        subset 3: {6,7,5}
+        subset 4: {5,0,7}
+        minimum set {14,7,7} => score: 686
+[0035] input: "Game 36: 2 blue, 8 red, 9 green; 9 green, 3 red, 10 blue; 6 red, 8 blue, 1 green; 6 green, 8 red, 4 blue" game: 36
+        subset 0: {8,9,2}
+        subset 1: {3,9,10}
+        subset 2: {6,1,8}
+        subset 3: {8,6,4}
+        minimum set {8,9,10} => score: 720
+[0036] input: "Game 37: 10 green, 3 red, 6 blue; 2 blue, 9 red, 5 green; 13 green, 9 red, 10 blue; 2 blue, 4 green, 9 red" game: 37
+        subset 0: {3,10,6}
+        subset 1: {9,5,2}
+        subset 2: {9,13,10}
+        subset 3: {9,4,2}
+        minimum set {9,13,10} => score: 1170
+[0037] input: "Game 38: 4 red, 14 blue, 12 green; 6 red, 12 green, 18 blue; 6 green, 1 blue, 1 red" game: 38
+        subset 0: {4,12,14}
+        subset 1: {6,12,18}
+        subset 2: {1,6,1}
+        minimum set {6,12,18} => score: 1296
+[0038] input: "Game 39: 5 red, 1 blue, 3 green; 1 blue, 3 green, 8 red; 15 red, 1 blue, 5 green; 3 green, 5 red; 1 blue, 14 red; 3 green, 1 blue, 12 red" game: 39
+        subset 0: {5,3,1}
+        subset 1: {8,3,1}
+        subset 2: {15,5,1}
+        subset 3: {5,3,0}
+        subset 4: {14,0,1}
+        subset 5: {12,3,1}
+        minimum set {15,5,1} => score: 75
+[0039] input: "Game 40: 8 green, 4 blue; 5 blue, 7 red, 8 green; 5 blue, 8 green; 6 green, 3 red, 12 blue; 14 blue, 7 green, 2 red; 1 green, 7 red, 5 blue" game: 40
+        subset 0: {0,8,4}
+        subset 1: {7,8,5}
+        subset 2: {0,8,5}
+        subset 3: {3,6,12}
+        subset 4: {2,7,14}
+        subset 5: {7,1,5}
+        minimum set {7,8,14} => score: 784
+[0040] input: "Game 41: 7 red, 10 green; 10 red, 6 green; 9 red, 7 green, 1 blue; 3 red, 1 blue" game: 41
+        subset 0: {7,10,0}
+        subset 1: {10,6,0}
+        subset 2: {9,7,1}
+        subset 3: {3,0,1}
+        minimum set {10,10,1} => score: 100
+[0041] input: "Game 42: 3 green, 2 blue, 13 red; 1 blue, 3 red; 11 green, 16 red; 3 green, 1 blue, 16 red; 5 red, 8 green" game: 42
+        subset 0: {13,3,2}
+        subset 1: {3,0,1}
+        subset 2: {16,11,0}
+        subset 3: {16,3,1}
+        subset 4: {5,8,0}
+        minimum set {16,11,2} => score: 352
+[0042] input: "Game 43: 12 blue, 9 red; 16 blue, 2 red, 7 green; 4 red, 1 blue, 11 green; 15 blue, 4 red, 9 green" game: 43
+        subset 0: {9,0,12}
+        subset 1: {2,7,16}
+        subset 2: {4,11,1}
+        subset 3: {4,9,15}
+        minimum set {9,11,16} => score: 1584
+[0043] input: "Game 44: 17 green, 5 blue, 2 red; 9 green, 11 blue, 1 red; 20 green, 3 blue, 8 red; 2 red, 13 green, 9 blue; 15 green, 12 blue; 4 blue, 7 green, 9 red" game: 44
+        subset 0: {2,17,5}
+        subset 1: {1,9,11}
+        subset 2: {8,20,3}
+        subset 3: {2,13,9}
+        subset 4: {0,15,12}
+        subset 5: {9,7,4}
+        minimum set {9,20,12} => score: 2160
+[0044] input: "Game 45: 5 green; 5 green, 1 red; 3 green, 2 blue; 1 green, 1 blue, 1 red" game: 45
+        subset 0: {0,5,0}
+        subset 1: {1,5,0}
+        subset 2: {0,3,2}
+        subset 3: {1,1,1}
+        minimum set {1,5,2} => score: 10
+[0045] input: "Game 46: 10 red, 11 green; 16 green, 8 blue, 12 red; 9 green, 9 blue" game: 46
+        subset 0: {10,11,0}
+        subset 1: {12,16,8}
+        subset 2: {0,9,9}
+        minimum set {12,16,9} => score: 1728
+[0046] input: "Game 47: 20 green, 17 red, 1 blue; 16 red, 2 blue, 11 green; 3 blue, 19 red, 1 green; 3 blue, 17 red, 17 green; 12 green, 2 blue, 7 red" game: 47
+        subset 0: {17,20,1}
+        subset 1: {16,11,2}
+        subset 2: {19,1,3}
+        subset 3: {17,17,3}
+        subset 4: {7,12,2}
+        minimum set {19,20,3} => score: 1140
+[0047] input: "Game 48: 1 red, 4 blue, 6 green; 19 green, 1 red, 1 blue; 16 green, 3 blue, 1 red; 3 blue, 17 green; 4 blue, 12 green" game: 48
+        subset 0: {1,6,4}
+        subset 1: {1,19,1}
+        subset 2: {1,16,3}
+        subset 3: {0,17,3}
+        subset 4: {0,12,4}
+        minimum set {1,19,4} => score: 76
+[0048] input: "Game 49: 13 green, 2 blue, 1 red; 1 green, 8 red, 2 blue; 11 red, 11 green, 3 blue; 7 red, 8 green, 4 blue" game: 49
+        subset 0: {1,13,2}
+        subset 1: {8,1,2}
+        subset 2: {11,11,3}
+        subset 3: {7,8,4}
+        minimum set {11,13,4} => score: 572
+[0049] input: "Game 50: 11 blue, 1 red, 2 green; 1 green, 10 blue; 1 blue; 6 blue; 1 green, 2 blue" game: 50
+        subset 0: {1,2,11}
+        subset 1: {0,1,10}
+        subset 2: {0,0,1}
+        subset 3: {0,0,6}
+        subset 4: {0,1,2}
+        minimum set {1,2,11} => score: 22
+[0050] input: "Game 51: 3 red, 3 green, 1 blue; 3 green, 3 red; 10 green, 4 red; 3 red, 2 green" game: 51
+        subset 0: {3,3,1}
+        subset 1: {3,3,0}
+        subset 2: {4,10,0}
+        subset 3: {3,2,0}
+        minimum set {4,10,1} => score: 40
+[0051] input: "Game 52: 1 red, 4 blue; 1 green, 11 blue; 1 green, 3 red, 6 blue; 4 red, 1 green, 4 blue; 9 blue, 1 green; 10 blue, 1 green" game: 52
+        subset 0: {1,0,4}
+        subset 1: {0,1,11}
+        subset 2: {3,1,6}
+        subset 3: {4,1,4}
+        subset 4: {0,1,9}
+        subset 5: {0,1,10}
+        minimum set {4,1,11} => score: 44
+[0052] input: "Game 53: 2 blue, 4 green, 1 red; 8 blue, 4 red, 7 green; 9 red, 7 blue, 6 green; 3 red, 7 green, 1 blue; 2 red, 9 blue, 5 green; 1 green, 7 red, 10 blue" game: 53
+        subset 0: {1,4,2}
+        subset 1: {4,7,8}
+        subset 2: {9,6,7}
+        subset 3: {3,7,1}
+        subset 4: {2,5,9}
+        subset 5: {7,1,10}
+        minimum set {9,7,10} => score: 630
+[0053] input: "Game 54: 1 red, 1 blue, 5 green; 2 red, 1 green, 2 blue; 3 green, 3 blue, 2 red; 4 red; 12 red, 5 green, 2 blue" game: 54
+        subset 0: {1,5,1}
+        subset 1: {2,1,2}
+        subset 2: {2,3,3}
+        subset 3: {4,0,0}
+        subset 4: {12,5,2}
+        minimum set {12,5,3} => score: 180
+[0054] input: "Game 55: 2 red, 11 blue; 16 green, 7 red, 16 blue; 4 blue, 11 green, 7 red; 8 green, 18 blue, 8 red" game: 55
+        subset 0: {2,0,11}
+        subset 1: {7,16,16}
+        subset 2: {7,11,4}
+        subset 3: {8,8,18}
+        minimum set {8,16,18} => score: 2304
+[0055] input: "Game 56: 2 blue, 2 green, 1 red; 1 red, 1 green; 1 red; 4 green; 1 blue; 1 blue, 7 green" game: 56
+        subset 0: {1,2,2}
+        subset 1: {1,1,0}
+        subset 2: {1,0,0}
+        subset 3: {0,4,0}
+        subset 4: {0,0,1}
+        subset 5: {0,7,1}
+        minimum set {1,7,2} => score: 14
+[0056] input: "Game 57: 4 blue, 3 green; 16 green, 2 red, 5 blue; 1 red, 13 green, 2 blue; 3 blue, 12 green, 2 red; 2 red, 5 blue, 4 green; 10 green, 2 blue" game: 57
+        subset 0: {0,3,4}
+        subset 1: {2,16,5}
+        subset 2: {1,13,2}
+        subset 3: {2,12,3}
+        subset 4: {2,4,5}
+        subset 5: {0,10,2}
+        minimum set {2,16,5} => score: 160
+[0057] input: "Game 58: 3 blue, 8 green; 4 green, 3 blue; 7 green, 5 blue, 5 red; 8 green; 3 red, 6 blue, 9 green; 2 red, 10 green, 4 blue" game: 58
+        subset 0: {0,8,3}
+        subset 1: {0,4,3}
+        subset 2: {5,7,5}
+        subset 3: {0,8,0}
+        subset 4: {3,9,6}
+        subset 5: {2,10,4}
+        minimum set {5,10,6} => score: 300
+[0058] input: "Game 59: 7 blue, 6 green, 5 red; 7 red, 2 blue; 5 red, 11 green, 14 blue; 8 green, 17 red" game: 59
+        subset 0: {5,6,7}
+        subset 1: {7,0,2}
+        subset 2: {5,11,14}
+        subset 3: {17,8,0}
+        minimum set {17,11,14} => score: 2618
+[0059] input: "Game 60: 3 green, 8 blue, 2 red; 4 green, 7 blue, 6 red; 13 blue, 8 green, 2 red; 10 red, 6 blue, 5 green; 11 green, 3 blue, 4 red; 9 red, 5 green, 9 blue" game: 60
+        subset 0: {2,3,8}
+        subset 1: {6,4,7}
+        subset 2: {2,8,13}
+        subset 3: {10,5,6}
+        subset 4: {4,11,3}
+        subset 5: {9,5,9}
+        minimum set {10,11,13} => score: 1430
+[0060] input: "Game 61: 4 red, 18 blue, 13 green; 9 green, 5 red, 3 blue; 4 green, 3 blue, 4 red; 8 red, 4 green, 7 blue; 8 red, 4 blue, 6 green; 10 green, 5 red, 14 blue" game: 61
+        subset 0: {4,13,18}
+        subset 1: {5,9,3}
+        subset 2: {4,4,3}
+        subset 3: {8,4,7}
+        subset 4: {8,6,4}
+        subset 5: {5,10,14}
+        minimum set {8,13,18} => score: 1872
+[0061] input: "Game 62: 12 red, 14 blue, 9 green; 9 blue, 6 red, 4 green; 2 red, 5 blue; 1 red, 12 blue" game: 62
+        subset 0: {12,9,14}
+        subset 1: {6,4,9}
+        subset 2: {2,0,5}
+        subset 3: {1,0,12}
+        minimum set {12,9,14} => score: 1512
+[0062] input: "Game 63: 11 blue, 13 red, 11 green; 4 blue, 9 green; 8 blue, 9 red; 7 red, 11 green, 7 blue" game: 63
+        subset 0: {13,11,11}
+        subset 1: {0,9,4}
+        subset 2: {9,0,8}
+        subset 3: {7,11,7}
+        minimum set {13,11,11} => score: 1573
+[0063] input: "Game 64: 10 blue, 8 red, 12 green; 10 red, 12 blue, 9 green; 3 green, 17 red; 12 green, 15 blue, 16 red; 6 green, 15 blue, 1 red; 9 red, 6 blue, 10 green" game: 64
+        subset 0: {8,12,10}
+        subset 1: {10,9,12}
+        subset 2: {17,3,0}
+        subset 3: {16,12,15}
+        subset 4: {1,6,15}
+        subset 5: {9,10,6}
+        minimum set {17,12,15} => score: 3060
+[0064] input: "Game 65: 7 red, 7 blue; 3 blue, 1 red, 1 green; 3 red, 8 blue" game: 65
+        subset 0: {7,0,7}
+        subset 1: {1,1,3}
+        subset 2: {3,0,8}
+        minimum set {7,1,8} => score: 56
+[0065] input: "Game 66: 1 blue, 3 red; 10 green, 5 blue; 4 green; 3 red, 11 green; 3 blue, 15 green, 3 red" game: 66
+        subset 0: {3,0,1}
+        subset 1: {0,10,5}
+        subset 2: {0,4,0}
+        subset 3: {3,11,0}
+        subset 4: {3,15,3}
+        minimum set {3,15,5} => score: 225
+[0066] input: "Game 67: 1 red; 2 blue, 2 green, 1 red; 6 green, 1 blue" game: 67
+        subset 0: {1,0,0}
+        subset 1: {1,2,2}
+        subset 2: {0,6,1}
+        minimum set {1,6,2} => score: 12
+[0067] input: "Game 68: 7 red, 4 blue; 4 blue, 6 red, 7 green; 2 green, 19 red, 11 blue; 11 green, 9 red" game: 68
+        subset 0: {7,0,4}
+        subset 1: {6,7,4}
+        subset 2: {19,2,11}
+        subset 3: {9,11,0}
+        minimum set {19,11,11} => score: 2299
+[0068] input: "Game 69: 4 blue, 3 green, 1 red; 7 blue, 1 red, 3 green; 5 blue, 1 green; 2 blue, 10 green, 2 red; 2 red, 6 green, 5 blue; 1 red, 4 green, 2 blue" game: 69
+        subset 0: {1,3,4}
+        subset 1: {1,3,7}
+        subset 2: {0,1,5}
+        subset 3: {2,10,2}
+        subset 4: {2,6,5}
+        subset 5: {1,4,2}
+        minimum set {2,10,7} => score: 140
+[0069] input: "Game 70: 9 blue, 7 red, 6 green; 19 blue, 4 red, 5 green; 6 blue, 7 red, 4 green; 3 blue, 4 red, 2 green" game: 70
+        subset 0: {7,6,9}
+        subset 1: {4,5,19}
+        subset 2: {7,4,6}
+        subset 3: {4,2,3}
+        minimum set {7,6,19} => score: 798
+[0070] input: "Game 71: 6 green, 12 blue, 4 red; 11 red, 10 green, 11 blue; 3 red, 14 blue, 13 green; 4 blue, 3 green" game: 71
+        subset 0: {4,6,12}
+        subset 1: {11,10,11}
+        subset 2: {3,13,14}
+        subset 3: {0,3,4}
+        minimum set {11,13,14} => score: 2002
+[0071] input: "Game 72: 2 green, 1 blue, 9 red; 10 red, 3 green, 1 blue; 11 red, 2 green; 2 green, 1 blue, 5 red; 1 red, 1 blue, 3 green; 13 red, 4 blue, 1 green" game: 72
+        subset 0: {9,2,1}
+        subset 1: {10,3,1}
+        subset 2: {11,2,0}
+        subset 3: {5,2,1}
+        subset 4: {1,3,1}
+        subset 5: {13,1,4}
+        minimum set {13,3,4} => score: 156
+[0072] input: "Game 73: 11 green, 6 blue; 7 green, 6 blue, 7 red; 12 green, 8 blue, 11 red; 4 red, 2 blue, 9 green; 4 green, 7 blue, 2 red" game: 73
+        subset 0: {0,11,6}
+        subset 1: {7,7,6}
+        subset 2: {11,12,8}
+        subset 3: {4,9,2}
+        subset 4: {2,4,7}
+        minimum set {11,12,8} => score: 1056
+[0073] input: "Game 74: 3 blue, 7 red; 3 blue, 5 green, 2 red; 5 red, 1 green, 3 blue; 8 green, 2 blue, 11 red; 3 blue, 8 green, 10 red" game: 74
+        subset 0: {7,0,3}
+        subset 1: {2,5,3}
+        subset 2: {5,1,3}
+        subset 3: {11,8,2}
+        subset 4: {10,8,3}
+        minimum set {11,8,3} => score: 264
+[0074] input: "Game 75: 2 green; 5 blue; 1 blue, 1 red; 1 red, 9 blue, 2 green; 2 blue, 2 green" game: 75
+        subset 0: {0,2,0}
+        subset 1: {0,0,5}
+        subset 2: {1,0,1}
+        subset 3: {1,2,9}
+        subset 4: {0,2,2}
+        minimum set {1,2,9} => score: 18
+[0075] input: "Game 76: 12 blue, 13 green; 5 red, 11 blue, 9 green; 12 green, 6 red" game: 76
+        subset 0: {0,13,12}
+        subset 1: {5,9,11}
+        subset 2: {6,12,0}
+        minimum set {6,13,12} => score: 936
+[0076] input: "Game 77: 1 blue, 15 green, 12 red; 15 green, 5 blue; 14 green, 3 blue, 8 red" game: 77
+        subset 0: {12,15,1}
+        subset 1: {0,15,5}
+        subset 2: {8,14,3}
+        minimum set {12,15,5} => score: 900
+[0077] input: "Game 78: 11 green, 8 blue, 1 red; 9 green, 8 blue, 1 red; 13 green, 5 red, 6 blue; 5 red, 7 green, 20 blue; 10 blue, 5 red" game: 78
+        subset 0: {1,11,8}
+        subset 1: {1,9,8}
+        subset 2: {5,13,6}
+        subset 3: {5,7,20}
+        subset 4: {5,0,10}
+        minimum set {5,13,20} => score: 1300
+[0078] input: "Game 79: 3 blue; 6 blue, 5 red; 4 red, 1 green, 4 blue; 7 blue, 6 red; 7 red, 1 blue; 1 red, 1 blue, 1 green" game: 79
+        subset 0: {0,0,3}
+        subset 1: {5,0,6}
+        subset 2: {4,1,4}
+        subset 3: {6,0,7}
+        subset 4: {7,0,1}
+        subset 5: {1,1,1}
+        minimum set {7,1,7} => score: 49
+[0079] input: "Game 80: 11 green, 3 red, 8 blue; 2 red, 15 green, 2 blue; 5 green, 8 blue, 2 red; 8 blue, 14 green; 2 blue, 13 green" game: 80
+        subset 0: {3,11,8}
+        subset 1: {2,15,2}
+        subset 2: {2,5,8}
+        subset 3: {0,14,8}
+        subset 4: {0,13,2}
+        minimum set {3,15,8} => score: 360
+[0080] input: "Game 81: 9 red, 4 green; 7 green, 4 red; 2 red, 4 blue, 6 green; 6 red, 4 blue, 9 green; 1 green, 3 red; 6 green, 1 blue, 8 red" game: 81
+        subset 0: {9,4,0}
+        subset 1: {4,7,0}
+        subset 2: {2,6,4}
+        subset 3: {6,9,4}
+        subset 4: {3,1,0}
+        subset 5: {8,6,1}
+        minimum set {9,9,4} => score: 324
+[0081] input: "Game 82: 5 blue, 3 red, 3 green; 5 red; 2 red, 3 green, 8 blue" game: 82
+        subset 0: {3,3,5}
+        subset 1: {5,0,0}
+        subset 2: {2,3,8}
+        minimum set {5,3,8} => score: 120
+[0082] input: "Game 83: 10 green, 1 red, 1 blue; 3 red, 1 green, 1 blue; 4 red, 10 green" game: 83
+        subset 0: {1,10,1}
+        subset 1: {3,1,1}
+        subset 2: {4,10,0}
+        minimum set {4,10,1} => score: 40
+[0083] input: "Game 84: 16 red, 2 green, 6 blue; 6 red, 3 green, 8 blue; 3 green, 10 red, 5 blue; 4 blue, 3 green; 15 red" game: 84
+        subset 0: {16,2,6}
+        subset 1: {6,3,8}
+        subset 2: {10,3,5}
+        subset 3: {0,3,4}
+        subset 4: {15,0,0}
+        minimum set {16,3,8} => score: 384
+[0084] input: "Game 85: 3 green, 2 red; 5 green, 4 blue; 5 green, 8 red, 3 blue" game: 85
+        subset 0: {2,3,0}
+        subset 1: {0,5,4}
+        subset 2: {8,5,3}
+        minimum set {8,5,4} => score: 160
+[0085] input: "Game 86: 7 green, 16 blue, 7 red; 1 green, 12 red, 2 blue; 15 green, 16 blue, 7 red" game: 86
+        subset 0: {7,7,16}
+        subset 1: {12,1,2}
+        subset 2: {7,15,16}
+        minimum set {12,15,16} => score: 2880
+[0086] input: "Game 87: 1 red, 6 green, 5 blue; 2 green, 1 blue; 2 green, 1 red, 1 blue; 5 green, 4 blue" game: 87
+        subset 0: {1,6,5}
+        subset 1: {0,2,1}
+        subset 2: {1,2,1}
+        subset 3: {0,5,4}
+        minimum set {1,6,5} => score: 30
+[0087] input: "Game 88: 3 green, 3 red, 4 blue; 1 red, 1 green; 6 blue, 9 red, 1 green; 1 green, 11 red, 3 blue; 7 red, 6 blue" game: 88
+        subset 0: {3,3,4}
+        subset 1: {1,1,0}
+        subset 2: {9,1,6}
+        subset 3: {11,1,3}
+        subset 4: {7,0,6}
+        minimum set {11,3,6} => score: 198
+[0088] input: "Game 89: 2 blue, 3 red, 4 green; 5 red, 7 blue, 14 green; 8 blue, 5 red, 16 green; 2 blue, 5 red, 7 green; 5 green, 9 blue, 1 red" game: 89
+        subset 0: {3,4,2}
+        subset 1: {5,14,7}
+        subset 2: {5,16,8}
+        subset 3: {5,7,2}
+        subset 4: {1,5,9}
+        minimum set {5,16,9} => score: 720
+[0089] input: "Game 90: 1 blue, 3 red, 7 green; 11 green, 4 red, 1 blue; 1 red, 1 blue, 6 green; 2 blue, 2 green; 8 green, 2 blue; 3 red, 2 blue, 4 green" game: 90
+        subset 0: {3,7,1}
+        subset 1: {4,11,1}
+        subset 2: {1,6,1}
+        subset 3: {0,2,2}
+        subset 4: {0,8,2}
+        subset 5: {3,4,2}
+        minimum set {4,11,2} => score: 88
+[0090] input: "Game 91: 6 blue, 4 red, 1 green; 8 red, 3 blue, 3 green; 1 green, 2 blue, 5 red; 1 blue, 3 green" game: 91
+        subset 0: {4,1,6}
+        subset 1: {8,3,3}
+        subset 2: {5,1,2}
+        subset 3: {0,3,1}
+        minimum set {8,3,6} => score: 144
+[0091] input: "Game 92: 8 green, 1 red, 5 blue; 2 green, 7 blue; 11 blue, 5 green, 8 red; 7 blue, 3 red, 4 green" game: 92
+        subset 0: {1,8,5}
+        subset 1: {0,2,7}
+        subset 2: {8,5,11}
+        subset 3: {3,4,7}
+        minimum set {8,8,11} => score: 704
+[0092] input: "Game 93: 3 green, 1 red, 9 blue; 13 red, 5 blue, 8 green; 5 green, 2 red, 7 blue" game: 93
+        subset 0: {1,3,9}
+        subset 1: {13,8,5}
+        subset 2: {2,5,7}
+        minimum set {13,8,9} => score: 936
+[0093] input: "Game 94: 4 green, 10 blue, 8 red; 4 red, 10 blue, 2 green; 2 green, 10 blue, 5 red; 5 green, 2 red, 10 blue" game: 94
+        subset 0: {8,4,10}
+        subset 1: {4,2,10}
+        subset 2: {5,2,10}
+        subset 3: {2,5,10}
+        minimum set {8,5,10} => score: 400
+[0094] input: "Game 95: 5 green, 1 blue; 3 blue, 11 green, 8 red; 8 blue, 2 red, 12 green; 4 green, 4 blue, 4 red" game: 95
+        subset 0: {0,5,1}
+        subset 1: {8,11,3}
+        subset 2: {2,12,8}
+        subset 3: {4,4,4}
+        minimum set {8,12,8} => score: 768
+[0095] input: "Game 96: 1 blue, 13 green; 8 blue, 3 red, 4 green; 1 red, 3 blue, 10 green" game: 96
+        subset 0: {0,13,1}
+        subset 1: {3,4,8}
+        subset 2: {1,10,3}
+        minimum set {3,13,8} => score: 312
+[0096] input: "Game 97: 18 green, 4 red; 1 blue, 2 red, 9 green; 6 red, 3 blue, 10 green; 3 blue, 15 green, 4 red" game: 97
+        subset 0: {4,18,0}
+        subset 1: {2,9,1}
+        subset 2: {6,10,3}
+        subset 3: {4,15,3}
+        minimum set {6,18,3} => score: 324
+[0097] input: "Game 98: 2 blue, 3 green, 6 red; 1 green, 1 blue, 8 red; 8 red, 3 green, 1 blue; 2 blue; 8 red, 2 green, 2 blue" game: 98
+        subset 0: {6,3,2}
+        subset 1: {8,1,1}
+        subset 2: {8,3,1}
+        subset 3: {0,0,2}
+        subset 4: {8,2,2}
+        minimum set {8,3,2} => score: 48
+[0098] input: "Game 99: 1 green, 2 red, 1 blue; 8 green, 4 blue, 1 red; 7 blue, 1 red, 11 green; 9 green, 3 blue; 1 red, 2 blue; 1 red, 6 blue" game: 99
+        subset 0: {2,1,1}
+        subset 1: {1,8,4}
+        subset 2: {1,11,7}
+        subset 3: {0,9,3}
+        subset 4: {1,0,2}
+        subset 5: {1,0,6}
+        minimum set {2,11,7} => score: 154
+[0099] input: "Game 100: 7 blue, 9 green, 2 red; 5 red, 9 green; 1 blue, 8 red, 13 green" game: 100
+        subset 0: {2,9,7}
+        subset 1: {5,9,0}
+        subset 2: {8,13,1}
+        minimum set {8,13,7} => score: 728
+result 2: 65371
+Elapsed time: 0.038000 seconds

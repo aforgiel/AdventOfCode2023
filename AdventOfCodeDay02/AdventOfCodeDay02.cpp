@@ -1,4 +1,4 @@
-// AdventOfCodeDay15.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// AdventOfCodeDay02.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -7,27 +7,38 @@
 #include <vector>
 #include <algorithm>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
 
 #if( TEST_MODE == true)
-const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/sample2.txt";
+const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/sample.txt";
 #else
 const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay02/input.txt";
 #endif
 
-const char* digits[] =
+bool MatchPattern(char* buffer, const char* pattern)
 {
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine"
-};
+    char* ptrPattern;
+    bool result;
+
+    ptrPattern = const_cast<char*>(pattern);
+    result = false;
+
+    while ((*buffer) != '\0' && *ptrPattern != '\0')
+    {
+        result = (*ptrPattern == *buffer);
+        if (result == false)
+            return false;
+
+        ptrPattern++;
+        buffer++;
+    }
+
+    if (*ptrPattern == '\0')
+        return true;
+
+    return false;
+}
 
 bool FindPattern(char** buffer, const char* pattern)
 {
@@ -37,39 +48,20 @@ bool FindPattern(char** buffer, const char* pattern)
     ptrPattern = const_cast<char*>(pattern);
     result = false;
 
-    while ((**buffer) != '\0' && *ptrPattern != '\0')
+    while (**buffer != '\0' && *ptrPattern != '\0')
     {
         result = (*ptrPattern == **buffer);
-        if (result == false)
-            return false;
-
-        ptrPattern++;
+        if (result == true)
+            ptrPattern++;
+        else
+        {
+            *buffer -= ptrPattern - pattern;
+            ptrPattern = const_cast<char*>(pattern);
+        }
         (*buffer)++;
     }
 
-    if (*ptrPattern == '\0')
-        return true;
-
-    return false;
-}
-
-int FindTextDigit(char** buffer)
-{
-    char* tmp;
-    int index;
-
-    index = 0;
-    for( index = 0; index < 9; index++ )
-    {
-        tmp = *buffer;
-        if (FindPattern(&tmp, digits[index]))
-        {
-            *buffer = tmp;
-            return index + 1;
-        }
-    }
-
-    return 0;
+    return result;
 }
 
 int ReadLine(FILE* file, char* buffer)
@@ -95,112 +87,171 @@ int ReadLine(FILE* file, char* buffer)
     return result;
 }
 
-const char* kXXXPattern = "dfdf=";
+const char* header = "Game ";
+const char* startGame = ": ";
+const char* nextColor = ", ";
+const char* nextSubset = "; ";
+const char* space = " ";
 
-inline bool IsDigit( char c )
-{
-    return (c >= '0' && c <= '9');
-}
+#define R 0
+#define G 1
+#define B 2
 
-bool ReadData1(FILE* file, int64_t * result )
+const char* colors[] = {
+    "red",
+    "green",
+    "blue"
+};
+
+const int maxs[] = { 12, 13, 14 };
+
+bool ReadData1(FILE* file, int64_t* result)
 {
     char buffer[256];
-    char * tmp;
-    int firstDigit;
-    int aDigit;
-    int calibration;
+    char* tmp;
+    char* ncolor;
+    char* nsubset;
     int index;
-    int digit;
-    int textDigit;
+    int subset;
+
+    int color[3];
+    int i;
+
+    int game;
+    int cube;
+    bool possible;
 
     index = 0;
     while (ReadLine(file, buffer) > 0)
     {
-        firstDigit = 0;
-        aDigit = 0;
-        textDigit = 0;
         tmp = buffer;
-        printf("[%004d] buffer: %s,", index, buffer);
-        while( * tmp != '\0' )
+        printf("[%004d] input: \"%s\"", index,buffer);
+
+        FindPattern(&tmp, header);
+        sscanf_s(tmp, "%d", &game);
+        printf(" game: %d\n", game);
+        FindPattern(&tmp, startGame );
+        possible = true;
+        subset = 0;
+        while (*tmp != '\0')
         {
-            if (IsDigit(*tmp))
+            color[R] = color[G] = color[B] = 0;
+
+            // Read subset:
+            while (*tmp != '\0')
             {
-                digit = *tmp - '0';
-                printf(" => d: %d", digit);
-                if (firstDigit == 0)
-                    firstDigit = digit;
-                aDigit = digit;
+                sscanf_s(tmp, "%d", &cube);
+                FindPattern(&tmp, space);
+                for (i = 0; i < 3; i++)
+                    if (MatchPattern(tmp, colors[i]))
+                        color[i] = cube;
+                ncolor = tmp;
+                nsubset = tmp;
+                FindPattern(&ncolor, nextColor);
+                FindPattern(&nsubset, nextSubset);
+                if (ncolor >= nsubset)
+                {
+                    tmp = nsubset;
+                    break;
+                }
+                tmp = ncolor;
             }
-            tmp++;
-        }
 
-        calibration = firstDigit * 10 + aDigit;
+            printf("\tsubset %d: {%d,%d,%d}", subset, color[R], color[G], color[B]);
 
-        printf( " calibration: %d\n", calibration );
-        *result += calibration;
-        index++;
-    }
-
-    return true;
-}
-
-bool ReadData2(FILE* file, int64_t * result )
-{
-    char buffer[256];
-    char * tmp;
-    int firstDigit;
-    int aDigit;
-    int calibration;
-    int index;
-    int digit;
-    int textDigit;
-    char* textTmp;
-
-    index = 0;
-    while (ReadLine(file, buffer) > 0)
-    {
-        firstDigit = 0;
-        aDigit = 0;
-        textDigit = 0;
-        tmp = buffer;
-        printf("[%004d] buffer: %s,", index, buffer);
-        while( * tmp != '\0' )
-        {
-            if (IsDigit(*tmp))
+            if (color[R] > maxs[R] ||
+                color[G] > maxs[G] ||
+                color[B] > maxs[B])
             {
-                digit = *tmp - '0';
-                printf(" => d: %d", digit);
-                if (firstDigit == 0)
-                    firstDigit = digit;
-                aDigit = digit;
+                printf(" => impossible\n");
+                possible = false;
             }
             else
-            {
-                textTmp = tmp;
-                textDigit = FindTextDigit(&textTmp);
-                if (textDigit > 0)
-                {
-                    printf(" => t: %d", textDigit);
-                    if (firstDigit == 0)
-                        firstDigit = textDigit;
-                    aDigit = textDigit;
-                }
-            }
-            tmp++;
+                printf("\n");
+            subset++;
         }
 
-        calibration = firstDigit * 10 + aDigit;
+        if (possible)
+        {
+            printf("\t=> possible\n");
+            *result += game;
+        }
 
-        printf( " calibration: %d\n", calibration );
-        *result += calibration;
         index++;
     }
 
     return true;
 }
 
-void PrintData( void )
+bool ReadData2(FILE* file, int64_t* result)
 {
+    char buffer[256];
+    char* tmp;
+    char* ncolor;
+    char* nsubset;
+    int index;
+    int subset;
+
+    int maxColor[3];
+    int color[3];
+    int i;
+
+    int game;
+    int cube;
+    int score;
+
+    index = 0;
+    while (ReadLine(file, buffer) > 0)
+    {
+        tmp = buffer;
+        printf("[%004d] input: \"%s\"", index,buffer);
+
+        FindPattern(&tmp, header);
+        sscanf_s(tmp, "%d", &game);
+        printf(" game: %d\n", game);
+        FindPattern(&tmp, startGame );
+        maxColor[R] = maxColor[G] = maxColor[B] = 1;
+        subset = 0;
+        while (*tmp != '\0')
+        {
+            color[R] = color[G] = color[B] = 0;
+
+            // Read subset:
+            while (*tmp != '\0')
+            {
+                sscanf_s(tmp, "%d", &cube);
+                FindPattern(&tmp, space);
+                for (i = 0; i < 3; i++)
+                    if (MatchPattern(tmp, colors[i]))
+                        color[i] = cube;
+                ncolor = tmp;
+                nsubset = tmp;
+                FindPattern(&ncolor, nextColor);
+                FindPattern(&nsubset, nextSubset);
+                if (ncolor >= nsubset)
+                {
+                    tmp = nsubset;
+                    break;
+                }
+                tmp = ncolor;
+            }
+
+            printf("\tsubset %d: {%d,%d,%d}\n", subset, color[R], color[G], color[B]);
+
+            for (i = 0; i < 3; i++)
+                if (color[i] > maxColor[i])
+                    maxColor[i] = color[i];
+            subset++;
+        }
+
+        score = maxColor[R] * maxColor[G] * maxColor[B];
+        printf("\tminimum set {%d,%d,%d} => score: %d\n", maxColor[R], maxColor[G], maxColor[B],score);
+        *result += score;
+
+        index++;
+    }
+
+    return true;
 }
 
 int main()
