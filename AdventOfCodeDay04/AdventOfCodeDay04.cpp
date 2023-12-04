@@ -6,6 +6,7 @@
 #include <list>
 #include <vector>
 #include <map>
+#include <deque>
 #include <algorithm>
 
 #define TEST_MODE false
@@ -106,18 +107,20 @@ struct Collection {
     std::vector<CardPtr> cards;
     void Read(FILE* file);
     void Print(void);
-    int64_t Score(void);
+    int64_t Score1(void);
+    int64_t Score2(void);
 };
 
 struct Card {
     int id;
-    std::map<int,NumberTypePtr> numbers;
+    std::map<int, NumberTypePtr> numbers;
 
-    void Read(char *buffer);
+    void Read(char* buffer);
     void Print(void);
     NumberTypePtr AddNumber(int number);
     void AddWinningNumber(int number);
     void AddDrawNumber(int number);
+    int CountMatches(void);
     int64_t Score(void);
 };
 
@@ -154,11 +157,10 @@ Collection::Print(void)
         printf("[%03d] ", ++index);
         card->Print();
     }
-    printf("\nScore: %zd\n", Score());
 }
 
 int64_t
-Collection::Score(void)
+Collection::Score1(void)
 {
     int64_t result;
     result = 0;
@@ -167,8 +169,45 @@ Collection::Score(void)
     return result;
 }
 
+int64_t
+Collection::Score2(void)
+{
+    int64_t result;
+    std::deque<CardPtr> stack;
+    std::map<int, int> resultTree;
+    std::map<int, int>::iterator search;
+    CardPtr card;
+    int i;
 
-const char * header = "Card ";
+    result = 0;
+    for ( CardPtr tmp : cards)
+        stack.push_back(tmp);
+
+    while (!stack.empty())
+    {
+        card = stack.front();
+        stack.pop_front();
+        // insert the card in the result tree:
+        search = resultTree.find(card->id);
+        if (search == resultTree.end())
+            resultTree[card->id] = 1;
+        else
+            resultTree[card->id] = resultTree[card->id]+1;
+
+        for (i = 0; i < card->CountMatches(); i++)
+            stack.push_front(cards[card->id + i]);
+    }
+
+    for (const auto& n : resultTree)
+    {
+        printf("Card %d : %d\n", n.first, n.second);
+        result += n.second;
+    }
+
+    return result;
+}
+
+const char* header = "Card ";
 const char* separator = ":";
 const char* space = " ";
 
@@ -242,10 +281,21 @@ Card::Score(void)
 {
     int64_t result;
     result = 0;
-    for( const auto&n:numbers)
-        if(n.second->mask == MatchMask)
-            result = result == 0 ? 1: result * 2;
+    for (const auto& n : numbers)
+        if (n.second->mask == MatchMask)
+            result = result == 0 ? 1 : result * 2;
 
+    return result;
+}
+
+int
+Card::CountMatches(void)
+{
+    int result;
+    result = 0;
+    for (const auto& n : numbers)
+        if (n.second->mask == MatchMask)
+            result++;
     return result;
 }
 
@@ -270,7 +320,7 @@ int main()
 
     collection.Read(input);
     collection.Print();
-    result = collection.Score();
+    result = collection.Score1();
 
     printf("result 1: %I64d\n", result);
 
@@ -282,6 +332,8 @@ int main()
 
     result = 0;
     clockStart = clock();
+
+    result = collection.Score2();
 
     printf("result 2: %I64d\n", result);
 
