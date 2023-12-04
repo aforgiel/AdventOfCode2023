@@ -5,9 +5,10 @@
 #include <string>
 #include <list>
 #include <vector>
+#include <map>
 #include <algorithm>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
 
 #if( TEST_MODE == true)
@@ -97,6 +98,157 @@ inline bool IsSymbol(char c)
     return !IsDigit(c) && c != '.';
 }
 
+typedef struct Collection* CollectionPtr;
+typedef struct Card* CardPtr;
+typedef struct NumberType* NumberTypePtr;
+
+struct Collection {
+    std::vector<CardPtr> cards;
+    void Read(FILE* file);
+    void Print(void);
+    int64_t Score(void);
+};
+
+struct Card {
+    int id;
+    std::map<int,NumberTypePtr> numbers;
+
+    void Read(char *buffer);
+    void Print(void);
+    NumberTypePtr AddNumber(int number);
+    void AddWinningNumber(int number);
+    void AddDrawNumber(int number);
+    int64_t Score(void);
+};
+
+#define WinningMask 2
+#define DrawMask 1
+#define MatchMask 3
+
+struct NumberType {
+    int mask;
+};
+
+void
+Collection::Read(FILE* file)
+{
+    CardPtr card;
+
+    char buffer[256];
+    while (ReadLine(file, buffer))
+    {
+        card = new Card();
+        card->Read(buffer);
+        cards.push_back(card);
+    }
+}
+
+void
+Collection::Print(void)
+{
+    int index;
+    index = 0;
+    printf("Cards: %zd\n", cards.size());
+    for (CardPtr card : cards)
+    {
+        printf("[%03d] ", ++index);
+        card->Print();
+    }
+    printf("\nScore: %zd\n", Score());
+}
+
+int64_t
+Collection::Score(void)
+{
+    int64_t result;
+    result = 0;
+    for (CardPtr card : cards)
+        result += card->Score();
+    return result;
+}
+
+
+const char * header = "Card ";
+const char* separator = ":";
+const char* space = " ";
+
+void
+Card::Read(char* buffer)
+{
+    char* tmp;
+    tmp = buffer;
+    int number;
+    FindPattern(&tmp, header);
+    sscanf_s(tmp, "%d", &id);
+    FindPattern(&tmp, separator);
+    while (FindPattern(&tmp, space))
+    {
+        if (*tmp == '|')
+            break;
+        sscanf_s(tmp, "%d", &number);
+        AddWinningNumber(number);
+    }
+    while (FindPattern(&tmp, space))
+    {
+        sscanf_s(tmp, "%d", &number);
+        AddDrawNumber(number);
+    }
+}
+
+void
+Card::Print(void)
+{
+    printf("id: %d, score: %zd, numbers:", id, Score());
+    for (const auto& n : numbers)
+        printf(" %d (%d)", n.first, n.second->mask);
+    printf("\n");
+}
+
+NumberTypePtr
+Card::AddNumber(int number)
+{
+    auto search = numbers.find(number);
+    if (search == numbers.end())
+    {
+        NumberTypePtr result;
+
+        result = new NumberType();
+        result->mask = 0;
+        numbers[number] = result;
+        return result;
+    }
+
+    return search->second;
+}
+
+void
+Card::AddWinningNumber(int number)
+{
+    NumberTypePtr value;
+    value = AddNumber(number);
+    value->mask = value->mask | WinningMask;
+}
+
+void
+Card::AddDrawNumber(int number)
+{
+    NumberTypePtr value;
+    value = AddNumber(number);
+    value->mask = value->mask | DrawMask;
+}
+
+int64_t
+Card::Score(void)
+{
+    int64_t result;
+    result = 0;
+    for( const auto&n:numbers)
+        if(n.second->mask == MatchMask)
+            result = result == 0 ? 1: result * 2;
+
+    return result;
+}
+
 int main()
 {
     FILE* input;
@@ -104,6 +256,7 @@ int main()
     clock_t clockStart, clockEnd;
     double time_taken;
     int64_t result;
+    Collection collection;
 
     printf("Advent of Code - Day 04\n");
 
@@ -114,6 +267,11 @@ int main()
 
     result = 0;
     clockStart = clock();
+
+    collection.Read(input);
+    collection.Print();
+    result = collection.Score();
+
     printf("result 1: %I64d\n", result);
 
     clockEnd = clock();
