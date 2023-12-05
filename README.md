@@ -7,3 +7,4 @@ Summary:
 * Day 2: Part 1 was a mix of MatchPattern() and FindPattern() calls to read the various subsets. Printing comments helps a lot and I've now decided to systematically start with writing down what's going on ;)
 * Day 3: forced to breakdown the problem with Schematic, Part, Gear data structures to complete part 2. Traces helped a lot to identify pending issues...
 * Day 4: started directly with defining classes of problems' objects (collection and cards), leveraging std:: containers (map, deque,vector). Long part 2 processing : 23 seconds !
+* Day 5: wake-up > read instructions > think while shower & dress > code... thinking in range was tough but feasible
