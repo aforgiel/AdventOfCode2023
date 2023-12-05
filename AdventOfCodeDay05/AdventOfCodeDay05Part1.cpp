@@ -108,13 +108,13 @@ struct LUTEntry {
 const char* pSpace = " ";
 const char* pSeeds = "seeds:";
 const char* pSteps[] = {
-    "seed-to-soil map:",
-    "soil-to-fertilizer map:",
-    "fertilizer-to-water map:",
-    "water-to-light map:",
-    "light-to-temperature map:",
-    "temperature-to-humidity map:",
-    "humidity-to-location map:"
+    "seed-to-soil",
+    "soil-to-fertilizer",
+    "fertilizer-to-water",
+    "water-to-light",
+    "light-to-temperature",
+    "temperature-to-humidity",
+    "humidity-to-location"
 };
 
 void
