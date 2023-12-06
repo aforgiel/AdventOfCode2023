@@ -92,7 +92,7 @@ struct Competition {
 
 	void Read(std::ifstream& input);
 	void Print(void);
-	int64_t FindSolution1(void);
+	int64_t FindSolution(void);
 };
 
 struct Race {
@@ -100,7 +100,6 @@ struct Race {
 	int distance;
 
 	void Print(void);
-	int Distance(int time);
 	bool ComputeSolutions(int& min, int& max);
 };
 
@@ -157,7 +156,7 @@ Competition::Print(void)
 }
 
 int64_t
-Competition::FindSolution1(void )
+Competition::FindSolution(void)
 {
 	int64_t result;
 	int min, max;
@@ -177,13 +176,6 @@ Race::Print(void)
 	ComputeSolutions(min, max);
 	printf("time: %d, distance: %d, [%d,%d] = %d\n", time, distance, min, max, max - min + 1);
 }
-
-int
-Race::Distance(int t)
-{
-	return t * (time - t);
-}
-
 
 bool
 Race::ComputeSolutions(int& min, int& max)
@@ -233,7 +225,7 @@ int main()
 
 	Competition.Read(input);
 	Competition.Print();
-	result = Competition.FindSolution1();
+	result = Competition.FindSolution();
 
 	printf("result: %I64d\n", result);
 

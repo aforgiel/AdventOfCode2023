@@ -100,7 +100,6 @@ struct Race {
 	int64_t distance;
 
 	void Print(void);
-	int64_t Distance(int64_t time);
 	bool ComputeSolutions(int64_t& min, int64_t& max);
 };
 
@@ -183,13 +182,6 @@ Race::Print(void)
 	ComputeSolutions(min, max);
 	printf("time: %zd, distance: %zd, [%zd,%zd] = %zd\n", time, distance, min, max, max - min + 1);
 }
-
-int64_t
-Race::Distance(int64_t t)
-{
-	return t * (time - t);
-}
-
 
 bool
 Race::ComputeSolutions(int64_t& min, int64_t& max)
