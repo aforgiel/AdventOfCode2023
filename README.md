@@ -8,3 +8,4 @@ Summary:
 * Day 3: forced to breakdown the problem with Schematic, Part, Gear data structures to complete part 2. Traces helped a lot to identify pending issues...
 * Day 4: started directly with defining classes of problems' objects (collection and cards), leveraging std:: containers (map, deque,vector). Long part 2 processing : 23 seconds !
 * Day 5: wake-up > read instructions > think while shower & dress > code... thinking in range was tough but feasible
+* Day 6: back to arithmetic (b^2-4ac). Not so hard but I took my time to think the problem through instead of jumping into a brut force solution
