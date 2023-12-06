@@ -1,0 +1,16 @@
+Advent of Code - Day 06
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay06/input.txt
+[01]    x1: 4.911286, x2: 50.088714
+time: 55, distance: 246, [5,50] = 46
+[02]    x1: 25.508067, x2: 56.491933
+time: 82, distance: 1441, [26,56] = 31
+[03]    x1: 28.535898, x2: 35.464102
+time: 64, distance: 1012, [29,35] = 7
+[04]    x1: 14.767567, x2: 75.232433
+time: 90, distance: 1111, [15,75] = 61
+        x1: 4.911286, x2: 50.088714
+        x1: 25.508067, x2: 56.491933
+        x1: 28.535898, x2: 35.464102
+        x1: 14.767567, x2: 75.232433
+result: 608902
+Elapsed time: 0.001000 seconds

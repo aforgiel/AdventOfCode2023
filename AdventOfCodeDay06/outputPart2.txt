@@ -1,0 +1,7 @@
+Advent of Code - Day 06
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay06/input.txt
+[01]    x1: 4826340.999920, x2: 51000149.000080
+time: 55826490, distance: 246144110121111, [4826341,51000149] = 46173809
+        x1: 4826340.999920, x2: 51000149.000080
+result: 46173809
+Elapsed time: 0.000000 seconds
