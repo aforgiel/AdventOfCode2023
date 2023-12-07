@@ -134,8 +134,6 @@ struct Hand {
 	void Print(void);
 	Type ComputeType(void);
 
-	bool operator ==(const Hand& hand) const;
-	bool operator !=(const Hand& hand) const;
 	bool operator <(const Hand& hand) const;
 	bool operator <=(const Hand& hand) const;
 	bool operator >(const Hand& hand) const;
@@ -217,9 +215,6 @@ Game::SortHands(void)
 {
 	std::sort(hands.begin(), hands.end(), [](Hand& a, Hand& b)
 		{
-#if COMMENT == true
-			printf("\tCompare(%s,%s)\n", a.cards, b.cards);
-#endif
 			return a > b;
 		});
 }
@@ -331,49 +326,12 @@ Hand::ComputeType(void)
 }
 
 bool
-Hand::operator ==(const Hand& hand) const
-{
-	if (type != hand.type)
-		return false;
-
-	int i;
-	i = 0;
-	while (i < kHandSize && cards[i] == hand.cards[i])
-		i++;
-
-	if (i != kHandSize)
-		return false;
-
-	return true;
-}
-
-bool
-Hand::operator !=(const Hand& hand) const
-{
-	return !(*this == hand);
-}
-
-bool
 Hand::operator <(const Hand& hand) const
 {
-#if COMMENT == true
-	printf("operator %s < %s:", cards, hand.cards);
-#endif
-
 	if (type < hand.type)
-	{
-#if COMMENT == true
-		printf(" %s < %s => true\n", kTypeName[(int)type], kTypeName[(int)hand.type]);
-#endif
 		return true;
-	}
 	else if (type > hand.type)
-	{
-#if COMMENT == true
-		printf(" %s > %s => false\n", kTypeName[(int)type], kTypeName[(int)hand.type]);
-#endif
 		return false;
-	}
 
 	// equal type case:
 	int i;
@@ -383,25 +341,12 @@ Hand::operator <(const Hand& hand) const
 	{
 		compare = CompareCards(cards[i], hand.cards[i]);
 		if (compare < 0)
-		{
-#if COMMENT == true
-			printf(" %c > %c => true\n", cards[i], hand.cards[i]);
-#endif
 			return true;
-		}
 		else if (compare > 0)
-		{
-#if COMMENT == true
-			printf(" %c > %c => false\n", cards[i], hand.cards[i]);
-#endif
 			return false;
-		}
 		i++;
 	}
 
-#if COMMENT == true
-	printf(" default comparison %d < %d => %s\n", id, hand.id, id < hand.id ? "true" : "false");
-#endif
 	return id < hand.id;
 }
 
