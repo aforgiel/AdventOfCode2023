@@ -9,3 +9,4 @@ Summary:
 * Day 4: started directly with defining classes of problems' objects (collection and cards), leveraging std:: containers (map, deque,vector). Long part 2 processing : 23 seconds !
 * Day 5: wake-up > read instructions > think while shower & dress > code... thinking in range was tough but feasible
 * Day 6: back to arithmetic (b^2-4ac). Not so hard but I took my time to think the problem through instead of jumping into a brut force solution
+* Day 7: same routine : wake-up > read instructions > think > code, starting with class definition to breakdown the problem. Writing an efficient comparison operator was tough due to the number of cases
