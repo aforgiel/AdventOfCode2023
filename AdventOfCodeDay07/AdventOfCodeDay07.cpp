@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <cmath>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
 
 #if( TEST_MODE == true)
@@ -84,41 +84,330 @@ inline bool IsSymbol(char c)
 	return !IsDigit(c) && c != '.';
 }
 
-typedef struct Problem* ProblemPtr;
+const char* pSpace = " ";
 
-struct Problem {
+typedef struct Game* GamePtr;
+typedef struct Hand* HandPtr;
+
+struct Game {
+	std::vector<Hand> hands;
+
 	void Read(std::ifstream& input);
 	void Print(void);
+	void SortHands(void);
 	int64_t FindSolution(void);
 };
 
-const char* pSpace = " ";
+#define kHandSize 5
+enum class Type : int {
+	Void = 0,
+
+	HighCard,
+	OnePair,
+	TwoPair,
+	ThreeOfAKind,
+	FullHouse,
+	FourOfAKind,
+	FiveOfAKind
+};
+
+const char* kTypeName[] = {
+	"Void",
+
+	"HighCard",
+	"OnePair",
+	"TwoPair",
+	"ThreeOfAKind",
+	"FullHouse",
+	"FourOfAKind",
+	"FiveOfAKind"
+
+};
+
+struct Hand {
+	int id;
+	char cards[kHandSize + 1];
+	int bid;
+	Type type;
+
+	void Read(std::string &line);
+	void Print(void);
+	Type ComputeType(void);
+
+	bool operator ==(const Hand& hand) const;
+	bool operator !=(const Hand& hand) const;
+	bool operator <(const Hand& hand) const;
+	bool operator <=(const Hand& hand) const;
+	bool operator >(const Hand& hand) const;
+	bool operator >=(const Hand& hand) const;
+};
 
 void
-Problem::Read(std::ifstream& input)
+Game::Read(std::ifstream& input)
 {
 	std::string line;
-	char* tmp;
+	Hand hand;
+	int index;
 
-	std::getline(input, line);
-	tmp = const_cast<char*>(line.c_str());
+	index = 0;
+	while( std::getline(input, line) )
+	{
+		hand.Read(line);
+		hand.id = ++index;
+		hand.type = hand.ComputeType();
+		hands.push_back(hand);
+	}
 }
 
 void
-Problem::Print(void)
+Game::Print(void)
 {
-	int index;
-	index = 0;
+	for (Hand hand : hands)
+		hand.Print();
+}
+
+void
+Game::SortHands(void)
+{
+	std::sort(hands.begin(), hands.end(), [](Hand& a, Hand& b)
+		{
+#if COMMENT == true
+			printf("\tCompare(%s,%s)\n", a.cards, b.cards);
+#endif
+			return a > b;
+		});
 }
 
 int64_t
-Problem::FindSolution(void)
+Game::FindSolution(void)
 {
 	int64_t result;
+	int rank;
 
-	result = 1;
+	result = 0;
+	rank = (int)hands.size();
+	for (Hand hand : hands)
+	{
+		result += hand.bid * rank;
+		rank--;
+	}
 
 	return result;
+}
+
+void
+Hand::Read(std::string& line)
+{
+	char* tmp;
+
+	tmp = const_cast<char*>(line.c_str());
+	for (int i = 0; i < kHandSize; i++)
+	{
+		cards[i] = *tmp;
+		tmp++;
+	}
+	cards[kHandSize] = '\0';
+	SkipSpace(&tmp);
+	sscanf_s(tmp, "%d", &bid);
+}
+
+void
+Hand::Print(void)
+{
+	printf("[%0d] \'%s\' bid: %d, type: %s\n", id, cards, bid, kTypeName[(int)type]);
+}
+
+Type
+Hand::ComputeType(void)
+{
+	std::map<char, int> tree;
+	std::map<char, int>::iterator search;
+
+	// Count the number of cards of each type:
+	for (int i = 0; i < kHandSize; i++)
+	{
+		search = tree.find(cards[i]);
+		if (search == tree.end())
+			tree[cards[i]] = 1;
+		else
+			tree[cards[i]] = tree[cards[i]] + 1;
+	}
+
+	int first, second;
+	first = second = 0;
+	for (const auto& n : tree)
+	{
+		if (n.second > first)
+		{
+			second = first;
+			first = n.second;
+		}
+		else if (n.second > second)
+			second = n.second;
+	}
+
+	switch (first)
+	{
+		case 5:
+			return Type::FiveOfAKind;
+		case 4:
+			return Type::FourOfAKind;
+		case 3:
+			if (second == 2)
+				return Type::FullHouse;
+			else
+				return Type::ThreeOfAKind;
+		case 2:
+			if (second == 2)
+				return Type::TwoPair;
+			else
+				return Type::OnePair;
+		case 1:
+			return Type::HighCard;
+		default:
+			break;
+	}
+
+	return Type::Void;
+}
+
+bool
+Hand::operator ==(const Hand& hand) const
+{
+	if (type != hand.type)
+		return false;
+
+	int i;
+	i = 0;
+	while (i < kHandSize && cards[i] == hand.cards[i])
+		i++;
+
+	if (i != kHandSize)
+		return false;
+
+	return true;
+}
+
+bool
+Hand::operator !=(const Hand& hand) const
+{
+	return !(*this == hand);
+}
+
+inline int CardRank(char card)
+{
+	switch (card)
+	{
+		case '2':
+			return 1;
+		case '3':
+			return 2;
+		case '4':
+			return 3;
+		case '5':
+			return 4;
+		case '6':
+			return 5;
+		case'7':
+			return 6;
+		case '8':
+			return 7;
+		case '9':
+			return 8;
+		case 'T':
+			return 9;
+		case 'J':
+			return 10;
+		case 'Q':
+			return 11;
+		case 'K':
+			return 12;
+		case 'A':
+			return 13;
+		default:
+			break;
+	}
+	return -1;
+}
+
+int CompareCards(char a, char b)
+{
+	if (CardRank(a) == CardRank(b))
+		return 0;
+	if (CardRank(a) > CardRank(b))
+		return 1;
+
+	return -1;
+}
+
+bool
+Hand::operator <(const Hand& hand) const
+{
+#if COMMENT == true
+	printf("operator %s < %s:", cards, hand.cards);
+#endif
+
+	if (type < hand.type)
+	{
+#if COMMENT == true
+		printf(" %s < %s => true\n", kTypeName[(int)type], kTypeName[(int)hand.type]);
+#endif
+		return true;
+	}
+	else if (type > hand.type)
+	{
+#if COMMENT == true
+		printf(" %s > %s => false\n", kTypeName[(int)type], kTypeName[(int)hand.type]);
+#endif
+		return false;
+	}
+
+	// equal type case:
+	int i;
+	int compare;
+	i = 0;
+	while (i < kHandSize)
+	{
+		compare = CompareCards(cards[i], hand.cards[i]);
+		if (compare < 0)
+		{
+#if COMMENT == true
+			printf(" %c > %c => true\n", cards[i], hand.cards[i]);
+#endif
+			return true;
+		}
+		else if (compare > 0)
+		{
+#if COMMENT == true
+			printf(" %c > %c => false\n", cards[i], hand.cards[i]);
+#endif
+			return false;
+		}
+		i++;
+	}
+
+#if COMMENT == true
+	printf(" default comparison %d < %d => %s\n", id, hand.id, id < hand.id ? "true":"false");
+#endif
+	return id < hand.id;
+}
+
+bool
+Hand::operator <=(const Hand& hand) const
+{
+	return !(hand < *this);
+}
+
+bool
+Hand::operator >(const Hand& hand) const
+{
+	return (hand < *this);
+}
+
+bool
+Hand::operator >=(const Hand& hand) const
+{
+	return !(*this < hand);
 }
 
 int main()
@@ -127,7 +416,7 @@ int main()
 	clock_t clockStart, clockEnd;
 	double time_taken;
 	int64_t result;
-	Problem Problem;
+	Game Game;
 
 	printf("Advent of Code - Day 07\n");
 
@@ -139,9 +428,10 @@ int main()
 	result = 0;
 	clockStart = clock();
 
-	Problem.Read(input);
-	Problem.Print();
-	result = Problem.FindSolution();
+	Game.Read(input);
+	Game.SortHands();
+	Game.Print();
+	result = Game.FindSolution();
 
 	printf("result: %I64d\n", result);
 
