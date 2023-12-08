@@ -10,3 +10,4 @@ Summary:
 * Day 5: wake-up > read instructions > think while shower & dress > code... thinking in range was tough but feasible
 * Day 6: back to arithmetic (b^2-4ac). Not so hard but I took my time to think the problem through instead of jumping into a brut force solution
 * Day 7: same routine : wake-up > read instructions > think > code, starting with class definition to breakdown the problem. Writing an efficient comparison operator was tough due to the number of cases
+* Day 8: using a C-language trick to go from char[] to int and back and prime decomposition for part 2. Lesson learned: brute force never works !

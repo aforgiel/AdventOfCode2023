@@ -11,11 +11,11 @@
 #include <algorithm>
 #include <cmath>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
 
 #if( TEST_MODE == true)
-const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay08/sample.txt";
+const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay08/samplePart1.txt";
 #else
 const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay08/input.txt";
 #endif
@@ -86,63 +86,135 @@ inline bool IsSymbol(char c)
 
 const char* pSpace = " ";
 
-typedef struct Game* GamePtr;
-typedef struct Hand* HandPtr;
+typedef struct Map* MapPtr;
+typedef int32_t Node;
+typedef struct Network* NetworkPtr;
 
-struct Game {
-	std::vector<Hand> hands;
+struct Map {
+	std::string instructions;
+	char* instPosition;
+	std::map<Node, Network> nodes;
 
 	void Read(std::ifstream& input);
-	void Print(void);
+	void Print(void) const;
+	int GetInstruction(void);
 	int64_t FindSolution(void);
 };
 
-struct Hand {
-	void Read(std::string& line);
-	void Print(void);
+#define LEFT 0
+#define RIGHT 1
+
+Node ReadNode(char** buffer)
+{
+	char tmp[4];
+	std::sscanf(*buffer, "%3s", tmp);
+	(*buffer) += 3;
+	return *(int*)tmp;
+}
+
+struct Network {
+	Node next[2];
+	void Read(char* buffer);
+	void Print(void) const;
 };
 
+const char* p1 = " = (";
+const char* p2 = ", ";
+
 void
-Game::Read(std::ifstream& input)
+Map::Read(std::ifstream& input)
 {
 	std::string line;
-	Hand hand;
+	Node node;
+	Network network;
+	char* tmp;
+
+	std::getline(input, instructions);
+	instPosition = const_cast<char*>(instructions.c_str());
+	std::getline(input, line);
 
 	while (std::getline(input, line))
 	{
-		hand.Read(line);
-		hands.push_back(hand);
+		tmp = const_cast<char*>(line.c_str());
+		node = ReadNode(&tmp);
+		FindPattern(&tmp, p1);
+		network.Read(tmp);
+		nodes[node] = network;
 	}
 }
 
 void
-Game::Print(void)
+Map::Print(void) const
 {
-	for (Hand hand : hands)
-		hand.Print();
+	printf("Instructions: %s\n", instructions.c_str());
+	for (const auto& n : nodes)
+	{
+		printf("[%s] ", (char*)&n.first);
+		n.second.Print();
+	}
 }
 
+int
+Map::GetInstruction(void)
+{
+	int result;
+
+	switch (*instPosition)
+	{
+	case 'L':
+		result = 0;
+		break;
+	case 'R':
+		result = 1;
+		break;
+	default:
+		printf("Bad instruction: %c", *instPosition);
+		exit(-1);
+		break;
+	}
+
+	instPosition++;
+	if (*instPosition == '\0')
+		instPosition = const_cast<char*>(instructions.c_str());
+
+	return result;
+}
+
+
 int64_t
-Game::FindSolution(void)
+Map::FindSolution(void)
 {
 	int64_t result;
 
 	result = 0;
 
+	Node node;
+
+	node = *(int*)"AAA";
+	while (node != *(int*)"ZZZ")
+	{
+		node = nodes[node].next[GetInstruction()];
+		result++;
+#if COMMENT == true
+		printf("[%zd] %s\n", result, (char*)&node);
+#endif
+	}
+
 	return result;
 }
 
 void
-Hand::Read(std::string& line)
+Network::Read(char* buffer)
 {
-	char* tmp;
-
-	tmp = const_cast<char*>(line.c_str());
+	next[LEFT] = ReadNode(&buffer);
+	FindPattern(&buffer, p2);
+	next[RIGHT] = ReadNode(&buffer);
 }
 
 void
-Hand::Print(void)
+Network::Print(void) const
 {
+	printf("left: %s, right: %s\n", (char*)&next[LEFT], (char*)&next[RIGHT]);
 }
 
 int main()
@@ -151,7 +223,7 @@ int main()
 	clock_t clockStart, clockEnd;
 	double time_taken;
 	int64_t result;
-	Game Game;
+	Map Map;
 
 	printf("Advent of Code - Day 08\n");
 
@@ -163,9 +235,9 @@ int main()
 	result = 0;
 	clockStart = clock();
 
-	Game.Read(input);
-	Game.Print();
-	result = Game.FindSolution();
+	Map.Read(input);
+	Map.Print();
+	result = Map.FindSolution();
 
 	printf("result: %I64d\n", result);
 

@@ -114,14 +114,13 @@ enum class Type : int {
 const char* kTypeName[] = {
 	"Void",
 
-	"HighCard",
-	"OnePair",
-	"TwoPair",
-	"ThreeOfAKind",
-	"FullHouse",
-	"FourOfAKind",
-	"FiveOfAKind"
-
+	"High Card",
+	"One Pair",
+	"Two Pair",
+	"Three Of A Kind",
+	"Full House",
+	"Four Of A Kind",
+	"Five Of A Kind"
 };
 
 struct Hand {
