@@ -90,8 +90,6 @@ Expand the universe, then find the length of the shortest path between every pai
 
 Your puzzle answer was 9742154.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 The galaxies are much older (and thus much farther apart) than the researcher initially estimated.
 
@@ -100,3 +98,7 @@ Now, instead of the expansion you did before, make each empty row or column one 
 (In the example above, if each empty row or column were merely 10 times larger, the sum of the shortest paths between every pair of galaxies would be 1030. If each empty row or column were merely 100 times larger, the sum of the shortest paths between every pair of galaxies would be 8410. However, your universe will need to expand far beyond these values.)
 
 Starting with the same initial image, expand the universe according to these new rules, then find the length of the shortest path between every pair of galaxies. What is the sum of these lengths?
+
+Your puzzle answer was 411142919886.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
