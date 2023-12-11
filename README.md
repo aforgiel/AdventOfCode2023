@@ -13,3 +13,4 @@ Summary:
 * Day 8: using a C-language trick to go from char[] to int and back and prime decomposition for part 2. Lesson learned: brute force never works !
 * Day 9: interesting recursive approach to compute n-derivatives. Clear variable naming is key to avoid mistakes
 * Day 10: much more difficult ! Lost a lot of time making sense of binary operators which I seldom use. Also, the ray casting in diagonal saved me!
+* Day 11: Using a map as a proxy for coordinates made the solution quite simple, avoiding complex array row/column insertion
