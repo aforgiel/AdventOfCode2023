@@ -64,20 +64,13 @@ struct Problem {
 	int64_t FindSolution2(void);
 };
 
-enum class Input : int {
-	Start,
+#define EmptyCacheValue -1
+#define OPERATIONAL 0
+#define DAMAGED 1
 
-	N,
-	B,
-	M,
-	E,
-
-	EndOfList
-};
-
-typedef struct RecursiveInput* RecursiveInputPtr;
-struct RecursiveInput {
-	int64_t data[(int)Input::EndOfList];
+typedef struct Cache* CachePtr;
+struct Cache {
+	std::vector<int64_t> value[2];
 };
 
 struct Record {
@@ -86,14 +79,17 @@ struct Record {
 	std::vector<int> damages;
 	int minSize;
 	char first, last;
+	std::vector<Cache> caches;
 
 	void Read(std::string& input);
 	void Print(void) const;
 	int64_t CountArrangements(void);
-	int64_t RecursiveProbability(Input position, int depth, int limit, RecursiveInput& input);
 	int64_t CountUnfoldedArrangements(int copies);
 
-	int64_t RecursiveCountV2(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength);
+	int64_t RecursiveCount(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength);
+
+	void BuildCache(int copies, int steps);
+	int64_t CacheRecursiveCount(int springType, const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength);
 };
 
 void
@@ -207,62 +203,8 @@ Record::CountArrangements(void)
 	int64_t result;
 
 	progress = 0;
-	result = RecursiveCountV2(row, 0, 0, damages, size, minSize);
-
-	return result;
-}
-
-#define V(c) (input.data[(int)Input::c])
-#define DP(y,x) (V(y)==V(x)?0:(V(y)-V(x))*RecursiveProbability(Input::x,depth+1,limit,input))
-
-int64_t
-Record::RecursiveProbability(Input position, int depth, int limit, RecursiveInput& input)
-{
-	int64_t result;
-
-	// Case 1: Nominal [XXX]
-	// Case 2: Begin [?XXX]
-	// Case 3: Mid [?XXX?]
-	// Case 4: End [XXX?]
-
-	if (depth == limit)
-		switch (position)
-		{
-		case Input::N:
-			printf(" => RP: %zd\n", V(N));
-			return V(N);
-		case Input::B:
-			printf(" => RP: %zd\n", V(B));
-			return V(B);
-		default:
-			return 0;
-		}
-
-	for (int i = 0; i < depth; i++)
-		printf("  ");
-	printf("RP(%d,%d,%d) ", (int)position, depth,limit);
-
-	result = 0;
-	switch (position)
-	{
-	case Input::Start:
-	case Input::B:
-	case Input::M:
-		printf("RP: {Start, B, M} N: %zd, E: %zd\n", V(N), V(E));
-		result = V(N) * RecursiveProbability(Input::N, depth + 1, limit, input);
-		result += DP(E, N);
-		break;
-	case Input::N:
-	case Input::E:
-		printf("RP: {N, E} B: %zd, M: %zd\n", V(B), V(M));
-		result = V(B) * RecursiveProbability(Input::B, depth + 1, limit, input);
-		result += DP(M, B);
-		break;
-	default:
-		return 0;
-	}
-
-	printf(" => RP: %zd\n", result);
+	BuildCache(1, (int)damages.size());
+	result = RecursiveCount(row, 0, 0, damages, size, minSize);
 
 	return result;
 }
@@ -298,14 +240,15 @@ Record::CountUnfoldedArrangements(int copies)
 	length = (size + 1) * copies - 1;
 	minLength--;
 
-	result = RecursiveCountV2(buffer, 0, 0, list, length, minLength);
+	BuildCache(copies, copies * (int)damages.size());
+	result = RecursiveCount(buffer, 0, 0, list, length, minLength);
 	delete buffer;
 
 	return result;
 }
 
 int64_t
-Record::RecursiveCountV2(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength)
+Record::RecursiveCount(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength)
 {
 	int count;
 	int pos, i, min;
@@ -354,13 +297,13 @@ Record::RecursiveCountV2(const char* buffer, const int position, const int index
 				printf(" => Recursion [#]");
 #endif
 			* tmp = '#';
-			result = RecursiveCountV2(buffer, pos, i, listOfDamages, length, min);
+			result = CacheRecursiveCount(DAMAGED, buffer, pos, i, listOfDamages, length, min);
 #if COMMENT == true
 			if (debug)
 				printf(" => Recursion [.]");
 #endif
 			* tmp = '.';
-			result += RecursiveCountV2(buffer, pos, i, listOfDamages, length, min);
+			result += CacheRecursiveCount(OPERATIONAL, buffer, pos, i, listOfDamages, length, min);
 			*tmp = '?';
 			return result;
 		}
@@ -438,6 +381,46 @@ Record::RecursiveCountV2(const char* buffer, const int position, const int index
 #endif
 
 	return 1;
+}
+
+void
+Record::BuildCache(int copies, int steps)
+{
+	caches.clear();
+	Cache emptyCache;
+	int cacheSize;
+
+	cacheSize = copies * (size + 1) - 1;
+
+	for (int j = 0; j < steps; j++)
+	{
+		emptyCache.value[OPERATIONAL].push_back(EmptyCacheValue);
+		emptyCache.value[DAMAGED].push_back(EmptyCacheValue);
+	}
+
+	for (int i = 0; i < cacheSize; i++)
+		caches.push_back(emptyCache);
+}
+
+int64_t
+Record::CacheRecursiveCount(int springType, const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength)
+{
+	if (caches[position].value[springType][index] == EmptyCacheValue)
+	{
+		int64_t cacheValue;
+
+		cacheValue = RecursiveCount(buffer, position, index, listOfDamages, length, minLength);
+		caches[position].value[springType][index] = cacheValue;
+#if COMMENT == true
+		printf("Empty cache for (%d,%d,%d) => %zd\n", position, springType, index, cacheValue);
+#endif
+		return cacheValue;
+	}
+
+#if COMMENT == true
+	printf("Cache for (%d,%d,%d) => %zd\n", position, springType, index, caches[position].value[springType][index]);
+#endif
+	return caches[position].value[springType][index];
 }
 
 int main()
