@@ -1,419 +1,1304 @@
 Advent of Code - Day 12
-Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay12/sample.txt
-.result part 1: 21
-Elapsed time: 0.001000 seconds
-Row: .?????...??.?????...?.?????...??.?????...??.?????...?, Damages: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1, MinSize: 29
-....... => 738384
-Row: ???##?###?????????##?###?????????##?###?????????##?###?????????##?###?????, Damages: 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4, MinSize: 69
-        => 162
-Row: .#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#??, Damages: 1 1 1 1 1 4 1 1 1 1 1 4 1 1 1 1 1 4 1 1 1 1 1 4 1 1 1 1 1 4, MinSize: 74
-.       => 71044
-Row: ?.??#...#???.??#...#???.??#...#???.??#...#???.??#...#?, Damages: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1, MinSize: 29
-        => 1182
-Row: ???#??.???#??#.??????#??.???#??#.??????#??.???#??#.??????#??.???#??#.??????#??.???#??#.??, Damages: 1 3 1 5 1 1 3 1 5 1 1 3 1 5 1 1 3 1 5 1 1 3 1 5 1, MinSize: 79
-..      => 141819
-row: ???.###
-        N: 1, DS: 1, DB: 3, DE: 1, DF: 3
-    1
-    1
-   3
-    1
-    1
-   3
-  9
-    1
-    1
-   3
-    1
-    1
-   3
-  9
- 27
-27
-        => 27
-row: .??..??...?##.
-        N: 4, DS: 32, DB: 64, DE: 32, DF: 64
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
- 562432
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-    4
-    4
-    4
-   208
-  10816
- 562432
-11248640
-        => 11248640
-row: ?#?#?#?#?#?#?#?
-        N: 1, DS: 1, DB: 1, DE: 1, DF: 1
-    1
-   1
-  1
- 1
-1
-        => 1
-row: ????.#...#...
-        N: 1, DS: 2, DB: 4, DE: 2, DF: 4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
- 64
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-    1
-    1
-    1
-   4
-  16
- 64
-128
-        => 128
-row: ????.######..#####.
-        N: 4, DS: 20, DB: 25, DE: 20, DF: 25
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
- 8788
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-    4
-    4
-    4
-   52
-  676
- 8788
-70304
-        => 70304
-row: ?###????????
-        N: 10, DS: 150, DB: 150, DE: 225, DF: 225
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
- 24603750
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
- 24603750
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-    10
-    10
-    10
-   1350
-  182250
- 24603750
-3321506250
-        => 3321506250
-result part 2: 3332825350
-Elapsed time: 0.054000 seconds
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay12/input.txt
+[001] Row: .?????...?, Damages: 1 1 1, Size: 10, MinSize: 5 => 7
+[002] Row: #????????.#?#??????, Damages: 2 1 1 5 1, Size: 19, MinSize: 14 => 36
+[003] Row: ???##?###?????, Damages: 1 2 3 4, Size: 14, MinSize: 13 => 2
+[004] Row: ?#?????##????#??, Damages: 1 9, Size: 16, MinSize: 11 => 3
+[005] Row: ?.?.??#?...?????, Damages: 1 2 1, Size: 16, MinSize: 6 => 28
+[006] Row: .#.#???..??#???#??, Damages: 1 1 1 1 1 4, Size: 18, MinSize: 14 => 4
+[007] Row: ?#??#??#..#?#???., Damages: 1 4 1 1 2, Size: 17, MinSize: 13 => 1
+[008] Row: ??######???.??.., Damages: 7 1 1, Size: 16, MinSize: 11 => 6
+[009] Row: .?#???#?#?#??.?.?.#?, Damages: 2 7 1 1 1, Size: 20, MinSize: 16 => 7
+[010] Row: .?#.???.???.#???, Damages: 2 1 1 3 4, Size: 16, MinSize: 15 => 1
+[011] Row: ?????????#?., Damages: 2 1 3, Size: 12, MinSize: 8 => 16
+[012] Row: ??.?.?.#??##?#?#?., Damages: 1 9, Size: 18, MinSize: 11 => 4
+[013] Row: ?....?.?#?#????, Damages: 1 1 7, Size: 15, MinSize: 11 => 2
+[014] Row: ?.??.????#?#??##??#., Damages: 1 9 2, Size: 20, MinSize: 14 => 4
+[015] Row: ?.??#...#?, Damages: 1 1 1, Size: 10, MinSize: 5 => 2
+[016] Row: ?###??????#??#?, Damages: 7 5, Size: 15, MinSize: 13 => 4
+[017] Row: ??????##????#, Damages: 1 7 2, Size: 13, MinSize: 12 => 3
+[018] Row: ??????.????.., Damages: 1 2, Size: 13, MinSize: 4 => 25
+[019] Row: ??##??#??#.., Damages: 5 2, Size: 12, MinSize: 8 => 1
+[020] Row: #????#?#???????#??#., Damages: 8 8, Size: 20, MinSize: 17 => 1
+[021] Row: ???#..????###???, Damages: 2 2 3 2, Size: 16, MinSize: 12 => 2
+[022] Row: ?##?#?#?????#?.#???, Damages: 2 3 1 1 4, Size: 19, MinSize: 15 => 3
+[023] Row: ??#?..?#????, Damages: 3 3 1, Size: 12, MinSize: 9 => 6
+[024] Row: ??#.?#??.?#?????, Damages: 1 4 2 1, Size: 16, MinSize: 11 => 7
+[025] Row: ???.?#?????, Damages: 1 5, Size: 11, MinSize: 7 => 6
+[026] Row: .?#.???##???, Damages: 2 6, Size: 12, MinSize: 9 => 3
+[027] Row: ...#.?#?##., Damages: 1 1 2, Size: 11, MinSize: 6 => 1
+[028] Row: ????.??????, Damages: 1 2 1, Size: 11, MinSize: 6 => 31
+[029] Row: ?#?????????#, Damages: 2 2 1 2, Size: 12, MinSize: 10 => 9
+[030] Row: ??##??????., Damages: 5 1 1, Size: 11, MinSize: 9 => 4
+[031] Row: ???..??#???#????##, Damages: 1 1 1 9, Size: 18, MinSize: 15 => 4
+[032] Row: ??#??##??#, Damages: 1 3 1, Size: 10, MinSize: 7 => 2
+[033] Row: ??#????#??.?????##., Damages: 9 3, Size: 19, MinSize: 13 => 2
+[034] Row: ??.?#??#??#.???#?.??, Damages: 2 2 1 1 4 1, Size: 20, MinSize: 16 => 8
+[035] Row: ?#??#?#??#??#????., Damages: 11 1 1 1, Size: 18, MinSize: 17 => 1
+[036] Row: .#...??###?, Damages: 1 5, Size: 11, MinSize: 7 => 2
+[037] Row: ???#?#?#???????, Damages: 1 1 1 6 1, Size: 15, MinSize: 14 => 2
+[038] Row: .???#.??##?..#??#, Damages: 3 4 2 1, Size: 17, MinSize: 13 => 2
+[039] Row: ???#?.???#, Damages: 1 1 1, Size: 10, MinSize: 5 => 4
+[040] Row: ???#??###?#?#????, Damages: 1 12 1, Size: 17, MinSize: 16 => 4
+[041] Row: ??.#??????, Damages: 2 2 2, Size: 10, MinSize: 8 => 3
+[042] Row: #?#??..#?#, Damages: 5 1 1, Size: 10, MinSize: 9 => 1
+[043] Row: #?..?????##?#.???#??, Damages: 2 2 5 6, Size: 20, MinSize: 18 => 2
+[044] Row: ????#?.??##?.??#??, Damages: 6 5 1 1, Size: 18, MinSize: 16 => 2
+[045] Row: .??.#?##????., Damages: 1 6, Size: 13, MinSize: 8 => 3
+[046] Row: #??#?####??#?.??, Damages: 1 1 8 1, Size: 16, MinSize: 14 => 2
+[047] Row: ?#.??#?#?#??#????, Damages: 1 1 9 1, Size: 17, MinSize: 15 => 2
+[048] Row: .???????#?., Damages: 4 3, Size: 11, MinSize: 8 => 3
+[049] Row: .?.?#???#?#?#??#.?, Damages: 1 10 2, Size: 18, MinSize: 15 => 1
+[050] Row: ????#??#??#..?., Damages: 1 1 1 2 1, Size: 15, MinSize: 10 => 5
+[051] Row: .??#??#????.???, Damages: 7 2, Size: 15, MinSize: 10 => 7
+[052] Row: ??#?#?????.??, Damages: 3 2 1 1, Size: 13, MinSize: 10 => 9
+[053] Row: ???#.??#????#??#, Damages: 2 3 4, Size: 16, MinSize: 11 => 3
+[054] Row: ??.??#?.#??#??#??, Damages: 1 1 2 4 1, Size: 17, MinSize: 13 => 5
+[055] Row: ????#.????.?#????, Damages: 5 3 1 1 1, Size: 17, MinSize: 15 => 2
+[056] Row: ?????##???????, Damages: 1 1 9, Size: 14, MinSize: 13 => 4
+[057] Row: ?????.???#??.?, Damages: 3 6, Size: 14, MinSize: 10 => 3
+[058] Row: .?????##????., Damages: 5 1, Size: 13, MinSize: 7 => 6
+[059] Row: ??????????., Damages: 3 1 2, Size: 11, MinSize: 8 => 10
+[060] Row: ?####.??#???.?, Damages: 4 5, Size: 14, MinSize: 10 => 2
+[061] Row: ?.#??.??????.?#??#?, Damages: 2 5 5, Size: 19, MinSize: 14 => 4
+[062] Row: ?..#??????????, Damages: 1 1 5, Size: 14, MinSize: 9 => 11
+[063] Row: ???????#.????, Damages: 4 1, Size: 13, MinSize: 6 => 7
+[064] Row: ?.??.?????#????., Damages: 2 2 1 1 2, Size: 16, MinSize: 12 => 2
+[065] Row: ????#..?????#.??, Damages: 3 5 1, Size: 16, MinSize: 11 => 2
+[066] Row: ???????????#???#, Damages: 7 5 1, Size: 16, MinSize: 15 => 3
+[067] Row: .???#..????, Damages: 1 1 2, Size: 11, MinSize: 6 => 7
+[068] Row: ??.?.?.???#?, Damages: 2 1 2, Size: 12, MinSize: 7 => 7
+[069] Row: ??##???#?????., Damages: 3 4, Size: 14, MinSize: 8 => 5
+[070] Row: ??.????..??###???, Damages: 1 4, Size: 17, MinSize: 6 => 13
+[071] Row: .??#????#?#, Damages: 4 3, Size: 11, MinSize: 8 => 3
+[072] Row: ???.????#.?#?##???#, Damages: 1 1 1 1 1 8, Size: 19, MinSize: 18 => 1
+[073] Row: ??????#?.?.???, Damages: 3 2, Size: 14, MinSize: 6 => 9
+[074] Row: ?.???..?????, Damages: 2 3, Size: 12, MinSize: 6 => 6
+[075] Row: ?..??#???????, Damages: 1 2 1 1, Size: 13, MinSize: 8 => 23
+[076] Row: ?.#???.?#???, Damages: 1 1 3, Size: 12, MinSize: 7 => 6
+[077] Row: ??????#???.???????, Damages: 7 1 1 1, Size: 18, MinSize: 13 => 85
+[078] Row: ???#?#???????#?., Damages: 4 3 2 2, Size: 16, MinSize: 14 => 3
+[079] Row: ??###?.??#?#?, Damages: 3 5, Size: 13, MinSize: 9 => 2
+[080] Row: ?#???.??????????#, Damages: 5 1 1 1 4, Size: 17, MinSize: 16 => 4
+[081] Row: ???#.????#???.#, Damages: 1 1 4 2 1, Size: 15, MinSize: 13 => 2
+[082] Row: ???.#???#??, Damages: 2 7, Size: 11, MinSize: 10 => 2
+[083] Row: ?#.?#?###??#?., Damages: 1 10, Size: 14, MinSize: 12 => 1
+[084] Row: .?..????#?#??, Damages: 1 2 2 1, Size: 13, MinSize: 9 => 1
+[085] Row: .??.?????#, Damages: 1 3 1, Size: 10, MinSize: 7 => 4
+[086] Row: ???#??.????#???, Damages: 6 1 3 1, Size: 15, MinSize: 14 => 4
+[087] Row: ??#?#?#???#, Damages: 3 1 3, Size: 11, MinSize: 9 => 1
+[088] Row: ??????????????????, Damages: 3 4, Size: 18, MinSize: 8 => 66
+[089] Row: #????#????##??????, Damages: 13 2, Size: 18, MinSize: 16 => 3
+[090] Row: ????#??.#?#?##?#???, Damages: 1 2 8 2, Size: 19, MinSize: 16 => 5
+[091] Row: .??#?##??.?#?????#??, Damages: 5 9, Size: 20, MinSize: 15 => 4
+[092] Row: ?##..#????, Damages: 3 1, Size: 10, MinSize: 5 => 1
+[093] Row: ?##.##???#??.##???#, Damages: 2 3 4 6, Size: 19, MinSize: 18 => 1
+[094] Row: #?????????#?, Damages: 1 1 3 2, Size: 12, MinSize: 10 => 9
+[095] Row: ???#??????????, Damages: 2 2 1 1, Size: 14, MinSize: 9 => 51
+[096] Row: ??#??##??#?.?, Damages: 1 5 1 1, Size: 13, MinSize: 11 => 1
+[097] Row: ?#??.??##???????.??, Damages: 1 1 9 1 1, Size: 19, MinSize: 17 => 2
+[098] Row: ??#?##??##?.??#???, Damages: 10 1 2 1, Size: 18, MinSize: 17 => 2
+[099] Row: ..??#..?#?.?, Damages: 1 2, Size: 12, MinSize: 4 => 2
+[100] Row: ??#?.?.?????, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 18
+[101] Row: #.?##??.?.?, Damages: 1 2 1, Size: 11, MinSize: 6 => 3
+[102] Row: ..?..??#????#..?, Damages: 1 8, Size: 16, MinSize: 10 => 1
+[103] Row: .?#??.??????., Damages: 3 5, Size: 13, MinSize: 9 => 4
+[104] Row: ??.????#???#?????, Damages: 1 1 3 2 1, Size: 17, MinSize: 12 => 68
+[105] Row: ??.#??..??, Damages: 1 3 2, Size: 10, MinSize: 8 => 2
+[106] Row: #?.#??????.??, Damages: 2 2 3 1, Size: 13, MinSize: 11 => 4
+[107] Row: ????.???.?, Damages: 3 1, Size: 10, MinSize: 5 => 9
+[108] Row: #???.??????#, Damages: 1 2 1 2, Size: 12, MinSize: 9 => 5
+[109] Row: ?.?.??.?#??.???, Damages: 1 1 1 1 3, Size: 15, MinSize: 11 => 7
+[110] Row: ?.#????#.?, Damages: 1 1 1, Size: 10, MinSize: 5 => 4
+[111] Row: .????#??.?, Damages: 2 4 1, Size: 10, MinSize: 9 => 1
+[112] Row: ???##??#?..#??#???, Damages: 5 1 4, Size: 18, MinSize: 12 => 4
+[113] Row: ??#??##?.???#?, Damages: 5 4, Size: 14, MinSize: 10 => 2
+[114] Row: ??#??#???##????.?, Damages: 3 3 6, Size: 17, MinSize: 14 => 4
+[115] Row: .?##??.#?..?, Damages: 2 2, Size: 12, MinSize: 5 => 1
+[116] Row: ?????#.?#?#???#???, Damages: 3 9, Size: 18, MinSize: 13 => 2
+[117] Row: .#.??#????, Damages: 1 3, Size: 10, MinSize: 5 => 3
+[118] Row: ??????.??.?, Damages: 5 1 1, Size: 11, MinSize: 9 => 4
+[119] Row: .??.???????????., Damages: 1 7, Size: 16, MinSize: 9 => 16
+[120] Row: ??????##???#?##??.#?, Damages: 2 13 2, Size: 20, MinSize: 19 => 3
+[121] Row: ??#???????#??, Damages: 3 1 1 3, Size: 13, MinSize: 11 => 15
+[122] Row: ?????.?#???, Damages: 2 3, Size: 11, MinSize: 6 => 8
+[123] Row: ????.?????????, Damages: 1 6, Size: 14, MinSize: 8 => 19
+[124] Row: #?#.??#?.#??, Damages: 1 1 2 1, Size: 12, MinSize: 8 => 2
+[125] Row: ?#?????#?###?????#, Damages: 4 7 2 1, Size: 18, MinSize: 17 => 4
+[126] Row: ?????#???.?.?, Damages: 3 1, Size: 13, MinSize: 5 => 11
+[127] Row: #?#?.#?##??., Damages: 3 6, Size: 12, MinSize: 10 => 1
+[128] Row: ??#.?????????, Damages: 1 1 3 1, Size: 13, MinSize: 9 => 25
+[129] Row: ??????#????.??, Damages: 1 1 2 2, Size: 14, MinSize: 9 => 31
+[130] Row: ??????#?.??##???, Damages: 1 3, Size: 16, MinSize: 5 => 2
+[131] Row: ?.###???#????, Damages: 4 2 1, Size: 13, MinSize: 9 => 5
+[132] Row: ??.????.??.#.#??#?, Damages: 2 1 1 1 2 2, Size: 18, MinSize: 14 => 13
+[133] Row: ??##.???##?##?.##?#?, Damages: 3 2 5 4, Size: 20, MinSize: 17 => 1
+[134] Row: ??.?????????#??, Damages: 1 2 5, Size: 15, MinSize: 10 => 34
+[135] Row: .##????????., Damages: 4 1, Size: 12, MinSize: 6 => 5
+[136] Row: ??..?##.????, Damages: 1 2 2 1, Size: 12, MinSize: 9 => 2
+[137] Row: .?#?.????.#?##?..., Damages: 2 2 1 3, Size: 18, MinSize: 11 => 6
+[138] Row: #?????.???#?#???, Damages: 1 1 1 7, Size: 16, MinSize: 13 => 13
+[139] Row: ?#.#???.#??#???.???., Damages: 2 1 1 1 4 2, Size: 20, MinSize: 16 => 8
+[140] Row: ??????????##???#???, Damages: 1 1 7, Size: 19, MinSize: 11 => 49
+[141] Row: ???#?#???.##.., Damages: 3 2, Size: 14, MinSize: 6 => 1
+[142] Row: .??##?#.??#?., Damages: 6 1, Size: 13, MinSize: 8 => 1
+[143] Row: ?##?.###?#??, Damages: 3 5, Size: 12, MinSize: 9 => 2
+[144] Row: ????###?..???..?, Damages: 1 6 3, Size: 16, MinSize: 12 => 1
+[145] Row: ..#????#?#???, Damages: 1 3 2, Size: 13, MinSize: 8 => 2
+[146] Row: #?#????????#, Damages: 4 1 4, Size: 12, MinSize: 11 => 2
+[147] Row: ?#???????????#??, Damages: 2 3 1 3, Size: 16, MinSize: 12 => 50
+[148] Row: .#???#?..??#?????#, Damages: 1 2 9, Size: 18, MinSize: 14 => 2
+[149] Row: ??.?#.???., Damages: 1 1 1, Size: 10, MinSize: 5 => 7
+[150] Row: ?#?#??.???.#?, Damages: 1 2 2 1, Size: 13, MinSize: 9 => 2
+[151] Row: ??##??#???#?, Damages: 3 5, Size: 12, MinSize: 9 => 2
+[152] Row: ?#???????., Damages: 3 1, Size: 10, MinSize: 5 => 9
+[153] Row: .#?????.???, Damages: 3 2, Size: 11, MinSize: 6 => 3
+[154] Row: .#?#?##??????#??, Damages: 1 4 6, Size: 16, MinSize: 13 => 3
+[155] Row: ??.??.?##?.??, Damages: 1 1 3 1, Size: 13, MinSize: 9 => 16
+[156] Row: ??##??.#.?.?#, Damages: 4 1 1 2, Size: 13, MinSize: 11 => 4
+[157] Row: #???????#??, Damages: 1 1 4, Size: 11, MinSize: 8 => 9
+[158] Row: ????#??.?#????, Damages: 1 4 1 3, Size: 14, MinSize: 12 => 3
+[159] Row: #?.?##???.?, Damages: 1 3, Size: 11, MinSize: 5 => 2
+[160] Row: ????#?????##?##???.?, Damages: 8 6, Size: 20, MinSize: 15 => 3
+[161] Row: ??.?#?.???.#???, Damages: 2 1 1 2, Size: 15, MinSize: 9 => 12
+[162] Row: ??#??#.??.???., Damages: 2 1 3, Size: 14, MinSize: 8 => 2
+[163] Row: .?.?.??.?#####, Damages: 1 1 5, Size: 14, MinSize: 9 => 5
+[164] Row: ???#??.???#??#.??, Damages: 1 3 1 5 1, Size: 17, MinSize: 15 => 6
+[165] Row: ..#????##??#?#?.?, Damages: 1 10, Size: 17, MinSize: 12 => 2
+[166] Row: ?#.????#??., Damages: 2 5, Size: 11, MinSize: 8 => 3
+[167] Row: #.????????#?#??#???, Damages: 1 1 7 2 1, Size: 19, MinSize: 16 => 14
+[168] Row: .?.?...?##?#?#?#?., Damages: 1 9, Size: 18, MinSize: 11 => 4
+[169] Row: ???????????#, Damages: 1 1 6, Size: 12, MinSize: 10 => 6
+[170] Row: ??#???????#?..??, Damages: 9 1, Size: 16, MinSize: 11 => 3
+[171] Row: ..?#??????, Damages: 1 3, Size: 10, MinSize: 5 => 3
+[172] Row: .?.????????, Damages: 2 4, Size: 11, MinSize: 7 => 3
+[173] Row: .??.#??.???, Damages: 2 1 1, Size: 11, MinSize: 6 => 5
+[174] Row: ??#.????.?, Damages: 1 1 1, Size: 10, MinSize: 5 => 12
+[175] Row: .#.??.????#???.????, Damages: 1 2 1 1 3 3, Size: 19, MinSize: 16 => 2
+[176] Row: ??#??????.???, Damages: 5 1 2, Size: 13, MinSize: 10 => 12
+[177] Row: ????????.??.??, Damages: 1 4 1 1, Size: 14, MinSize: 10 => 28
+[178] Row: ???????#??, Damages: 3 3, Size: 10, MinSize: 7 => 9
+[179] Row: ??#?????#???##., Damages: 2 1 2 2, Size: 15, MinSize: 10 => 8
+[180] Row: ??#???????#, Damages: 2 6, Size: 11, MinSize: 9 => 2
+[181] Row: ?#?#??#??#.?.#??, Damages: 6 1 2, Size: 16, MinSize: 11 => 1
+[182] Row: ##?##?#?.??#??, Damages: 8 1 1, Size: 14, MinSize: 12 => 2
+[183] Row: .?#??###?????#??, Damages: 8 3, Size: 16, MinSize: 12 => 6
+[184] Row: ????#.#?#?????, Damages: 3 6, Size: 14, MinSize: 10 => 1
+[185] Row: #??.????#??#.#??..??, Damages: 2 6 1 3 1, Size: 20, MinSize: 17 => 2
+[186] Row: ??????.?????, Damages: 2 1, Size: 12, MinSize: 4 => 34
+[187] Row: ????.?????., Damages: 1 2 1, Size: 11, MinSize: 6 => 17
+[188] Row: ???????#..#?, Damages: 1 2 2 2, Size: 12, MinSize: 10 => 3
+[189] Row: ????#??#??, Damages: 4 4, Size: 10, MinSize: 9 => 1
+[190] Row: ???.?????##?##????, Damages: 1 14, Size: 18, MinSize: 16 => 3
+[191] Row: ??#.???#.?#??.????, Damages: 2 2 1 1 1 1, Size: 18, MinSize: 13 => 10
+[192] Row: ?.???#?.?., Damages: 1 5, Size: 10, MinSize: 7 => 1
+[193] Row: #.#?#.?##?????, Damages: 1 3 5 1, Size: 14, MinSize: 13 => 3
+[194] Row: .?..?#???????#???#?, Damages: 1 14, Size: 19, MinSize: 16 => 2
+[195] Row: .#?#??##??#?..??#?., Damages: 3 2 3 4, Size: 19, MinSize: 15 => 1
+[196] Row: .??#?#?.????.???.?#, Damages: 6 1 1 1 1, Size: 19, MinSize: 14 => 13
+[197] Row: .?#.????.#.?, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 7
+[198] Row: ?#?.??#??#??, Damages: 1 8, Size: 12, MinSize: 10 => 1
+[199] Row: ??..??????, Damages: 1 5, Size: 10, MinSize: 7 => 4
+[200] Row: ???.?????.?, Damages: 2 4, Size: 11, MinSize: 7 => 4
+[201] Row: ??#???.##?#?.??., Damages: 5 2 1 1, Size: 16, MinSize: 12 => 4
+[202] Row: ??#???#?....???#?.??, Damages: 3 3 4 2, Size: 20, MinSize: 15 => 6
+[203] Row: ?..???##..?.?., Damages: 1 5 1, Size: 14, MinSize: 9 => 2
+[204] Row: ?#????????.??, Damages: 3 2 1, Size: 13, MinSize: 8 => 27
+[205] Row: ?#??????.##, Damages: 4 1 2, Size: 11, MinSize: 9 => 5
+[206] Row: .??.###.?#??., Damages: 1 3 3, Size: 13, MinSize: 9 => 4
+[207] Row: ?.??????#?#???, Damages: 1 1 8, Size: 14, MinSize: 12 => 7
+[208] Row: ?#.?.??????#?.????, Damages: 2 1 6 1, Size: 18, MinSize: 13 => 12
+[209] Row: .???????#?#???., Damages: 2 6, Size: 15, MinSize: 9 => 14
+[210] Row: ???#????.?#??#???, Damages: 4 1 1 5, Size: 17, MinSize: 14 => 8
+[211] Row: ??#???##???#?, Damages: 7 2, Size: 13, MinSize: 10 => 4
+[212] Row: #??????.??, Damages: 2 2, Size: 10, MinSize: 5 => 4
+[213] Row: ?.?#.?##???.?#?##, Damages: 1 2 4, Size: 17, MinSize: 9 => 1
+[214] Row: .?#.??????#?, Damages: 1 2 2 1, Size: 12, MinSize: 9 => 1
+[215] Row: #?#?#?#?##.??#?#.?, Damages: 1 3 4 2 1 1, Size: 18, MinSize: 17 => 1
+[216] Row: ???#?????#?#??, Damages: 1 6, Size: 14, MinSize: 8 => 3
+[217] Row: ?????##?#?#?##???, Damages: 1 11, Size: 17, MinSize: 13 => 9
+[218] Row: #?????????##?.#??.?, Damages: 1 2 1 6 2 1, Size: 19, MinSize: 18 => 1
+[219] Row: ???#?.???????.?.., Damages: 1 3 2 2 1, Size: 17, MinSize: 13 => 7
+[220] Row: .??.#??????, Damages: 1 2 1, Size: 11, MinSize: 6 => 11
+[221] Row: ??#?????#.?, Damages: 6 1, Size: 11, MinSize: 8 => 2
+[222] Row: .????#??#??????., Damages: 12 1, Size: 16, MinSize: 14 => 1
+[223] Row: ?.?...#??...?###??.?, Damages: 2 4, Size: 20, MinSize: 7 => 2
+[224] Row: ??.??.?##??..??, Damages: 2 1 5 1, Size: 15, MinSize: 12 => 4
+[225] Row: ?#????.#??###?, Damages: 2 1 6, Size: 14, MinSize: 11 => 5
+[226] Row: #.???#?.?#?#??.?, Damages: 1 5 5, Size: 16, MinSize: 13 => 2
+[227] Row: #?#?????????#?, Damages: 11 1, Size: 14, MinSize: 13 => 1
+[228] Row: #???#??#?#???.#..#?, Damages: 12 1 1, Size: 19, MinSize: 16 => 1
+[229] Row: .??#?#?.?????, Damages: 5 1, Size: 13, MinSize: 7 => 10
+[230] Row: ?????.?????#?????, Damages: 1 1 1 6, Size: 17, MinSize: 12 => 86
+[231] Row: .??#?.?????#???#???, Damages: 2 1 1 1 4, Size: 19, MinSize: 13 => 26
+[232] Row: ?#???##????.#????, Damages: 7 1 4, Size: 17, MinSize: 14 => 5
+[233] Row: .?#?#??#.., Damages: 3 2, Size: 10, MinSize: 6 => 1
+[234] Row: ..????????.#?????#.?, Damages: 4 1 7 1, Size: 20, MinSize: 16 => 6
+[235] Row: ??.????#.#??.?#, Damages: 1 5 3 2, Size: 15, MinSize: 14 => 2
+[236] Row: ?#??????.???##.?, Damages: 3 3 2, Size: 16, MinSize: 10 => 3
+[237] Row: .#.?#???#???##??#?#, Damages: 1 8 3 3, Size: 19, MinSize: 18 => 1
+[238] Row: ??#.??#?..####?#?##?, Damages: 1 1 4 4 5, Size: 20, MinSize: 19 => 1
+[239] Row: ?#?????????#?#, Damages: 5 5 1, Size: 14, MinSize: 13 => 2
+[240] Row: ???????.??, Damages: 1 3 1, Size: 10, MinSize: 7 => 13
+[241] Row: ???????..??.?, Damages: 1 2 1 1, Size: 13, MinSize: 8 => 32
+[242] Row: .?##.#????, Damages: 2 2, Size: 10, MinSize: 5 => 1
+[243] Row: ?#?.?#??#.#??, Damages: 1 5 2, Size: 13, MinSize: 10 => 1
+[244] Row: ?.???.???##??????., Damages: 3 9, Size: 18, MinSize: 13 => 3
+[245] Row: ?#.?????.?.???.??##, Damages: 2 2 1 1 3 3, Size: 19, MinSize: 17 => 3
+[246] Row: ???????#??.??#????., Damages: 5 2 3 3, Size: 19, MinSize: 16 => 3
+[247] Row: ?????.???.?, Damages: 4 1 1, Size: 11, MinSize: 8 => 8
+[248] Row: ???????.?#?##?.?, Damages: 1 1 5 1, Size: 16, MinSize: 11 => 30
+[249] Row: .??????.#??.???, Damages: 4 3 1, Size: 15, MinSize: 10 => 9
+[250] Row: ??.?#??#??, Damages: 2 2, Size: 10, MinSize: 5 => 3
+[251] Row: ?.#?.??#?.??#??.., Damages: 1 2 4 1 2, Size: 17, MinSize: 14 => 1
+[252] Row: ??#?.???????, Damages: 2 1 1 1, Size: 12, MinSize: 8 => 20
+[253] Row: ???????###????.#??., Damages: 3 9 2, Size: 19, MinSize: 16 => 3
+[254] Row: .#??.#??.###??#????#, Damages: 3 3 7 1 1, Size: 20, MinSize: 19 => 1
+[255] Row: .??????.??, Damages: 2 2, Size: 10, MinSize: 5 => 8
+[256] Row: ????#.#??#?##????, Damages: 1 1 11, Size: 17, MinSize: 15 => 3
+[257] Row: #???????##.?, Damages: 1 1 4, Size: 12, MinSize: 8 => 3
+[258] Row: .?#?#???#?.????, Damages: 8 2, Size: 15, MinSize: 11 => 6
+[259] Row: ?.??#?.#?.???..?????, Damages: 1 3 2 1 5, Size: 20, MinSize: 16 => 6
+[260] Row: ???#????#.#####??, Damages: 1 3 2 5 1, Size: 17, MinSize: 16 => 3
+[261] Row: ??#?#??????, Damages: 6 2, Size: 11, MinSize: 9 => 6
+[262] Row: ??.????#??#?, Damages: 1 6 1, Size: 12, MinSize: 10 => 2
+[263] Row: #????.##?#., Damages: 2 2 4, Size: 11, MinSize: 10 => 1
+[264] Row: ?#?#?????????????, Damages: 9 1 1, Size: 17, MinSize: 13 => 25
+[265] Row: ????##?#????, Damages: 6 4, Size: 12, MinSize: 11 => 1
+[266] Row: ?????.??????, Damages: 5 1 1 1, Size: 12, MinSize: 11 => 4
+[267] Row: ????????????????###., Damages: 1 8 7, Size: 20, MinSize: 18 => 3
+[268] Row: ??.????????#??#?.??, Damages: 1 13 1, Size: 19, MinSize: 17 => 4
+[269] Row: ????.#???.####?, Damages: 2 1 5, Size: 15, MinSize: 10 => 4
+[270] Row: ??#?#?????????#., Damages: 7 1 1, Size: 16, MinSize: 11 => 12
+[271] Row: ??.#??##??, Damages: 1 1 5, Size: 10, MinSize: 9 => 2
+[272] Row: ?.???#??#???#??#?#, Damages: 1 1 9 1 1, Size: 18, MinSize: 17 => 3
+[273] Row: ????#???#?#., Damages: 1 7, Size: 12, MinSize: 9 => 3
+[274] Row: ???.???#???##.#??, Damages: 1 1 7 1, Size: 17, MinSize: 13 => 4
+[275] Row: ??#.????#., Damages: 1 2 1, Size: 10, MinSize: 6 => 2
+[276] Row: .##.??#?#.?, Damages: 2 4 1, Size: 11, MinSize: 9 => 1
+[277] Row: ??#?.?.#.????, Damages: 3 1 1 2, Size: 13, MinSize: 10 => 8
+[278] Row: #???#??#?#?.???.?, Damages: 10 1 1, Size: 17, MinSize: 14 => 4
+[279] Row: ???..#??##, Damages: 3 5, Size: 10, MinSize: 9 => 1
+[280] Row: .?????#??##???#., Damages: 6 2 1, Size: 16, MinSize: 11 => 2
+[281] Row: .???#???????????., Damages: 5 5, Size: 17, MinSize: 11 => 14
+[282] Row: ?????#?.???, Damages: 1 2 2, Size: 11, MinSize: 7 => 15
+[283] Row: ?#?#??..?.?#??.., Damages: 6 1 4, Size: 16, MinSize: 13 => 1
+[284] Row: ???.?#.????, Damages: 1 2 1, Size: 11, MinSize: 6 => 13
+[285] Row: ????.#??????##???.., Damages: 1 1 2 8, Size: 19, MinSize: 15 => 6
+[286] Row: .?????????.????##?, Damages: 5 3 5, Size: 18, MinSize: 15 => 2
+[287] Row: ?##???#????#?#???, Damages: 3 11, Size: 17, MinSize: 15 => 5
+[288] Row: ?????##?.?#?, Damages: 2 2 2, Size: 12, MinSize: 8 => 6
+[289] Row: ?.????#?????, Damages: 1 5 1, Size: 12, MinSize: 9 => 14
+[290] Row: ???#.??#???.?#?, Damages: 1 2 4 1 2, Size: 15, MinSize: 14 => 2
+[291] Row: ##???#??..#??????, Damages: 3 1 1 5, Size: 17, MinSize: 13 => 2
+[292] Row: ??????.??#.?, Damages: 1 2 1 1, Size: 12, MinSize: 8 => 13
+[293] Row: ?#????###??#?##?, Damages: 2 9, Size: 16, MinSize: 12 => 2
+[294] Row: #.??#?.??####?, Damages: 1 1 1 7, Size: 14, MinSize: 13 => 1
+[295] Row: ?????#??.??#?????#?, Damages: 5 9, Size: 19, MinSize: 15 => 6
+[296] Row: ?#.??#.???##??, Damages: 1 3 4 1, Size: 14, MinSize: 12 => 1
+[297] Row: .#..??#???????.????, Damages: 1 4 1 2 1 1, Size: 19, MinSize: 15 => 12
+[298] Row: ##?#.??###?##, Damages: 2 1 7, Size: 13, MinSize: 12 => 1
+[299] Row: ?#?#?#?.??, Damages: 3 1 2, Size: 10, MinSize: 8 => 1
+[300] Row: .??..???.???..#??, Damages: 1 1 1 1, Size: 17, MinSize: 7 => 51
+[301] Row: .?????????.?????#???, Damages: 2 3 3, Size: 20, MinSize: 10 => 54
+[302] Row: #.#?.???.????.???#., Damages: 1 2 1 4 1 2, Size: 19, MinSize: 16 => 3
+[303] Row: ??????.?##?.., Damages: 4 3, Size: 13, MinSize: 8 => 6
+[304] Row: ?.##?#??.#?###?###?#, Damages: 6 9 1, Size: 20, MinSize: 18 => 1
+[305] Row: ?.????.?.??????#???, Damages: 4 1 1 2 1, Size: 19, MinSize: 13 => 28
+[306] Row: .?.????.?#???., Damages: 1 5, Size: 14, MinSize: 7 => 5
+[307] Row: .?#????#??#.??#?????, Damages: 3 4 5 1, Size: 20, MinSize: 16 => 6
+[308] Row: ?#.#?##???#?????#?, Damages: 1 9 1 1, Size: 18, MinSize: 15 => 2
+[309] Row: .???.??????#??#?., Damages: 2 7 2, Size: 17, MinSize: 13 => 6
+[310] Row: ?????#??##?##??????, Damages: 2 1 9 1, Size: 19, MinSize: 16 => 13
+[311] Row: ###?????????.?., Damages: 6 1 1 1, Size: 15, MinSize: 12 => 7
+[312] Row: ??????????..#?, Damages: 1 1 6 1, Size: 14, MinSize: 12 => 1
+[313] Row: ????.??.?#.??.####??, Damages: 1 1 1 1 2 6, Size: 20, MinSize: 17 => 6
+[314] Row: ?????#?#?##?#??#, Damages: 1 13, Size: 16, MinSize: 15 => 2
+[315] Row: ????#??#??????, Damages: 5 1 1 1, Size: 14, MinSize: 11 => 13
+[316] Row: ..???##.#????#., Damages: 1 3 3 1, Size: 15, MinSize: 11 => 1
+[317] Row: ??.?#??????, Damages: 2 5 1, Size: 11, MinSize: 10 => 3
+[318] Row: .??..??????#???#??, Damages: 1 2 3 3, Size: 18, MinSize: 12 => 37
+[319] Row: #?..?#?#??#??#??, Damages: 1 10, Size: 16, MinSize: 12 => 2
+[320] Row: ?#??#?#?#????????, Damages: 7 5 2, Size: 17, MinSize: 16 => 2
+[321] Row: #?.??#??????.#.#?, Damages: 1 3 2 1 2, Size: 17, MinSize: 13 => 9
+[322] Row: ??#.???#.????????, Damages: 3 4 5, Size: 17, MinSize: 14 => 4
+[323] Row: ..????..?##...?, Damages: 2 3, Size: 15, MinSize: 6 => 3
+[324] Row: .??.??...?, Damages: 2 1 1, Size: 10, MinSize: 6 => 2
+[325] Row: ##...??#?.????##, Damages: 2 4 5, Size: 16, MinSize: 13 => 1
+[326] Row: ###.??#??#?#?.?#, Damages: 3 8 1, Size: 16, MinSize: 14 => 2
+[327] Row: .??#??????#?#..??., Damages: 1 4 1 1 1 1, Size: 18, MinSize: 14 => 2
+[328] Row: ????????#??##???, Damages: 2 1 1 6 1, Size: 16, MinSize: 15 => 6
+[329] Row: ???.##?.??#., Damages: 3 3 1 1, Size: 12, MinSize: 11 => 1
+[330] Row: ????????#????##??#?#, Damages: 9 1 3 1 1, Size: 20, MinSize: 19 => 4
+[331] Row: ??.??#??##, Damages: 1 3 2, Size: 10, MinSize: 8 => 4
+[332] Row: ????#?#??#?.???., Damages: 1 1 5 1 1, Size: 16, MinSize: 13 => 3
+[333] Row: ??#???#.????, Damages: 2 1 1 1, Size: 12, MinSize: 8 => 10
+[334] Row: ?????#???#??#??#?#.?, Damages: 1 1 1 8 1, Size: 20, MinSize: 16 => 3
+[335] Row: ??.?????.?.#??.??, Damages: 2 1, Size: 17, MinSize: 4 => 7
+[336] Row: ??..?#???#, Damages: 1 3 1, Size: 10, MinSize: 7 => 4
+[337] Row: .?##???????????, Damages: 7 1, Size: 15, MinSize: 9 => 11
+[338] Row: ??????.??????.#.?, Damages: 1 2 2 1 1, Size: 17, MinSize: 11 => 84
+[339] Row: .??????.???, Damages: 4 1, Size: 11, MinSize: 6 => 10
+[340] Row: ?#????#.?.???, Damages: 2 1 1 3, Size: 13, MinSize: 10 => 5
+[341] Row: #.??#??#.##????., Damages: 1 3 2 2 3, Size: 16, MinSize: 15 => 1
+[342] Row: ??.#?#?.?.??#?????., Damages: 1 1 1 1 1 4, Size: 19, MinSize: 14 => 7
+[343] Row: ????#?????????#?.??, Damages: 1 3 7 1, Size: 19, MinSize: 15 => 25
+[344] Row: ????????.??, Damages: 4 2 2, Size: 11, MinSize: 10 => 3
+[345] Row: .?????????, Damages: 2 1, Size: 10, MinSize: 4 => 21
+[346] Row: #???#?#?.??????????, Damages: 1 5 2 1 3, Size: 19, MinSize: 16 => 20
+[347] Row: .?#??#??##?#., Damages: 2 7, Size: 13, MinSize: 10 => 2
+[348] Row: ??#?.????#??###?.??, Damages: 1 5 4 2, Size: 19, MinSize: 15 => 3
+[349] Row: ??.???.?##??, Damages: 1 3 4, Size: 12, MinSize: 10 => 4
+[350] Row: ?.?????.????, Damages: 1 5 2, Size: 12, MinSize: 10 => 3
+[351] Row: ??????#???, Damages: 3 1 1, Size: 10, MinSize: 7 => 7
+[352] Row: #..?#????????##?, Damages: 1 12, Size: 16, MinSize: 14 => 2
+[353] Row: #???#?.???, Damages: 3 1 1, Size: 10, MinSize: 7 => 3
+[354] Row: ????#?.?.?????????, Damages: 1 1 2 1 4 3, Size: 18, MinSize: 17 => 3
+[355] Row: #?????#??#??.???????, Damages: 1 8 1 1 4, Size: 20, MinSize: 19 => 3
+[356] Row: ..?#??##??, Damages: 1 3, Size: 10, MinSize: 5 => 2
+[357] Row: .#???.?##?##?????, Damages: 1 10, Size: 17, MinSize: 12 => 2
+[358] Row: ??#??#?..??#??.??#?, Damages: 7 5 2, Size: 19, MinSize: 16 => 2
+[359] Row: ??..??..#???, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 8
+[360] Row: ???.????##?#.?, Damages: 2 7, Size: 14, MinSize: 10 => 2
+[361] Row: .?##???????.?#?.?.?#, Damages: 2 3 3 1, Size: 20, MinSize: 12 => 4
+[362] Row: .?.??#??????#?#???, Damages: 1 1 1 3 6, Size: 18, MinSize: 16 => 3
+[363] Row: #?.???#?????#.#???., Damages: 2 4 2 2 1, Size: 19, MinSize: 15 => 5
+[364] Row: ?#?#???.?#????#??, Damages: 4 6, Size: 17, MinSize: 11 => 2
+[365] Row: ????.?????#?????#??, Damages: 1 2 2 9, Size: 19, MinSize: 17 => 6
+[366] Row: ??.??#?#.???#??.?##?, Damages: 1 5 2 1 2, Size: 20, MinSize: 15 => 4
+[367] Row: ????#.?.???#??..?, Damages: 1 6, Size: 17, MinSize: 8 => 1
+[368] Row: ??.?.?###?#???.?????, Damages: 1 1 6 1 2 1, Size: 20, MinSize: 17 => 18
+[369] Row: ??#.###.#???., Damages: 3 3 1 2, Size: 13, MinSize: 12 => 1
+[370] Row: ????#?..#?#????, Damages: 1 1 1 2 1, Size: 15, MinSize: 10 => 6
+[371] Row: .??#??#????????##?#, Damages: 1 1 5 1 6, Size: 19, MinSize: 18 => 1
+[372] Row: #??##.??#???#??, Damages: 5 8, Size: 15, MinSize: 14 => 2
+[373] Row: ???????#???, Damages: 3 4, Size: 11, MinSize: 8 => 10
+[374] Row: .??.#.??.??.????, Damages: 1 1 1 2 1, Size: 16, MinSize: 10 => 28
+[375] Row: ??#??.?#?.??, Damages: 4 1 2, Size: 12, MinSize: 9 => 2
+[376] Row: .???????.???#?????.?, Damages: 3 6, Size: 20, MinSize: 10 => 20
+[377] Row: ???#????#????#??#??., Damages: 3 14, Size: 20, MinSize: 18 => 1
+[378] Row: ????????..?????.?, Damages: 3 1 2, Size: 17, MinSize: 8 => 59
+[379] Row: ?????#?#?.#???, Damages: 1 4 1, Size: 14, MinSize: 8 => 7
+[380] Row: #???.??##.????, Damages: 4 2 1, Size: 14, MinSize: 9 => 4
+[381] Row: ?.?#????#?, Damages: 2 3, Size: 10, MinSize: 6 => 4
+[382] Row: ?.?.???##???., Damages: 1 7, Size: 13, MinSize: 9 => 4
+[383] Row: ...#####?.??##?, Damages: 6 3, Size: 15, MinSize: 10 => 2
+[384] Row: ?#???#??????, Damages: 1 3 2 1, Size: 12, MinSize: 10 => 4
+[385] Row: ???.##?###?, Damages: 1 7, Size: 11, MinSize: 9 => 3
+[386] Row: #?#???#?????, Damages: 7 2, Size: 12, MinSize: 10 => 3
+[387] Row: .??#???.?#???.???#, Damages: 5 3 4, Size: 18, MinSize: 14 => 4
+[388] Row: ?#?#??#??#.?#???.#??, Damages: 1 5 1 2 1 1, Size: 20, MinSize: 16 => 5
+[389] Row: ??????##??##??#??., Damages: 4 8 1 1, Size: 18, MinSize: 17 => 1
+[390] Row: ??#????..??##???#???, Damages: 4 1 9, Size: 20, MinSize: 16 => 12
+[391] Row: ?.??#?.?.?, Damages: 2 1, Size: 10, MinSize: 4 => 4
+[392] Row: ?#????#?.??, Damages: 7 2, Size: 11, MinSize: 10 => 2
+[393] Row: ???????##??????, Damages: 4 4 2, Size: 15, MinSize: 12 => 16
+[394] Row: ??##?.?#???.#?.?????, Damages: 1 3 3 1 1 5, Size: 20, MinSize: 19 => 1
+[395] Row: .?.?????#?????, Damages: 1 1 3 1, Size: 14, MinSize: 9 => 34
+[396] Row: ?????.??#?????###?, Damages: 5 1 2 1 3, Size: 18, MinSize: 16 => 2
+[397] Row: ???#??.#??????.?., Damages: 1 4 1 5, Size: 17, MinSize: 14 => 1
+[398] Row: ??#????????#.?, Damages: 2 1 4, Size: 14, MinSize: 9 => 5
+[399] Row: ?.??????#..?, Damages: 3 3, Size: 12, MinSize: 7 => 1
+[400] Row: ?????##..#.?, Damages: 2 2 1, Size: 12, MinSize: 7 => 3
+[401] Row: .#?..????#####???#., Damages: 1 13, Size: 19, MinSize: 15 => 1
+[402] Row: .??.?????#?#?.#?, Damages: 1 1 6 1, Size: 16, MinSize: 12 => 6
+[403] Row: ??????????#??., Damages: 6 2, Size: 14, MinSize: 9 => 7
+[404] Row: ???.?..???, Damages: 3 1 1, Size: 10, MinSize: 7 => 4
+[405] Row: ??#???????#??????, Damages: 3 6 2, Size: 17, MinSize: 13 => 26
+[406] Row: ?.???.????.??#?, Damages: 1 2, Size: 15, MinSize: 4 => 17
+[407] Row: ????.????????????, Damages: 2 8, Size: 17, MinSize: 11 => 18
+[408] Row: .#.??????., Damages: 1 5, Size: 10, MinSize: 7 => 2
+[409] Row: ?????.???., Damages: 2 1 2, Size: 10, MinSize: 7 => 6
+[410] Row: ??.??#???#..?###???., Damages: 1 5 1 6, Size: 20, MinSize: 16 => 4
+[411] Row: #????#.??##?.??#, Damages: 3 1 3 3, Size: 16, MinSize: 13 => 2
+[412] Row: ???#???.#?.?.?????.?, Damages: 6 2 1 3 1 1, Size: 20, MinSize: 19 => 2
+[413] Row: .###.???.?, Damages: 3 1, Size: 10, MinSize: 5 => 4
+[414] Row: ???????..??#?, Damages: 6 2, Size: 13, MinSize: 9 => 4
+[415] Row: ????#??????#?, Damages: 5 2 2, Size: 13, MinSize: 11 => 9
+[416] Row: ????????.??#??, Damages: 2 3 1, Size: 14, MinSize: 8 => 13
+[417] Row: #?#.???.???, Damages: 3 1 2, Size: 11, MinSize: 8 => 6
+[418] Row: ?###?###???.??, Damages: 8 2, Size: 14, MinSize: 11 => 3
+[419] Row: ?#??.#..#?.?#???., Damages: 1 1 2 3, Size: 17, MinSize: 10 => 2
+[420] Row: ?????.?#?????, Damages: 5 1 1, Size: 13, MinSize: 9 => 4
+[421] Row: .?#??????.?.?.??, Damages: 3 1, Size: 16, MinSize: 5 => 15
+[422] Row: .#??##??.???#?#.., Damages: 7 3, Size: 17, MinSize: 11 => 1
+[423] Row: ???#?.??????, Damages: 2 4, Size: 12, MinSize: 7 => 6
+[424] Row: ???#.???.., Damages: 3 1, Size: 10, MinSize: 5 => 3
+[425] Row: ?.???#??#.????#, Damages: 1 1 1 1 2, Size: 15, MinSize: 10 => 8
+[426] Row: ??????##.??#????#??, Damages: 7 1 2 5, Size: 19, MinSize: 18 => 1
+[427] Row: ?????.?.??, Damages: 1 1 1, Size: 10, MinSize: 5 => 29
+[428] Row: #??#?????.????., Damages: 1 3 3 2 1, Size: 15, MinSize: 14 => 1
+[429] Row: ?.???##????.??#?#.., Damages: 5 2 3 1, Size: 19, MinSize: 14 => 3
+[430] Row: ?#.#??????, Damages: 1 1 1, Size: 10, MinSize: 5 => 5
+[431] Row: ??????#?##?#?.?#?., Damages: 1 1 1 2 1 3, Size: 18, MinSize: 14 => 6
+[432] Row: ??#????.##?, Damages: 3 2, Size: 11, MinSize: 6 => 3
+[433] Row: ??.?.#.??#?, Damages: 2 1 1, Size: 11, MinSize: 6 => 1
+[434] Row: ?????##?.?#???, Damages: 3 3 1 1, Size: 14, MinSize: 11 => 6
+[435] Row: ???#.?#????, Damages: 2 3, Size: 11, MinSize: 6 => 2
+[436] Row: ???????..?#??#??#???, Damages: 3 2 6 1 1, Size: 20, MinSize: 17 => 6
+[437] Row: .??#?#??.????#??#??#, Damages: 7 1 7, Size: 20, MinSize: 17 => 3
+[438] Row: ???#.?#?.#, Damages: 2 2 1, Size: 10, MinSize: 7 => 2
+[439] Row: ??.?##?#.??#, Damages: 5 2, Size: 12, MinSize: 8 => 1
+[440] Row: ?.????#?#.?, Damages: 4 1, Size: 11, MinSize: 6 => 2
+[441] Row: ????.???#.?, Damages: 1 3, Size: 11, MinSize: 5 => 4
+[442] Row: ?#????#??#???#?, Damages: 1 1 2 2 3, Size: 15, MinSize: 13 => 5
+[443] Row: .?????#??#??#??., Damages: 1 10, Size: 16, MinSize: 12 => 6
+[444] Row: ?#?#??#?????#?#?#???, Damages: 13 1 1 1, Size: 20, MinSize: 19 => 2
+[445] Row: ?#??.?#?#.????, Damages: 1 1 3 1, Size: 14, MinSize: 9 => 4
+[446] Row: ???#.???#??, Damages: 1 1 5, Size: 11, MinSize: 9 => 4
+[447] Row: #???????##????, Damages: 1 1 7, Size: 14, MinSize: 11 => 10
+[448] Row: ?#.?????###?, Damages: 1 1 6, Size: 12, MinSize: 10 => 3
+[449] Row: ?..??.????#, Damages: 1 3 1, Size: 11, MinSize: 7 => 3
+[450] Row: ?.#??.????#?, Damages: 3 1 3, Size: 12, MinSize: 9 => 3
+[451] Row: ?.#?#??#???????, Damages: 1 1 4 1 2, Size: 15, MinSize: 13 => 7
+[452] Row: .???????..#.??????#., Damages: 4 1 1 1 2 1, Size: 20, MinSize: 15 => 9
+[453] Row: ???#..?#..?.??##?#, Damages: 1 1 2 1 5, Size: 18, MinSize: 14 => 2
+[454] Row: ??????????.#., Damages: 1 1 3 1, Size: 13, MinSize: 9 => 20
+[455] Row: ????..????????????#, Damages: 1 1 1 3 1 2, Size: 19, MinSize: 14 => 80
+[456] Row: .#.??#????, Damages: 1 1 1, Size: 10, MinSize: 5 => 4
+[457] Row: ???????????????????, Damages: 4 1 4 1 1, Size: 19, MinSize: 15 => 126
+[458] Row: ??????????#??#??????, Damages: 4 8 1, Size: 20, MinSize: 15 => 50
+[459] Row: .???#?.???, Damages: 2 1 2, Size: 10, MinSize: 7 => 2
+[460] Row: ???.???#???.?.??#?, Damages: 2 6 4, Size: 18, MinSize: 14 => 4
+[461] Row: ?.?.??????#?#?#?, Damages: 8 2, Size: 16, MinSize: 11 => 1
+[462] Row: ??#?.?????, Damages: 1 4, Size: 10, MinSize: 6 => 2
+[463] Row: ??#???#??????#???., Damages: 2 5 2 1, Size: 18, MinSize: 13 => 16
+[464] Row: ?#???.#???, Damages: 2 2, Size: 10, MinSize: 5 => 2
+[465] Row: #??.##?####??#?, Damages: 1 11, Size: 15, MinSize: 13 => 1
+[466] Row: #????##??.????.?##.?, Damages: 4 4 1 1 3 1, Size: 20, MinSize: 19 => 3
+[467] Row: ???...?#??#???, Damages: 2 6, Size: 14, MinSize: 9 => 4
+[468] Row: ????????????, Damages: 1 1 3, Size: 12, MinSize: 7 => 56
+[469] Row: ?#.????#??.#..??, Damages: 1 1 4 1 1, Size: 16, MinSize: 12 => 6
+[470] Row: .?.?????##??##????, Damages: 1 1 12, Size: 18, MinSize: 16 => 3
+[471] Row: ????????..??##, Damages: 1 5 3, Size: 14, MinSize: 11 => 3
+[472] Row: ?????#?#..#???, Damages: 7 1 1, Size: 14, MinSize: 11 => 2
+[473] Row: .?##???.#?#.??#?, Damages: 2 1 3 1, Size: 16, MinSize: 10 => 2
+[474] Row: .??##??#????#.???..?, Damages: 8 2 1, Size: 20, MinSize: 13 => 8
+[475] Row: ?#????.??.##????, Damages: 3 1 3, Size: 16, MinSize: 9 => 7
+[476] Row: #??#????#?????, Damages: 5 4 1, Size: 14, MinSize: 12 => 6
+[477] Row: ##?#?????#?, Damages: 4 2, Size: 11, MinSize: 7 => 2
+[478] Row: ???#??#??.., Damages: 2 3, Size: 11, MinSize: 6 => 3
+[479] Row: ?#????#????.#.###?, Damages: 2 5 1 3, Size: 18, MinSize: 14 => 7
+[480] Row: ?.?????#?#??.????#??, Damages: 1 4 2 5 1, Size: 20, MinSize: 17 => 2
+[481] Row: #????#??.???, Damages: 2 2 1 1, Size: 12, MinSize: 9 => 5
+[482] Row: .?????#??.????.?, Damages: 4 3 1 1 1, Size: 16, MinSize: 14 => 3
+[483] Row: ?#..?#??.#, Damages: 2 1 1, Size: 10, MinSize: 6 => 1
+[484] Row: #?.??#??.?##??, Damages: 1 4 5, Size: 14, MinSize: 12 => 2
+[485] Row: ??????##??.?, Damages: 1 1 4, Size: 12, MinSize: 8 => 10
+[486] Row: ???..#?.????.?, Damages: 1 2 2, Size: 14, MinSize: 7 => 9
+[487] Row: ???#?.#?.?#??#..#?, Damages: 5 2 3 1 2, Size: 18, MinSize: 17 => 1
+[488] Row: ?.#?#????#??????????, Damages: 10 1, Size: 20, MinSize: 12 => 7
+[489] Row: ??????#??.?, Damages: 3 3, Size: 11, MinSize: 7 => 6
+[490] Row: ????#?#??#??###??, Damages: 5 7, Size: 17, MinSize: 13 => 3
+[491] Row: ?????.?.?.#?.?, Damages: 3 1 1, Size: 14, MinSize: 7 => 10
+[492] Row: ?????#?#####?#, Damages: 3 9, Size: 14, MinSize: 13 => 2
+[493] Row: ?#??.?..??., Damages: 3 1 1, Size: 11, MinSize: 7 => 4
+[494] Row: ?#?????#?#??#.???, Damages: 4 6 3, Size: 17, MinSize: 15 => 2
+[495] Row: ?????#?.??., Damages: 1 4 1, Size: 11, MinSize: 8 => 6
+[496] Row: ????#?###???..?, Damages: 10 1, Size: 15, MinSize: 12 => 4
+[497] Row: .???#??#?.??#?#, Damages: 1 1 1 3 1, Size: 15, MinSize: 11 => 2
+[498] Row: #????#??#.?, Damages: 1 6 1, Size: 11, MinSize: 10 => 1
+[499] Row: #????#?.#?#?.#.??, Damages: 3 1 4 1 2, Size: 17, MinSize: 15 => 1
+[500] Row: #.?.?.?#.??.???#?, Damages: 1 1 2 1 5, Size: 17, MinSize: 14 => 4
+[501] Row: ??????..?????#??.?., Damages: 1 1 1 4 1 1, Size: 19, MinSize: 14 => 22
+[502] Row: ????..?..?????#, Damages: 1 1 1 1 2, Size: 15, MinSize: 10 => 16
+[503] Row: ??.#???.?#?, Damages: 1 3 1, Size: 11, MinSize: 7 => 2
+[504] Row: ????.??#?., Damages: 1 2, Size: 10, MinSize: 4 => 9
+[505] Row: ?#??#??????.???, Damages: 8 1, Size: 15, MinSize: 10 => 9
+[506] Row: ??????###??#.??.??, Damages: 1 6 2 1 1, Size: 18, MinSize: 15 => 8
+[507] Row: ????..##??#?#???????, Damages: 2 11, Size: 20, MinSize: 14 => 4
+[508] Row: ?.???##??????., Damages: 2 7, Size: 14, MinSize: 10 => 1
+[509] Row: .#??#?.??????, Damages: 2 1 4 1, Size: 13, MinSize: 11 => 1
+[510] Row: ?.?#??#??##?#???#??#, Damages: 1 8 8, Size: 20, MinSize: 19 => 1
+[511] Row: #????.#?????#???????, Damages: 1 1 1 7 1 1, Size: 20, MinSize: 17 => 22
+[512] Row: ?...?#?.????##??, Damages: 1 1 7, Size: 16, MinSize: 11 => 2
+[513] Row: ..???.???????#?, Damages: 2 6, Size: 15, MinSize: 9 => 5
+[514] Row: #?#???#??????????, Damages: 5 5 1 2, Size: 17, MinSize: 16 => 3
+[515] Row: ??.???????, Damages: 1 1 1, Size: 10, MinSize: 5 => 40
+[516] Row: ..?.???.???, Damages: 1 2, Size: 11, MinSize: 4 => 10
+[517] Row: #.????.?#????###????, Damages: 1 2 2 7, Size: 20, MinSize: 15 => 22
+[518] Row: ??.?..??????#????, Damages: 1 1 2 6, Size: 17, MinSize: 13 => 15
+[519] Row: .?#????##.#.??#????, Damages: 8 1 5, Size: 19, MinSize: 16 => 3
+[520] Row: #??##?.?#???#, Damages: 6 3 1, Size: 13, MinSize: 12 => 2
+[521] Row: ???#??????????????, Damages: 9 1 1 1, Size: 18, MinSize: 15 => 35
+[522] Row: ?#????.???#??#, Damages: 3 1 3 2, Size: 14, MinSize: 12 => 3
+[523] Row: ????.??????????.?, Damages: 1 1 2 1 3, Size: 17, MinSize: 12 => 34
+[524] Row: ?..?#?????..?#?.??#, Damages: 1 2 2 1 3 2, Size: 19, MinSize: 16 => 1
+[525] Row: ??#???#?#??#??#???, Damages: 4 3 6, Size: 18, MinSize: 15 => 4
+[526] Row: .????#.????????, Damages: 2 1 1 1 1, Size: 15, MinSize: 10 => 45
+[527] Row: .??????.#?#.#, Damages: 4 1 3 1, Size: 13, MinSize: 12 => 1
+[528] Row: .?#?#?#??#?????#?, Damages: 1 6 1 1, Size: 17, MinSize: 12 => 3
+[529] Row: ???.????#.?????, Damages: 2 4 1, Size: 15, MinSize: 9 => 10
+[530] Row: .?.??#????, Damages: 1 1, Size: 10, MinSize: 3 => 5
+[531] Row: ?.?#????#?##?#??, Damages: 3 7, Size: 16, MinSize: 11 => 4
+[532] Row: ..???##??#.#.????, Damages: 7 1 1 1, Size: 17, MinSize: 13 => 3
+[533] Row: ?.???#??????###??.#?, Damages: 1 1 1 4 3 1, Size: 20, MinSize: 16 => 2
+[534] Row: ????#???.???..#, Damages: 2 1 1 1 1, Size: 15, MinSize: 10 => 17
+[535] Row: ??????.?.#???., Damages: 4 2, Size: 14, MinSize: 7 => 3
+[536] Row: .??#??.?##.#???, Damages: 5 2 1 1, Size: 15, MinSize: 12 => 2
+[537] Row: ?.?.???##?????#???.?, Damages: 1 1 11 1, Size: 20, MinSize: 17 => 13
+[538] Row: ??##??#?????.??????, Damages: 10 3, Size: 19, MinSize: 14 => 12
+[539] Row: .???#.??????????#, Damages: 1 1 5 3, Size: 17, MinSize: 13 => 7
+[540] Row: ??.#??##???##??##??, Damages: 10 3, Size: 19, MinSize: 14 => 2
+[541] Row: ?#.???#??.?, Damages: 1 5 1, Size: 11, MinSize: 9 => 2
+[542] Row: ??????.?...??#??#?.., Damages: 3 7, Size: 20, MinSize: 11 => 4
+[543] Row: ?.???????????., Damages: 2 1 2, Size: 14, MinSize: 7 => 35
+[544] Row: ??????????..?###??., Damages: 5 3, Size: 19, MinSize: 9 => 6
+[545] Row: ??????#?.??, Damages: 1 5, Size: 11, MinSize: 7 => 3
+[546] Row: .?##..#???, Damages: 3 2, Size: 10, MinSize: 6 => 1
+[547] Row: ??#?..???#???, Damages: 3 1 2 1, Size: 13, MinSize: 10 => 8
+[548] Row: ????????.#??##, Damages: 1 1 2 2, Size: 14, MinSize: 9 => 21
+[549] Row: #??????#?..#, Damages: 1 3 1 1, Size: 12, MinSize: 9 => 2
+[550] Row: ??.#?.?????#, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 11
+[551] Row: ???#?????.?., Damages: 5 1 1 1, Size: 12, MinSize: 11 => 1
+[552] Row: ?????????#?, Damages: 2 7, Size: 11, MinSize: 10 => 3
+[553] Row: ?##?.##?????, Damages: 3 2 1 2, Size: 12, MinSize: 11 => 2
+[554] Row: ?#.????.?###?, Damages: 2 2 4, Size: 13, MinSize: 10 => 6
+[555] Row: ?.#?.?#????, Damages: 2 1 2, Size: 11, MinSize: 7 => 2
+[556] Row: ??#???.???.??., Damages: 2 1 3 1, Size: 14, MinSize: 10 => 6
+[557] Row: .?#?#?????, Damages: 1 1 2, Size: 10, MinSize: 6 => 3
+[558] Row: .???.???#?###??, Damages: 2 7, Size: 15, MinSize: 10 => 7
+[559] Row: ?#?#??????????#, Damages: 6 1 1 1 1, Size: 15, MinSize: 14 => 5
+[560] Row: ??????.????, Damages: 1 2 1, Size: 11, MinSize: 6 => 31
+[561] Row: ..??.?#???#.??#??#?., Damages: 2 5 2 3, Size: 20, MinSize: 15 => 1
+[562] Row: ?????#?.???##??#??, Damages: 2 2 6 1, Size: 18, MinSize: 14 => 10
+[563] Row: ???..??.??...#?#..?., Damages: 2 3, Size: 20, MinSize: 6 => 4
+[564] Row: #?.?#??#??, Damages: 1 2 2, Size: 10, MinSize: 7 => 3
+[565] Row: ?????????.??#???.??#, Damages: 2 5 1 1 1 2, Size: 20, MinSize: 17 => 6
+[566] Row: #????##?#?#?.??, Damages: 2 3 1 2 1, Size: 15, MinSize: 13 => 2
+[567] Row: #????????????#???, Damages: 1 2 11, Size: 17, MinSize: 16 => 3
+[568] Row: ?????????..?, Damages: 1 5 1, Size: 12, MinSize: 9 => 7
+[569] Row: ???????..?????.#????, Damages: 1 4 1 1 3 1, Size: 20, MinSize: 16 => 18
+[570] Row: ???.????????????#?, Damages: 1 1 1 1 2 5, Size: 18, MinSize: 16 => 17
+[571] Row: ??.????###?#?, Damages: 1 8, Size: 13, MinSize: 10 => 5
+[572] Row: .?##???.??????#, Damages: 5 4 1, Size: 15, MinSize: 12 => 4
+[573] Row: .????????.??.????, Damages: 2 2, Size: 17, MinSize: 5 => 41
+[574] Row: ?#?#.????#???, Damages: 3 6, Size: 13, MinSize: 10 => 3
+[575] Row: ???#??.#??#.?#?.??, Damages: 1 3 1 1 1 1, Size: 18, MinSize: 13 => 6
+[576] Row: ??..?.??#?, Damages: 1 1 1, Size: 10, MinSize: 5 => 5
+[577] Row: ???..????#.?#?, Damages: 1 1 3 1, Size: 14, MinSize: 9 => 4
+[578] Row: ???#?????????.?, Damages: 1 2 1 1 1, Size: 15, MinSize: 10 => 102
+[579] Row: ?????.###?#?.????, Damages: 1 6, Size: 17, MinSize: 8 => 5
+[580] Row: ??##???#####.??.?.?, Damages: 11 1 1 1, Size: 19, MinSize: 17 => 2
+[581] Row: ????.#?#??..??., Damages: 3 1 3 1, Size: 15, MinSize: 11 => 4
+[582] Row: ???#?????????????, Damages: 2 1 2 5 1, Size: 17, MinSize: 15 => 11
+[583] Row: ?#????.?.#???, Damages: 1 1 1 4, Size: 13, MinSize: 10 => 4
+[584] Row: #?????#???#?#., Damages: 1 1 2 3, Size: 14, MinSize: 10 => 5
+[585] Row: ????#????#??#????, Damages: 1 12 1, Size: 17, MinSize: 16 => 4
+[586] Row: ..#.?#.??#?.?.#.???, Damages: 1 1 3 1 1 3, Size: 19, MinSize: 15 => 2
+[587] Row: ???????##?#, Damages: 1 2 4, Size: 11, MinSize: 9 => 6
+[588] Row: ????????#?????, Damages: 4 4, Size: 14, MinSize: 9 => 11
+[589] Row: #??...?#?.#.????, Damages: 1 1 2 1 4, Size: 16, MinSize: 13 => 2
+[590] Row: ?#?.???.###?.#????, Damages: 3 1 3 2 1, Size: 18, MinSize: 14 => 6
+[591] Row: ?#????????, Damages: 2 1 1, Size: 10, MinSize: 6 => 25
+[592] Row: .#???#?????###?, Damages: 1 4 3, Size: 15, MinSize: 10 => 3
+[593] Row: ???#?.??.?????#?., Damages: 4 6, Size: 17, MinSize: 11 => 4
+[594] Row: ????##??#??#?##?., Damages: 1 3 1 4, Size: 17, MinSize: 12 => 5
+[595] Row: ?.???#?##??#??, Damages: 6 1, Size: 14, MinSize: 8 => 2
+[596] Row: ?????????.??????#?#, Damages: 1 1 5 1 1 4, Size: 19, MinSize: 18 => 3
+[597] Row: ??????#??##???.?#, Damages: 1 10 1, Size: 17, MinSize: 14 => 6
+[598] Row: .?#...??.??.????, Damages: 1 1 1 4, Size: 16, MinSize: 10 => 4
+[599] Row: #?#.#?##?..#??#?, Damages: 1 1 4 1 2, Size: 16, MinSize: 13 => 2
+[600] Row: .#??.????##?..??, Damages: 1 1 1 3 1, Size: 16, MinSize: 11 => 12
+[601] Row: ??????#??#??, Damages: 7 1 1, Size: 12, MinSize: 11 => 2
+[602] Row: ??##?#??.#?#., Damages: 5 3, Size: 13, MinSize: 9 => 2
+[603] Row: ?...????.##??#, Damages: 1 2 5, Size: 14, MinSize: 10 => 4
+[604] Row: .#?.???..?, Damages: 1 1 1, Size: 10, MinSize: 5 => 4
+[605] Row: ???.?..????#???., Damages: 3 5, Size: 16, MinSize: 9 => 4
+[606] Row: ???????#???#??#??#??, Damages: 1 9 1, Size: 20, MinSize: 13 => 12
+[607] Row: ??#?##???.#??.#.????, Damages: 4 1 1 1 1 3, Size: 20, MinSize: 16 => 4
+[608] Row: .?????..????##??, Damages: 1 7, Size: 16, MinSize: 9 => 10
+[609] Row: ??????###??##?#?????, Damages: 1 2 14, Size: 20, MinSize: 19 => 4
+[610] Row: ???#???.#???.???, Damages: 1 4 2, Size: 16, MinSize: 9 => 5
+[611] Row: ??.?#???????????, Damages: 1 11 1, Size: 16, MinSize: 15 => 2
+[612] Row: ??.?.????..???##??.?, Damages: 1 1 5, Size: 20, MinSize: 9 => 58
+[613] Row: #??????#??.??????., Damages: 2 5 1 3 1, Size: 18, MinSize: 16 => 3
+[614] Row: ??#?.?.???#?##?, Damages: 2 1 6, Size: 15, MinSize: 11 => 6
+[615] Row: .????..?????, Damages: 2 2, Size: 12, MinSize: 5 => 13
+[616] Row: ????##???..?##?..?, Damages: 1 4 3, Size: 18, MinSize: 10 => 12
+[617] Row: ..????.?.???????????, Damages: 1 2 1 6 3, Size: 20, MinSize: 17 => 3
+[618] Row: #??#?###??#????#., Damages: 4 6 3, Size: 17, MinSize: 15 => 1
+[619] Row: #?##?#???.????##???., Damages: 9 9, Size: 20, MinSize: 19 => 1
+[620] Row: .#?????.?..?, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 10
+[621] Row: ???##??#??###?##??, Damages: 8 8, Size: 18, MinSize: 17 => 3
+[622] Row: ??.????#??.?#..#, Damages: 2 7 1 1, Size: 16, MinSize: 14 => 1
+[623] Row: ??????#??????????#?, Damages: 2 4 10, Size: 19, MinSize: 18 => 4
+[624] Row: ??##?#?????##??.#??, Damages: 11 1 2, Size: 19, MinSize: 16 => 1
+[625] Row: ??..?.#?#??, Damages: 1 1 5, Size: 11, MinSize: 9 => 2
+[626] Row: ????###?#??.?#??.?., Damages: 6 4, Size: 19, MinSize: 11 => 2
+[627] Row: ??.##????#?..?, Damages: 1 2 5 1, Size: 14, MinSize: 12 => 2
+[628] Row: ??????#??##??????., Damages: 8 2, Size: 18, MinSize: 11 => 11
+[629] Row: ????##???.##??#????, Damages: 6 5 1, Size: 19, MinSize: 14 => 12
+[630] Row: ???????##?.?..?????., Damages: 6 3, Size: 20, MinSize: 10 => 7
+[631] Row: #????##..??, Damages: 3 2 1, Size: 11, MinSize: 8 => 2
+[632] Row: ??#??##??#?..?, Damages: 1 5 2 1, Size: 14, MinSize: 12 => 2
+[633] Row: ???#???.???#???, Damages: 1 3 5, Size: 15, MinSize: 11 => 9
+[634] Row: .??#.#???.?#?.#?.??, Damages: 3 4 3 2 1, Size: 19, MinSize: 17 => 2
+[635] Row: .???##...?????, Damages: 5 1, Size: 14, MinSize: 7 => 5
+[636] Row: ?#??.??#?.#???##.#?., Damages: 1 1 1 6 2, Size: 20, MinSize: 15 => 2
+[637] Row: .?#??#??#?#?##??#, Damages: 4 9, Size: 17, MinSize: 14 => 1
+[638] Row: ???#????.???.??#.??, Damages: 8 2 3 1, Size: 19, MinSize: 17 => 4
+[639] Row: .??#.?.?##.., Damages: 2 3, Size: 12, MinSize: 6 => 1
+[640] Row: ????##?#?.?, Damages: 1 5 1, Size: 11, MinSize: 9 => 5
+[641] Row: ?.?.??????###?, Damages: 1 2 7, Size: 14, MinSize: 12 => 2
+[642] Row: ?#?????????????, Damages: 3 1 4 2, Size: 15, MinSize: 13 => 14
+[643] Row: ..#??#?????????, Damages: 4 1, Size: 15, MinSize: 6 => 8
+[644] Row: ???.?.??????#??#??, Damages: 1 1 2 1 5 1, Size: 18, MinSize: 16 => 4
+[645] Row: .???#??#?#????????#?, Damages: 11 3, Size: 20, MinSize: 15 => 8
+[646] Row: .???#??.#??.?, Damages: 3 2 1, Size: 13, MinSize: 8 => 3
+[647] Row: ????#????#???#?#, Damages: 1 4 1 3 1, Size: 16, MinSize: 14 => 6
+[648] Row: ?####?#????.??##???, Damages: 10 1 5, Size: 19, MinSize: 18 => 2
+[649] Row: #???.??.?#., Damages: 1 1 2, Size: 11, MinSize: 6 => 4
+[650] Row: ??####?????#?, Damages: 7 1, Size: 13, MinSize: 9 => 3
+[651] Row: ????????##?.#???.?, Damages: 2 6 4, Size: 18, MinSize: 14 => 5
+[652] Row: ?#????##.??????, Damages: 3 1 2 1 1, Size: 15, MinSize: 12 => 10
+[653] Row: ??#?#??????.#?, Damages: 6 1 1, Size: 14, MinSize: 10 => 9
+[654] Row: ?????????.#.#, Damages: 7 1 1, Size: 13, MinSize: 11 => 3
+[655] Row: ???????????????, Damages: 6 5, Size: 15, MinSize: 12 => 10
+[656] Row: .?.?.##???, Damages: 1 3, Size: 10, MinSize: 5 => 2
+[657] Row: .##?.#??.???#?, Damages: 3 1 5, Size: 14, MinSize: 11 => 1
+[658] Row: ???#???#????????, Damages: 4 1 2 1, Size: 16, MinSize: 11 => 36
+[659] Row: ..????????, Damages: 1 1, Size: 10, MinSize: 3 => 21
+[660] Row: ????????????, Damages: 7 1, Size: 12, MinSize: 9 => 10
+[661] Row: ..????.????????, Damages: 3 1 3, Size: 15, MinSize: 9 => 20
+[662] Row: ???.???????#???##??, Damages: 1 2 1 2 4, Size: 19, MinSize: 14 => 65
+[663] Row: .?###?.????, Damages: 4 1 1, Size: 11, MinSize: 8 => 6
+[664] Row: ?.?#?#??#?###???#???, Damages: 2 12 1, Size: 20, MinSize: 17 => 2
+[665] Row: ????#??.?.?????.??, Damages: 2 1 1, Size: 18, MinSize: 6 => 72
+[666] Row: ?????#???????#????, Damages: 1 6 4, Size: 18, MinSize: 13 => 29
+[667] Row: ?.???.?#????, Damages: 2 4, Size: 12, MinSize: 7 => 4
+[668] Row: ??###..????##???##??, Damages: 5 9, Size: 20, MinSize: 15 => 3
+[669] Row: ??????????., Damages: 1 3 1, Size: 11, MinSize: 7 => 20
+[670] Row: #??????###??, Damages: 5 4, Size: 12, MinSize: 10 => 2
+[671] Row: #?#..?#??#?##???, Damages: 1 1 3 7, Size: 16, MinSize: 15 => 1
+[672] Row: ??#?.?###?????##?., Damages: 3 5 4, Size: 18, MinSize: 14 => 8
+[673] Row: ??#???????##.?##?, Damages: 10 2, Size: 17, MinSize: 13 => 1
+[674] Row: #.??###?#?, Damages: 1 5, Size: 10, MinSize: 7 => 1
+[675] Row: ?...##??##?##??., Damages: 1 9, Size: 16, MinSize: 11 => 1
+[676] Row: .??#???#.????????, Damages: 6 2 1, Size: 17, MinSize: 11 => 15
+[677] Row: #??#?#??.#??#?##??., Damages: 8 9, Size: 19, MinSize: 18 => 1
+[678] Row: ?..?.#???????#??, Damages: 1 1 3 4, Size: 16, MinSize: 12 => 9
+[679] Row: ??.?#??#?.?.#???, Damages: 5 4, Size: 16, MinSize: 10 => 2
+[680] Row: ?..???????#??##????, Damages: 1 1 5 3 2, Size: 19, MinSize: 16 => 10
+[681] Row: .?#?????.., Damages: 2 1, Size: 10, MinSize: 4 => 7
+[682] Row: ???###..???, Damages: 4 1, Size: 11, MinSize: 6 => 3
+[683] Row: ????#??????###???#??, Damages: 1 2 1 1 9, Size: 20, MinSize: 18 => 11
+[684] Row: ??#????.????.#??#???, Damages: 5 3 4, Size: 20, MinSize: 14 => 6
+[685] Row: ?#???#..?.??????.#, Damages: 2 1 1 2 2 1, Size: 18, MinSize: 14 => 9
+[686] Row: ??...??##?#???#??, Damages: 1 9, Size: 17, MinSize: 11 => 5
+[687] Row: ???.#??.????#?, Damages: 3 2, Size: 14, MinSize: 6 => 2
+[688] Row: ?????...???.#???., Damages: 2 1 1 1, Size: 17, MinSize: 8 => 43
+[689] Row: ???#???##???#??..?##, Damages: 1 1 4 4 2, Size: 20, MinSize: 16 => 6
+[690] Row: ??????#??..??., Damages: 2 2 1, Size: 14, MinSize: 7 => 18
+[691] Row: ?????##?????????#, Damages: 1 6 1 3, Size: 17, MinSize: 14 => 20
+[692] Row: .#.#.?#???.?, Damages: 1 1 4, Size: 12, MinSize: 8 => 2
+[693] Row: ?????.???.????, Damages: 1 1 3, Size: 14, MinSize: 7 => 50
+[694] Row: ???.??#??.????#???, Damages: 1 3 1 8, Size: 18, MinSize: 16 => 3
+[695] Row: ??##???????.?##???, Damages: 3 1 2 4, Size: 18, MinSize: 13 => 18
+[696] Row: ???#???????.?#., Damages: 9 1, Size: 15, MinSize: 11 => 3
+[697] Row: ????#.??????., Damages: 3 1 4, Size: 13, MinSize: 10 => 4
+[698] Row: .????.#?##??#., Damages: 1 1 7, Size: 14, MinSize: 11 => 3
+[699] Row: ?.????????, Damages: 1 1 2, Size: 10, MinSize: 6 => 25
+[700] Row: .????#.?##?#?#???., Damages: 5 8 1, Size: 18, MinSize: 16 => 1
+[701] Row: ?#??.??.?#??, Damages: 3 2 2, Size: 12, MinSize: 9 => 4
+[702] Row: ??????????, Damages: 2 1 1, Size: 10, MinSize: 6 => 35
+[703] Row: #.??????##??????##, Damages: 1 2 3 5, Size: 18, MinSize: 14 => 7
+[704] Row: ?#??.?#?#??, Damages: 1 5, Size: 11, MinSize: 7 => 2
+[705] Row: .##???#?#?????#???, Damages: 8 1 4 1, Size: 18, MinSize: 17 => 1
+[706] Row: ??.?????.??#?????#, Damages: 2 5 4 2, Size: 18, MinSize: 16 => 3
+[707] Row: ?..?.??.??#?, Damages: 2 4, Size: 12, MinSize: 7 => 1
+[708] Row: ???..??.???##?, Damages: 1 1 6, Size: 14, MinSize: 10 => 7
+[709] Row: #??#?..???.???.#??., Damages: 5 1 1 2 1 1, Size: 19, MinSize: 16 => 2
+[710] Row: ?????#?#??#?#, Damages: 3 4, Size: 13, MinSize: 8 => 1
+[711] Row: #???.?..??##?#, Damages: 1 1 1 6, Size: 14, MinSize: 12 => 2
+[712] Row: .#????.???#???, Damages: 5 1 3, Size: 14, MinSize: 11 => 3
+[713] Row: #.???#????, Damages: 1 1 4, Size: 10, MinSize: 8 => 3
+[714] Row: .?????..?????#?, Damages: 2 1 1 1 1, Size: 15, MinSize: 10 => 9
+[715] Row: .#???#??.?#?., Damages: 1 3 2, Size: 13, MinSize: 8 => 6
+[716] Row: ????.????#???, Damages: 1 2 4, Size: 13, MinSize: 9 => 16
+[717] Row: ?##?#???###??..?##?, Damages: 5 6 3, Size: 19, MinSize: 16 => 6
+[718] Row: ??????#??#???., Damages: 1 1 1 5, Size: 14, MinSize: 11 => 7
+[719] Row: #???????????., Damages: 5 2, Size: 13, MinSize: 8 => 5
+[720] Row: #.??.????????.???, Damages: 1 2 7 1 1, Size: 17, MinSize: 16 => 2
+[721] Row: ??#.??.?????###?, Damages: 1 1 2 5, Size: 16, MinSize: 12 => 11
+[722] Row: .#?.?..#????????, Damages: 1 4, Size: 16, MinSize: 6 => 1
+[723] Row: ?###?##.??, Damages: 4 2 1, Size: 10, MinSize: 9 => 2
+[724] Row: .????.?#?##.?, Damages: 1 4, Size: 13, MinSize: 6 => 4
+[725] Row: ?.##?.?..??, Damages: 2 1 1, Size: 11, MinSize: 6 => 2
+[726] Row: ?#?.?#.????, Damages: 1 2 1, Size: 11, MinSize: 6 => 4
+[727] Row: .???##????????., Damages: 6 4 1, Size: 15, MinSize: 13 => 1
+[728] Row: .##???????##???#??#?, Damages: 2 1 9, Size: 20, MinSize: 14 => 5
+[729] Row: #???????##, Damages: 2 4, Size: 10, MinSize: 7 => 1
+[730] Row: #????#.#.?#?, Damages: 6 1 2, Size: 12, MinSize: 11 => 2
+[731] Row: ??#?#??#??, Damages: 3 2, Size: 10, MinSize: 6 => 2
+[732] Row: ##.??.??.?.#??, Damages: 2 1 1 1, Size: 14, MinSize: 8 => 13
+[733] Row: ?#????????#?##?#??#?, Damages: 2 1 1 1 7, Size: 20, MinSize: 16 => 16
+[734] Row: ?????#????????., Damages: 1 7 1 1, Size: 15, MinSize: 13 => 5
+[735] Row: ??.???#???#?#?, Damages: 5 4, Size: 14, MinSize: 10 => 3
+[736] Row: .????.#?####?#?????, Damages: 1 1 11, Size: 19, MinSize: 15 => 7
+[737] Row: ???.??.?????#????.??, Damages: 1 1 8 1 2, Size: 20, MinSize: 17 => 7
+[738] Row: ??????.?.#?#????#, Damages: 3 1 8, Size: 17, MinSize: 14 => 7
+[739] Row: #?.??????..#, Damages: 2 2 1 1, Size: 12, MinSize: 9 => 6
+[740] Row: ???#??????, Damages: 2 2, Size: 10, MinSize: 5 => 8
+[741] Row: ?????#??.????##?, Damages: 7 5, Size: 16, MinSize: 13 => 4
+[742] Row: .???????#???, Damages: 1 8, Size: 12, MinSize: 10 => 3
+[743] Row: ?.???????.???, Damages: 5 1, Size: 13, MinSize: 7 => 10
+[744] Row: .????##???#????????, Damages: 1 5 3 3, Size: 19, MinSize: 15 => 13
+[745] Row: .?#???###?#???#?, Damages: 1 8 2, Size: 16, MinSize: 13 => 3
+[746] Row: ?##??#????#???#?.??, Damages: 3 5 2 1 1, Size: 19, MinSize: 16 => 2
+[747] Row: ??#?#.????, Damages: 1 3 1, Size: 10, MinSize: 7 => 4
+[748] Row: ??????????????, Damages: 1 3 2 4, Size: 14, MinSize: 13 => 5
+[749] Row: ??#??.?????#??#?, Damages: 3 9, Size: 16, MinSize: 13 => 6
+[750] Row: #.#????##?..?, Damages: 1 2 5, Size: 13, MinSize: 10 => 1
+[751] Row: ?#????#???????, Damages: 1 1 7 1, Size: 14, MinSize: 13 => 1
+[752] Row: .??#??#????###???, Damages: 8 3, Size: 17, MinSize: 12 => 2
+[753] Row: ?.???#??#??, Damages: 1 3, Size: 11, MinSize: 5 => 2
+[754] Row: ?#??.???#??????????, Damages: 4 6 4, Size: 19, MinSize: 16 => 10
+[755] Row: ?.?.?#.?#???#??????#, Damages: 1 1 2 8 1, Size: 20, MinSize: 17 => 4
+[756] Row: ??#????????, Damages: 1 4, Size: 11, MinSize: 6 => 5
+[757] Row: .#????????., Damages: 3 1 1, Size: 11, MinSize: 7 => 6
+[758] Row: .#?#?#?????????, Damages: 1 1 1 6 1, Size: 15, MinSize: 14 => 1
+[759] Row: ???#???#??????, Damages: 3 1 1 2, Size: 14, MinSize: 10 => 13
+[760] Row: ?.#??#???????#????.?, Damages: 1 1 5 5 1, Size: 20, MinSize: 17 => 12
+[761] Row: .#????#.????#, Damages: 4 1 1 1, Size: 13, MinSize: 10 => 3
+[762] Row: #.?.#?#?.??#?#?#?, Damages: 1 1 4 7, Size: 17, MinSize: 16 => 2
+[763] Row: .?????.???., Damages: 1 2, Size: 11, MinSize: 4 => 13
+[764] Row: ??.???#????#?#..???, Damages: 2 2 2 5 2, Size: 19, MinSize: 17 => 2
+[765] Row: .????.????##??, Damages: 2 6, Size: 14, MinSize: 9 => 9
+[766] Row: ??#?.??####??., Damages: 3 5, Size: 14, MinSize: 9 => 4
+[767] Row: ?#?#?????#?????#, Damages: 7 4 1, Size: 16, MinSize: 14 => 3
+[768] Row: ??.#????#??, Damages: 1 4 1, Size: 11, MinSize: 8 => 3
+[769] Row: ?????##???#??.?, Damages: 5 1 3 1, Size: 15, MinSize: 13 => 1
+[770] Row: ????????.#???, Damages: 3 2 1 1, Size: 13, MinSize: 10 => 13
+[771] Row: ???.???#?., Damages: 1 1 1, Size: 10, MinSize: 5 => 7
+[772] Row: #?.#?.?##., Damages: 2 1 3, Size: 10, MinSize: 8 => 1
+[773] Row: ???#??.???#., Damages: 4 2, Size: 12, MinSize: 7 => 3
+[774] Row: ?#?#????#.??#..????., Damages: 9 1 1 1 1, Size: 20, MinSize: 17 => 3
+[775] Row: ?#??.??#??#?, Damages: 2 1 3 2, Size: 12, MinSize: 11 => 3
+[776] Row: ?##???#??????##.?.?, Damages: 2 11, Size: 19, MinSize: 14 => 1
+[777] Row: ????#?.?????., Damages: 5 4, Size: 13, MinSize: 10 => 4
+[778] Row: ???#?.?????#????, Damages: 3 3 4, Size: 16, MinSize: 12 => 6
+[779] Row: ????####??.??#?????, Damages: 8 5, Size: 19, MinSize: 14 => 9
+[780] Row: ???#??#???, Damages: 1 3 3, Size: 10, MinSize: 9 => 1
+[781] Row: ???#?#????#??#??..#, Damages: 14 1, Size: 19, MinSize: 16 => 3
+[782] Row: ???..?.????, Damages: 1 2, Size: 11, MinSize: 4 => 13
+[783] Row: #...??????.?#??.?, Damages: 1 5 3, Size: 17, MinSize: 11 => 4
+[784] Row: ???#?#??????.??##??, Damages: 3 1 5 1 2 1, Size: 19, MinSize: 18 => 1
+[785] Row: ?##??.?.?#?, Damages: 3 1 1, Size: 11, MinSize: 7 => 3
+[786] Row: ##?????#?#??????#.?, Damages: 8 1 4, Size: 19, MinSize: 15 => 1
+[787] Row: .##???##??#?###??.??, Damages: 4 11 2, Size: 20, MinSize: 19 => 1
+[788] Row: ###.???????.????, Damages: 3 1 2, Size: 16, MinSize: 8 => 32
+[789] Row: ?...??????????#????, Damages: 1 5 3, Size: 19, MinSize: 11 => 28
+[790] Row: ????.?.#??##???.?, Damages: 4 1 2 1 1, Size: 17, MinSize: 13 => 2
+[791] Row: #??.?#?.#???., Damages: 2 3 3, Size: 13, MinSize: 10 => 1
+[792] Row: ?#??#?#?..????????, Damages: 1 4 1 1 1 1, Size: 18, MinSize: 14 => 10
+[793] Row: .????.?#?#.?????.?#, Damages: 3 3 1 1 2, Size: 19, MinSize: 14 => 12
+[794] Row: ##?.???.#????#?#????, Damages: 2 2 1 1 8, Size: 20, MinSize: 18 => 2
+[795] Row: .?????##????#?.#.?, Damages: 8 2 1, Size: 18, MinSize: 13 => 5
+[796] Row: ?#??###???#??????#?, Damages: 12 1, Size: 19, MinSize: 14 => 2
+[797] Row: .?..??.??????#??.#?., Damages: 1 7 2, Size: 20, MinSize: 12 => 10
+[798] Row: ?#????#?...?#??, Damages: 1 3 1, Size: 15, MinSize: 7 => 2
+[799] Row: ???????????????, Damages: 3 1 3, Size: 15, MinSize: 9 => 84
+[800] Row: ??????.????##?, Damages: 1 2 6, Size: 14, MinSize: 11 => 12
+[801] Row: .???.?##????, Damages: 1 3 1, Size: 12, MinSize: 7 => 15
+[802] Row: ?####?.#????.#?, Damages: 5 3 1, Size: 15, MinSize: 11 => 2
+[803] Row: ?.#?#????????..#, Damages: 1 3 4 2 1, Size: 16, MinSize: 15 => 1
+[804] Row: #?.?.????#??, Damages: 2 1 2 3, Size: 12, MinSize: 11 => 3
+[805] Row: ??#???????#???##?#, Damages: 10 5, Size: 18, MinSize: 16 => 2
+[806] Row: .???#?????.?, Damages: 1 6, Size: 12, MinSize: 8 => 3
+[807] Row: ?.#?.???##??????????, Damages: 1 2 6 7, Size: 20, MinSize: 19 => 3
+[808] Row: ???????#?#??#?, Damages: 1 1 1 7, Size: 14, MinSize: 13 => 5
+[809] Row: ?#??#?#??..##???.., Damages: 8 4, Size: 18, MinSize: 13 => 2
+[810] Row: ????????.#?, Damages: 2 1 1, Size: 11, MinSize: 6 => 15
+[811] Row: #.#??..?.#????, Damages: 1 3 3 1, Size: 14, MinSize: 11 => 1
+[812] Row: #???.??#????, Damages: 2 1 4 1, Size: 12, MinSize: 11 => 3
+[813] Row: ????.?????, Damages: 3 1 3, Size: 10, MinSize: 9 => 2
+[814] Row: ?????.##???.???, Damages: 1 2 2 1 1, Size: 15, MinSize: 11 => 26
+[815] Row: ??#??.#?????#??, Damages: 3 2 3, Size: 15, MinSize: 10 => 9
+[816] Row: .??#???.??###???, Damages: 1 1 6, Size: 16, MinSize: 10 => 10
+[817] Row: ?????.???.?, Damages: 1 2, Size: 11, MinSize: 4 => 13
+[818] Row: ?.?#?????#???., Damages: 8 1, Size: 14, MinSize: 10 => 3
+[819] Row: .???????#?#??????#, Damages: 1 6 3, Size: 18, MinSize: 12 => 18
+[820] Row: ????##?#????.., Damages: 1 4 2, Size: 14, MinSize: 9 => 7
+[821] Row: ?.??.?.??????, Damages: 1 1 5, Size: 13, MinSize: 9 => 10
+[822] Row: ?????.###.?, Damages: 4 3 1, Size: 11, MinSize: 10 => 2
+[823] Row: ???..??#.##?, Damages: 1 3 2, Size: 12, MinSize: 8 => 3
+[824] Row: #.#??#??.?????#.??, Damages: 1 4 1 1 1 1, Size: 18, MinSize: 14 => 17
+[825] Row: .#?????.?##???.?#, Damages: 2 3 4 1 1, Size: 17, MinSize: 15 => 1
+[826] Row: ???#????.??????.??.?, Damages: 4 1 1 1 2, Size: 20, MinSize: 13 => 94
+[827] Row: ...???.?.#., Damages: 2 1, Size: 11, MinSize: 4 => 2
+[828] Row: ???#?.##.???.?????, Damages: 3 2 2 1 1, Size: 18, MinSize: 13 => 24
+[829] Row: ??????#??.##???????., Damages: 4 9, Size: 20, MinSize: 14 => 3
+[830] Row: #?#?????????, Damages: 5 4, Size: 12, MinSize: 10 => 3
+[831] Row: .#????##???.??, Damages: 1 7 2, Size: 14, MinSize: 12 => 2
+[832] Row: ???#.?.?#., Damages: 1 1 1, Size: 10, MinSize: 5 => 3
+[833] Row: ???#?##.??#??#??.##., Damages: 6 6 2, Size: 20, MinSize: 16 => 3
+[834] Row: ???????#?#?#?###?#., Damages: 1 11, Size: 19, MinSize: 13 => 6
+[835] Row: ????#.#??.?, Damages: 2 1, Size: 11, MinSize: 4 => 1
+[836] Row: ?.#??.?????#???????, Damages: 3 2 8, Size: 19, MinSize: 15 => 6
+[837] Row: ?#.????????, Damages: 2 4 1, Size: 11, MinSize: 9 => 6
+[838] Row: ??.?#??#???, Damages: 2 7, Size: 11, MinSize: 10 => 2
+[839] Row: .?????????#?, Damages: 3 4 2, Size: 12, MinSize: 11 => 1
+[840] Row: ?.???.???#.?, Damages: 3 3, Size: 12, MinSize: 7 => 1
+[841] Row: .#?#??##???, Damages: 4 3, Size: 11, MinSize: 8 => 1
+[842] Row: ?.??????????, Damages: 3 3, Size: 12, MinSize: 7 => 10
+[843] Row: ?????.?.#?????????, Damages: 1 1 1 1 5 1, Size: 18, MinSize: 15 => 25
+[844] Row: ?#?.???????#?#???#?, Damages: 2 3 3 2, Size: 19, MinSize: 13 => 18
+[845] Row: .?#?#?????.????..?, Damages: 8 3, Size: 18, MinSize: 12 => 4
+[846] Row: .?#?#.?..????, Damages: 3 4, Size: 13, MinSize: 8 => 1
+[847] Row: ?.?????.?.##.??.?, Damages: 5 1 2 1, Size: 17, MinSize: 12 => 3
+[848] Row: ??????#???.?, Damages: 3 4 1, Size: 12, MinSize: 10 => 7
+[849] Row: #?.????.?####??, Damages: 2 1 1 4, Size: 15, MinSize: 11 => 3
+[850] Row: ????#?????????#?, Damages: 2 3 6, Size: 16, MinSize: 13 => 7
+[851] Row: ?.#??#????##?????#?, Damages: 1 2 1 2 4, Size: 19, MinSize: 14 => 8
+[852] Row: ??..????##????, Damages: 2 8, Size: 14, MinSize: 11 => 3
+[853] Row: ?##?####??#, Damages: 8 1, Size: 11, MinSize: 10 => 2
+[854] Row: ?.?#####?????#.?., Damages: 6 3, Size: 17, MinSize: 10 => 2
+[855] Row: ###??#..##??.??#?., Damages: 6 3 2, Size: 18, MinSize: 13 => 2
+[856] Row: ?????#??.???#?, Damages: 2 4, Size: 14, MinSize: 7 => 4
+[857] Row: ?.??????#?#?#??, Damages: 1 6, Size: 15, MinSize: 8 => 11
+[858] Row: ????#??????, Damages: 5 1 1, Size: 11, MinSize: 9 => 10
+[859] Row: #??#?#.#?????#.????, Damages: 1 2 1 3 1 3, Size: 19, MinSize: 16 => 2
+[860] Row: ??#?????##???.., Damages: 3 6, Size: 15, MinSize: 10 => 9
+[861] Row: ???#??#??????, Damages: 4 2 1, Size: 13, MinSize: 9 => 16
+[862] Row: ?.??###.???, Damages: 4 1, Size: 11, MinSize: 6 => 3
+[863] Row: ???.???????.???, Damages: 3 3 2 1, Size: 15, MinSize: 12 => 9
+[864] Row: ????????#?????#?.??, Damages: 4 2 1 1 1 1, Size: 19, MinSize: 15 => 13
+[865] Row: ????.???????#??, Damages: 1 1 1 4, Size: 15, MinSize: 10 => 77
+[866] Row: ##??....##???, Damages: 4 3, Size: 13, MinSize: 8 => 1
+[867] Row: .?#???#?????.?#???., Damages: 8 1 2 2, Size: 19, MinSize: 16 => 3
+[868] Row: ?.?##?????.., Damages: 1 5 1, Size: 12, MinSize: 9 => 3
+[869] Row: ##???#?????, Damages: 2 4 2, Size: 11, MinSize: 10 => 3
+[870] Row: ??.?.????##?????., Damages: 1 10, Size: 17, MinSize: 12 => 6
+[871] Row: ?##???###??.?????#., Damages: 10 1 1, Size: 19, MinSize: 14 => 8
+[872] Row: ???????#????, Damages: 3 1, Size: 12, MinSize: 5 => 10
+[873] Row: ?.??..???#.?, Damages: 1 1 2 1, Size: 12, MinSize: 8 => 7
+[874] Row: #????#...., Damages: 2 1, Size: 10, MinSize: 4 => 1
+[875] Row: ?#?.??????, Damages: 3 1 2, Size: 10, MinSize: 8 => 6
+[876] Row: ??.#?.??#?.., Damages: 1 1 4, Size: 12, MinSize: 8 => 2
+[877] Row: ?.??.#???????#??, Damages: 1 7, Size: 16, MinSize: 9 => 3
+[878] Row: ???#??#??#??#??, Damages: 4 2 2 3, Size: 15, MinSize: 14 => 5
+[879] Row: ???..#?##?, Damages: 1 4, Size: 10, MinSize: 6 => 3
+[880] Row: .???#??..??., Damages: 4 2, Size: 12, MinSize: 7 => 3
+[881] Row: ?#?.????#???#?, Damages: 2 1 2 2, Size: 14, MinSize: 10 => 20
+[882] Row: ???????#.???#?#?., Damages: 4 1 2 1 1, Size: 17, MinSize: 13 => 3
+[883] Row: ?????.??#???, Damages: 2 5, Size: 12, MinSize: 8 => 8
+[884] Row: ??????.?####??, Damages: 3 6, Size: 14, MinSize: 10 => 8
+[885] Row: ???##???????, Damages: 9 1, Size: 12, MinSize: 11 => 3
+[886] Row: ????##?#?.??.#??.???, Damages: 1 7 1 1 1 1, Size: 20, MinSize: 17 => 9
+[887] Row: #????###??##?.?.??, Damages: 2 8 1, Size: 18, MinSize: 13 => 6
+[888] Row: ???.??..?., Damages: 1 1 1, Size: 10, MinSize: 5 => 9
+[889] Row: .?#??#????#?#?#?, Damages: 1 11, Size: 16, MinSize: 13 => 2
+[890] Row: ?.???#.????????, Damages: 1 2 6, Size: 15, MinSize: 11 => 6
+[891] Row: ?????##?.??#??##, Damages: 8 3 2, Size: 16, MinSize: 15 => 2
+[892] Row: ?.??????????, Damages: 4 3, Size: 12, MinSize: 8 => 6
+[893] Row: ???.???#?##????????, Damages: 2 1 6 3, Size: 19, MinSize: 15 => 23
+[894] Row: ..??????##?#?????, Damages: 8 2 1, Size: 17, MinSize: 13 => 4
+[895] Row: .?.#??#???##..#??#?, Damages: 1 9 2 1, Size: 19, MinSize: 16 => 1
+[896] Row: ?.?#.??#?#, Damages: 1 1 5, Size: 10, MinSize: 9 => 1
+[897] Row: .#.??#?#?#?, Damages: 1 5, Size: 11, MinSize: 7 => 1
+[898] Row: .#??????.?#, Damages: 1 2 2, Size: 11, MinSize: 7 => 4
+[899] Row: .?????????.???.#, Damages: 1 4 1 3 1, Size: 16, MinSize: 14 => 4
+[900] Row: #?????##?#??????????, Damages: 1 1 8 1 1 2, Size: 20, MinSize: 19 => 6
+[901] Row: ?##?#???.???????##?, Damages: 7 10, Size: 19, MinSize: 18 => 2
+[902] Row: #.?.##.?#?, Damages: 1 2 1, Size: 10, MinSize: 6 => 1
+[903] Row: ?##??..???#?, Damages: 4 2, Size: 12, MinSize: 7 => 4
+[904] Row: ??#?#????#, Damages: 6 2, Size: 10, MinSize: 9 => 2
+[905] Row: #?.##?#???, Damages: 1 6, Size: 10, MinSize: 8 => 1
+[906] Row: ???#.?#???###.????#, Damages: 2 1 7 5, Size: 19, MinSize: 18 => 1
+[907] Row: ??????#?##??.?, Damages: 3 7, Size: 14, MinSize: 11 => 3
+[908] Row: ?#?#??#??????.., Damages: 3 1 1 2, Size: 15, MinSize: 10 => 3
+[909] Row: .??#??#?.?.???????, Damages: 1 5 1 3 1 1, Size: 18, MinSize: 17 => 1
+[910] Row: #??.#??.#??#???????, Damages: 3 3 1 5 2, Size: 19, MinSize: 18 => 3
+[911] Row: .##???????????????, Damages: 3 2 2 5, Size: 18, MinSize: 15 => 10
+[912] Row: ??##??.#?####.., Damages: 4 6, Size: 15, MinSize: 11 => 3
+[913] Row: ?.???###?.#..??, Damages: 6 1 1, Size: 15, MinSize: 10 => 4
+[914] Row: ????????????, Damages: 1 1 7, Size: 12, MinSize: 11 => 4
+[915] Row: ???#?#?#??????##???, Damages: 9 3 1, Size: 19, MinSize: 15 => 12
+[916] Row: ??????.???., Damages: 5 3, Size: 11, MinSize: 9 => 2
+[917] Row: .????#??????##???, Damages: 6 8, Size: 17, MinSize: 15 => 3
+[918] Row: ..?#??#???#?#?.??##, Damages: 5 4 2, Size: 19, MinSize: 13 => 4
+[919] Row: ?????#???###?.#?.???, Damages: 1 9 2 2, Size: 20, MinSize: 17 => 10
+[920] Row: #?.??#?#??, Damages: 2 3 1, Size: 10, MinSize: 8 => 2
+[921] Row: #?#???.???##?, Damages: 3 3, Size: 13, MinSize: 7 => 2
+[922] Row: #????#???????.??#?, Damages: 12 1 1, Size: 18, MinSize: 16 => 1
+[923] Row: #???.?????###?#?, Damages: 1 2 2 5, Size: 16, MinSize: 13 => 3
+[924] Row: #?.?????#?##???##??, Damages: 1 1 11, Size: 19, MinSize: 15 => 9
+[925] Row: ??#??#????#?#, Damages: 1 1 1 6, Size: 13, MinSize: 12 => 1
+[926] Row: ..#??.??#????, Damages: 3 1 1, Size: 13, MinSize: 7 => 4
+[927] Row: ???##??????#?##?., Damages: 6 4, Size: 17, MinSize: 11 => 4
+[928] Row: .???????.#.??#??????, Damages: 4 1 1 8, Size: 20, MinSize: 17 => 6
+[929] Row: ..??.????#?.?#, Damages: 1 2 2 1, Size: 14, MinSize: 9 => 6
+[930] Row: .????#??.?#?.??##??., Damages: 5 1 1 4, Size: 20, MinSize: 14 => 6
+[931] Row: ?#.???????, Damages: 2 1 2, Size: 10, MinSize: 7 => 10
+[932] Row: ????#?##??#?????, Damages: 9 2, Size: 16, MinSize: 12 => 7
+[933] Row: ?????????#., Damages: 2 1 1, Size: 11, MinSize: 6 => 15
+[934] Row: ?.?#????##????#?, Damages: 1 9 1 1, Size: 16, MinSize: 15 => 1
+[935] Row: ..?#??#??.????, Damages: 6 2, Size: 14, MinSize: 9 => 6
+[936] Row: ?##??????.??????#, Damages: 6 2 1 1, Size: 17, MinSize: 13 => 11
+[937] Row: ????#??#??#?#?.., Damages: 5 7, Size: 16, MinSize: 13 => 3
+[938] Row: ?#?#???.?###???????#, Damages: 5 7 1 2, Size: 20, MinSize: 18 => 2
+[939] Row: ??#?#??#????, Damages: 1 1 2 1, Size: 12, MinSize: 8 => 6
+[940] Row: ?.?.?#???###, Damages: 1 1 2 3, Size: 12, MinSize: 10 => 2
+[941] Row: ?????.???????#?.??.?, Damages: 2 1 9 2 1, Size: 20, MinSize: 19 => 3
+[942] Row: .??##???#.?.????#?, Damages: 6 1 2 1, Size: 18, MinSize: 13 => 4
+[943] Row: ??.?????????.??.., Damages: 2 4 1, Size: 17, MinSize: 9 => 35
+[944] Row: ??#???#?##??, Damages: 4 5, Size: 12, MinSize: 10 => 3
+[945] Row: ???#??####?.?????, Damages: 10 1, Size: 17, MinSize: 12 => 10
+[946] Row: ??????#????#??#?, Damages: 1 10 1, Size: 16, MinSize: 14 => 3
+[947] Row: ##?.????????#, Damages: 2 3 1 3, Size: 13, MinSize: 12 => 1
+[948] Row: ?#??.?.??###?.#?##, Damages: 1 1 1 1 3 4, Size: 18, MinSize: 16 => 1
+[949] Row: ???#?????##?, Damages: 1 2 1 3, Size: 12, MinSize: 10 => 11
+[950] Row: ?#???.?.##???.?????., Damages: 4 1 3 5, Size: 20, MinSize: 16 => 2
+[951] Row: #..?..?.?##?#??, Damages: 1 1 6, Size: 15, MinSize: 10 => 4
+[952] Row: ?.??.?????..?, Damages: 2 2, Size: 13, MinSize: 5 => 5
+[953] Row: ???#??.?#??#?, Damages: 5 2 3, Size: 13, MinSize: 12 => 2
+[954] Row: ##??????#???, Damages: 3 3, Size: 12, MinSize: 7 => 3
+[955] Row: ??#.?.??.#????#?#?, Damages: 3 1 2 5, Size: 18, MinSize: 14 => 6
+[956] Row: ?.?????????#????????, Damages: 10 2, Size: 20, MinSize: 13 => 21
+[957] Row: ???.?#.?????????#., Damages: 2 1 10, Size: 18, MinSize: 15 => 2
+[958] Row: ???#??##??????#, Damages: 9 1 2, Size: 15, MinSize: 14 => 3
+[959] Row: ??##?#?????###.?, Damages: 8 3, Size: 16, MinSize: 12 => 3
+[960] Row: ?##????.?.???#??., Damages: 2 2 1 4 1, Size: 17, MinSize: 14 => 2
+[961] Row: .?#?###????????????, Damages: 7 1 1 2, Size: 19, MinSize: 14 => 55
+[962] Row: #????#???#?#?.????#, Damages: 1 1 5 2 1 1, Size: 19, MinSize: 16 => 6
+[963] Row: .??????.???????., Damages: 6 1 1 1 1, Size: 16, MinSize: 14 => 1
+[964] Row: ??????.??#., Damages: 1 1 3, Size: 11, MinSize: 7 => 10
+[965] Row: ??.??##??.?, Damages: 1 2, Size: 11, MinSize: 4 => 3
+[966] Row: ??????#???.?.??., Damages: 1 5 1 1, Size: 16, MinSize: 11 => 32
+[967] Row: ???##.??#???, Damages: 4 1, Size: 12, MinSize: 6 => 1
+[968] Row: ..???#??#?, Damages: 4 2, Size: 10, MinSize: 7 => 3
+[969] Row: #????.#?.?????#????, Damages: 5 1 1 1 2 1, Size: 19, MinSize: 16 => 9
+[970] Row: ?.??#???.#?.????., Damages: 4 2, Size: 17, MinSize: 7 => 3
+[971] Row: ?.#.#?.?.??#???, Damages: 1 2 1 1 3, Size: 15, MinSize: 12 => 1
+[972] Row: ?.???###??##?..???., Damages: 7 2 1 1, Size: 19, MinSize: 14 => 1
+[973] Row: ?##?.?????????, Damages: 2 3 3, Size: 14, MinSize: 10 => 6
+[974] Row: ???????????????##???, Damages: 1 1 5 1 3 1, Size: 20, MinSize: 17 => 65
+[975] Row: ?#.?????#????#??#???, Damages: 1 2 1 7 2, Size: 20, MinSize: 17 => 4
+[976] Row: ###?.???#?#?????????, Damages: 4 7 5, Size: 20, MinSize: 18 => 6
+[977] Row: .??#?????., Damages: 1 1 1, Size: 10, MinSize: 5 => 7
+[978] Row: ..###??#???, Damages: 3 3, Size: 11, MinSize: 7 => 2
+[979] Row: ???#???#?.#?.#??#, Damages: 5 2 2 4, Size: 17, MinSize: 16 => 3
+[980] Row: ??.???#.???????.., Damages: 4 3, Size: 17, MinSize: 8 => 5
+[981] Row: ?#???.??????, Damages: 1 1, Size: 12, MinSize: 3 => 8
+[982] Row: ??..???????, Damages: 1 3 1, Size: 11, MinSize: 7 => 13
+[983] Row: ??#???????.??.?#?, Damages: 7 1 2 2, Size: 17, MinSize: 15 => 6
+[984] Row: ?????????.???#?., Damages: 3 1 1 3, Size: 16, MinSize: 11 => 35
+[985] Row: .????#.???##??, Damages: 5 6, Size: 14, MinSize: 12 => 2
+[986] Row: ??????.???, Damages: 1 2 2, Size: 10, MinSize: 7 => 12
+[987] Row: ??????????, Damages: 2 1 3, Size: 10, MinSize: 8 => 10
+[988] Row: ?????.??#??, Damages: 2 4, Size: 11, MinSize: 7 => 8
+[989] Row: ?.?.??#??????.?, Damages: 1 4 3, Size: 15, MinSize: 10 => 6
+[990] Row: ?#?#???????????#, Damages: 12 1, Size: 16, MinSize: 14 => 2
+[991] Row: #?.?#?????, Damages: 1 7, Size: 10, MinSize: 9 => 1
+[992] Row: ????#?#?#????#, Damages: 1 6 1 1, Size: 14, MinSize: 12 => 7
+[993] Row: ...?#??????????##?#, Damages: 8 4, Size: 19, MinSize: 13 => 2
+[994] Row: ??????#???, Damages: 3 4, Size: 10, MinSize: 8 => 6
+[995] Row: ??.?????????????, Damages: 1 1 2 1 2, Size: 16, MinSize: 11 => 161
+[996] Row: ?#??#?#??#.?#????, Damages: 7 2 3, Size: 17, MinSize: 14 => 2
+[997] Row: ????..???#??#??., Damages: 1 2 1 6, Size: 16, MinSize: 13 => 3
+[998] Row: ?????.??#?????.??., Damages: 1 5, Size: 18, MinSize: 7 => 16
+[999] Row: ?#.?????????, Damages: 1 1 1 3, Size: 12, MinSize: 9 => 10
+[1000] Row: ??##?.#?#???, Damages: 3 5, Size: 12, MinSize: 9 => 2
+result part 1: 7922
+Elapsed time: 0.234000 seconds
+[001] Row: .?????...?, Damages: 1 1 1, Size: 10, MinSize: 5. => 1316327
+[002] Row: #????????.#?#??????, Damages: 2 1 1 5 1, Size: 19, MinSize: 14..................................................................................................................................................................................................................... => 1193780037
+[003] Row: ???##?###?????, Damages: 1 2 3 4, Size: 14, MinSize: 13 => 162
+[004] Row: ?#?????##????#??, Damages: 1 9, Size: 16, MinSize: 11 => 243
+[005] Row: ?.?.??#?...?????, Damages: 1 2 1, Size: 16, MinSize: 6........................................................................................................................... => 483597088
+[006] Row: .#.#???..??#???#??, Damages: 1 1 1 1 1 4, Size: 18, MinSize: 14 => 71044
+[007] Row: ?#??#??#..#?#???., Damages: 1 4 1 1 2, Size: 17, MinSize: 13 => 34
+[008] Row: ??######???.??.., Damages: 7 1 1, Size: 16, MinSize: 11 => 359008
+[009] Row: .?#???#?#?#??.?.?.#?, Damages: 2 7 1 1 1, Size: 20, MinSize: 16 => 786919
+[010] Row: .?#.???.???.#???, Damages: 2 1 1 3 4, Size: 16, MinSize: 15 => 1
+[011] Row: ?????????#?., Damages: 2 1 3, Size: 12, MinSize: 8........ => 12742962
+[012] Row: ??.?.?.#??##?#?#?., Damages: 1 9, Size: 18, MinSize: 11 => 2500
+[013] Row: ?....?.?#?#????, Damages: 1 1 7, Size: 15, MinSize: 11 => 162
+[014] Row: ?.??.????#?#??##??#., Damages: 1 9 2, Size: 20, MinSize: 14 => 2500
+[015] Row: ?.??#...#?, Damages: 1 1 1, Size: 10, MinSize: 5 => 1182
+[016] Row: ?###??????#??#?, Damages: 7 5, Size: 15, MinSize: 13 => 2900
+[017] Row: ??????##????#, Damages: 1 7 2, Size: 13, MinSize: 12 => 2403
+[018] Row: ??????.????.., Damages: 1 2, Size: 13, MinSize: 4................................................................................... => 563181306
+[019] Row: ??##??#??#.., Damages: 5 2, Size: 12, MinSize: 8 => 1
+[020] Row: #????#?#???????#??#., Damages: 8 8, Size: 20, MinSize: 17 => 1
+[021] Row: ???#..????###???, Damages: 2 2 3 2, Size: 16, MinSize: 12 => 2592
+[022] Row: ?##?#?#?????#?.#???, Damages: 2 3 1 1 4, Size: 19, MinSize: 15 => 243
+[023] Row: ??#?..?#????, Damages: 3 3 1, Size: 12, MinSize: 9 => 24576
+[024] Row: ??#.?#??.?#?????, Damages: 1 4 2 1, Size: 16, MinSize: 11 => 125055
+[025] Row: ???.?#?????, Damages: 1 5, Size: 11, MinSize: 7 => 60000
+[026] Row: .?#.???##???, Damages: 2 6, Size: 12, MinSize: 9 => 768
+[027] Row: ...#.?#?##., Damages: 1 1 2, Size: 11, MinSize: 6 => 1
+[028] Row: ????.??????, Damages: 1 2 1, Size: 11, MinSize: 6................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................. => 3954409084
+[029] Row: ?#?????????#, Damages: 2 2 1 2, Size: 12, MinSize: 10. => 536979
+[030] Row: ??##??????., Damages: 5 1 1, Size: 11, MinSize: 9 => 95249
+[031] Row: ???..??#???#????##, Damages: 1 1 1 9, Size: 18, MinSize: 15 => 20609
+[032] Row: ??#??##??#, Damages: 1 3 1, Size: 10, MinSize: 7 => 32
+[033] Row: ??#????#??.?????##., Damages: 9 3, Size: 19, MinSize: 13 => 162
+[034] Row: ??.?#??#??#.???#?.??, Damages: 2 2 1 1 4 1, Size: 20, MinSize: 16 => 165888
+[035] Row: ?#??#?#??#??#????., Damages: 11 1 1 1, Size: 18, MinSize: 17 => 16
+[036] Row: .#...??###?, Damages: 1 5, Size: 11, MinSize: 7 => 162
+[037] Row: ???#?#?#???????, Damages: 1 1 1 6 1, Size: 15, MinSize: 14 => 162
+[038] Row: .???#.??##?..#??#, Damages: 3 4 2 1, Size: 17, MinSize: 13 => 32
+[039] Row: ???#?.???#, Damages: 1 1 1, Size: 10, MinSize: 5 => 8064
+[040] Row: ???#??###?#?#????, Damages: 1 12 1, Size: 17, MinSize: 16 => 7642
+[041] Row: ??.#??????, Damages: 2 2 2, Size: 10, MinSize: 8 => 3888
+[042] Row: #?#??..#?#, Damages: 5 1 1, Size: 10, MinSize: 9 => 1
+[043] Row: #?..?????##?#.???#??, Damages: 2 2 5 6, Size: 20, MinSize: 18 => 32
+[044] Row: ????#?.??##?.??#??, Damages: 6 5 1 1, Size: 18, MinSize: 16 => 162
+[045] Row: .??.#?##????., Damages: 1 6, Size: 13, MinSize: 8 => 1538
+[046] Row: #??#?####??#?.??, Damages: 1 1 8 1, Size: 16, MinSize: 14 => 32
+[047] Row: ?#.??#?#?#??#????, Damages: 1 1 9 1, Size: 17, MinSize: 15 => 4336
+[048] Row: .???????#?., Damages: 4 3, Size: 11, MinSize: 8 => 243
+[049] Row: .?.?#???#?#?#??#.?, Damages: 1 10 2, Size: 18, MinSize: 15 => 164
+[050] Row: ????#??#??#..?., Damages: 1 1 1 2 1, Size: 15, MinSize: 10 => 524357
+[051] Row: .??#??#????.???, Damages: 7 2, Size: 15, MinSize: 10 => 70000
+[052] Row: ??#?#?????.??, Damages: 3 2 1 1, Size: 13, MinSize: 10. => 742293
+[053] Row: ???#.??#????#??#, Damages: 2 3 4, Size: 16, MinSize: 11 => 243
+[054] Row: ??.??#?.#??#??#??, Damages: 1 1 2 4 1, Size: 17, MinSize: 13 => 172346
+[055] Row: ????#.????.?#????, Damages: 5 3 1 1 1, Size: 17, MinSize: 15 => 32
+[056] Row: ?????##???????, Damages: 1 1 9, Size: 14, MinSize: 13 => 7084
+[057] Row: ?????.???#??.?, Damages: 3 6, Size: 14, MinSize: 10 => 1875
+[058] Row: .?????##????., Damages: 5 1, Size: 13, MinSize: 7 => 674400
+[059] Row: ??????????., Damages: 3 1 2, Size: 11, MinSize: 8.... => 3342945
+[060] Row: ?####.??#???.?, Damages: 4 5, Size: 14, MinSize: 10 => 32
+[061] Row: ?.#??.??????.?#??#?, Damages: 2 5 5, Size: 19, MinSize: 14 => 1024
+[062] Row: ?..#??????????, Damages: 1 1 5, Size: 14, MinSize: 9.. => 4912490
+[063] Row: ???????#.????, Damages: 4 1, Size: 13, MinSize: 6 => 212227
+[064] Row: ?.??.?????#????., Damages: 2 2 1 1 2, Size: 16, MinSize: 12.... => 3575570
+[065] Row: ????#..?????#.??, Damages: 3 5 1, Size: 16, MinSize: 11 => 512
+[066] Row: ???????????#???#, Damages: 7 5 1, Size: 16, MinSize: 15 => 243
+[067] Row: .???#..????, Damages: 1 1 2, Size: 11, MinSize: 6. => 652644
+[068] Row: ??.?.?.???#?, Damages: 2 1 2, Size: 12, MinSize: 7 => 221312
+[069] Row: ??##???#?????., Damages: 3 4, Size: 14, MinSize: 8 => 3125
+[070] Row: ??.????..??###???, Damages: 1 4, Size: 17, MinSize: 6. => 1346269
+[071] Row: .??#????#?#, Damages: 4 3, Size: 11, MinSize: 8 => 243
+[072] Row: ???.????#.?#?##???#, Damages: 1 1 1 1 1 8, Size: 19, MinSize: 18 => 1
+[073] Row: ??????#?.?.???, Damages: 3 2, Size: 14, MinSize: 6 => 1387065
+[074] Row: ?.???..?????, Damages: 2 3, Size: 12, MinSize: 6. => 753762
+[075] Row: ?..??#???????, Damages: 1 2 1 1, Size: 13, MinSize: 8............................................................................ => 177132580
+[076] Row: ?.#???.?#???, Damages: 1 1 3, Size: 12, MinSize: 7 => 64502
+[077] Row: ??????#???.???????, Damages: 7 1 1 1, Size: 18, MinSize: 13...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 62180854161
+[078] Row: ???#?#???????#?., Damages: 4 3 2 2, Size: 16, MinSize: 14 => 243
+[079] Row: ??###?.??#?#?, Damages: 3 5, Size: 13, MinSize: 9 => 162
+[080] Row: ?#???.??????????#, Damages: 5 1 1 1 4, Size: 17, MinSize: 16 => 1024
+[081] Row: ???#.????#???.#, Damages: 1 1 4 2 1, Size: 15, MinSize: 13 => 32
+[082] Row: ???.#???#??, Damages: 2 7, Size: 11, MinSize: 10 => 32
+[083] Row: ?#.?#?###??#?., Damages: 1 10, Size: 14, MinSize: 12 => 1
+[084] Row: .?..????#?#??, Damages: 1 2 2 1, Size: 13, MinSize: 9 => 1572
+[085] Row: .??.?????#, Damages: 1 3 1, Size: 10, MinSize: 7 => 1024
+[086] Row: ???#??.????#???, Damages: 6 1 3 1, Size: 15, MinSize: 14 => 2500
+[087] Row: ??#?#?#???#, Damages: 3 1 3, Size: 11, MinSize: 9 => 81
+[088] Row: ??????????????????, Damages: 3 4, Size: 18, MinSize: 8............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................ => 75394027566
+[089] Row: #????#????##??????, Damages: 13 2, Size: 18, MinSize: 16 => 4532
+[090] Row: ????#??.#?#?##?#???, Damages: 1 2 8 2, Size: 19, MinSize: 16 => 32805
+[091] Row: .??#?##??.?#?????#??, Damages: 5 9, Size: 20, MinSize: 15 => 1024
+[092] Row: ?##..#????, Damages: 3 1, Size: 10, MinSize: 5 => 1
+[093] Row: ?##.##???#??.##???#, Damages: 2 3 4 6, Size: 19, MinSize: 18 => 1
+[094] Row: #?????????#?, Damages: 1 1 3 2, Size: 12, MinSize: 10 => 120060
+[095] Row: ???#??????????, Damages: 2 2 1 1, Size: 14, MinSize: 9...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 49705086351
+[096] Row: ??#??##??#?.?, Damages: 1 5 1 1, Size: 13, MinSize: 11 => 1
+[097] Row: ?#??.??##???????.??, Damages: 1 1 9 1 1, Size: 19, MinSize: 17 => 14456
+[098] Row: ??#?##??##?.??#???, Damages: 10 1 2 1, Size: 18, MinSize: 17 => 162
+[099] Row: ..??#..?#?.?, Damages: 1 2, Size: 12, MinSize: 4 => 32
+[100] Row: ??#?.?.?????, Damages: 1 1 1 1, Size: 12, MinSize: 7..................................................... => 129616142
+[101] Row: #.?##??.?.?, Damages: 1 2 1, Size: 11, MinSize: 6 => 243
+[102] Row: ..?..??#????#..?, Damages: 1 8, Size: 16, MinSize: 10 => 81
+[103] Row: .?#??.??????., Damages: 3 5, Size: 13, MinSize: 9 => 1024
+[104] Row: ??.????#???#?????, Damages: 1 1 3 2 1, Size: 17, MinSize: 12....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 53965682118
+[105] Row: ??.#??..??, Damages: 1 3 2, Size: 10, MinSize: 8 => 162
+[106] Row: #?.#??????.??, Damages: 2 2 3 1, Size: 13, MinSize: 11 => 5184
+[107] Row: ????.???.?, Damages: 3 1, Size: 10, MinSize: 5. => 1833921
+[108] Row: #???.??????#, Damages: 1 2 1 2, Size: 12, MinSize: 9 => 59745
+[109] Row: ?.?.??.?#??.???, Damages: 1 1 1 1 3, Size: 15, MinSize: 11. => 308999
+[110] Row: ?.#????#.?, Damages: 1 1 1, Size: 10, MinSize: 5 => 24760
+[111] Row: .????#??.?, Damages: 2 4 1, Size: 10, MinSize: 9 => 16
+[112] Row: ???##??#?..#??#???, Damages: 5 1 4, Size: 18, MinSize: 12 => 1024
+[113] Row: ??#??##?.???#?, Damages: 5 4, Size: 14, MinSize: 10 => 512
+[114] Row: ??#??#???##????.?, Damages: 3 3 6, Size: 17, MinSize: 14 => 1024
+[115] Row: .?##??.#?..?, Damages: 2 2, Size: 12, MinSize: 5 => 1
+[116] Row: ?????#.?#?#???#???, Damages: 3 9, Size: 18, MinSize: 13 => 32
+[117] Row: .#.??#????, Damages: 1 3, Size: 10, MinSize: 5 => 243
+[118] Row: ??????.??.?, Damages: 5 1 1, Size: 11, MinSize: 9 => 5184
+[119] Row: .??.???????????., Damages: 1 7, Size: 16, MinSize: 9.. => 6875401
+[120] Row: ??????##???#?##??.#?, Damages: 2 13 2, Size: 20, MinSize: 19 => 243
+[121] Row: ??#???????#??, Damages: 3 1 1 3, Size: 13, MinSize: 11. => 1208798
+[122] Row: ?????.?#???, Damages: 2 3, Size: 11, MinSize: 6 => 398608
+[123] Row: ????.?????????, Damages: 1 6, Size: 14, MinSize: 8........................ => 72243003
+[124] Row: #?#.??#?.#??, Damages: 1 1 2 1, Size: 12, MinSize: 8 => 32
+[125] Row: ?#?????#?###?????#, Damages: 4 7 2 1, Size: 18, MinSize: 17 => 1024
+[126] Row: ?????#???.?.?, Damages: 3 1, Size: 13, MinSize: 5. => 2869903
+[127] Row: #?#?.#?##??., Damages: 3 6, Size: 12, MinSize: 10 => 1
+[128] Row: ??#.?????????, Damages: 1 1 3 1, Size: 13, MinSize: 9............................................................................................................................................................. => 381112115
+[129] Row: ??????#????.??, Damages: 1 1 2 2, Size: 14, MinSize: 9....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 3180921602
+[130] Row: ??????#?.??##???, Damages: 1 3, Size: 16, MinSize: 5 => 32
+[131] Row: ?.###???#????, Damages: 4 2 1, Size: 13, MinSize: 9 => 32805
+[132] Row: ??.????.??.#.#??#?, Damages: 2 1 1 1 2 2, Size: 18, MinSize: 14 => 3996733
+[133] Row: ??##.???##?##?.##?#?, Damages: 3 2 5 4, Size: 20, MinSize: 17 => 1
+[134] Row: ??.?????????#??, Damages: 1 2 5, Size: 15, MinSize: 10...................................................................................................................................................................................................................... => 755282730
+[135] Row: .##????????., Damages: 4 1, Size: 12, MinSize: 6 => 6480
+[136] Row: ??..?##.????, Damages: 1 2 2 1, Size: 12, MinSize: 9 => 512
+[137] Row: .?#?.????.#?##?..., Damages: 2 2 1 3, Size: 18, MinSize: 11 => 7776
+[138] Row: #?????.???#?#???, Damages: 1 1 1 7, Size: 16, MinSize: 13 => 1000406
+[139] Row: ?#.#???.#??#???.???., Damages: 2 1 1 1 4 2, Size: 20, MinSize: 16 => 32768
+[140] Row: ??????????##???#???, Damages: 1 1 7, Size: 19, MinSize: 11............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 5585198249
+[141] Row: ???#?#???.##.., Damages: 3 2, Size: 14, MinSize: 6 => 1
+[142] Row: .??##?#.??#?., Damages: 6 1, Size: 13, MinSize: 8 => 1
+[143] Row: ?##?.###?#??, Damages: 3 5, Size: 12, MinSize: 9 => 32
+[144] Row: ????###?..???..?, Damages: 1 6 3, Size: 16, MinSize: 12 => 625
+[145] Row: ..#????#?#???, Damages: 1 3 2, Size: 13, MinSize: 8 => 427
+[146] Row: #?#????????#, Damages: 4 1 4, Size: 12, MinSize: 11 => 32
+[147] Row: ?#???????????#??, Damages: 2 3 1 3, Size: 16, MinSize: 12........................................................................................................................................... => 659475398
+[148] Row: .#???#?..??#?????#, Damages: 1 2 9, Size: 18, MinSize: 14 => 512
+[149] Row: ??.?#.???., Damages: 1 1 1, Size: 10, MinSize: 5 => 1172493
+[150] Row: ?#?#??.???.#?, Damages: 1 2 2 1, Size: 13, MinSize: 9 => 32
+[151] Row: ??##??#???#?, Damages: 3 5, Size: 12, MinSize: 9 => 32
+[152] Row: ?#???????., Damages: 3 1, Size: 10, MinSize: 5 => 747092
+[153] Row: .#?????.???, Damages: 3 2, Size: 11, MinSize: 6 => 3214
+[154] Row: .#?#?##??????#??, Damages: 1 4 6, Size: 16, MinSize: 13 => 768
+[155] Row: ??.??.?##?.??, Damages: 1 1 3 1, Size: 13, MinSize: 9 => 7311616
+[156] Row: ??##??.#.?.?#, Damages: 4 1 1 2, Size: 13, MinSize: 11 => 5184
+[157] Row: #???????#??, Damages: 1 1 4, Size: 11, MinSize: 8 => 91650
+[158] Row: ????#??.?#????, Damages: 1 4 1 3, Size: 14, MinSize: 12 => 768
+[159] Row: #?.?##???.?, Damages: 1 3, Size: 11, MinSize: 5 => 32
+[160] Row: ????#?????##?##???.?, Damages: 8 6, Size: 20, MinSize: 15 => 7203
+[161] Row: ??.?#?.???.#???, Damages: 2 1 1 2, Size: 15, MinSize: 9 => 29893383
+[162] Row: ??#??#.??.???., Damages: 2 1 3, Size: 14, MinSize: 8 => 1556
+[163] Row: .?.?.??.?#####, Damages: 1 1 5, Size: 14, MinSize: 9 => 3125
+[164] Row: ???#??.???#??#.??, Damages: 1 3 1 5 1, Size: 17, MinSize: 15 => 141819
+[165] Row: ..#????##??#?#?.?, Damages: 1 10, Size: 17, MinSize: 12 => 32
+[166] Row: ?#.????#??., Damages: 2 5, Size: 11, MinSize: 8 => 243
+[167] Row: #.????????#?#??#???, Damages: 1 1 7 2 1, Size: 19, MinSize: 16 => 5777552
+[168] Row: .?.?...?##?#?#?#?., Damages: 1 9, Size: 18, MinSize: 11 => 5184
+[169] Row: ???????????#, Damages: 1 1 6, Size: 12, MinSize: 10 => 644514
+[170] Row: ??#???????#?..??, Damages: 9 1, Size: 16, MinSize: 11 => 3179
+[171] Row: ..?#??????, Damages: 1 3, Size: 10, MinSize: 5 => 13986
+[172] Row: .?.????????, Damages: 2 4, Size: 11, MinSize: 7 => 3888
+[173] Row: .??.#??.???, Damages: 2 1 1, Size: 11, MinSize: 6 => 417030
+[174] Row: ??#.????.?, Damages: 1 1 1, Size: 10, MinSize: 5 => 12934376
+[175] Row: .#.??.????#???.????, Damages: 1 2 1 1 3 3, Size: 19, MinSize: 16 => 162
+[176] Row: ??#??????.???, Damages: 5 1 2, Size: 13, MinSize: 10 => 3973353
+[177] Row: ????????.??.??, Damages: 1 4 1 1, Size: 14, MinSize: 10....................................................................................................................................................................................... => 725577300
+[178] Row: ???????#??, Damages: 3 3, Size: 10, MinSize: 7 => 234021
+[179] Row: ??#?????#???##., Damages: 2 1 2 2, Size: 15, MinSize: 10 => 145436
+[180] Row: ??#???????#, Damages: 2 6, Size: 11, MinSize: 9 => 1560
+[181] Row: ?#?#??#??#.?.#??, Damages: 6 1 2, Size: 16, MinSize: 11 => 1
+[182] Row: ##?##?#?.??#??, Damages: 8 1 1, Size: 14, MinSize: 12 => 162
+[183] Row: .?#??###?????#??, Damages: 8 3, Size: 16, MinSize: 12 => 7776
+[184] Row: ????#.#?#?????, Damages: 3 6, Size: 14, MinSize: 10 => 1
+[185] Row: #??.????#??#.#??..??, Damages: 2 6 1 3 1, Size: 20, MinSize: 17 => 162
+[186] Row: ??????.?????, Damages: 2 1, Size: 12, MinSize: 4..................................................................................................................................................................................................................................................... => 2601188334
+[187] Row: ????.?????., Damages: 1 2 1, Size: 11, MinSize: 6.............................................................................................................................................................................................. => 362202192
+[188] Row: ???????#..#?, Damages: 1 2 2 2, Size: 12, MinSize: 10 => 243
+[189] Row: ????#??#??, Damages: 4 4, Size: 10, MinSize: 9 => 81
+[190] Row: ???.?????##?##????, Damages: 1 14, Size: 18, MinSize: 16 => 8187
+[191] Row: ??#.???#.?#??.????, Damages: 2 2 1 1 1 1, Size: 18, MinSize: 13...... => 6042216
+[192] Row: ?.???#?.?., Damages: 1 5, Size: 10, MinSize: 7 => 81
+[193] Row: #.#?#.?##?????, Damages: 1 3 5 1, Size: 14, MinSize: 13 => 243
+[194] Row: .?..?#???????#???#?, Damages: 1 14, Size: 19, MinSize: 16 => 162
+[195] Row: .#?#??##??#?..??#?., Damages: 3 2 3 4, Size: 19, MinSize: 15 => 1
+[196] Row: .??#?#?.????.???.?#, Damages: 6 1 1 1 1, Size: 19, MinSize: 14 => 371293
+[197] Row: .?#.????.#.?, Damages: 1 1 1 1, Size: 12, MinSize: 7 => 1109287
+[198] Row: ?#?.??#??#??, Damages: 1 8, Size: 12, MinSize: 10 => 16
+[199] Row: ??..??????, Damages: 1 5, Size: 10, MinSize: 7 => 11572
+[200] Row: ???.?????.?, Damages: 2 4, Size: 11, MinSize: 7 => 16384
+[201] Row: ??#???.##?#?.??., Damages: 5 2 1 1, Size: 16, MinSize: 12 => 9604
+[202] Row: ??#???#?....???#?.??, Damages: 3 3 4 2, Size: 20, MinSize: 15 => 24576
+[203] Row: ?..???##..?.?., Damages: 1 5 1, Size: 14, MinSize: 9 => 1250
+[204] Row: ?#????????.??, Damages: 3 2 1, Size: 13, MinSize: 8.................. => 198173652
+[205] Row: ?#??????.##, Damages: 4 1 2, Size: 11, MinSize: 9 => 3125
+[206] Row: .??.###.?#??., Damages: 1 3 3, Size: 13, MinSize: 9 => 5184
+[207] Row: ?.??????#?#???, Damages: 1 1 8, Size: 14, MinSize: 12 => 280069
+[208] Row: ?#.?.??????#?.????, Damages: 2 1 6 1, Size: 18, MinSize: 13 => 1259712
+[209] Row: .???????#?#???., Damages: 2 6, Size: 15, MinSize: 9 => 638944
+[210] Row: ???#????.?#??#???, Damages: 4 1 1 5, Size: 17, MinSize: 14 => 265568
+[211] Row: ??#???##???#?, Damages: 7 2, Size: 13, MinSize: 10 => 1024
+[212] Row: #??????.??, Damages: 2 2, Size: 10, MinSize: 5 => 70656
+[213] Row: ?.?#.?##???.?#?##, Damages: 1 2 4, Size: 17, MinSize: 9 => 1
+[214] Row: .?#.??????#?, Damages: 1 2 2 1, Size: 12, MinSize: 9 => 5715
+[215] Row: #?#?#?#?##.??#?#.?, Damages: 1 3 4 2 1 1, Size: 18, MinSize: 17 => 1
+[216] Row: ???#?????#?#??, Damages: 1 6, Size: 14, MinSize: 8 => 768
+[217] Row: ?????##?#?#?##???, Damages: 1 11, Size: 17, MinSize: 13 => 400329
+[218] Row: #?????????##?.#??.?, Damages: 1 2 1 6 2 1, Size: 19, MinSize: 18 => 1
+[219] Row: ???#?.???????.?.., Damages: 1 3 2 2 1, Size: 17, MinSize: 13 => 3809667
+[220] Row: .??.#??????, Damages: 1 2 1, Size: 11, MinSize: 6 => 7414046
+[221] Row: ??#?????#.?, Damages: 6 1, Size: 11, MinSize: 8 => 512
+[222] Row: .????#??#??????., Damages: 12 1, Size: 16, MinSize: 14 => 436
+[223] Row: ?.?...#??...?###??.?, Damages: 2 4, Size: 20, MinSize: 7 => 32
+[224] Row: ??.??.?##??..??, Damages: 2 1 5 1, Size: 15, MinSize: 12 => 5184
+[225] Row: ?#????.#??###?, Damages: 2 1 6, Size: 14, MinSize: 11 => 5741
+[226] Row: #.???#?.?#?#??.?, Damages: 1 5 5, Size: 16, MinSize: 13 => 32
+[227] Row: #?#?????????#?, Damages: 11 1, Size: 14, MinSize: 13 => 16
+[228] Row: #???#??#?#???.#..#?, Damages: 12 1 1, Size: 19, MinSize: 16 => 16
+[229] Row: .??#?#?.?????, Damages: 5 1, Size: 13, MinSize: 7 => 207360
+[230] Row: ?????.?????#?????, Damages: 1 1 1 6, Size: 17, MinSize: 12................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................ => 128773311478
+[231] Row: .??#?.?????#???#???, Damages: 2 1 1 1 4, Size: 19, MinSize: 13 => 33647764
+[232] Row: ?#???##????.#????, Damages: 7 1 4, Size: 17, MinSize: 14 => 7589
+[233] Row: .?#?#??#.., Damages: 3 2, Size: 10, MinSize: 6 => 1
+[234] Row: ..????????.#?????#.?, Damages: 4 1 7 1, Size: 20, MinSize: 16 => 171366
+[235] Row: ??.????#.#??.?#, Damages: 1 5 3 2, Size: 15, MinSize: 14 => 162
+[236] Row: ?#??????.???##.?, Damages: 3 3 2, Size: 16, MinSize: 10 => 7731
+[237] Row: .#.?#???#???##??#?#, Damages: 1 8 3 3, Size: 19, MinSize: 18 => 1
+[238] Row: ??#.??#?..####?#?##?, Damages: 1 1 4 4 5, Size: 20, MinSize: 19 => 1
+[239] Row: ?#?????????#?#, Damages: 5 5 1, Size: 14, MinSize: 13 => 32
+[240] Row: ???????.??, Damages: 1 3 1, Size: 10, MinSize: 7 => 9861500
+[241] Row: ???????..??.?, Damages: 1 2 1 1, Size: 13, MinSize: 8............................................................................................................................................................................................................................................................................................................................................................................................................................................ => 1384433850
+[242] Row: .?##.#????, Damages: 2 2, Size: 10, MinSize: 5 => 1
+[243] Row: ?#?.?#??#.#??, Damages: 1 5 2, Size: 13, MinSize: 10 => 1
+[244] Row: ?.???.???##??????., Damages: 3 9, Size: 18, MinSize: 13 => 243
+[245] Row: ?#.?????.?.???.??##, Damages: 2 2 1 1 3 3, Size: 19, MinSize: 17 => 243
+[246] Row: ???????#??.??#????., Damages: 5 2 3 3, Size: 19, MinSize: 16 => 1875
+[247] Row: ?????.???.?, Damages: 4 1 1, Size: 11, MinSize: 8 => 720128
+[248] Row: ???????.?#?##?.?, Damages: 1 1 5 1, Size: 16, MinSize: 11...................................................................................................................................................................................................................... => 720300000
+[249] Row: .??????.#??.???, Damages: 4 3 1, Size: 15, MinSize: 10 => 257049
+[250] Row: ??.?#??#??, Damages: 2 2, Size: 10, MinSize: 5 => 243
+[251] Row: ?.#?.??#?.??#??.., Damages: 1 2 4 1 2, Size: 17, MinSize: 14 => 16
+[252] Row: ??#?.???????, Damages: 2 1 1 1, Size: 12, MinSize: 8............ => 338940980
+[253] Row: ???????###????.#??., Damages: 3 9 2, Size: 19, MinSize: 16 => 3888
+[254] Row: .#??.#??.###??#????#, Damages: 3 3 7 1 1, Size: 20, MinSize: 19 => 1
+[255] Row: .??????.??, Damages: 2 2, Size: 10, MinSize: 5 => 2007188
+[256] Row: ????#.#??#?##????, Damages: 1 1 11, Size: 17, MinSize: 15 => 450
+[257] Row: #???????##.?, Damages: 1 1 4, Size: 12, MinSize: 8 => 768
+[258] Row: .?#?#???#?.????, Damages: 8 2, Size: 15, MinSize: 11 => 24576
+[259] Row: ?.??#?.#?.???..?????, Damages: 1 3 2 1 5, Size: 20, MinSize: 16 => 7776
+[260] Row: ???#????#.#####??, Damages: 1 3 2 5 1, Size: 17, MinSize: 16 => 768
+[261] Row: ??#?#??????, Damages: 6 2, Size: 11, MinSize: 9. => 61932
+[262] Row: ??.????#??#?, Damages: 1 6 1, Size: 12, MinSize: 10 => 6051
+[263] Row: #????.##?#., Damages: 2 2 4, Size: 11, MinSize: 10 => 81
+[264] Row: ?#?#?????????????, Damages: 9 1 1, Size: 17, MinSize: 13.................................................................................................................................................................................................. => 716849030
+[265] Row: ????##?#????, Damages: 6 4, Size: 12, MinSize: 11 => 1
+[266] Row: ?????.??????, Damages: 5 1 1 1, Size: 12, MinSize: 11 => 2500
+[267] Row: ????????????????###., Damages: 1 8 7, Size: 20, MinSize: 18 => 3888
+[268] Row: ??.????????#??#?.??, Damages: 1 13 1, Size: 19, MinSize: 17 => 5184
+[269] Row: ????.#???.####?, Damages: 2 1 5, Size: 15, MinSize: 10 => 1024
+[270] Row: ??#?#?????????#., Damages: 7 1 1, Size: 16, MinSize: 11.. => 2191368
+[271] Row: ??.#??##??, Damages: 1 1 5, Size: 10, MinSize: 9 => 162
+[272] Row: ?.???#??#???#??#?#, Damages: 1 1 9 1 1, Size: 18, MinSize: 17 => 243
+[273] Row: ????#???#?#., Damages: 1 7, Size: 12, MinSize: 9 => 1227
+[274] Row: ???.???#???##.#??, Damages: 1 1 7 1, Size: 17, MinSize: 13 => 58564
+[275] Row: ??#.????#., Damages: 1 2 1, Size: 10, MinSize: 6 => 2438
+[276] Row: .##.??#?#.?, Damages: 2 4 1, Size: 11, MinSize: 9 => 16
+[277] Row: ??#?.?.#.????, Damages: 3 1 1 2, Size: 13, MinSize: 10 => 148928
+[278] Row: #???#??#?#?.???.?, Damages: 10 1 1, Size: 17, MinSize: 14 => 3308
+[279] Row: ???..#??##, Damages: 3 5, Size: 10, MinSize: 9 => 1
+[280] Row: .?????#??##???#., Damages: 6 2 1, Size: 16, MinSize: 11 => 5288
+[281] Row: .???#???????????., Damages: 5 5, Size: 17, MinSize: 11 => 537824
+[282] Row: ?????#?.???, Damages: 1 2 2, Size: 11, MinSize: 7..... => 17380321
+[283] Row: ?#?#??..?.?#??.., Damages: 6 1 4, Size: 16, MinSize: 13 => 16
+[284] Row: ???.?#.????, Damages: 1 2 1, Size: 11, MinSize: 6 => 12024909
+[285] Row: ????.#??????##???.., Damages: 1 1 2 8, Size: 19, MinSize: 15 => 124416
+[286] Row: .?????????.????##?, Damages: 5 3 5, Size: 18, MinSize: 15 => 162
+[287] Row: ?##???#????#?#???, Damages: 3 11, Size: 17, MinSize: 15 => 3125
+[288] Row: ?????##?.?#?, Damages: 2 2 2, Size: 12, MinSize: 8 => 24686
+[289] Row: ?.????#?????, Damages: 1 5 1, Size: 12, MinSize: 9 => 9152112
+[290] Row: ???#.??#???.?#?, Damages: 1 2 4 1 2, Size: 15, MinSize: 14 => 162
+[291] Row: ##???#??..#??????, Damages: 3 1 1 5, Size: 17, MinSize: 13 => 5540
+[292] Row: ??????.??#.?, Damages: 1 2 1 1, Size: 12, MinSize: 8 => 35534151
+[293] Row: ?#????###??#?##?, Damages: 2 9, Size: 16, MinSize: 12 => 32
+[294] Row: #.??#?.??####?, Damages: 1 1 1 7, Size: 14, MinSize: 13 => 1
+[295] Row: ?????#??.??#?????#?, Damages: 5 9, Size: 19, MinSize: 15 => 39366
+[296] Row: ?#.??#.???##??, Damages: 1 3 4 1, Size: 14, MinSize: 12 => 81
+[297] Row: .#..??#???????.????, Damages: 1 4 1 2 1 1, Size: 19, MinSize: 15 => 3981312
+[298] Row: ##?#.??###?##, Damages: 2 1 7, Size: 13, MinSize: 12 => 1
+[299] Row: ?#?#?#?.??, Damages: 3 1 2, Size: 10, MinSize: 8 => 16
+[300] Row: .??..???.???..#??, Damages: 1 1 1 1, Size: 17, MinSize: 7.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... => 50569018146
