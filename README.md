@@ -14,5 +14,5 @@ Summary:
 * Day 9: interesting recursive approach to compute n-derivatives. Clear variable naming is key to avoid mistakes
 * Day 10: much more difficult ! Lost a lot of time making sense of binary operators which I seldom use. Also, the ray casting in diagonal saved me!
 * Day 11: Using a map as a proxy for coordinates made the solution quite simple, avoiding complex array row/column insertion
-* Day 12: Nice recursive search slightly optimized but not enough for part 2! Still computing...
+* Day 12: Nice recursive search slightly optimized but not enough for part 2! Still computing... Finally wrote a recursive cache to accelerate the algorithm, getting the results in 1s instead of 10h!!!
 * Day 13: Much simpler than yesterday ! Brute force was enough in detecting symetry
