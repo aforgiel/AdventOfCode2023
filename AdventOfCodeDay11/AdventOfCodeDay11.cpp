@@ -228,27 +228,17 @@ Map::ExpandCoordinates(std::map<int, int>& coordinates, int max, int increment)
 		it1 = coordinates.find(value);
 		if (it1 == coordinates.end())
 		{
-#if COMMENT == true
-			printf("\t%d:", value);
-#endif
 			for (expended = value + 1; expended <= max; expended++)
 			{
 				it2 = coordinates.find(expended);
 				if (it2 != coordinates.end())
 				{
 					it2->second += increment;
-#if COMMENT == true
-					printf(" %d=>%d", expended, it2->second);
-#endif
 				}
 			}
-#if COMMENT == true
-			printf("\n");
-#endif
 		}
 	}
 }
-
 
 int64_t
 Map::FindSolution(int increment)
@@ -256,24 +246,13 @@ Map::FindSolution(int increment)
 	int64_t result = 0;
 
 	for (int i = 0; i < 2; i++)
-	{
-#if COMMENT == true
-		printf("Expension of %s\n", i == X ? "X" : "Y");
-#endif
 		ExpandCoordinates(coordinates[i], max[i], increment);
-	}
 
 	int i, j;
 
 	for (i = 0; i < (galaxies.size() - 1); i++)
 		for (j = i + 1; j < galaxies.size(); j++)
-		{
-#if COMMENT == true
-			printf("[%d,%d] ", i + 1, j + 1);
-			printf("%d\n", Distance(galaxies[i], galaxies[j]));
-#endif
 			result += Distance(galaxies[i], galaxies[j]);
-		}
 
 	return result;
 }

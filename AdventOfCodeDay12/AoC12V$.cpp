@@ -12,8 +12,10 @@
 #include <cmath>
 #include <cstdlib>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
+
+bool debug = false;
 
 #if( TEST_MODE == true)
 const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay12/sample.txt";
@@ -29,6 +31,9 @@ inline bool IsDigit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
+
+#define MIN(a,b) (((a)<(b))?(a):(b))
+#define MAX(a,b) (((a)>(b))?(a):(b))
 
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)  \
@@ -59,18 +64,59 @@ struct Problem {
 	int64_t FindSolution2(void);
 };
 
+enum class Input : int {
+	Start,
+
+	N,
+	NGG,
+	NGB,
+	NBG,
+	NBB,
+	B,
+	BG,
+	BB,
+	M,
+	MG,
+	MB,
+	MGG,
+	MGB,
+	MBG,
+	MBB,
+	E,
+	EG,
+	EB,
+
+	// Duals
+	DS,
+	DB,
+	DE,
+	DF,
+
+	EndOfList
+};
+
+typedef struct RecursiveInput* RecursiveInputPtr;
+struct RecursiveInput {
+	int64_t data[(int)Input::EndOfList];
+};
+
 struct Record {
 	char* row;
 	int size;
 	std::vector<int> damages;
 	int minSize;
+	char first, last;
 
 	void Read(std::string& input);
 	void Print(void) const;
 	int64_t CountArrangements(void);
+	int64_t RecursiveProbability(Input position, int depth, int limit, RecursiveInput& input);
+	int64_t CountUnfoldedArrangements(int copies);
+
+	int64_t RecursiveCountV2(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength);
+
 	int64_t RecursiveCount(char* buffer, int position, std::vector<int>& listOfDamages, int length, int minLength);
 	bool ProgressiveDamageValidation(char* buffer, std::vector<int>& listOfDamages, int length, int minLength);
-	int64_t CountUnfoldedArrangements(int copies);
 };
 
 void
@@ -94,6 +140,7 @@ Problem::Print(void) const
 	{
 		printf("[%03d] ", ++index);
 		record.Print();
+		printf("\n");
 	}
 }
 
@@ -106,10 +153,15 @@ Problem::FindSolution1(void)
 
 	for (Record record : records)
 	{
-		printf("[%03d]", ++index);
+		printf("[%03d] ", ++index);
+		record.Print();
 		count = record.CountArrangements();
 		printf(" => %zd\n", count);
 		result += count;
+		/*
+				if (index == 20)
+					break;
+		*/
 	}
 
 	return result;
@@ -124,14 +176,18 @@ Problem::FindSolution2(void)
 
 	for (Record record : records)
 	{
-		printf("[%03d]", ++index);
+		printf("[%03d] ", ++index);
+		record.Print();
 		count = record.CountUnfoldedArrangements(5);
 		printf(" => %zd\n", count);
+		if (index == 10)
+			break;
 		result += count;
 	}
 
 	return result;
 }
+
 void
 Record::Read(std::string& input)
 {
@@ -150,6 +206,8 @@ Record::Read(std::string& input)
 
 	strncpy(row, input.c_str(), size);
 	row[size] = '\0';
+	first = row[0];
+	last = row[size - 1];
 
 	damages.clear();
 	minSize = 0;
@@ -169,24 +227,220 @@ Record::Print(void) const
 	printf("Row: %s, Damages:", row);
 	for (int i : damages)
 		printf(" %d", i);
-	printf(", MinSize: %d\n", minSize);
+	printf(", Size: %d, MinSize: %d", size, minSize);
 }
 
 int64_t
 Record::CountArrangements(void)
 {
 	int64_t result;
-	char* buffer;
 
-	buffer = new char[size + 1];
-	strcpy(buffer, row);
-#if COMMENT == true
-	printf("CountArrangements(%s,%d,%d)\n", buffer, size, minSize);
-#endif
-	result = RecursiveCount(buffer, 0, damages, size, minSize);
+	progress = 0;
+	result = RecursiveCountV2(row, 0, 0, damages, size, minSize);
+/*
+	int64_t validation;
+	validation = RecursiveCount(row, 0, damages, size, minSize);
+	if (validation != result)
+	{
+		printf("\n!!! WRONG COUNT (%zd vs. %zd) !!!\n", result, validation);
+		debug = true;
+		result = RecursiveCountV2(row, 0, 0, damages, size, minSize);
+		debug = false;
+	}
+*/
+	return result;
+}
+
+#define V(c) (input.data[(int)Input::c])
+#define DP(y,x) (V(y)==V(x)?0:(V(y)-V(x))*RecursiveProbability(Input::x,depth+1,limit,input))
+
+int64_t
+Record::RecursiveProbability(Input position, int depth, int limit, RecursiveInput& input)
+{
+	int64_t result;
+
+	result = 0;
+
+	return result;
+}
+
+int64_t
+Record::CountUnfoldedArrangements(int copies)
+{
+	int64_t result;
+
+	char* buffer;
+	std::vector<int> list;
+	char* tmp;
+	int length, minLength;
+
+	buffer = new char[copies * (size + 1)];
+	list.clear();
+	tmp = buffer;
+	minLength = 0;
+	for (int i = 0; i < copies; i++)
+	{
+		strncpy(tmp, row, size);
+		tmp += size;
+		*tmp = '?';
+		tmp++;
+		for (int j = 0; j < damages.size(); j++)
+		{
+			list.push_back(damages[j]);
+			minLength += damages[j] + 1;
+		}
+	}
+	tmp--;
+	*tmp = '\0';
+	length = (size + 1) * copies - 1;
+	minLength--;
+
+	printf(" buffer: %s, length: %d, minLength: %d, damages:",buffer,length, minLength);
+	for (int i = 0; i < list.size(); i++)
+		printf(" %d", list[i]);
+	printf("\n");
+
+	result = RecursiveCountV2(buffer, 0, 0, list, length, minLength);
+
 	delete buffer;
 
 	return result;
+}
+
+int64_t
+Record::RecursiveCountV2(const char* buffer, const int position, const int index, std::vector<int>& listOfDamages, const int length, const int minLength)
+{
+	int count;
+	int pos, i, min;
+	char* tmp;
+
+	if (progress > 0 && progress % threshold == 0)
+		printf(".");
+	progress++;
+
+	tmp = const_cast<char*>(buffer) + position;
+	pos = position;
+	i = index;
+	min = minLength;
+	while (*tmp != '\0' && i < listOfDamages.size())
+	{
+#if COMMENT == true
+		if (debug)
+		{
+			printf("\n");
+			for (int j = 0; j < pos; j++)
+				printf(" ");
+			printf("[%d] buffer: %s", index, tmp);
+		}
+#endif
+		// Step 1: skip operational spring
+		while (*tmp != '\0' && *tmp == '.')
+		{
+			tmp++;
+			pos++;
+		}
+		if (*tmp == '\0' || (length - pos) < min)
+		{
+#if COMMENT == true
+			if (debug)
+				printf(" => EOF1\n");
+#endif
+			return 0;
+		}
+
+		// Step 2: recursion case ?
+		if (*tmp == '?')
+		{
+			int64_t result;
+#if COMMENT == true
+			if (debug)
+				printf(" => Recursion [#]");
+#endif
+			* tmp = '#';
+			result = RecursiveCountV2(buffer, pos, i, listOfDamages, length, min);
+#if COMMENT == true
+			if (debug)
+				printf(" => Recursion [.]");
+#endif
+			* tmp = '.';
+			result += RecursiveCountV2(buffer, pos, i, listOfDamages, length, min);
+			*tmp = '?';
+			return result;
+		}
+
+		// Step 3: Go through the damaged spring
+		count = listOfDamages[i];
+#if COMMENT == true
+		if (debug)
+			printf(" [%d] damage %d", i, count);
+#endif
+		while (*tmp != '\0' && count > 0)
+		{
+			if (*tmp == '.')
+				break;
+			count--;
+			tmp++;
+			pos++;
+			min--;
+		}
+#if COMMENT == true
+		if (debug)
+			printf(" (%d,%c)", count, *tmp == '\0' ? 'E' : *tmp);
+#endif
+		if (count == 0)
+			i++;
+
+		if (*tmp == '\0' && i == listOfDamages.size())
+		{
+#if COMMENT == true
+			if (debug)
+				printf(" => END OF LINE MATCH\n");
+#endif
+			return 1;
+		}
+
+		if (*tmp != '\0' && (count > 0 || (length - pos) < min))
+		{
+#if COMMENT == true
+			if (debug)
+				printf(" => EOF2\n");
+#endif
+			return 0;
+		}
+
+		// Step 4: check the operational spring
+		if (*tmp == '#')
+		{
+#if COMMENT == true
+			if (debug)
+				printf(" => EOF3\n");
+#endif
+			return 0;
+		}
+		tmp++;
+		pos++;
+		min--;
+	}
+
+	while (*tmp != '\0')
+	{
+		if (*tmp == '#')
+		{
+#if COMMENT == true
+			if (debug)
+				printf(" => WRONG ENDING\n");
+#endif
+			return 0;
+		}
+		tmp++;
+	}
+
+#if COMMENT == true
+	if (debug)
+		printf(" => MATCH\n");
+#endif
+
+	return 1;
 }
 
 int64_t
@@ -202,16 +456,7 @@ Record::RecursiveCount(char* buffer, int position, std::vector<int>& listOfDamag
 		position++;
 
 	if (position == length)
-	{
-		result = ProgressiveDamageValidation(buffer, listOfDamages, length, minLength) == true ? 1 : 0;
-#if COMMENT == true
-		printf("\t\t%s", buffer);
-		if (result != 0)
-			printf(" => MATCH");
-		printf("\n");
-#endif
-		return result;
-	}
+		return ProgressiveDamageValidation(buffer, listOfDamages, length, minLength) == true ? 1 : 0;
 
 	result = 0;
 	buffer[position] = '.';
@@ -232,13 +477,6 @@ Record::ProgressiveDamageValidation(char* buffer, std::vector<int>& listOfDamage
 	char* tmp;
 	int count;
 
-#if COMMENT == true
-	printf("\tProgressive validation: %s (", buffer);
-	for (int i = 0; i < listOfDamages.size(); i++)
-		printf(" %d", listOfDamages[i]);
-	printf(")");
-#endif
-
 	tmp = buffer;
 	for (int damage : listOfDamages)
 	{
@@ -246,29 +484,14 @@ Record::ProgressiveDamageValidation(char* buffer, std::vector<int>& listOfDamage
 			tmp++;
 
 		if (*tmp == '\0')
-		{
-#if COMMENT == true
-			printf(" => EOF\n");
-#endif
 			return false;
-		}
 
-		position = (int)( tmp - buffer);
+		position = (int)(tmp - buffer);
 		if ((length - position) < minLength)
-		{
-#if COMMENT == true
-			printf(" => IMPOSSIBLE (size too small => length: %d, minLength: %d, position: %d)\n", length, minLength, position);
-#endif
 			return false;
-		}
 
 		if (*tmp == '?')
-		{
-#if COMMENT == true
-			printf(" => POSSIBLE PROGRESSIVE (Possible)\n");
-#endif
 			return true;
-		}
 
 		count = 0;
 		while (*tmp == '#' && count < damage)
@@ -281,28 +504,13 @@ Record::ProgressiveDamageValidation(char* buffer, std::vector<int>& listOfDamage
 		if (count < damage)
 		{
 			if (*tmp == '?')
-			{
-#if COMMENT == true
-				printf(" => POSSIBLE PROGRESSIVE (Uncomplete damage)\n");
-#endif
 				return true;
-			}
 			else
-			{
-#if COMMENT == true
-				printf(" => IMPOSSIBLE (Too short)\n");
-#endif
 				return false;
-			}
 		}
 
 		if (*tmp == '#')
-		{
-#if COMMENT == true
-			printf(" => IMPOSSIBLE 2 (Continuous #)\n");
-#endif
 			return false;
-		}
 
 		minLength--;
 	}
@@ -310,74 +518,23 @@ Record::ProgressiveDamageValidation(char* buffer, std::vector<int>& listOfDamage
 	while (*tmp != '\0' && *tmp != '?')
 	{
 		if (*tmp == '#')
-		{
-#if COMMENT == true
-			printf(" => WRONG REMAINING\n");
-#endif
 			return false;
-		}
 		tmp++;
 	}
-
-#if COMMENT == true
-	printf(" => POSSIBLE FINISH\n");
-#endif
 
 	return true;
 }
 
-int64_t
-Record::CountUnfoldedArrangements(int copies)
+std::string testInput[] =
 {
-	int64_t result;
-	
-	char* buffer;
+	".?????...??.?????...?.?????...??.?????...??.?????...? 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1",
+	"???##?###?????????##?###?????????##?###?????????##?###?????????##?###????? 1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4",
+	".#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#???.#.#???..??#???#?? 1,1,1,1,1,4,1,1,1,1,1,4,1,1,1,1,1,4,1,1,1,1,1,4,1,1,1,1,1,4",
+	"?.??#...#???.??#...#???.??#...#???.??#...#???.??#...#? 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1",
+	"???#??.???#??#.??????#??.???#??#.??????#??.???#??#.??????#??.???#??#.??????#??.???#??#.?? 1,3,1,5,1,1,3,1,5,1,1,3,1,5,1,1,3,1,5,1,1,3,1,5,1"
+};
 
-	int64_t r1, r2,r3,r4;
-	char first, last;
-	char prev, next;
-
-	buffer = new char[size + 2 + 1];
-	r1 = r2 =r3=r4=0;
-	first = row[0];
-	last = row[size - 1];
-
-	printf("row: %s, damage:", row);
-	for (int damage : damages)
-		printf(" %d", damage);
-	printf(", size: %d, minSize: %d, first: %c, last: %c\n",size,minSize,first,last);
-
-	// Case 1: nominal
-	strncpy(buffer, row, size);
-	buffer[size] = '\0';
-	r1 = RecursiveCount(buffer, 0, damages, size, minSize);
-	printf("\tcase 1: %s => %zd (nominal)\n", buffer,r1);
-
-	// Case 2: begin
-	buffer[size] = '?';
-	buffer[size+1] = '\0';
-	r2 = RecursiveCount(buffer, 0, damages, size + 1, minSize);
-	printf("\tcase 2: %s => %zd (begin)\n", buffer, r2);
-
-	// Case 3: end
-	buffer[0] = '?';
-	strncpy(buffer + 1, row, size);
-	buffer[size + 1] = '\0';
-	r3 = RecursiveCount(buffer, 0, damages, size + 1, minSize);
-	printf("\tcase 3: %s => %zd (end)\n", buffer, r3);
-
-	// Case 4: mid
-	buffer[size+1] = '?';
-	buffer[size + 2] = '\0';
-	r4 = RecursiveCount(buffer, 0, damages, size + 2, minSize);
-	printf("\tcase 4: %s => %zd (mid)\n", buffer, r4);
-
-	result = r3*r2;
-	for (int i = 2; i < copies; i++)
-		result *= r4;
-
-	return result;
-}
+#define NTest 5
 
 int main()
 {
@@ -397,7 +554,6 @@ int main()
 	clockStart = clock();
 
 	problem.Read(input);
-	problem.Print();
 	result = problem.FindSolution1();
 
 	printf("result part 1: %I64d\n", result);
@@ -407,6 +563,16 @@ int main()
 		= double(clockEnd - clockStart)
 		/ double(CLOCKS_PER_SEC);
 	printf("Elapsed time: %f seconds\n", time_taken);
+/*
+	Record test;
+
+	for (int i = 0; i < NTest; i++)
+	{
+		test.Read(testInput[i]);
+		test.Print();
+		printf("\t=> %zd\n", test.CountArrangements());
+	}
+*/
 
 	clockStart = clock();
 
