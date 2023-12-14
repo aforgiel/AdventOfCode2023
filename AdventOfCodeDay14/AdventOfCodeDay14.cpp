@@ -12,7 +12,7 @@
 #include <cmath>
 #include <cstdlib>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT true
 
 #if( TEST_MODE == true)
@@ -21,119 +21,320 @@ const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOf
 const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay14/input.txt";
 #endif
 
-bool MatchPattern(char* buffer, const char* pattern)
-{
-	char* ptrPattern;
-	bool result;
+enum class Direction :int {
+	South,
+	North,
+	East,
+	West,
+	EndOfList
+};
 
-	ptrPattern = const_cast<char*>(pattern);
-	result = false;
+typedef struct Platform* PlatformPtr;
 
-	while ((*buffer) != '\0' && *ptrPattern != '\0')
-	{
-		result = (*ptrPattern == *buffer);
-		if (result == false)
-			return false;
-
-		ptrPattern++;
-		buffer++;
-	}
-
-	if (*ptrPattern == '\0')
-		return true;
-
-	return false;
-}
-
-bool FindPattern(char** buffer, const char* pattern)
-{
-	char* ptrPattern;
-	bool result;
-
-	ptrPattern = const_cast<char*>(pattern);
-	result = false;
-
-	while (**buffer != '\0' && *ptrPattern != '\0')
-	{
-		result = (*ptrPattern == **buffer);
-		if (result == true)
-			ptrPattern++;
-		else
-		{
-			*buffer -= ptrPattern - pattern;
-			ptrPattern = const_cast<char*>(pattern);
-		}
-		(*buffer)++;
-	}
-
-	return result;
-}
-
-void SkipSpace(char** buffer)
-{
-	while (**buffer == ' ')
-		(*buffer)++;
-}
-
-inline bool IsDigit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-#define MIN(a,b) (((a)<(b))?(a):(b))
-#define MAX(a,b) (((a)>(b))?(a):(b))
-
-#define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
-#define BYTE_TO_BINARY(byte)  \
-	((byte) & 0x80 ? '1' : '0'), \
-	((byte) & 0x40 ? '1' : '0'), \
-	((byte) & 0x20 ? '1' : '0'), \
-	((byte) & 0x10 ? '1' : '0'), \
-	((byte) & 0x08 ? '1' : '0'), \
-	((byte) & 0x04 ? '1' : '0'), \
-	((byte) & 0x02 ? '1' : '0'), \
-	((byte) & 0x01 ? '1' : '0') 
-
-const char* pSpace = " ";
-
-typedef struct Problem* ProblemPtr;
-
-struct Problem {
+struct Platform {
+	std::vector<std::string> lines;
+	int width;
+	int height;
 
 	void Read(std::ifstream& input);
 	void Print(void) const;
+	char Value(int x, int y);
+	void SetValue(int x, int y, char value);
+	bool MoveRocks(Direction direction);
+	int ValueScore(Direction direction, int x, int y);
+	int Score(Direction direction);
 	int64_t FindSolutionPart1(void);
+	void SpinCycle(void);
 	int64_t FindSolutionPart2(void);
 };
 
 void
-Problem::Read(std::ifstream& input)
+Platform::Read(std::ifstream& input)
 {
 	std::string line;
 
+	width = 0;
+	height = 0;
+
 	while (std::getline(input, line))
-	{
-	}
+		lines.push_back(line);
+
+	height = (int)lines.size();
+	width = (int)lines[0].size();
 }
 
 void
-Problem::Print(void) const
+Platform::Print(void) const
 {
 	int index = 0;
+	printf("Width: %d, Height: %d\n", width, height);
+	for (std::string line : lines)
+		printf("[%03d] %s\n", ++index, line.c_str());
 }
 
-int64_t
-Problem::FindSolutionPart1(void)
+char
+Platform::Value(int x, int y)
 {
-	int64_t result = 0;
+	if (x < 0 || x >= width ||
+		y < 0 || y >= height)
+		return '?';
+
+	return lines[y][x];
+}
+
+void
+Platform::SetValue(int x, int y, char value)
+{
+	if (x < 0 || x >= width ||
+		y < 0 || y >= height)
+		return;
+
+	lines[y][x] = value;
+}
+
+const int DX[(int)Direction::EndOfList] = { 0,0,1,-1 };
+const int DY[(int)Direction::EndOfList] = { 1,-1,0,0 };
+
+bool
+Platform::MoveRocks(Direction direction)
+{
+	bool result;
+	int x, y;
+	int ax, bx, ay, by;
+
+	// x => ax * x + bx
+	// y => ay * y + by
+	switch (direction)
+	{
+	case Direction::South:
+		ax = 1;
+		bx = 0;
+		ay = 1;
+		by = 0;
+		break;
+	case Direction::North:
+		ax = 1;
+		bx = 0;
+		ay = -1;
+		by = height - 1;
+		break;
+	case Direction::East:
+		ax = 1;
+		bx = 0;
+		ay = 1;
+		by = 0;
+		break;
+	case Direction::West:
+		ax = -1;
+		bx = width - 1;
+		ay = 1;
+		by = 0;
+		break;
+	default:
+		return false;
+	}
+
+	result = false;
+	for (int n = 0; n < width * height; n++)
+	{
+		x = n % width;
+		y = int(n / width);
+		x = ax * x + bx;
+		y = ay * y + by;
+		if (Value(x, y) == 'O')
+		{
+			if (Value(x + DX[(int)direction], y + DY[(int)direction]) == '.')
+			{
+				SetValue(x + DX[(int)direction], y + DY[(int)direction], 'O');
+				SetValue(x, y, '.');
+				result = true;
+			}
+		}
+	}
+
+	return result;
+}
+
+int
+Platform::ValueScore(Direction direction, int x, int y)
+{
+	switch (Value(x, y))
+	{
+	case 'O':
+		switch (direction)
+		{
+		case Direction::South:
+			return y + 1;
+		case Direction::North:
+			return height - y;
+		case Direction::East:
+			return x + 1;
+		case Direction::West:
+			return width - x;
+		default:
+			break;
+		}
+		break;
+	default:
+		break;
+	}
+
+	return 0;
+}
+
+int
+Platform::Score(Direction direction)
+{
+	int result = 0;
+
+	for (int y = 0; y < height; y++)
+		for (int x = 0; x < width; x++)
+			result += ValueScore(direction, x, y);
 
 	return result;
 }
 
 int64_t
-Problem::FindSolutionPart2(void)
+Platform::FindSolutionPart1(void)
 {
 	int64_t result = 0;
+
+	while (MoveRocks(Direction::North)) {}
+
+	Print();
+
+	return Score(Direction::North);;
+}
+
+void
+Platform::SpinCycle(void)
+{
+	while (MoveRocks(Direction::North)) {}
+	while (MoveRocks(Direction::West)) {}
+	while (MoveRocks(Direction::South)) {}
+	while (MoveRocks(Direction::East)) {}
+}
+
+#define NullPosition -1
+#define PatternDiscoveryThreshold 2
+#define MinPatternLength 2
+
+typedef struct Entry* EntryPtr;
+struct Entry {
+	std::vector<int> positions;
+};
+
+int64_t
+Platform::FindSolutionPart2(void)
+{
+	int64_t result = 0;
+	std::map<int, Entry> values;
+	std::map<int, Entry>::iterator search;
+	std::vector<int> scores;
+	int patternStart, patternLength;
+	bool patternFound;
+	int index = 0;
+	int score;
+
+	patternFound = false;
+	while (!patternFound)
+	{
+		SpinCycle();
+		score = Score(Direction::North);
+		scores.push_back(Score(Direction::North));
+
+		search = values.find(score);
+		if (search == values.end())
+		{
+			printf("[%03d] New candidate: %d\n", index, score);
+			Entry entry;
+
+			entry.positions.clear();
+			entry.positions.push_back(index);
+			values[score] = entry;
+		}
+		else
+		{
+			values[score].positions.push_back(index);
+			// Score is already present, search for a pattern:
+			printf("[%03d] Existing candidate: %d (", index, score);
+			for (int position : values[score].positions)
+				printf(" %d", position);
+			printf(" )");
+			if (values[score].positions.size() <= PatternDiscoveryThreshold)
+			{
+				printf(" => Not enough data\n");
+			}
+			else
+			{
+				int lastLength = 0;
+				int step = 0;
+				int lastPosition;
+				int length;
+
+				patternFound = true;
+
+				printf(" => Cycles:");
+				auto it = values[score].positions.rbegin();
+				lastPosition = *it;
+				while (it != values[score].positions.rend() && step <= PatternDiscoveryThreshold)
+				{
+					length = lastPosition - *it;
+					if (step == 1)
+						lastLength = length;
+					if (step >= 1)
+						printf(" %d", length);
+					if (step > 1)
+					{
+						if (length != lastLength)
+						{
+							printf(" => No rythm (%d)\n", index);
+							patternFound = false;
+							break;
+						}
+					}
+
+					lastPosition = *it;
+					step++;
+					it++;
+				}
+
+				if (patternFound)
+				{
+					if (length <= 1)
+					{
+						printf(" => TOO SHORT\n");
+						patternFound = false;
+					}
+					else
+					{
+						printf(" => Search for pattern at position %d\n", index - 2 * length);
+						for (int i = index - 2 * length; i < index - length; i++)
+						{
+							printf("\t[%03d] %d, [%03d] %d\n", i, scores[i], i + length, scores[i + length]);
+							if (scores[i] != scores[i + length])
+							{
+								printf("\t\t=> BAD\n");
+								patternFound = false;
+								break;
+							}
+						}
+
+						if (patternFound)
+						{
+							patternStart = index - 2 * length;
+							patternLength = length;
+							printf("\t\t=> FOUND (Start: %d, Length: %d)\n", patternStart, patternLength);
+						}
+					}
+				}
+			}
+		}
+
+		index++;
+	}
+
+	result = scores[patternStart + (1000000000 - (int64_t)patternStart) % patternLength - 1];
 
 	return result;
 }
@@ -144,7 +345,7 @@ int main()
 	clock_t clockStart, clockEnd;
 	double time_taken;
 	int64_t result;
-	Problem problem;
+	Platform platform;
 
 	printf("Advent of Code - Day 14\n");
 
@@ -153,13 +354,12 @@ int main()
 		return 0;
 	printf("Opening file %s\n", fileName);
 
-	problem.Read(input);
-
-	problem.Print();
+	platform.Read(input);
+	platform.Print();
 
 	clockStart = clock();
 
-	result = problem.FindSolutionPart1();
+	result = platform.FindSolutionPart1();
 
 	printf("result part 1: %I64d\n", result);
 
@@ -171,7 +371,7 @@ int main()
 
 	clockStart = clock();
 
-	result = problem.FindSolutionPart2();
+	result = platform.FindSolutionPart2();
 
 	printf("result part 2: %I64d\n", result);
 
