@@ -17,3 +17,4 @@ Summary:
 * Day 12: Nice recursive search slightly optimized but not enough for part 2! Still computing... Finally wrote a recursive cache to accelerate the algorithm, getting the results in 1s instead of 10h!!!
 * Day 13: Much simpler than yesterday ! Brute force was enough in detecting symmetry
 * Day 14: Anticpated rightly the cardinal cases (S,N,E,W) to speedup part 2. This one was all about finding rhythm ;)
+* Day 15: A bit wordy today... Had to create several classes to breakdown the problem; no real difficulty here. Glad the elves are using the same ASCII codes as us!

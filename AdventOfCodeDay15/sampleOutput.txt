@@ -1,0 +1,30 @@
+Advent of Code - Day 15
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay15/sample.txt
+[0001] rn=1 => 30, label: rn, instruction: 2, length: 1, box: 0
+[0002] cm- => 253, label: cm, instruction: 1, length: 0, box: 0
+[0003] qp=3 => 97, label: qp, instruction: 2, length: 3, box: 1
+[0004] cm=2 => 47, label: cm, instruction: 2, length: 2, box: 0
+[0005] qp- => 14, label: qp, instruction: 1, length: 0, box: 1
+[0006] pc=4 => 180, label: pc, instruction: 2, length: 4, box: 3
+[0007] ot=9 => 9, label: ot, instruction: 2, length: 9, box: 3
+[0008] ab=5 => 197, label: ab, instruction: 2, length: 5, box: 3
+[0009] pc- => 48, label: pc, instruction: 1, length: 0, box: 3
+[0010] pc=6 => 214, label: pc, instruction: 2, length: 6, box: 3
+[0011] ot=7 => 231, label: ot, instruction: 2, length: 7, box: 3
+result part 1: 1320
+Elapsed time: 0.000000 seconds
+[0001] rn=1 => 30, label: rn, instruction: 2, length: 1, box: 0
+[0002] cm- => 253, label: cm, instruction: 1, length: 0, box: 0
+[0003] qp=3 => 97, label: qp, instruction: 2, length: 3, box: 1
+[0004] cm=2 => 47, label: cm, instruction: 2, length: 2, box: 0
+[0005] qp- => 14, label: qp, instruction: 1, length: 0, box: 1
+[0006] pc=4 => 180, label: pc, instruction: 2, length: 4, box: 3
+[0007] ot=9 => 9, label: ot, instruction: 2, length: 9, box: 3
+[0008] ab=5 => 197, label: ab, instruction: 2, length: 5, box: 3
+[0009] pc- => 48, label: pc, instruction: 1, length: 0, box: 3
+[0010] pc=6 => 214, label: pc, instruction: 2, length: 6, box: 3
+[0011] ot=7 => 231, label: ot, instruction: 2, length: 7, box: 3
+[000]  [rn 1] [cm 2]
+[003]  [ot 7] [ab 5] [pc 6]
+result part 2: 145
+Elapsed time: 0.002000 seconds

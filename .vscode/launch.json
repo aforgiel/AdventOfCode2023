@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay12",
-      "program": "c:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay12/build/Debug/outDebug",
+      "cwd": "c:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay15",
+      "program": "c:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay15/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
