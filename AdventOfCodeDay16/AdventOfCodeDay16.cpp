@@ -221,8 +221,6 @@ Contraption::Score(int x, int y, Direction direction)
 	return result;
 }
 
-
-
 int64_t
 Contraption::FindSolutionPart1(void)
 {
