@@ -19,3 +19,4 @@ Summary:
 * Day 14: Anticpated rightly the cardinal cases (S,N,E,W) to speedup part 2. This one was all about finding rhythm ;)
 * Day 15: A bit wordy today... Had to create several classes to breakdown the problem; no real difficulty here. Glad the elves are using the same ASCII codes as us!
 * Day 16: Again, anticipate what part 2 should be by generalizing the case right from the start. Enjoyed playing with bits and queue-based recursive methods
+* Day 17: Hard-learned lesson on the Dijkstra's algorithm with edge cases and constraints. spent some time on the vizualization for debug and experience purpose
