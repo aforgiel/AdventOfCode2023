@@ -20,3 +20,5 @@ Summary:
 * Day 15: A bit wordy today... Had to create several classes to breakdown the problem; no real difficulty here. Glad the elves are using the same ASCII codes as us!
 * Day 16: Again, anticipate what part 2 should be by generalizing the case right from the start. Enjoyed playing with bits and queue-based recursive methods
 * Day 17: Hard-learned lesson on the Dijkstra's algorithm with edge cases and constraints. spent some time on the vizualization for debug and experience purpose
+* Day 18: Catching up with the rythm, playing with the fill algorithm before leveraging the Shoelace formula : having fun !
+* Day 19: Another opportunity to work with ranges. Spent too much time on the parsing than on the solving but the clear data scheme helped a lot for part 2

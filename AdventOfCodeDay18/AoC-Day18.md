@@ -49,8 +49,6 @@ The Elves are concerned the lagoon won't be large enough; if they follow their d
 
 Your puzzle answer was 31171.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 The Elves were right to be concerned; the planned lagoon would be much too small.
 
@@ -77,3 +75,7 @@ So, in the above example, the hexadecimal codes can be converted into the true i
 Digging out this loop and its interior produces a lagoon that can hold an impressive 952408144115 cubic meters of lava.
 
 Convert the hexadecimal color codes into the correct instructions; if the Elves follow this new dig plan, how many cubic meters of lava could the lagoon hold?
+
+Your puzzle answer was 131431655002266.
+
+Both parts of this puzzle are complete! They provide two gold stars: **

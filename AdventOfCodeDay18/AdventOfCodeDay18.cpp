@@ -16,7 +16,7 @@
 #include <cmath>
 #include <cstdlib>
 
-#define TEST_MODE true
+#define TEST_MODE false
 #define COMMENT false
 
 #if( TEST_MODE == true)
@@ -121,8 +121,8 @@ typedef struct Instruction* InstructionPtr;
 typedef struct Point* PointPtr;
 
 struct Point {
-	int x;
-	int y;
+	int64_t x;
+	int64_t y;
 
 	void Print(void)const;
 	bool operator==(const Point& rhs) const { return x == rhs.x && y == rhs.y; }
@@ -136,6 +136,7 @@ struct Instruction {
 	void Read(std::string& line);
 	void Print(void)const;
 	void Move(Point &point) const;
+	void Decode(Direction& direction, int& length) const;
 };
 
 struct DigPlan {
@@ -156,14 +157,16 @@ struct DigPlan {
 	int DigLagoon(void);
 
 	int64_t ComputeArea(void);
+	int64_t ComputeCorrectedArea(void);
 
-	int64_t FindSolution(void);
+	int64_t FindSolutionPart1(void);
+	int64_t FindSolutionPart2(void);
 };
 
 void
 Point::Print(void)const
 {
-	printf("(%d,%d)", x, y);
+	printf("(%zd,%zd)", x, y);
 }
 
 const char* pColorStart = " (";
@@ -213,6 +216,53 @@ Instruction::Move(Point& point) const
 {
 	point.x += length * DX[(int)direction];
 	point.y += length * DY[(int)direction];
+}
+
+inline int HexToDigital(char c)
+{
+	if (c >= '0' && c <= '9')
+		return c - '0';
+
+	if (c >= 'a' && c <= 'f')
+		return 10 + c - 'a';
+
+	return 0;
+}
+
+void
+Instruction::Decode(Direction& direction, int& length) const
+{
+	char* tmp;
+	int64_t mask;
+
+	tmp = const_cast<char*>(color.c_str());
+	tmp++; // Skip the #
+	mask = 0;
+	while (*tmp != '\0')
+	{
+		mask = mask << 4;
+		mask = mask | HexToDigital(*tmp);
+		tmp++;
+	}
+
+	switch( mask & 0b1111 )
+	{
+	case 0:
+		direction = Direction::Right;
+		break;
+	case 1:
+		direction = Direction::Down;
+		break;
+	case 2:
+		direction = Direction::Left;
+		break;
+	case 3:
+		direction = Direction::Up;
+		break;
+	default:
+		direction = Direction::Void;
+	}
+	length = (int) mask >> 4;
 }
 
 void
@@ -284,8 +334,8 @@ DigPlan::FindSetup(void)
 	printf("min: "); min.Print(); printf("\n");
 	printf("max: "); max.Print(); printf("\n");
 
-	width = max.x - min.x +1;
-	height = max.y - min.y +1;
+	width = (int)(max.x - min.x +1);
+	height = (int)(max.y - min.y +1);
 
 	start.x = -min.x;
 	start.y = -min.y;
@@ -372,43 +422,87 @@ DigPlan::ComputeArea(void)
 {
 	std::vector<Point> vertices;
 	Point point, point2;
-	int64_t result;
+	int64_t result, area, perimeter;
 	int size;
 
 	point = start;
 
+	perimeter = 0;
 	for (Instruction instruction : instructions)
 	{
 		instruction.Move(point);
 		vertices.push_back(point);
+		perimeter += instruction.length;
 	}
 
-	result = 0;
+	area = 0;
 	point = vertices[0];
 	size = (int)vertices.size();
 	for (int i = 1; i <= size; i++)
 	{
 		point2 = vertices[i%size];
-		result += point.x * point2.y - point2.x * point.y;
+		area += point.x * point2.y - point2.x * point.y;
 		point = point2;
 	}
-	result /= 2;
+	area /= 2;
+
+	result = area + perimeter / 2 + 1;
 
 	return result;
 }
 
 int64_t
-DigPlan::FindSolution(void)
+DigPlan::ComputeCorrectedArea(void)
 {
-	int64_t result;
+	std::vector<Point> vertices;
+	Direction direction;
+	int length;
+	Point point, point2;
+	int64_t result, area, perimeter;
+	int size;
 
-	result = 0;
+	point = { 0,0 };
+	perimeter = 0;
+	for (Instruction instruction : instructions)
+	{
+		instruction.Decode(direction, length);
+		point.x += length * DX[(int)direction];
+		point.y += length * DY[(int)direction];
+#if COMMENT == true
+		printf("Direction: %c, length: %d => ", DirectionSymbol[(int)direction], length); point.Print(); printf("\n");
+#endif
+		vertices.push_back(point);
+		perimeter += length;
+	}
 
-	result = DigLagoon();
+	area = 0;
+	point = vertices[0];
+	size = (int)vertices.size();
+	for (int i = 1; i <= size; i++)
+	{
+		point2 = vertices[i % size];
+		area += point.x * point2.y - point2.x * point.y;
+		point = point2;
+	}
+	area /= 2;
 
-	printf("DigLagoon: %d\nComputeArea: %d\n", result, ComputeArea());
+	result = area + perimeter / 2 + 1;
 
 	return result;
+}
+
+int64_t
+DigPlan::FindSolutionPart1(void)
+{
+	DigLagoon();
+
+	return ComputeArea();
+}
+
+int64_t
+DigPlan::FindSolutionPart2(void)
+{
+	return ComputeCorrectedArea();
 }
 
 int main()
@@ -419,7 +513,7 @@ int main()
 	int64_t result;
 	DigPlan digPlan;
 
-	printf("Advent of Code - Day 17\n");
+	printf("Advent of Code - Day 18\n");
 
 	input.open(fileName);
 	if (!input.is_open())
@@ -427,11 +521,11 @@ int main()
 	printf("Opening file %s\n", fileName);
 
 	digPlan.Read(input);
-//	digPlan.Print();
+	digPlan.Print();
 
 	clockStart = clock();
 
-	result = digPlan.FindSolution();
+	result = digPlan.FindSolutionPart1();
 
 	printf("result part 1: %I64d\n", result);
 
@@ -441,11 +535,11 @@ int main()
 		/ double(CLOCKS_PER_SEC);
 	printf("Elapsed time: %f seconds\n", time_taken);
 
-//	digPlan.Print();
-/*
+	digPlan.Print();
+
 	clockStart = clock();
 
-	result = digPlan.FindSolution(4, 10);
+	result = digPlan.FindSolutionPart2();
 
 	printf("result part 2: %I64d\n", result);
 
@@ -455,8 +549,6 @@ int main()
 		/ double(CLOCKS_PER_SEC);
 	printf("Elapsed time: %f seconds\n", time_taken);
 
-	digPlan.PrintSolution(digPlan.width - 1, digPlan.height - 1, 4, 10);
-*/
 	input.close();
 
 	return 0;
