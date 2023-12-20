@@ -17,7 +17,7 @@
 #include <cstdlib>
 
 #define TEST_MODE true
-#define COMMENT true
+#define COMMENT false
 
 #if( TEST_MODE == true)
 const char* fileName = "C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay21/sample.txt";
@@ -84,6 +84,24 @@ inline bool IsDigit(char c)
 	return (c >= '0' && c <= '9');
 }
 
+int64_t GCD(int64_t a, int64_t b)
+{
+	if (b == 0)
+		return a;
+	return GCD(b, a % b);
+}
+
+int64_t LCM(std::vector<int64_t> group)
+{
+	int64_t result = group[0];
+
+	for (int i = 1; i < group.size(); i++)
+		result = (((group[i] * result)) /
+			(GCD(group[i], result)));
+
+	return result;
+}
+
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)  \
 	((byte) & 0x80 ? '1' : '0'), \
@@ -100,7 +118,6 @@ const char* pSpace = " ";
 typedef struct Problem* ProblemPtr;
 
 struct Problem {
-
 	void Read(std::ifstream& input);
 	void Print(void) const;
 
@@ -113,7 +130,7 @@ Problem::Read(std::ifstream& input)
 {
 	std::string line;
 
-	while (std::getline(input, line))
+	while(std::getline(input,line))
 	{
 	}
 }
@@ -121,20 +138,22 @@ Problem::Read(std::ifstream& input)
 void
 Problem::Print(void) const
 {
-	int index = 0;
-
 }
 
 int64_t
 Problem::FindSolutionPart1(void)
 {
-	return 0;
+	int64_t result = 0;
+
+	return result;
 }
 
 int64_t
 Problem::FindSolutionPart2(void)
 {
-	return 0;
+	int64_t result = 0;
+
+	return result;
 }
 
 int main()
@@ -166,8 +185,6 @@ int main()
 		= double(clockEnd - clockStart)
 		/ double(CLOCKS_PER_SEC);
 	printf("Elapsed time: %f seconds\n", time_taken);
-
-	problem.Print();
 
 	clockStart = clock();
 
