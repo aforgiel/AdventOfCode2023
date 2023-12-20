@@ -22,3 +22,4 @@ Summary:
 * Day 17: Hard-learned lesson on the Dijkstra's algorithm with edge cases and constraints. spent some time on the vizualization for debug and experience purpose
 * Day 18: Catching up with the rythm, playing with the fill algorithm before leveraging the Shoelace formula : having fun !
 * Day 19: Another opportunity to work with ranges. Spent too much time on the parsing than on the solving but the clear data scheme helped a lot for part 2
+* Day 20: Again, spent quite some time in defining the data scheme, leveraging class hierarchization. Had to print the dependencies to make sense of part 2

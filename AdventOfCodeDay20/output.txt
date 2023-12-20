@@ -1,0 +1,66 @@
+Advent of Code - Day 20
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay20/input.txt
+[001] &bb in: ct, kp, ks, xc | out: rx
+[002] %bg in: ss, xd | out: xl
+[003] %bj in: dp | out: xd
+[004] %br in: ms, vr | out: px
+[005] broadcaster in:  | out: fr, jf, mf, bv
+[006] %bs in: vg | out: xj, ms
+[007] %bv in: broadcaster, gt | out: gt, nn
+[008] %bx in: gp | out: jr, gt
+[009] %cb in: jl | out: sj, zt
+[010] &ct in: gt | out: bb
+[011] %dp in: kx | out: bj, xd
+[012] %fh in: hg, zt | out: xp
+[013] %fr in: broadcaster, ms | out: ms, zm
+[014] %fx in: xd, zq | out: mv
+[015] %gp in: gt, kt | out: bx
+[016] &gt in: bv, bx, hv, jr, kt, lt, nz, qh | out: pm, xh, gp, nn, bv, ct
+[017] %hg in: hr | out: fh, zt
+[018] %hr in: pd | out: hg, zt
+[019] %hv in: jr | out: gt
+[020] %hz in: nl | out: ms, vg
+[021] %jf in: broadcaster, zt | out: zt, pd
+[022] %jl in: tz, zt | out: cb
+[023] %jr in: bx | out: gt, hv
+[024] &kp in: xd | out: bb
+[025] &ks in: ms | out: bb
+[026] %kt in: qh | out: gp, gt
+[027] %kx in: sn | out: dp, xd
+[028] %lt in: pm | out: gt, xh
+[029] %mf in: broadcaster, xd | out: xd, qb
+[030] %mq in: sj | out: zt
+[031] &ms in: bs, fr, hz, ts, vt, xj, zm | out: br, nl, px, vg, vr, ks, fr
+[032] %mv in: fx | out: xd, ss
+[033] %nl in: ms, px | out: hz
+[034] %nn in: bv, gt | out: nz
+[035] %nz in: nn | out: pm, gt
+[036] %pd in: jf | out: hr, zt
+[037] %pm in: gt, nz | out: lt
+[038] %px in: br, ms | out: nl
+[039] %qb in: mf, xd | out: zq
+[040] %qh in: xh | out: gt, kt
+[041] TEST rx in: bb | out:
+[042] %sj in: cb | out: mq, zt
+[043] %sn in: xd, xl | out: kx
+[044] %ss in: mv, xd | out: bg
+[045] %ts in: vt | out: ms
+[046] %tz in: vl | out: jl, zt
+[047] %vg in: hz, ms | out: bs
+[048] %vl in: xp | out: zt, tz
+[049] %vr in: ms, zm | out: br
+[050] %vt in: xj | out: ms, ts
+[051] &xc in: zt | out: bb
+[052] &xd in: bj, dp, kx, mf, mv, xl, zq | out: kp, bg, ss, sn, mf, qb, fx
+[053] %xh in: gt, lt | out: qh
+[054] %xj in: bs | out: ms, vt
+[055] %xl in: bg | out: xd, sn
+[056] %xp in: fh | out: vl, zt
+[057] %zm in: fr | out: ms, vr
+[058] %zq in: qb | out: xd, fx
+[059] &zt in: cb, hg, hr, jf, mq, pd, sj, tz, vl, xp | out: jl, xc, jf, fh
+=> Low: 18124, High: 48760
+result part 1: 883726240
+Elapsed time: 0.001000 seconds
+result part 2: 211712400442661
+Elapsed time: 0.022000 seconds

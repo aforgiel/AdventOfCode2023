@@ -1,0 +1,64 @@
+Advent of Code - Day 20
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay20/input.txt
+[001] &bb -> rx
+[002] %bg -> xl
+[003] %bj -> xd
+[004] %br -> px
+[005] broadcaster -> fr, jf, mf, bv
+[006] %bs -> xj, ms
+[007] %bv -> gt, nn
+[008] %bx -> jr, gt
+[009] %cb -> sj, zt
+[010] &ct -> bb
+[011] %dp -> bj, xd
+[012] %fh -> xp
+[013] %fr -> ms, zm
+[014] %fx -> mv
+[015] %gp -> bx
+[016] &gt -> pm, xh, gp, nn, bv, ct
+[017] %hg -> fh, zt
+[018] %hr -> hg, zt
+[019] %hv -> gt
+[020] %hz -> ms, vg
+[021] %jf -> zt, pd
+[022] %jl -> cb
+[023] %jr -> gt, hv
+[024] &kp -> bb
+[025] &ks -> bb
+[026] %kt -> gp, gt
+[027] %kx -> dp, xd
+[028] %lt -> gt, xh
+[029] %mf -> xd, qb
+[030] %mq -> zt
+[031] &ms -> br, nl, px, vg, vr, ks, fr
+[032] %mv -> xd, ss
+[033] %nl -> hz
+[034] %nn -> nz
+[035] %nz -> pm, gt
+[036] %pd -> hr, zt
+[037] %pm -> lt
+[038] %px -> nl
+[039] %qb -> zq
+[040] %qh -> gt, kt
+[041] rx ->
+[042] %sj -> mq, zt
+[043] %sn -> kx
+[044] %ss -> bg
+[045] %ts -> ms
+[046] %tz -> jl, zt
+[047] %vg -> bs
+[048] %vl -> zt, tz
+[049] %vr -> br
+[050] %vt -> ms, ts
+[051] &xc -> bb
+[052] &xd -> kp, bg, ss, sn, mf, qb, fx
+[053] %xh -> qh
+[054] %xj -> ms, vt
+[055] %xl -> xd, sn
+[056] %xp -> vl, zt
+[057] %zm -> ms, vr
+[058] %zq -> xd, fx
+[059] &zt -> jl, xc, jf, fh
+=> Low: 18124, High: 48760
+result part 1: 883726240
+Elapsed time: 0.091000 seconds
