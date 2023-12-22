@@ -1,0 +1,2427 @@
+Advent of Code - Day 22
+Opening file C:/Users/aforgiel/source/repos/AdventOfCode2023/AdventOfCodeDay22/input.txt
+floor min: 0,0, max: 9,9 => xWidth: 10, y:Width: 10
+[0001](1,1,288)~(4,1,288) below: 474 above: 63 => Can be disintegrated
+[0002](4,3,302)~(4,5,302) below: 12 483 691 above: 444 496
+[0003](3,2,71)~(5,2,71) below: 218 above: => Can be disintegrated
+[0004](5,0,290)~(5,2,290) below: 121 above: 63 101
+[0005](2,6,182)~(5,6,182) below: 510 1055 above: 261
+[0006](2,8,66)~(5,8,66) below: 692 above: 668
+[0007](6,6,113)~(6,6,115) below: 493 above: => Can be disintegrated
+[0008](0,2,23)~(0,6,23) below: 242 above: 522 832
+[0009](3,7,118)~(5,7,118) below: 34 above: 141 303
+[0010](7,5,203)~(8,5,203) below: 139 above: 544
+[0011](9,4,69)~(9,5,69) below: 840 above: 679
+[0012](4,3,300)~(7,3,300) below: 1118 above: 2 948 => Can be disintegrated
+[0013](2,0,85)~(2,1,85) below: 1013 above: 808
+[0014](6,2,167)~(6,4,167) below: 366 above: 21 585
+[0015](1,2,2)~(1,4,2) below: 727 above: 657
+[0016](0,0,7)~(0,0,10) below: 1158 above: 955 => Can be disintegrated
+[0017](5,0,63)~(6,0,63) below: 89 above: => Can be disintegrated
+[0018](4,2,187)~(4,4,187) below: 559 above: 48 433 583 => Can be disintegrated
+[0019](6,1,61)~(8,1,61) below: 187 above: 289
+[0020](2,0,277)~(3,0,277) below: 1052 above: => Can be disintegrated
+[0021](6,0,169)~(6,2,169) below: 14 above: 311 1163
+[0022](6,1,249)~(6,3,249) below: 647 above: 318
+[0023](1,1,294)~(1,3,294) below: 743 above: => Can be disintegrated
+[0024](3,4,177)~(5,4,177) below: 820 above: 321 868
+[0025](0,0,55)~(0,3,55) below: 847 above: 717
+[0026](6,3,15)~(8,3,15) below: 1036 above: 372
+[0027](6,4,234)~(8,4,234) below: 582 above: => Can be disintegrated
+[0028](2,4,47)~(2,4,49) below: 578 above: => Can be disintegrated
+[0029](6,5,296)~(8,5,296) below: 937 above: 694
+[0030](4,4,22)~(6,4,22) below: 242 above: => Can be disintegrated
+[0031](9,1,304)~(9,2,304) below: 533 above: => Can be disintegrated
+[0032](4,5,54)~(6,5,54) below: 145 above: 498 552
+[0033](1,6,164)~(1,8,164) below: 815 1209 above: 1035
+[0034](5,6,117)~(5,7,117) below: 243 above: 9 246
+[0035](6,6,216)~(8,6,216) below: 978 above: 813 1068
+[0036](4,2,270)~(4,4,270) below: 902 above: 126 1208
+[0037](1,2,154)~(3,2,154) below: 251 above: => Can be disintegrated
+[0038](7,4,173)~(7,5,173) below: 658 above: 820
+[0039](8,7,135)~(9,7,135) below: 43 above: => Can be disintegrated
+[0040](4,2,109)~(4,4,109) below: 828 above: 619 => Can be disintegrated
+[0041](0,8,295)~(1,8,295) below: 764 above: 234
+[0042](9,4,289)~(9,6,289) below: 1183 above: 1018
+[0043](8,6,134)~(8,9,134) below: 543 above: 39
+[0044](4,8,288)~(6,8,288) below: 864 above: 689
+[0045](8,0,282)~(8,2,282) below: 1011 above: => Can be disintegrated
+[0046](9,8,251)~(9,9,251) below: 741 above: 800
+[0047](8,1,249)~(8,3,249) below: 647 above: 494 1063
+[0048](2,3,190)~(4,3,190) below: 18 607 above: 107 627
+[0049](1,9,38)~(3,9,38) below: 984 above: 1064
+[0050](9,6,73)~(9,9,73) below: 928 above: 146 209 896
+[0051](8,6,176)~(8,8,176) below: 361 above: => Can be disintegrated
+[0052](6,1,283)~(6,2,283) below: 1011 above: => Can be disintegrated
+[0053](4,0,275)~(7,0,275) below: 1208 above: 710 992
+[0054](3,1,72)~(6,1,72) below: 218 above: 961
+[0055](4,2,12)~(4,4,12) below: 525 567 above: 223
+[0056](6,7,218)~(8,7,218) below: 1068 above: 435
+[0057](0,4,214)~(0,7,214) below: 492 above: 150
+[0058](2,3,212)~(2,5,212) below: 1176 above: 592
+[0059](0,5,211)~(1,5,211) below: 534 704 above: 492 => Can be disintegrated
+[0060](0,6,66)~(0,9,66) below: 763 above: 888
+[0061](0,0,212)~(0,2,212) below: 482 above: 938
+[0062](0,7,36)~(0,8,36) below: 485 above: => Can be disintegrated
+[0063](3,1,293)~(5,1,293) below: 1 4 above: 1033
+[0064](7,6,167)~(9,6,167) below: 687 above: 637 658 993
+[0065](5,4,6)~(5,6,6) below: 954 above: 224 567
+[0066](6,3,95)~(8,3,95) below: 449 above: 425 850 => Can be disintegrated
+[0067](3,4,3)~(4,4,3) below: above: => Can be disintegrated
+[0068](5,7,205)~(5,8,205) below: 412 above: 165
+[0069](4,0,84)~(4,1,84) below: 1013 above: => Can be disintegrated
+[0070](5,4,245)~(7,4,245) below: 1026 above: 698
+[0071](6,6,237)~(6,9,237) below: 171 above: 1198
+[0072](4,9,14)~(6,9,14) below: 297 above: => Can be disintegrated
+[0073](2,4,291)~(5,4,291) below: 587 above: 302 1009
+[0074](0,1,166)~(2,1,166) below: 830 above: 807 1195
+[0075](1,0,13)~(3,0,13) below: 420 above: 495 882
+[0076](4,1,231)~(4,5,231) below: 359 above: 623 930
+[0077](5,9,211)~(8,9,211) below: 936 above: => Can be disintegrated
+[0078](4,6,23)~(7,6,23) below: 310 above: 317 755 1149
+[0079](2,3,273)~(4,3,273) below: 126 above: 1091
+[0080](6,5,46)~(7,5,46) below: 926 above: 296 772
+[0081](4,7,61)~(4,9,61) below: 487 above: 451
+[0082](6,6,37)~(6,9,37) below: 204 above: 841
+[0083](1,3,60)~(4,3,60) below: 452 above: 219 368 506
+[0084](7,7,32)~(9,7,32) below: 1108 above: 1142
+[0085](3,5,221)~(3,7,221) below: 1143 above: 822
+[0086](1,4,285)~(1,5,285) below: 550 above: => Can be disintegrated
+[0087](2,4,267)~(4,4,267) below: 626 above: 902
+[0088](2,5,23)~(2,7,23) below: 801 above: => Can be disintegrated
+[0089](6,0,61)~(7,0,61) below: 187 above: 17 112
+[0090](4,1,121)~(4,4,121) below: 918 above: 666 911
+[0091](5,8,43)~(5,8,43) below: 298 above: 590
+[0092](5,5,35)~(8,5,35) below: 204 above: 594 842
+[0093](6,5,237)~(6,5,240) below: 732 above: 1026
+[0094](0,1,159)~(2,1,159) below: 299 above: => Can be disintegrated
+[0095](6,7,70)~(9,7,70) below: 164 above: 928
+[0096](6,6,52)~(6,9,52) below: 455 above: 228 => Can be disintegrated
+[0097](0,2,79)~(0,2,81) below: 889 above: 524
+[0098](6,6,187)~(6,7,187) below: 981 above: => Can be disintegrated
+[0099](1,0,235)~(2,0,235) below: 157 above: => Can be disintegrated
+[0100](0,8,243)~(0,8,245) below: 959 above: 818
+[0101](5,2,291)~(6,2,291) below: 4 above: => Can be disintegrated
+[0102](6,5,104)~(6,6,104) below: 480 above: 541 1175
+[0103](3,4,50)~(3,7,50) below: 695 above: 225 453
+[0104](1,3,276)~(1,3,279) below: 1111 above: => Can be disintegrated
+[0105](7,2,251)~(7,2,253) below: 647 above: => Can be disintegrated
+[0106](7,2,60)~(9,2,60) below: 291 above: 1008 => Can be disintegrated
+[0107](2,0,193)~(2,3,193) below: 48 above: => Can be disintegrated
+[0108](9,3,34)~(9,4,34) below: 1054 above: 932
+[0109](0,2,150)~(2,2,150) below: 723 above: 251 => Can be disintegrated
+[0110](3,0,113)~(6,0,113) below: 229 above: 973
+[0111](9,3,58)~(9,5,58) below: 552 above: 197
+[0112](7,0,62)~(9,0,62) below: 89 above: => Can be disintegrated
+[0113](2,0,288)~(4,0,288) below: 474 above: 953
+[0114](5,6,126)~(5,7,126) below: 432 above: 1193
+[0115](3,6,158)~(5,6,158) below: 879 above: => Can be disintegrated
+[0116](3,1,218)~(3,3,218) below: 910 above: 909
+[0117](0,6,56)~(0,7,56) below: 913 above: 486 => Can be disintegrated
+[0118](2,7,94)~(3,7,94) below: 1180 above: 414 => Can be disintegrated
+[0119](0,8,94)~(3,8,94) below: 811 above: 720 917
+[0120](1,0,292)~(2,0,292) below: 953 above: => Can be disintegrated
+[0121](4,2,287)~(6,2,287) below: 180 above: 4
+[0122](2,8,106)~(4,8,106) below: 1189 above: 750
+[0123](1,5,137)~(1,7,137) below: 1029 above: 238
+[0124](8,4,201)~(8,6,201) below: 708 above: 737
+[0125](6,3,114)~(7,3,114) below: 619 above: 362
+[0126](3,3,271)~(5,3,271) below: 36 above: 79
+[0127](4,3,43)~(7,3,43) below: 196 above: 1199
+[0128](1,7,214)~(1,9,214) below: 135 above: 716
+[0129](1,8,98)~(1,9,98) below: 917 above: 1032
+[0130](0,8,73)~(3,8,73) below: 767 above: 230 => Can be disintegrated
+[0131](0,9,288)~(3,9,288) below: 484 above: => Can be disintegrated
+[0132](7,2,103)~(8,2,103) below: 514 above: => Can be disintegrated
+[0133](6,1,225)~(6,3,225) below: 182 above: 1039
+[0134](3,8,209)~(3,9,209) below: 1159 above: => Can be disintegrated
+[0135](1,9,210)~(1,9,213) below: 770 above: 128
+[0136](3,0,80)~(6,0,80) below: 199 above: 1013
+[0137](4,3,100)~(6,3,100) below: 469 above: => Can be disintegrated
+[0138](5,4,82)~(5,6,82) below: 1137 above: 454
+[0139](4,5,201)~(7,5,201) below: 797 above: 10 1101
+[0140](6,9,190)~(9,9,190) below: 791 above: 573
+[0141](4,6,121)~(4,8,121) below: 9 above: 911 => Can be disintegrated
+[0142](2,8,21)~(2,9,21) below: 349 above: 1144
+[0143](6,1,19)~(7,1,19) below: 722 above: 1005
+[0144](1,5,40)~(1,7,40) below: 653 above: 603
+[0145](4,4,53)~(4,7,53) below: 455 above: 32
+[0146](6,7,75)~(9,7,75) below: 50 above: 1203
+[0147](8,0,134)~(8,2,134) below: 476 above: => Can be disintegrated
+[0148](6,6,145)~(6,9,145) below: 848 above: 176
+[0149](2,5,287)~(6,5,287) below: 643 above: 190 1088
+[0150](0,4,216)~(0,7,216) below: 57 above: 673 1102
+[0151](2,6,285)~(2,9,285) below: 399 above: 354 864
+[0152](5,0,2)~(5,1,2) below: above: 598
+[0153](0,2,72)~(2,2,72) below: 688 above: 1128
+[0154](1,4,251)~(1,4,252) below: 645 above: => Can be disintegrated
+[0155](3,5,280)~(6,5,280) below: 240 above: 1012 1134
+[0156](6,1,2)~(7,1,2) below: above: => Can be disintegrated
+[0157](0,0,234)~(3,0,234) below: 951 above: 99
+[0158](0,3,170)~(0,6,170) below: 1035 above: 941
+[0159](7,8,114)~(7,8,114) below: 762 above: => Can be disintegrated
+[0160](0,1,53)~(0,3,53) below: 974 above: 847
+[0161](9,0,16)~(9,0,19) below: 331 above: => Can be disintegrated
+[0162](2,5,305)~(4,5,305) below: 1092 above: 1185
+[0163](0,0,21)~(2,0,21) below: 955 above: 1000 => Can be disintegrated
+[0164](6,5,66)~(6,8,66) below: 715 above: 95
+[0165](5,8,208)~(5,9,208) below: 68 above: 398
+[0166](5,4,69)~(5,6,69) below: 1003 above: 967 => Can be disintegrated
+[0167](3,1,44)~(4,1,44) below: 406 above: => Can be disintegrated
+[0168](4,9,31)~(5,9,31) below: 1171 above: => Can be disintegrated
+[0169](3,5,213)~(3,5,216) below: 189 above: 419
+[0170](7,3,22)~(7,3,25) below: 702 above: 306
+[0171](4,8,234)~(7,8,234) below: 623 above: 71
+[0172](2,1,13)~(2,4,13) below: 641 1139 above: => Can be disintegrated
+[0173](7,0,241)~(9,0,241) below: 639 above: 1047
+[0174](4,4,76)~(4,7,76) below: 809 above: 1028
+[0175](3,5,156)~(4,5,156) below: 728 above: => Can be disintegrated
+[0176](6,8,146)~(9,8,146) below: 148 above: => Can be disintegrated
+[0177](6,0,37)~(6,2,37) below: 707 above: 347 731
+[0178](5,6,1)~(5,8,1) below: above: 463 954
+[0179](2,4,30)~(4,4,30) below: 960 above: 602
+[0180](2,2,284)~(4,2,284) below: 1065 above: 121 474
+[0181](2,2,39)~(5,2,39) below: 511 above: 196 769
+[0182](6,1,220)~(6,1,222) below: 201 above: 133
+[0183](6,5,19)~(9,5,19) below: 852 above: 310 => Can be disintegrated
+[0184](5,9,217)~(8,9,217) below: 998 above: 758 1095
+[0185](9,0,141)~(9,4,141) below: 1017 above: => Can be disintegrated
+[0186](5,3,233)~(5,3,234) below: 268 above: => Can be disintegrated
+[0187](6,0,60)~(6,1,60) below: 313 above: 19 89
+[0188](6,5,4)~(9,5,4) below: 322 above: => Can be disintegrated
+[0189](3,5,210)~(3,6,210) below: 910 above: 169
+[0190](5,5,290)~(5,7,290) below: 149 above: => Can be disintegrated
+[0191](1,6,275)~(3,6,275) below: 1111 above: 240 854
+[0192](5,3,62)~(5,5,62) below: 452 above: 471
+[0193](1,2,96)~(1,4,96) below: 604 above: => Can be disintegrated
+[0194](5,0,197)~(8,0,197) below: 1004 above: 232
+[0195](7,4,22)~(8,4,22) below: 547 above: => Can be disintegrated
+[0196](5,1,40)~(5,3,40) below: 181 above: 127 406
+[0197](9,3,61)~(9,5,61) below: 111 above: 1008 => Can be disintegrated
+[0198](4,9,80)~(5,9,80) below: 1205 above: 1089
+[0199](5,0,78)~(7,0,78) below: 300 above: 136
+[0200](5,8,10)~(8,8,10) below: 224 above: 297
+[0201](5,1,217)~(6,1,217) below: 1112 above: 182
+[0202](2,1,27)~(2,3,27) below: 885 above: 382
+[0203](4,2,209)~(4,4,209) below: 565 above: => Can be disintegrated
+[0204](6,5,34)~(6,6,34) below: 631 above: 82 92
+[0205](4,1,243)~(4,3,243) below: 1001 above: 979 1072 1178
+[0206](2,9,196)~(2,9,198) below: 437 above: => Can be disintegrated
+[0207](8,5,62)~(8,8,62) below: 713 above: 632
+[0208](2,1,61)~(2,1,63) below: 212 above: 506 => Can be disintegrated
+[0209](9,9,75)~(9,9,77) below: 50 above: => Can be disintegrated
+[0210](1,2,84)~(1,5,84) below: 475 above: => Can be disintegrated
+[0211](5,2,249)~(5,2,251) below: 979 above: 1138
+[0212](2,1,58)~(5,1,58) below: 988 above: 208 1042
+[0213](0,8,4)~(1,8,4) below: 247 above: 374 877 => Can be disintegrated
+[0214](7,8,183)~(9,8,183) below: 999 above: => Can be disintegrated
+[0215](7,2,281)~(7,2,282) below: 1011 above: => Can be disintegrated
+[0216](0,3,267)~(2,3,267) below: 626 above: 1140
+[0217](8,4,70)~(8,5,70) below: 315 above: 325 => Can be disintegrated
+[0218](4,1,69)~(4,4,69) below: 1003 above: 3 54 375
+[0219](1,3,63)~(1,5,63) below: 83 above: 434
+[0220](2,4,216)~(2,7,216) below: 592 above: 235 258
+[0221](9,8,78)~(9,8,80) below: 896 above: 674
+[0222](2,2,293)~(2,2,295) below: 1082 above: => Can be disintegrated
+[0223](4,0,14)~(4,2,14) below: 55 above: 495 1094 1097
+[0224](5,5,9)~(5,8,9) below: 65 above: 200 693 859
+[0225](2,6,53)~(3,6,53) below: 103 above: => Can be disintegrated
+[0226](3,1,5)~(3,3,5) below: 1058 above: 586
+[0227](7,5,119)~(7,6,119) below: 897 above: 1067
+[0228](6,7,54)~(8,7,54) below: 96 945 above: 265 333
+[0229](3,0,111)~(5,0,111) below: 584 above: 110
+[0230](2,7,75)~(2,8,75) below: 130 706 above: => Can be disintegrated
+[0231](1,3,71)~(1,5,71) below: 257 above: 940
+[0232](5,0,199)~(7,0,199) below: 194 above: => Can be disintegrated
+[0233](9,7,303)~(9,9,303) below: 685 above: => Can be disintegrated
+[0234](0,7,297)~(0,9,297) below: 41 above: => Can be disintegrated
+[0235](2,4,217)~(2,5,217) below: 220 above: 1121 => Can be disintegrated
+[0236](0,0,151)~(3,0,151) below: 403 above: 281
+[0237](2,0,117)~(3,0,117) below: 873 above: => Can be disintegrated
+[0238](1,5,138)~(1,7,138) below: 123 above: => Can be disintegrated
+[0239](6,4,299)~(8,4,299) below: 561 above: 824
+[0240](3,4,277)~(3,6,277) below: 191 above: 155 267 771
+[0241](7,0,87)~(9,0,87) below: 745 above: => Can be disintegrated
+[0242](0,4,20)~(4,4,20) below: 424 above: 8 30 960 1141
+[0243](5,4,114)~(5,6,114) below: 1110 above: 34 1200
+[0244](3,4,88)~(3,6,88) below: 678 above: 811
+[0245](5,6,195)~(5,9,195) below: 304 above: => Can be disintegrated
+[0246](5,6,119)~(5,6,121) below: 34 above: 432
+[0247](0,8,1)~(0,9,1) below: above: 213 672
+[0248](2,6,192)~(4,6,192) below: 443 above: 804 806
+[0249](2,2,278)~(2,4,278) below: 1091 above: 513 826
+[0250](4,2,177)~(7,2,177) below: 844 above: 542 712 922
+[0251](1,1,153)~(1,3,153) below: 109 407 above: 37 299
+[0252](1,5,303)~(1,8,303) below: 528 above: => Can be disintegrated
+[0253](0,9,148)~(1,9,148) below: 734 above: 696
+[0254](5,7,19)~(8,7,19) below: 852 above: 310 655
+[0255](3,9,184)~(5,9,184) below: 479 above: 1040
+[0256](4,1,263)~(5,1,263) below: 508 above: 392
+[0257](1,4,68)~(1,6,68) below: 434 above: 231
+[0258](2,6,218)~(2,8,218) below: 220 above: 863
+[0259](3,3,183)~(3,5,183) below: 510 above: 589 607 1071
+[0260](5,2,137)~(6,2,137) below: 686 above: => Can be disintegrated
+[0261](3,6,185)~(4,6,185) below: 5 above: 443
+[0262](0,2,4)~(0,3,4) below: 735 above: 1158
+[0263](2,6,204)~(2,7,204) below: 855 above: => Can be disintegrated
+[0264](1,3,53)~(2,3,53) below: 898 above: 798
+[0265](8,6,56)~(8,9,56) below: 228 above: 572 776
+[0266](2,4,61)~(2,7,61) below: 1196 above: 519 763
+[0267](3,6,280)~(3,9,280) below: 240 above: 399 484
+[0268](5,0,230)~(5,3,230) below: 490 above: 186 401 996
+[0269](4,8,80)~(5,8,80) below: 1205 above: 1060
+[0270](1,8,289)~(2,8,289) below: 864 above: 764 => Can be disintegrated
+[0271](1,5,279)~(1,7,279) below: 854 above: => Can be disintegrated
+[0272](0,3,124)~(3,3,124) below: 410 above: => Can be disintegrated
+[0273](5,3,148)~(5,4,148) below: 408 above: => Can be disintegrated
+[0274](3,8,191)~(3,9,191) below: 1123 above: => Can be disintegrated
+[0275](7,1,200)~(7,3,200) below: 799 above: => Can be disintegrated
+[0276](3,7,244)~(6,7,244) below: 312 above: 901
+[0277](4,3,210)~(4,5,210) below: 630 above: => Can be disintegrated
+[0278](2,7,141)~(4,7,141) below: 591 above: => Can be disintegrated
+[0279](2,6,135)~(2,8,135) below: 893 above: 876
+[0280](1,4,45)~(1,5,45) below: 603 above: 578
+[0281](1,0,152)~(3,0,152) below: 236 above: 588
+[0282](4,2,104)~(5,2,104) below: 963 above: 828
+[0283](5,4,205)~(5,6,205) below: 1101 above: 630 836
+[0284](5,6,279)~(5,7,279) below: 381 above: 1126
+[0285](0,6,33)~(0,8,33) below: 794 above: 485
+[0286](1,0,90)~(1,3,90) below: 808 above: 523 604
+[0287](8,1,255)~(8,1,258) below: 404 above: 327
+[0288](1,2,30)~(1,4,30) below: 382 above: 332
+[0289](6,1,62)~(6,2,62) below: 19 above: => Can be disintegrated
+[0290](8,9,74)~(8,9,75) below: 1187 above: 462
+[0291](7,2,59)~(7,5,59) below: 552 above: 106
+[0292](7,2,134)~(7,3,134) below: 476 above: 987
+[0293](2,5,154)~(3,5,154) below: 867 above: 369
+[0294](1,0,273)~(1,2,273) below: 972 above: 466 1052
+[0295](4,3,75)~(6,3,75) below: 409 above: => Can be disintegrated
+[0296](6,4,48)~(6,7,48) below: 80 above: 455
+[0297](6,8,13)~(6,9,13) below: 200 above: 72 975
+[0298](5,7,41)~(5,9,41) below: 841 above: 91 558 773
+[0299](1,1,156)~(3,1,156) below: 251 above: 94 478
+[0300](7,0,77)~(7,3,77) below: 365 above: 199
+[0301](6,1,184)~(8,1,184) below: 529 above: 307
+[0302](5,4,292)~(7,4,292) below: 73 above: 853 937
+[0303](3,6,120)~(3,8,120) below: 9 above: => Can be disintegrated
+[0304](4,9,192)~(5,9,192) below: 791 above: 245 788
+[0305](2,7,275)~(4,7,275) below: 520 above: 381
+[0306](7,3,28)~(7,5,28) below: 170 above: 512
+[0307](6,1,185)~(8,1,185) below: 301 above: => Can be disintegrated
+[0308](1,8,223)~(1,9,223) below: 716 above: 985
+[0309](5,5,72)~(6,5,72) below: 967 above: 409
+[0310](6,5,22)~(6,8,22) below: 183 254 356 above: 78
+[0311](6,2,171)~(6,2,172) below: 21 above: 844
+[0312](3,5,239)~(3,8,239) below: 827 above: 276 1117
+[0313](6,1,59)~(6,3,59) below: 982 above: 187
+[0314](3,1,13)~(3,4,13) below: 345 above: => Can be disintegrated
+[0315](8,3,67)~(8,6,67) below: 632 above: 217 428
+[0316](6,3,279)~(8,3,279) below: 1044 above: 884
+[0317](5,6,25)~(5,6,26) below: 78 above: 1188
+[0318](5,3,250)~(6,3,250) below: 22 above: => Can be disintegrated
+[0319](4,7,264)~(7,7,264) below: 635 above: => Can be disintegrated
+[0320](9,7,252)~(9,7,255) below: 518 above: => Can be disintegrated
+[0321](3,4,179)~(3,5,179) below: 24 above: 510
+[0322](8,5,3)~(8,8,3) below: above: 188 954
+[0323](2,3,71)~(2,5,71) below: 688 above: => Can be disintegrated
+[0324](6,5,158)~(8,5,158) below: 625 1191 above: => Can be disintegrated
+[0325](8,5,72)~(8,6,72) below: 217 428 above: 634
+[0326](9,4,195)~(9,7,195) below: 1081 above: 1024 => Can be disintegrated
+[0327](6,1,260)~(8,1,260) below: 287 above: => Can be disintegrated
+[0328](6,5,154)~(8,5,154) below: 416 above: 625 1191
+[0329](7,4,284)~(7,6,284) below: 1012 above: 1103
+[0330](0,9,91)~(2,9,91) below: 675 above: 438 612
+[0331](7,0,15)~(9,0,15) below: 1155 above: 161
+[0332](1,0,33)~(1,2,33) below: 288 above: 511 862
+[0333](6,7,56)~(7,7,56) below: 228 above: 994
+[0334](0,2,222)~(0,2,225) below: 768 above: => Can be disintegrated
+[0335](7,4,183)~(7,4,187) below: 564 above: 751
+[0336](9,6,40)~(9,8,40) below: 932 above: 574
+[0337](7,5,270)~(7,7,270) below: 725 above: 870 915
+[0338](8,7,67)~(8,9,67) below: 632 above: => Can be disintegrated
+[0339](7,8,21)~(9,8,21) below: 852 above: => Can be disintegrated
+[0340](0,5,77)~(0,7,77) below: 1070 above: 1165
+[0341](3,5,262)~(6,5,262) below: 1161 above: 516 635
+[0342](8,9,298)~(8,9,298) below: 633 above: 685
+[0343](6,6,243)~(7,6,243) below: 568 above: => Can be disintegrated
+[0344](8,4,289)~(8,7,289) below: 1183 above: => Can be disintegrated
+[0345](3,1,12)~(3,4,12) below: 1139 above: 314
+[0346](9,0,183)~(9,2,183) below: 529 above: => Can be disintegrated
+[0347](6,2,39)~(6,5,39) below: 177 515 above: 926 995
+[0348](9,1,281)~(9,4,281) below: 1011 above: 557 646
+[0349](2,8,19)~(4,8,19) below: 473 above: 142
+[0350](6,1,34)~(9,1,34) below: 1043 above: 721 783
+[0351](0,1,76)~(0,3,76) below: 1128 above: 536 889
+[0352](2,7,291)~(3,7,291) below: 611 1088 above: 765
+[0353](3,3,206)~(3,4,206) below: 779 above: => Can be disintegrated
+[0354](0,6,288)~(2,6,288) below: 151 above: 532 1088
+[0355](3,2,101)~(6,2,101) below: 429 above: 963
+[0356](6,6,19)~(9,6,19) below: 852 above: 310 => Can be disintegrated
+[0357](4,9,197)~(4,9,199) below: 437 above: => Can be disintegrated
+[0358](5,0,234)~(5,0,236) below: 996 above: => Can be disintegrated
+[0359](4,4,228)~(6,4,228) below: 1039 above: 76 1151
+[0360](6,5,115)~(9,5,115) below: 605 above: 857
+[0361](8,5,173)~(8,7,173) below: 993 above: 51
+[0362](6,3,115)~(7,3,115) below: 125 above: 897 => Can be disintegrated
+[0363](2,7,196)~(4,7,196) below: 788 804 above: 595 855
+[0364](4,5,56)~(4,5,59) below: 498 above: 487
+[0365](6,2,75)~(9,2,75) below: 409 above: 300 1078
+[0366](6,4,165)~(8,4,165) below: 1150 above: 14 687 1074
+[0367](0,3,156)~(0,6,156) below: 684 above: 956 1059
+[0368](3,2,63)~(3,4,63) below: 83 above: 539 829
+[0369](1,5,155)~(2,5,155) below: 293 above: => Can be disintegrated
+[0370](3,7,27)~(3,9,27) below: 1144 above: 562 739
+[0371](0,4,152)~(2,4,152) below: 723 above: 684 1045
+[0372](7,3,17)~(7,3,18) below: 26 above: 702 => Can be disintegrated
+[0373](0,0,100)~(0,0,102) below: 1119 above: 1201
+[0374](0,7,5)~(0,8,5) below: 213 719 above: 733
+[0375](4,4,72)~(4,4,73) below: 218 above: => Can be disintegrated
+[0376](4,6,126)~(4,8,126) below: 1202 above: 457 1206
+[0377](3,2,54)~(3,5,54) below: 453 above: 988
+[0378](6,4,267)~(8,4,267) below: 516 above: 615
+[0379](4,0,152)~(4,0,154) below: 681 above: => Can be disintegrated
+[0380](6,6,288)~(7,6,288) below: 1103 above: => Can be disintegrated
+[0381](3,7,276)~(6,7,276) below: 305 above: 284
+[0382](1,2,28)~(4,2,28) below: 202 above: 288 662
+[0383](4,6,85)~(4,8,85) below: 1098 above: => Can be disintegrated
+[0384](0,8,164)~(0,9,164) below: 1209 above: 651 883
+[0385](4,7,5)~(4,8,5) below: 463 above: => Can be disintegrated
+[0386](7,0,141)~(7,0,143) below: 865 above: => Can be disintegrated
+[0387](2,6,266)~(3,6,266) below: 821 above: 1057 => Can be disintegrated
+[0388](8,4,114)~(9,4,114) below: 605 above: 775
+[0389](0,7,62)~(0,9,62) below: 486 above: => Can be disintegrated
+[0390](7,4,93)~(8,4,93) below: 449 above: => Can be disintegrated
+[0391](3,7,72)~(4,7,72) below: 636 above: 706 809
+[0392](5,0,264)~(5,2,264) below: 256 above: => Can be disintegrated
+[0393](0,7,223)~(2,7,223) below: 716 above: 1170
+[0394](7,7,44)~(8,7,44) below: 670 above: => Can be disintegrated
+[0395](3,0,293)~(6,0,293) below: 953 above: => Can be disintegrated
+[0396](2,2,19)~(2,3,19) below: 784 above: 700 885
+[0397](1,1,100)~(3,1,100) below: 1062 above: 1041
+[0398](5,7,209)~(5,8,209) below: 165 above: 1080
+[0399](0,8,283)~(3,8,283) below: 267 above: 151 620
+[0400](5,2,24)~(6,2,24) below: 549 above: 803
+[0401](5,2,235)~(7,2,235) below: 268 663 above: => Can be disintegrated
+[0402](0,1,19)~(2,1,19) below: 882 above: => Can be disintegrated
+[0403](3,0,149)~(3,2,149) below: 906 above: 236
+[0404](8,1,252)~(8,1,254) below: 494 above: 287
+[0405](9,5,269)~(9,5,270) below: 971 above: => Can be disintegrated
+[0406](4,1,43)~(5,1,43) below: 196 above: 167
+[0407](1,3,152)~(4,3,152) below: 723 above: 251 785
+[0408](5,2,145)~(5,5,145) below: 757 above: 273 575 906
+[0409](6,2,73)~(6,5,73) below: 309 above: 295 365
+[0410](3,2,122)~(3,5,122) below: 918 above: 272 468
+[0411](9,7,2)~(9,9,2) below: above: => Can be disintegrated
+[0412](5,7,202)~(8,7,202) below: 595 above: 68 838 1084
+[0413](6,2,53)~(6,2,55) below: 521 above: 982
+[0414](2,6,100)~(2,8,100) below: 118 720 above: 422 1189
+[0415](6,6,138)~(7,6,138) below: 1169 above: => Can be disintegrated
+[0416](5,5,151)~(8,5,151) below: 575 above: 328 867
+[0417](1,1,79)~(1,3,79) below: 477 above: 475
+[0418](5,3,298)~(9,3,298) below: 937 above: 1085
+[0419](3,5,219)~(3,7,219) below: 169 above: 1143
+[0420](1,0,10)~(3,0,10) below: 1190 above: 75
+[0421](1,2,42)~(3,2,42) below: 769 above: 899
+[0422](0,7,101)~(2,7,101) below: 414 above: 440
+[0423](4,0,21)~(4,0,21) below: 1181 above: 1000 => Can be disintegrated
+[0424](3,3,19)~(3,6,19) below: 1031 above: 242
+[0425](7,1,98)~(7,3,98) below: 66 949 above: 514
+[0426](0,8,152)~(2,8,152) below: 696 above: => Can be disintegrated
+[0427](1,3,261)~(4,3,261) below: 1161 above: 456 508
+[0428](7,6,68)~(9,6,68) below: 315 above: 325 => Can be disintegrated
+[0429](6,0,99)~(6,2,99) below: 469 571 above: 355 677
+[0430](0,0,94)~(0,3,94) below: 523 above: => Can be disintegrated
+[0431](0,5,303)~(0,7,303) below: 528 above: => Can be disintegrated
+[0432](5,6,123)~(5,9,123) below: 246 above: 114 505
+[0433](0,4,188)~(4,4,188) below: 18 1071 above: 705
+[0434](1,4,65)~(1,6,65) below: 219 above: 257
+[0435](8,7,219)~(8,9,219) below: 56 above: => Can be disintegrated
+[0436](1,7,208)~(1,9,208) below: 1159 above: 770
+[0437](2,9,195)~(4,9,195) below: 788 above: 206 357
+[0438](1,9,92)~(2,9,92) below: 330 above: => Can be disintegrated
+[0439](0,4,227)~(0,6,227) below: 1121 above: 1069 1207
+[0440](1,7,102)~(1,8,102) below: 422 above: => Can be disintegrated
+[0441](1,0,50)~(3,0,50) below: 1166 above: => Can be disintegrated
+[0442](7,6,183)~(8,6,183) below: 555 above: 981
+[0443](3,6,186)~(3,6,189) below: 261 above: 248
+[0444](4,1,304)~(4,3,304) below: 2 above: 450 958
+[0445](7,2,129)~(9,2,129) below: 895 above: 476
+[0446](4,5,33)~(4,6,33) below: 602 above: => Can be disintegrated
+[0447](9,7,91)~(9,7,92) below: 887 above: => Can be disintegrated
+[0448](9,3,40)~(9,5,40) below: 932 above: 1023
+[0449](7,1,92)~(7,4,92) below: 1116 above: 66 390 949
+[0450](2,1,305)~(4,1,305) below: 444 above: => Can be disintegrated
+[0451](4,7,63)~(4,9,63) below: 81 above: 692 718
+[0452](1,3,59)~(5,3,59) below: 498 above: 83 192
+[0453](3,5,51)~(5,5,51) below: 103 above: 377
+[0454](3,4,85)~(6,4,85) below: 138 above: 554 678 1177
+[0455](4,7,50)~(7,7,50) below: 296 above: 96 145 754 945
+[0456](0,3,262)~(3,3,262) below: 427 above: 821
+[0457](0,8,128)~(4,8,128) below: 376 above: 1107
+[0458](6,6,292)~(6,8,292) below: 689 above: 729 886
+[0459](6,1,27)~(9,1,27) below: 527 above: 488
+[0460](3,3,247)~(3,3,248) below: 1178 above: 1184
+[0461](6,1,108)~(6,3,108) below: 828 above: 619 1192 => Can be disintegrated
+[0462](8,6,79)~(8,9,79) below: 290 above: 577 1153
+[0463](4,7,3)~(6,7,3) below: 178 above: 385 1156
+[0464](2,2,302)~(2,4,302) below: 872 above: => Can be disintegrated
+[0465](6,9,176)~(9,9,176) below: 1016 above: 986
+[0466](1,1,274)~(3,1,274) below: 294 above: => Can be disintegrated
+[0467](4,9,71)~(6,9,71) below: 576 above: 1187
+[0468](1,5,125)~(3,5,125) below: 410 above: 1022
+[0469](6,2,98)~(6,4,98) below: 850 above: 137 429 923
+[0470](5,0,8)~(8,0,8) below: 598 above: 802 1162
+[0471](5,1,64)~(5,3,64) below: 192 above: => Can be disintegrated
+[0472](1,3,222)~(3,3,222) below: 909 above: => Can be disintegrated
+[0473](2,8,17)~(5,8,17) below: 975 above: 349
+[0474](2,0,287)~(2,3,287) below: 180 above: 1 113 1082
+[0475](1,2,82)~(1,2,82) below: 417 above: 210
+[0476](6,2,132)~(8,2,132) below: 445 above: 147 292 686
+[0477](1,3,76)~(1,5,76) below: 940 above: 417 740
+[0478](3,1,157)~(4,1,157) below: 299 above: 747
+[0479](3,7,183)~(3,9,183) below: 510 above: 255 1113
+[0480](6,6,103)~(7,6,103) below: 923 above: 102
+[0481](4,2,48)~(4,4,48) below: 1199 above: 521 898
+[0482](0,2,211)~(0,3,211) below: 786 above: 61
+[0483](2,5,299)~(4,5,299) below: 1118 above: 2 782 872
+[0484](3,9,281)~(3,9,283) below: 267 above: 131
+[0485](0,7,35)~(0,9,35) below: 285 above: 62 984
+[0486](0,7,61)~(0,9,61) below: 117 714 above: 389
+[0487](4,4,60)~(4,7,60) below: 364 above: 81 703
+[0488](5,1,29)~(8,1,29) below: 459 above: 1043
+[0489](5,0,136)~(6,0,136) below: 686 above: 865
+[0490](5,3,227)~(7,3,227) below: 1039 above: 268
+[0491](1,5,24)~(1,5,27) below: 1141 above: => Can be disintegrated
+[0492](0,4,213)~(0,6,213) below: 59 786 above: 57
+[0493](6,6,112)~(6,8,112) below: 1135 above: 7
+[0494](8,1,250)~(8,2,250) below: 47 above: 404
+[0495](3,0,16)~(5,0,16) below: 75 223 1155 above: 1181 => Can be disintegrated
+[0496](3,4,305)~(5,4,305) below: 2 782 above: => Can be disintegrated
+[0497](4,2,309)~(4,4,309) below: 958 above: 580
+[0498](4,3,55)~(4,5,55) below: 32 above: 364 452
+[0499](9,7,245)~(9,7,247) below: 1114 above: 741
+[0500](0,8,159)~(0,8,159) below: 1059 above: 1209
+[0501](6,0,182)~(8,0,182) below: 616 above: 553
+[0502](0,4,54)~(0,5,54) below: 849 above: 913
+[0503](2,7,43)~(4,7,43) below: 507 above: => Can be disintegrated
+[0504](7,4,177)~(7,5,177) below: 820 above: 1027 => Can be disintegrated
+[0505](3,9,127)~(7,9,127) below: 432 1202 above: 1174
+[0506](2,1,64)~(2,3,64) below: 83 208 above: 539 => Can be disintegrated
+[0507](3,5,42)~(3,8,42) below: 841 above: 503
+[0508](4,1,262)~(4,3,262) below: 427 above: 256
+[0509](4,0,237)~(4,2,237) below: 930 above: 1001
+[0510](3,5,180)~(3,7,180) below: 321 above: 5 259 479
+[0511](1,2,36)~(2,2,36) below: 332 above: 181
+[0512](5,3,30)~(8,3,30) below: 306 above: => Can be disintegrated
+[0513](1,4,282)~(3,4,282) below: 249 771 above: 550 => Can be disintegrated
+[0514](7,1,101)~(7,3,101) below: 425 above: 132
+[0515](3,4,36)~(6,4,36) below: 900 above: 347 => Can be disintegrated
+[0516](6,3,265)~(6,5,265) below: 341 above: 378 971
+[0517](8,1,139)~(8,4,139) below: 987 above: 1182
+[0518](9,6,251)~(9,7,251) below: 741 above: 320 831
+[0519](2,4,64)~(2,6,64) below: 266 above: => Can be disintegrated
+[0520](3,6,272)~(3,9,272) below: 1057 above: 305
+[0521](4,2,50)~(7,2,50) below: 481 above: 413
+[0522](0,4,25)~(0,6,25) below: 8 above: 640 1010
+[0523](0,0,92)~(3,0,92) below: 286 above: 430 812
+[0524](0,2,87)~(2,2,87) below: 97 above: 970
+[0525](4,3,2)~(4,3,5) below: above: 55 => Can be disintegrated
+[0526](0,0,112)~(0,0,113) below: 942 above: => Can be disintegrated
+[0527](5,1,24)~(7,1,24) below: 1005 above: 459
+[0528](0,6,301)~(2,6,301) below: 760 above: 252 431
+[0529](7,1,182)~(9,1,182) below: 616 above: 301 346
+[0530](9,7,209)~(9,9,209) below: 701 936 above: 924
+[0531](9,4,235)~(9,7,235) below: 709 above: 846
+[0532](0,4,290)~(0,6,290) below: 354 above: 814 => Can be disintegrated
+[0533](9,0,303)~(9,2,303) below: 1085 above: 31
+[0534](1,5,201)~(1,8,201) below: 793 above: 59 683
+[0535](2,2,204)~(2,2,205) below: 946 above: 565
+[0536](0,3,78)~(0,4,78) below: 351 740 above: => Can be disintegrated
+[0537](0,4,162)~(2,4,162) below: 956 above: 1148
+[0538](4,2,16)~(6,2,16) below: 1094 above: 784 1049
+[0539](2,3,65)~(3,3,65) below: 368 506 above: 1099
+[0540](2,3,205)~(2,3,208) below: 779 above: 1176
+[0541](3,5,106)~(6,5,106) below: 102 above: 1093
+[0542](6,2,180)~(6,3,180) below: 250 above: 947
+[0543](8,8,133)~(8,9,133) below: 851 above: 43
+[0544](7,5,204)~(8,5,204) below: 10 above: 1046
+[0545](7,9,44)~(7,9,45) below: 773 above: => Can be disintegrated
+[0546](7,0,11)~(7,3,11) below: 1162 above: 1036 1155
+[0547](8,4,19)~(9,4,19) below: 852 above: 195
+[0548](6,4,196)~(8,4,196) below: 711 above: 708 799
+[0549](5,2,21)~(5,3,21) below: 702 above: 400
+[0550](1,0,284)~(1,4,284) below: 513 826 above: 86 787
+[0551](6,2,126)~(6,4,126) below: 1129 above: 656 895 1073
+[0552](6,5,55)~(9,5,55) below: 32 above: 111 291 572 790
+[0553](6,0,184)~(8,0,184) below: 501 above: => Can be disintegrated
+[0554](5,4,88)~(5,4,90) below: 454 above: => Can be disintegrated
+[0555](6,6,182)~(8,6,182) below: 736 above: 442
+[0556](2,3,2)~(2,5,2) below: above: 774
+[0557](9,4,284)~(9,6,284) below: 348 above: 1183
+[0558](5,5,42)~(5,7,42) below: 298 above: => Can be disintegrated
+[0559](4,2,184)~(7,2,184) below: 616 above: 18 777
+[0560](5,9,295)~(7,9,295) below: 1109 above: 907 => Can be disintegrated
+[0561](7,4,296)~(7,4,296) below: 937 above: 239
+[0562](1,8,28)~(3,8,28) below: 370 above: 742
+[0563](1,5,86)~(1,8,86) below: 1168 above: 675
+[0564](7,3,180)~(7,5,180) below: 922 1027 above: 335
+[0565](1,2,207)~(4,2,207) below: 535 above: 203
+[0566](2,4,8)~(2,6,8) below: 774 above: 1087 1139
+[0567](4,4,9)~(5,4,9) below: 65 above: 55 859 => Can be disintegrated
+[0568](6,6,242)~(6,8,242) below: 1198 above: 343 1056
+[0569](5,4,106)~(6,4,106) below: 881 above: => Can be disintegrated
+[0570](1,7,295)~(3,7,295) below: 765 above: => Can be disintegrated
+[0571](5,1,98)~(6,1,98) below: 850 above: 429 => Can be disintegrated
+[0572](8,5,58)~(8,7,58) below: 265 552 above: 713
+[0573](7,9,193)~(9,9,193) below: 140 above: 690
+[0574](9,7,41)~(9,8,41) below: 336 above: => Can be disintegrated
+[0575](2,5,148)~(5,5,148) below: 408 above: 416 723
+[0576](2,9,70)~(4,9,70) below: 668 above: 467
+[0577](6,7,80)~(9,7,80) below: 462 above: 861
+[0578](0,4,46)~(2,4,46) below: 280 above: 28 849
+[0579](2,3,98)~(2,3,101) below: 1077 above: => Can be disintegrated
+[0580](4,4,312)~(4,7,312) below: 497 above: => Can be disintegrated
+[0581](8,2,306)~(8,4,306) below: 948 above: => Can be disintegrated
+[0582](7,3,232)~(7,5,232) below: 1151 above: 27 732
+[0583](3,2,188)~(6,2,188) below: 18 777 above: 1066
+[0584](5,0,110)~(5,2,110) below: 828 above: 229 1192
+[0585](4,4,168)~(6,4,168) below: 14 above: => Can be disintegrated
+[0586](2,1,7)~(4,1,7) below: 226 above: 641
+[0587](4,4,290)~(7,4,290) below: 781 above: 73
+[0588](2,0,155)~(2,0,157) below: 281 above: => Can be disintegrated
+[0589](1,5,185)~(3,5,185) below: 259 above: => Can be disintegrated
+[0590](3,8,46)~(5,8,46) below: 91 above: => Can be disintegrated
+[0591](4,6,140)~(4,8,140) below: 1169 above: 278 610 1076
+[0592](2,2,214)~(2,5,214) below: 58 above: 220
+[0593](1,4,55)~(1,4,55) below: 798 above: 778
+[0594](7,5,38)~(7,6,38) below: 92 above: 1014
+[0595](3,7,199)~(5,7,199) below: 363 above: 412
+[0596](3,8,309)~(3,8,311) below: 796 above: => Can be disintegrated
+[0597](2,4,295)~(2,6,295) below: 1009 above: 816 => Can be disintegrated
+[0598](5,0,5)~(5,1,5) below: 152 above: 470
+[0599](0,5,249)~(0,6,249) below: 746 above: => Can be disintegrated
+[0600](5,1,196)~(5,3,196) below: 682 above: => Can be disintegrated
+[0601](0,0,81)~(0,0,83) below: 889 above: => Can be disintegrated
+[0602](4,4,32)~(4,6,32) below: 179 above: 446 900
+[0603](1,4,43)~(1,7,43) below: 144 above: 280 748 904
+[0604](1,2,93)~(1,4,93) below: 286 above: 193
+[0605](8,4,113)~(8,6,113) below: 1075 above: 360 388
+[0606](7,6,187)~(7,9,187) below: 981 above: 791
+[0607](1,3,184)~(3,3,184) below: 259 above: 48 890
+[0608](1,6,239)~(1,9,239) below: 1007 above: 629 875 1154
+[0609](6,6,60)~(7,6,60) below: 790 above: => Can be disintegrated
+[0610](3,8,142)~(4,8,142) below: 591 above: 977
+[0611](3,6,290)~(3,8,290) below: 864 above: 352 764 814 => Can be disintegrated
+[0612](0,8,92)~(0,9,92) below: 330 above: => Can be disintegrated
+[0613](8,6,273)~(8,8,273) below: 915 above: 1100
+[0614](4,4,239)~(7,4,239) below: 617 above: => Can be disintegrated
+[0615](8,2,269)~(8,4,269) below: 378 above: 638 650
+[0616](7,0,181)~(7,2,181) below: 922 above: 501 529 559
+[0617](3,4,236)~(5,4,236) below: 780 above: 614
+[0618](0,1,27)~(0,3,27) below: 832 above: => Can be disintegrated
+[0619](4,3,113)~(6,3,113) below: 40 461 1110 above: 125
+[0620](0,7,284)~(0,9,284) below: 399 above: => Can be disintegrated
+[0621](1,1,80)~(4,1,80) below: 1164 above: => Can be disintegrated
+[0622](6,6,298)~(6,8,298) below: 1152 above: => Can be disintegrated
+[0623](4,5,233)~(4,8,233) below: 76 above: 171 780 819
+[0624](9,5,67)~(9,5,67) below: 843 above: => Can be disintegrated
+[0625](8,2,156)~(8,5,156) below: 328 above: 324 934
+[0626](2,2,266)~(2,4,266) below: 821 above: 87 216 789
+[0627](3,3,193)~(3,3,196) below: 48 above: => Can be disintegrated
+[0628](6,3,22)~(6,3,23) below: 702 above: => Can be disintegrated
+[0629](1,6,242)~(1,7,242) below: 608 above: 746
+[0630](3,5,207)~(5,5,207) below: 283 above: 277 910
+[0631](5,6,31)~(6,6,31) below: 1188 above: 204
+[0632](8,3,65)~(8,7,65) below: 207 above: 315 338
+[0633](8,7,297)~(8,9,297) below: 729 above: 342 1006
+[0634](8,3,73)~(8,5,73) below: 325 above: => Can be disintegrated
+[0635](5,5,263)~(5,7,263) below: 341 above: 319
+[0636](4,6,70)~(4,7,70) below: 795 above: 391
+[0637](9,5,170)~(9,6,170) below: 64 above: => Can be disintegrated
+[0638](8,4,271)~(8,7,271) below: 615 above: 915 1015
+[0639](9,0,240)~(9,2,240) below: 676 above: 173
+[0640](0,6,28)~(0,8,28) below: 522 above: 794
+[0641](2,1,8)~(2,3,8) below: 586 above: 172 => Can be disintegrated
+[0642](2,8,61)~(3,8,61) below: 714 above: => Can be disintegrated
+[0643](6,4,284)~(6,5,284) below: 1012 above: 149 781
+[0644](9,3,77)~(9,5,77) below: 679 above: 969
+[0645](0,4,248)~(1,4,248) below: 665 above: 154
+[0646](9,1,283)~(9,3,283) below: 348 above: => Can be disintegrated
+[0647](6,2,248)~(8,2,248) below: 979 above: 22 47 105
+[0648](3,1,167)~(3,1,169) below: 830 above: => Can be disintegrated
+[0649](7,6,9)~(9,6,9) below: 980 above: => Can be disintegrated
+[0650](6,2,270)~(9,2,270) below: 615 above: => Can be disintegrated
+[0651](0,9,167)~(1,9,167) below: 384 above: => Can be disintegrated
+[0652](2,6,138)~(2,9,138) below: 876 above: => Can be disintegrated
+[0653](1,7,36)~(1,7,37) below: 866 above: 144
+[0654](6,4,89)~(6,6,89) below: 990 above: => Can be disintegrated
+[0655](5,7,20)~(5,9,20) below: 254 above: => Can be disintegrated
+[0656](6,4,127)~(6,6,127) below: 551 above: => Can be disintegrated
+[0657](1,1,4)~(1,2,4) below: 15 above: => Can be disintegrated
+[0658](7,4,170)~(7,6,170) below: 64 above: 38
+[0659](8,7,86)~(8,9,86) below: 1153 above: => Can be disintegrated
+[0660](5,1,307)~(5,3,307) below: 958 above: 1019
+[0661](1,1,262)~(1,2,262) below: 878 above: 1021
+[0662](4,1,29)~(4,3,29) below: 382 above: 707
+[0663](7,1,232)~(7,2,232) below: 952 above: 401 1186
+[0664](9,5,240)~(9,7,240) below: 846 above: 766
+[0665](0,2,247)~(0,5,247) below: 921 above: 645 1172
+[0666](4,2,122)~(6,2,122) below: 90 above: 1129
+[0667](5,2,1)~(8,2,1) below: above: 968
+[0668](2,7,69)~(2,9,69) below: 6 above: 576 767
+[0669](0,0,207)~(0,3,207) below: 1086 above: 704 738 835
+[0670](7,6,42)~(7,8,42) below: 1014 above: 394
+[0671](8,4,210)~(8,5,210) below: 1046 above: 978
+[0672](0,9,4)~(3,9,4) below: 247 871 above: 877 => Can be disintegrated
+[0673](0,5,219)~(1,5,219) below: 150 above: 768
+[0674](9,8,83)~(9,8,85) below: 221 above: => Can be disintegrated
+[0675](1,7,89)~(1,9,89) below: 563 above: 330
+[0676](9,2,235)~(9,2,237) below: 709 above: 639
+[0677](6,0,101)~(6,0,104) below: 429 above: => Can be disintegrated
+[0678](2,4,86)~(4,4,86) below: 454 above: 244
+[0679](9,5,71)~(9,5,74) below: 11 above: 644
+[0680](9,1,195)~(9,3,195) below: 1081 above: 1024 => Can be disintegrated
+[0681](4,0,150)~(4,2,150) below: 906 above: 379
+[0682](5,2,193)~(5,4,193) below: 1066 above: 600
+[0683](1,6,204)~(1,8,204) below: 534 above: 1159
+[0684](0,4,154)~(0,6,154) below: 371 above: 367
+[0685](6,9,300)~(9,9,300) below: 342 above: 233
+[0686](6,0,134)~(6,2,134) below: 476 above: 260 489
+[0687](7,4,166)~(7,7,166) below: 366 above: 64
+[0688](2,1,70)~(2,3,70) below: 1099 above: 153 323
+[0689](6,7,290)~(6,9,290) below: 44 above: 458 1109
+[0690](6,9,196)~(7,9,196) below: 573 above: => Can be disintegrated
+[0691](4,4,299)~(5,4,299) below: 1118 above: 2 => Can be disintegrated
+[0692](4,8,65)~(4,8,65) below: 451 above: 6
+[0693](4,7,10)~(5,7,10) below: 224 above: => Can be disintegrated
+[0694](7,5,298)~(7,7,298) below: 29 above: 964
+[0695](3,2,47)~(3,5,47) below: 899 above: 103 898
+[0696](0,7,151)~(0,9,151) below: 253 above: 426
+[0697](0,2,51)~(1,2,51) below: 1166 above: 974
+[0698](5,4,247)~(7,4,247) below: 70 above: => Can be disintegrated
+[0699](7,2,191)~(7,5,191) below: 751 above: 711 752 929
+[0700](2,3,22)~(4,3,22) below: 396 above: => Can be disintegrated
+[0701](6,8,208)~(9,8,208) below: 833 above: 530 912
+[0702](5,3,20)~(7,3,20) below: 372 1049 above: 170 549 628
+[0703](4,5,64)~(5,5,64) below: 487 above: 825
+[0704](0,3,209)~(0,6,209) below: 669 793 above: 59 786
+[0705](2,4,190)~(2,5,190) below: 433 above: => Can be disintegrated
+[0706](1,7,73)~(3,7,73) below: 391 above: 230 1168
+[0707](3,2,35)~(6,2,35) below: 662 above: 177
+[0708](8,3,198)~(8,5,198) below: 548 above: 124
+[0709](9,1,233)~(9,4,233) below: 1151 above: 531 676
+[0710](7,0,276)~(7,0,276) below: 53 above: => Can be disintegrated
+[0711](6,4,193)~(8,4,193) below: 699 above: 548
+[0712](3,2,178)~(5,2,178) below: 250 above: => Can be disintegrated
+[0713](8,5,60)~(8,7,60) below: 572 above: 207
+[0714](0,8,58)~(3,8,58) below: 913 above: 486 642
+[0715](6,5,64)~(6,7,64) below: 839 above: 164
+[0716](1,5,220)~(1,8,220) below: 128 above: 308 393
+[0717](0,0,56)~(0,0,56) below: 25 above: => Can be disintegrated
+[0718](4,5,67)~(4,7,67) below: 451 above: 795
+[0719](0,5,3)~(0,7,3) below: 735 above: 374 => Can be disintegrated
+[0720](2,8,97)~(4,8,97) below: 119 above: 414 => Can be disintegrated
+[0721](7,0,36)~(7,1,36) below: 350 above: 939
+[0722](5,1,17)~(6,1,17) below: 1097 above: 143
+[0723](2,2,149)~(2,5,149) below: 575 above: 109 371 407 867
+[0724](4,1,128)~(4,2,128) below: 895 above: 805
+[0725](6,5,268)~(7,5,268) below: 971 above: 337
+[0726](0,3,133)~(0,5,133) below: 792 above: => Can be disintegrated
+[0727](1,0,1)~(1,2,1) below: above: 15
+[0728](4,5,153)~(4,5,155) below: 867 above: 175
+[0729](6,8,295)~(8,8,295) below: 458 above: 633
+[0730](2,2,275)~(4,2,275) below: 1208 above: => Can be disintegrated
+[0731](6,1,40)~(8,1,40) below: 177 above: 744 995
+[0732](5,5,234)~(7,5,234) below: 582 above: 93
+[0733](0,7,8)~(0,9,8) below: 374 above: => Can be disintegrated
+[0734](1,9,146)~(4,9,146) below: 848 above: 253 1125
+[0735](0,3,1)~(0,5,1) below: above: 262 719
+[0736](6,4,181)~(6,6,181) below: 1055 above: 555
+[0737](7,4,203)~(8,4,203) below: 124 above: => Can be disintegrated
+[0738](0,0,209)~(1,0,209) below: 669 above: => Can be disintegrated
+[0739](3,5,28)~(3,7,28) below: 370 801 above: => Can be disintegrated
+[0740](0,4,77)~(2,4,77) below: 477 1128 above: 536 => Can be disintegrated
+[0741](9,7,248)~(9,9,248) below: 499 above: 46 518
+[0742](1,8,31)~(1,9,31) below: 562 above: => Can be disintegrated
+[0743](0,2,291)~(1,2,291) below: 1082 above: 23 869
+[0744](7,0,43)~(7,2,43) below: 731 above: => Can be disintegrated
+[0745](9,0,84)~(9,2,84) below: 943 above: 241
+[0746](0,6,243)~(1,6,243) below: 629 above: 599
+[0747](4,1,159)~(4,1,161) below: 478 above: => Can be disintegrated
+[0748](1,6,45)~(1,6,48) below: 603 above: 1083
+[0749](6,3,62)~(6,5,62) below: 790 above: => Can be disintegrated
+[0750](2,7,107)~(2,9,107) below: 122 above: => Can be disintegrated
+[0751](7,4,190)~(9,4,190) below: 335 above: 699
+[0752](7,2,193)~(9,2,193) below: 699 above: 1081
+[0753](4,2,256)~(5,2,256) below: 1138 above: 856
+[0754](5,6,53)~(5,7,53) below: 455 above: => Can be disintegrated
+[0755](4,6,26)~(4,7,26) below: 78 above: 1171
+[0756](3,1,256)~(3,2,256) below: 1138 above: 878
+[0757](5,3,139)~(5,3,142) below: 987 above: 408
+[0758](7,9,220)~(7,9,222) below: 184 above: => Can be disintegrated
+[0759](1,2,195)~(4,2,195) below: 1051 above: 1120
+[0760](2,6,300)~(4,6,300) below: 1118 above: 528 933
+[0761](7,8,217)~(9,8,217) below: 998 above: => Can be disintegrated
+[0762](7,7,112)~(7,8,112) below: 1135 above: 159
+[0763](0,7,65)~(2,7,65) below: 266 above: 60
+[0764](1,8,292)~(3,8,292) below: 270 611 above: 41
+[0765](1,7,294)~(3,7,294) below: 352 above: 570
+[0766](9,3,241)~(9,6,241) below: 664 above: 1114
+[0767](0,8,70)~(2,8,70) below: 668 above: 130
+[0768](0,2,220)~(0,5,220) below: 673 above: 334
+[0769](2,2,40)~(3,2,40) below: 181 above: 421
+[0770](1,8,209)~(1,9,209) below: 436 above: 135
+[0771](3,4,278)~(3,4,279) below: 240 above: 513 => Can be disintegrated
+[0772](7,5,49)~(7,5,50) below: 80 above: 945 => Can be disintegrated
+[0773](4,9,42)~(7,9,42) below: 298 above: 545
+[0774](1,5,5)~(2,5,5) below: 556 above: 566
+[0775](8,2,117)~(8,4,117) below: 388 above: => Can be disintegrated
+[0776](5,8,58)~(8,8,58) below: 265 above: => Can be disintegrated
+[0777](5,1,186)~(5,3,186) below: 559 above: 583 1173
+[0778](1,4,58)~(1,5,58) below: 593 above: 1196
+[0779](1,3,204)~(3,3,204) below: 1147 above: 353 540
+[0780](4,3,235)~(4,5,235) below: 623 above: 617
+[0781](4,4,287)~(6,4,287) below: 643 above: 587
+[0782](3,3,300)~(3,5,300) below: 483 above: 496 1092 => Can be disintegrated
+[0783](9,0,37)~(9,1,37) below: 350 above: => Can be disintegrated
+[0784](1,2,17)~(4,2,17) below: 538 above: 396
+[0785](3,3,155)~(3,3,157) below: 407 above: 1079
+[0786](0,2,210)~(0,4,210) below: 704 above: 482 492
+[0787](0,3,285)~(1,3,285) below: 550 above: => Can be disintegrated
+[0788](4,7,194)~(4,9,194) below: 304 above: 363 437
+[0789](2,2,269)~(3,2,269) below: 626 above: => Can be disintegrated
+[0790](6,4,57)~(6,6,57) below: 552 above: 609 749
+[0791](4,9,189)~(7,9,189) below: 606 above: 140 304
+[0792](0,5,132)~(1,5,132) below: 916 above: 726 1029
+[0793](0,5,198)~(3,5,198) below: 1127 above: 534 704
+[0794](0,8,30)~(0,9,30) below: 640 above: 285
+[0795](4,5,69)~(4,7,69) below: 718 above: 636 967
+[0796](2,8,306)~(4,8,306) below: 933 above: 596
+[0797](5,5,195)~(5,5,198) below: 929 above: 139
+[0798](1,3,54)~(1,4,54) below: 264 above: 593
+[0799](7,3,199)~(7,4,199) below: 548 above: 275
+[0800](9,8,254)~(9,9,254) below: 46 above: => Can be disintegrated
+[0801](1,6,22)~(3,6,22) below: 1141 above: 88 739 1204
+[0802](5,0,11)~(6,0,11) below: 470 above: => Can be disintegrated
+[0803](5,2,26)~(5,4,26) below: 400 above: => Can be disintegrated
+[0804](3,4,194)~(3,7,194) below: 248 above: 363 => Can be disintegrated
+[0805](2,2,129)~(4,2,129) below: 724 above: => Can be disintegrated
+[0806](2,4,195)~(2,6,195) below: 248 above: 1127
+[0807](2,1,169)~(2,4,169) below: 74 above: => Can be disintegrated
+[0808](1,1,87)~(2,1,87) below: 13 above: 286
+[0809](4,5,75)~(4,7,75) below: 391 above: 174
+[0810](0,1,211)~(1,1,211) below: 835 above: 1197
+[0811](3,6,90)~(3,8,90) below: 244 above: 119 1136 1180
+[0812](2,0,94)~(2,2,94) below: 523 above: 1077
+[0813](7,6,217)~(8,6,217) below: 35 above: => Can be disintegrated
+[0814](0,6,291)~(3,6,291) below: 532 611 1088 above: 1124
+[0815](0,6,159)~(1,6,159) below: 1090 above: 33 => Can be disintegrated
+[0816](2,4,296)~(5,4,296) below: 597 853 above: 1118
+[0817](7,9,206)~(9,9,206) below: 838 above: 936
+[0818](0,8,248)~(2,8,248) below: 100 above: => Can be disintegrated
+[0819](4,6,235)~(4,6,237) below: 623 above: => Can be disintegrated
+[0820](5,4,175)~(7,4,175) below: 38 above: 24 504
+[0821](2,3,265)~(2,6,265) below: 456 above: 387 626 1030
+[0822](3,7,222)~(3,9,222) below: 85 above: 827
+[0823](0,1,173)~(0,3,173) below: 941 above: 860
+[0824](8,3,301)~(8,5,301) below: 239 above: 892 948
+[0825](5,4,65)~(5,7,65) below: 703 above: 1003
+[0826](1,2,280)~(4,2,280) below: 249 above: 550 1065
+[0827](2,8,237)~(4,8,237) below: 822 above: 312 1007
+[0828](3,2,107)~(6,2,107) below: 282 above: 40 461 584
+[0829](3,0,66)~(3,2,66) below: 368 above: 925
+[0830](1,1,165)~(3,1,165) below: 962 above: 74 648
+[0831](9,4,253)~(9,6,253) below: 518 above: 1020
+[0832](0,2,24)~(0,3,24) below: 8 above: 618
+[0833](6,7,205)~(6,9,205) below: 1084 above: 701
+[0834](2,4,131)~(2,7,131) below: 1022 above: 1037 1206
+[0835](0,1,210)~(4,1,210) below: 669 above: 810 1002
+[0836](4,6,208)~(7,6,208) below: 283 above: 1105 => Can be disintegrated
+[0837](5,4,274)~(8,4,274) below: 902 1015 above: 1044
+[0838](8,7,203)~(8,9,203) below: 412 above: 817 931
+[0839](6,7,63)~(7,7,63) below: 994 above: 715
+[0840](9,1,68)~(9,4,68) below: 1194 above: 11 908
+[0841](3,8,40)~(6,8,40) below: 82 above: 298 507
+[0842](8,3,36)~(8,5,36) below: 92 above: => Can be disintegrated
+[0843](9,2,64)~(9,5,64) below: 1008 above: 624 1194
+[0844](6,2,175)~(7,2,175) below: 311 above: 250
+[0845](5,9,142)~(7,9,142) below: 1053 above: 848 880
+[0846](9,7,237)~(9,8,237) below: 531 above: 664
+[0847](0,2,54)~(1,2,54) below: 160 above: 25
+[0848](2,9,144)~(6,9,144) below: 845 above: 148 734
+[0849](0,4,49)~(0,4,51) below: 578 above: 502
+[0850](6,1,97)~(6,4,97) below: 66 949 above: 469 571
+[0851](5,9,132)~(8,9,132) below: 1174 above: 543 1050
+[0852](8,4,18)~(8,8,18) below: 975 above: 183 254 339 356 547
+[0853](4,4,294)~(5,4,294) below: 302 above: 816 => Can be disintegrated
+[0854](1,6,278)~(1,8,278) below: 191 above: 271
+[0855](2,7,199)~(2,7,201) below: 363 above: 263
+[0856](4,1,258)~(4,2,258) below: 753 above: => Can be disintegrated
+[0857](7,5,116)~(7,6,116) below: 360 above: 897 => Can be disintegrated
+[0858](5,7,300)~(5,8,300) below: 1152 above: => Can be disintegrated
+[0859](5,4,10)~(5,5,10) below: 224 567 above: 903 997
+[0860](0,2,175)~(0,6,175) below: 823 above: 914
+[0861](7,7,83)~(9,7,83) below: 577 above: 1104
+[0862](1,0,36)~(1,1,36) below: 332 above: => Can be disintegrated
+[0863](2,6,220)~(2,8,220) below: 258 above: => Can be disintegrated
+[0864](2,8,287)~(5,8,287) below: 151 above: 44 270 611
+[0865](6,0,138)~(9,0,138) below: 489 above: 386 1017
+[0866](1,6,34)~(1,8,34) below: 1204 above: 653
+[0867](2,5,152)~(5,5,152) below: 416 723 above: 293 728 879
+[0868](5,4,179)~(5,7,179) below: 24 above: 1055
+[0869](0,2,297)~(0,3,297) below: 743 1034 above: 1106
+[0870](7,7,273)~(7,8,273) below: 337 above: => Can be disintegrated
+[0871](2,9,1)~(5,9,1) below: above: 672 => Can be disintegrated
+[0872](2,2,301)~(2,5,301) below: 483 above: 464 1092
+[0873](2,0,115)~(4,0,115) below: 973 above: 237
+[0874](8,4,179)~(8,7,179) below: 1027 above: 999
+[0875](0,9,242)~(1,9,242) below: 608 above: => Can be disintegrated
+[0876](2,6,136)~(4,6,136) below: 279 above: 652 1169
+[0877](1,8,5)~(1,9,5) below: 213 672 above: => Can be disintegrated
+[0878](1,1,259)~(3,1,259) below: 756 above: 661
+[0879](5,5,155)~(5,7,155) below: 867 above: 115
+[0880](7,9,145)~(9,9,145) below: 845 above: => Can be disintegrated
+[0881](3,4,103)~(6,4,103) below: 923 above: 569
+[0882](2,0,16)~(2,3,16) below: 75 above: 402 955
+[0883](0,8,166)~(0,8,169) below: 384 above: 935
+[0884](6,3,282)~(7,3,282) below: 316 above: => Can be disintegrated
+[0885](2,2,22)~(2,2,25) below: 396 above: 202
+[0886](5,7,294)~(7,7,294) below: 458 above: 907 1130
+[0887](9,6,89)~(9,8,89) below: 1104 above: 447
+[0888](0,4,69)~(0,6,69) below: 60 above: => Can be disintegrated
+[0889](0,0,78)~(0,2,78) below: 351 above: 97 601
+[0890](1,1,187)~(1,3,187) below: 607 above: => Can be disintegrated
+[0891](3,6,3)~(3,8,3) below: above: => Can be disintegrated
+[0892](8,5,304)~(8,5,307) below: 824 above: => Can be disintegrated
+[0893](2,4,133)~(2,6,133) below: 1037 above: 279
+[0894](2,6,80)~(2,6,82) below: 1028 above: 966
+[0895](4,2,127)~(7,2,127) below: 551 above: 445 724
+[0896](7,8,76)~(9,8,76) below: 50 above: 221
+[0897](7,3,118)~(7,5,118) below: 362 857 above: 227
+[0898](1,3,50)~(4,3,50) below: 481 695 above: 264
+[0899](1,2,45)~(3,2,45) below: 421 above: 695 1166
+[0900](3,4,34)~(5,4,34) below: 602 above: 515
+[0901](4,7,245)~(6,7,245) below: 276 above: => Can be disintegrated
+[0902](2,4,269)~(5,4,269) below: 87 above: 36 837
+[0903](4,5,13)~(5,5,13) below: 859 above: => Can be disintegrated
+[0904](1,7,44)~(1,8,44) below: 603 above: => Can be disintegrated
+[0905](7,2,160)~(7,4,160) below: 1191 above: 1150
+[0906](3,2,148)~(6,2,148) below: 408 above: 403 681
+[0907](5,7,296)~(5,9,296) below: 560 886 above: 1152
+[0908](8,1,69)~(9,1,69) below: 840 above: => Can be disintegrated
+[0909](3,0,221)~(3,4,221) below: 116 above: 472 1121
+[0910](3,3,209)~(3,6,209) below: 630 above: 116 189
+[0911](4,4,122)~(4,7,122) below: 90 141 above: 1202
+[0912](6,8,209)~(7,8,209) below: 701 above: => Can be disintegrated
+[0913](0,5,55)~(0,8,55) below: 502 above: 117 714
+[0914](0,6,176)~(1,6,176) below: 860 above: => Can be disintegrated
+[0915](6,6,272)~(8,6,272) below: 337 638 above: 613
+[0916](1,3,130)~(1,5,130) below: 1022 above: 792
+[0917](1,8,95)~(1,9,95) below: 119 above: 129
+[0918](3,4,120)~(6,4,120) below: 1200 above: 90 410
+[0919](7,6,129)~(7,8,129) below: 1193 above: => Can be disintegrated
+[0920](6,5,9)~(6,7,9) below: 1156 above: => Can be disintegrated
+[0921](0,3,245)~(1,3,245) below: 1178 above: 665
+[0922](7,0,179)~(7,3,179) below: 250 above: 564 616
+[0923](6,4,101)~(6,6,101) below: 469 above: 480 881
+[0924](9,8,212)~(9,9,212) below: 530 above: => Can be disintegrated
+[0925](2,0,69)~(4,0,69) below: 829 above: => Can be disintegrated
+[0926](6,5,40)~(6,5,43) below: 347 above: 80
+[0927](7,2,23)~(9,2,23) below: 1005 above: => Can be disintegrated
+[0928](8,7,72)~(9,7,72) below: 95 above: 50
+[0929](4,5,193)~(7,5,193) below: 699 above: 797
+[0930](4,1,233)~(4,1,235) below: 76 above: 509
+[0931](7,7,205)~(8,7,205) below: 838 above: => Can be disintegrated
+[0932](9,3,37)~(9,6,37) below: 108 above: 336 448
+[0933](3,6,303)~(3,9,303) below: 760 above: 796 1167
+[0934](8,2,158)~(8,2,159) below: 625 above: => Can be disintegrated
+[0935](0,7,170)~(0,9,170) below: 883 above: 950 957
+[0936](7,9,207)~(9,9,207) below: 817 above: 77 530
+[0937](7,3,295)~(7,5,295) below: 302 above: 29 418 561
+[0938](0,1,215)~(0,3,215) below: 61 above: => Can be disintegrated
+[0939](7,0,39)~(7,1,39) below: 721 above: => Can be disintegrated
+[0940](1,4,73)~(1,4,73) below: 231 above: 477
+[0941](0,3,171)~(0,5,171) below: 158 above: 823
+[0942](0,0,108)~(0,0,109) below: 1157 above: 526
+[0943](9,0,81)~(9,2,81) below: 1078 above: 745
+[0944](6,6,109)~(6,8,109) below: 1175 above: 1135
+[0945](7,5,51)~(7,8,51) below: 455 772 above: 228 1146
+[0946](0,2,201)~(2,2,201) below: 1120 above: 535 1086 1147
+[0947](6,3,182)~(6,3,184) below: 542 above: => Can be disintegrated
+[0948](6,3,304)~(8,3,304) below: 12 824 above: 581
+[0949](6,1,94)~(7,1,94) below: 449 above: 425 850 => Can be disintegrated
+[0950](0,9,173)~(2,9,173) below: 935 above: 991
+[0951](2,0,233)~(4,0,233) below: 996 above: 157
+[0952](6,1,229)~(8,1,229) below: 1039 above: 663 983
+[0953](2,0,290)~(3,0,290) below: 113 above: 120 395
+[0954](5,6,5)~(8,6,5) below: 178 322 above: 65 980
+[0955](0,0,18)~(2,0,18) below: 16 882 above: 163
+[0956](0,4,159)~(0,4,160) below: 367 above: 537
+[0957](0,7,171)~(0,7,173) below: 935 above: => Can be disintegrated
+[0958](4,2,306)~(6,2,306) below: 444 above: 497 660
+[0959](0,8,241)~(2,8,241) below: 1154 above: 100
+[0960](3,4,23)~(3,4,27) below: 242 above: 179
+[0961](2,1,74)~(4,1,74) below: 54 above: 1164
+[0962](3,1,162)~(3,3,162) below: 1079 above: 830
+[0963](3,2,102)~(6,2,102) below: 355 above: 282
+[0964](7,6,301)~(7,6,302) below: 694 above: => Can be disintegrated
+[0965](0,0,1)~(0,1,1) below: above: => Can be disintegrated
+[0966](0,6,88)~(2,6,88) below: 894 above: => Can be disintegrated
+[0967](3,5,70)~(5,5,70) below: 166 795 above: 309
+[0968](5,2,3)~(8,2,3) below: 667 above: => Can be disintegrated
+[0969](9,3,78)~(9,3,80) below: 644 above: => Can be disintegrated
+[0970](0,2,88)~(3,2,88) below: 524 above: 1038
+[0971](6,5,266)~(9,5,266) below: 516 above: 405 725
+[0972](1,1,271)~(4,1,271) below: 1140 above: 294 1208
+[0973](4,0,114)~(5,0,114) below: 110 above: 873
+[0974](0,2,52)~(2,2,52) below: 697 above: 160
+[0975](5,8,15)~(8,8,15) below: 297 above: 473 852
+[0976](9,2,179)~(9,4,179) below: 1027 above: => Can be disintegrated
+[0977](4,8,144)~(4,8,144) below: 610 above: => Can be disintegrated
+[0978](8,5,213)~(8,7,213) below: 671 above: 35 998
+[0979](3,2,246)~(6,2,246) below: 205 above: 211 647
+[0980](7,6,6)~(9,6,6) below: 954 above: 649
+[0981](6,6,186)~(7,6,186) below: 442 above: 98 606
+[0982](5,2,56)~(8,2,56) below: 413 above: 313
+[0983](8,0,230)~(8,2,230) below: 952 above: => Can be disintegrated
+[0984](0,9,37)~(1,9,37) below: 485 above: 49
+[0985](1,9,225)~(1,9,225) below: 308 above: => Can be disintegrated
+[0986](7,9,177)~(8,9,177) below: 465 above: => Can be disintegrated
+[0987](5,3,136)~(8,3,136) below: 292 above: 517 757
+[0988](3,1,56)~(3,4,56) below: 377 above: 212
+[0989](8,6,124)~(8,6,126) below: 1067 above: => Can be disintegrated
+[0990](6,4,88)~(6,6,88) below: 1177 above: 654
+[0991](2,9,175)~(2,9,177) below: 950 above: => Can be disintegrated
+[0992](6,0,278)~(6,2,278) below: 53 above: 1011
+[0993](8,6,170)~(8,9,170) below: 64 above: 361 1115
+[0994](7,7,58)~(7,7,61) below: 333 above: 839
+[0995](6,1,41)~(6,2,41) below: 347 731 above: => Can be disintegrated
+[0996](4,0,232)~(6,0,232) below: 268 above: 358 951
+[0997](5,1,13)~(5,4,13) below: 859 above: 1097 => Can be disintegrated
+[0998](8,7,216)~(8,9,216) below: 978 above: 184 761
+[0999](8,7,182)~(8,9,182) below: 874 above: 214
+[1000](2,0,22)~(5,0,22) below: 163 423 above: => Can be disintegrated
+[1001](2,2,240)~(4,2,240) below: 509 above: 205
+[1002](2,1,213)~(3,1,213) below: 835 above: 1112
+[1003](3,4,66)~(5,4,66) below: 825 above: 166 218
+[1004](4,0,194)~(6,0,194) below: 1051 above: 194
+[1005](7,0,22)~(7,2,22) below: 143 above: 527 927
+[1006](8,6,300)~(8,8,300) below: 633 above: => Can be disintegrated
+[1007](0,8,238)~(2,8,238) below: 827 above: 608
+[1008](9,2,62)~(9,4,62) below: 106 197 above: 843
+[1009](0,4,293)~(3,4,293) below: 73 above: 597 1034
+[1010](0,5,27)~(0,5,29) below: 522 above: => Can be disintegrated
+[1011](6,2,280)~(9,2,280) below: 992 above: 45 52 215 348
+[1012](6,5,282)~(8,5,282) below: 155 above: 329 643
+[1013](2,0,83)~(5,0,83) below: 136 above: 13 69
+[1014](7,5,39)~(7,7,39) below: 594 above: 670
+[1015](8,4,273)~(9,4,273) below: 638 above: 837 => Can be disintegrated
+[1016](8,9,173)~(9,9,173) below: 1115 above: 465
+[1017](9,0,140)~(9,2,140) below: 865 above: 185
+[1018](9,1,290)~(9,4,290) below: 42 above: => Can be disintegrated
+[1019](5,2,308)~(5,3,308) below: 660 above: => Can be disintegrated
+[1020](7,6,256)~(9,6,256) below: 831 above: => Can be disintegrated
+[1021](1,1,263)~(3,1,263) below: 661 above: => Can be disintegrated
+[1022](0,5,128)~(2,5,128) below: 468 above: 834 916
+[1023](9,3,42)~(9,4,42) below: 448 above: => Can be disintegrated
+[1024](9,1,198)~(9,4,198) below: 326 680 above: => Can be disintegrated
+[1025](7,5,246)~(9,5,246) below: 1114 above: => Can be disintegrated
+[1026](6,4,242)~(6,5,242) below: 93 above: 70
+[1027](7,4,178)~(9,4,178) below: 504 1048 above: 564 874 976
+[1028](2,6,77)~(5,6,77) below: 174 above: 894 1137 1205
+[1029](1,5,135)~(1,7,135) below: 792 above: 123
+[1030](2,5,268)~(4,5,268) below: 821 above: 1057 => Can be disintegrated
+[1031](3,3,16)~(4,3,16) below: 1094 above: 424
+[1032](0,9,100)~(1,9,100) below: 129 above: => Can be disintegrated
+[1033](5,1,294)~(8,1,294) below: 63 above: => Can be disintegrated
+[1034](0,3,295)~(0,5,295) below: 1009 above: 869 => Can be disintegrated
+[1035](0,6,167)~(2,6,167) below: 33 above: 158
+[1036](7,1,12)~(7,4,12) below: 546 above: 26
+[1037](2,3,132)~(2,4,132) below: 834 above: 893
+[1038](1,2,89)~(1,4,89) below: 970 above: => Can be disintegrated
+[1039](6,1,226)~(6,4,226) below: 133 above: 359 490 952
+[1040](3,9,186)~(5,9,186) below: 255 above: 1123
+[1041](1,1,102)~(1,2,102) below: 397 above: => Can be disintegrated
+[1042](4,0,61)~(4,2,61) below: 212 above: => Can be disintegrated
+[1043](6,0,32)~(6,2,32) below: 488 above: 350
+[1044](7,2,276)~(7,4,276) below: 837 above: 316
+[1045](1,4,155)~(2,4,155) below: 371 above: => Can be disintegrated
+[1046](6,5,207)~(8,5,207) below: 544 above: 671 1105
+[1047](8,0,244)~(9,0,244) below: 173 above: => Can be disintegrated
+[1048](8,4,168)~(8,4,172) below: 1074 above: 1027 => Can be disintegrated
+[1049](5,2,18)~(5,4,18) below: 538 above: 702 => Can be disintegrated
+[1050](4,9,135)~(6,9,135) below: 851 above: 1053
+[1051](4,0,193)~(4,2,193) below: 1066 above: 759 1004
+[1052](0,0,275)~(2,0,275) below: 294 above: 20
+[1053](6,9,137)~(6,9,140) below: 1050 above: 845
+[1054](9,4,33)~(9,5,33) below: 1108 above: 108
+[1055](4,6,180)~(7,6,180) below: 868 above: 5 736
+[1056](6,8,245)~(6,8,248) below: 568 above: => Can be disintegrated
+[1057](3,5,269)~(3,7,269) below: 387 1030 above: 520
+[1058](3,0,2)~(3,3,2) below: above: 226 1190
+[1059](0,6,157)~(0,8,157) below: 367 above: 500 1090
+[1060](5,8,81)~(6,8,81) below: 269 above: => Can be disintegrated
+[1061](3,5,2)~(4,5,2) below: above: => Can be disintegrated
+[1062](2,1,98)~(2,2,98) below: 1077 above: 397
+[1063](7,3,250)~(9,3,250) below: 47 above: => Can be disintegrated
+[1064](1,9,41)~(3,9,41) below: 49 above: => Can be disintegrated
+[1065](4,1,281)~(4,3,281) below: 826 above: 180
+[1066](3,2,190)~(6,2,190) below: 583 above: 682 1051
+[1067](7,6,121)~(9,6,121) below: 227 above: 989
+[1068](6,5,217)~(6,8,217) below: 35 above: 56
+[1069](0,6,230)~(0,6,233) below: 439 above: => Can be disintegrated
+[1070](0,7,76)~(0,8,76) below: 1168 above: 340
+[1071](1,4,184)~(3,4,184) below: 259 above: 433 => Can be disintegrated
+[1072](4,1,246)~(5,1,246) below: 205 above: => Can be disintegrated
+[1073](5,3,129)~(7,3,129) below: 551 above: => Can be disintegrated
+[1074](8,1,166)~(8,4,166) below: 366 above: 1048
+[1075](6,5,111)~(9,5,111) below: 1093 above: 605
+[1076](4,6,141)~(4,6,143) below: 591 above: => Can be disintegrated
+[1077](2,0,96)~(2,3,96) below: 812 above: 579 1062 1119
+[1078](8,2,78)~(9,2,78) below: 365 above: 943
+[1079](2,3,159)~(4,3,159) below: 785 above: 962
+[1080](5,8,212)~(5,8,215) below: 398 above: => Can be disintegrated
+[1081](9,1,194)~(9,4,194) below: 752 above: 326 680
+[1082](1,2,290)~(3,2,290) below: 474 above: 222 743
+[1083](1,6,50)~(1,7,50) below: 748 above: => Can be disintegrated
+[1084](6,6,204)~(6,8,204) below: 412 above: 833
+[1085](9,2,301)~(9,5,301) below: 418 above: 533
+[1086](0,1,204)~(0,2,204) below: 946 above: 669
+[1087](2,5,11)~(2,7,11) below: 566 above: => Can be disintegrated
+[1088](2,5,289)~(2,7,289) below: 149 354 above: 352 814 => Can be disintegrated
+[1089](3,9,81)~(4,9,81) below: 198 above: 1098
+[1090](0,5,158)~(0,6,158) below: 1059 above: 815
+[1091](2,3,275)~(2,4,275) below: 79 above: 249
+[1092](2,5,304)~(3,5,304) below: 782 872 above: 162
+[1093](5,5,108)~(7,5,108) below: 541 above: 1075 1110
+[1094](4,2,15)~(4,3,15) below: 223 above: 538 1031
+[1095](5,9,220)~(5,9,223) below: 184 above: => Can be disintegrated
+[1096](7,6,28)~(7,7,28) below: 1149 above: => Can be disintegrated
+[1097](4,1,15)~(6,1,15) below: 223 997 above: 722 1181
+[1098](4,7,83)~(4,9,83) below: 1089 above: 383
+[1099](2,3,68)~(2,5,68) below: 539 above: 688
+[1100](7,6,276)~(8,6,276) below: 613 above: => Can be disintegrated
+[1101](5,3,203)~(5,6,203) below: 139 above: 283
+[1102](0,6,219)~(0,8,219) below: 150 above: => Can be disintegrated
+[1103](6,6,287)~(7,6,287) below: 329 above: 380
+[1104](9,7,86)~(9,8,86) below: 861 above: 887
+[1105](6,4,209)~(6,7,209) below: 836 1046 above: => Can be disintegrated
+[1106](0,2,298)~(0,3,298) below: 869 above: => Can be disintegrated
+[1107](4,8,129)~(6,8,129) below: 457 above: => Can be disintegrated
+[1108](9,5,30)~(9,7,30) below: 1210 above: 84 1054
+[1109](6,9,292)~(9,9,292) below: 689 above: 560
+[1110](5,3,111)~(5,6,111) below: 1093 above: 243 619
+[1111](1,3,273)~(1,6,273) below: 1140 above: 104 191
+[1112](2,1,215)~(5,1,215) below: 1002 above: 201
+[1113](2,7,184)~(5,7,184) below: 479 above: => Can be disintegrated
+[1114](9,3,243)~(9,7,243) below: 766 above: 499 1025
+[1115](8,9,171)~(9,9,171) below: 993 above: 1016
+[1116](7,1,89)~(7,4,89) below: 1177 above: 449
+[1117](3,8,241)~(3,8,244) below: 312 above: => Can be disintegrated
+[1118](4,3,298)~(4,6,298) below: 816 above: 12 483 691 760
+[1119](0,0,99)~(2,0,99) below: 1077 above: 373
+[1120](2,0,198)~(2,2,198) below: 759 above: 946
+[1121](0,4,224)~(3,4,224) below: 235 909 above: 439
+[1122](5,3,1)~(6,3,1) below: above: => Can be disintegrated
+[1123](3,9,188)~(3,9,190) below: 1040 above: 274
+[1124](0,6,293)~(0,6,293) below: 814 above: => Can be disintegrated
+[1125](2,9,147)~(4,9,147) below: 734 above: => Can be disintegrated
+[1126](5,6,280)~(5,7,280) below: 284 above: => Can be disintegrated
+[1127](0,5,197)~(2,5,197) below: 806 above: 793
+[1128](0,2,74)~(0,5,74) below: 153 above: 351 740
+[1129](6,1,124)~(6,3,124) below: 666 above: 551
+[1130](6,6,295)~(6,7,295) below: 886 above: => Can be disintegrated
+[1131](6,4,1)~(8,4,1) below: above: => Can be disintegrated
+[1132](3,2,257)~(3,5,257) below: 1184 above: 1161
+[1133](8,6,29)~(8,9,29) below: 1149 above: => Can be disintegrated
+[1134](4,5,283)~(5,5,283) below: 155 above: => Can be disintegrated
+[1135](5,8,111)~(7,8,111) below: 944 above: 493 762
+[1136](3,6,93)~(5,6,93) below: 811 above: => Can be disintegrated
+[1137](5,6,79)~(7,6,79) below: 1028 above: 138
+[1138](3,2,254)~(5,2,254) below: 211 above: 753 756
+[1139](2,4,10)~(3,4,10) below: 566 above: 172 345
+[1140](1,1,270)~(1,3,270) below: 216 above: 972 1111
+[1141](1,4,21)~(1,7,21) below: 242 above: 491 801
+[1142](7,7,34)~(9,7,34) below: 84 above: 1179
+[1143](3,6,220)~(3,9,220) below: 419 above: 85
+[1144](2,9,24)~(3,9,24) below: 142 above: 370
+[1145](1,4,60)~(1,6,60) below: 1196 above: => Can be disintegrated
+[1146](7,8,52)~(7,9,52) below: 945 above: => Can be disintegrated
+[1147](1,1,203)~(1,3,203) below: 946 above: 779
+[1148](1,4,163)~(1,4,163) below: 537 above: => Can be disintegrated
+[1149](6,6,26)~(9,6,26) below: 78 above: 1096 1133 1210
+[1150](6,4,163)~(7,4,163) below: 905 above: 366
+[1151](6,4,230)~(9,4,230) below: 359 above: 582 709
+[1152](4,8,297)~(7,8,297) below: 907 above: 622 858
+[1153](8,9,81)~(8,9,84) below: 462 above: 659
+[1154](0,8,240)~(2,8,240) below: 608 above: 959
+[1155](5,0,14)~(7,0,14) below: 546 above: 331 495
+[1156](6,7,6)~(7,7,6) below: 463 above: 920
+[1157](0,0,106)~(0,2,106) below: 1201 above: 942
+[1158](0,0,5)~(0,2,5) below: 262 above: 16
+[1159](1,8,207)~(4,8,207) below: 683 above: 134 436
+[1160](4,5,48)~(5,5,48) below: 1199 above: => Can be disintegrated
+[1161](3,3,260)~(3,6,260) below: 1132 above: 341 427
+[1162](7,0,9)~(7,2,9) below: 470 above: 546
+[1163](6,0,170)~(6,0,171) below: 21 above: => Can be disintegrated
+[1164](3,1,77)~(6,1,77) below: 961 above: 621
+[1165](0,5,80)~(0,5,82) below: 340 above: => Can be disintegrated
+[1166](1,0,48)~(1,2,48) below: 899 above: 441 697
+[1167](3,7,304)~(3,7,306) below: 933 above: => Can be disintegrated
+[1168](0,7,75)~(1,7,75) below: 706 above: 563 1070
+[1169](4,6,137)~(6,6,137) below: 876 above: 415 591
+[1170](2,5,226)~(2,7,226) below: 393 above: => Can be disintegrated
+[1171](4,7,28)~(4,9,28) below: 755 above: 168
+[1172](0,0,248)~(0,2,248) below: 665 above: => Can be disintegrated
+[1173](5,0,188)~(5,1,188) below: 777 above: => Can be disintegrated
+[1174](3,9,130)~(5,9,130) below: 505 above: 851
+[1175](6,6,106)~(7,6,106) below: 102 above: 944
+[1176](2,3,210)~(2,6,210) below: 540 above: 58
+[1177](6,4,87)~(8,4,87) below: 454 above: 990 1116
+[1178](1,3,244)~(4,3,244) below: 205 above: 460 921
+[1179](8,6,37)~(8,9,37) below: 1142 above: => Can be disintegrated
+[1180](2,7,91)~(3,7,91) below: 811 above: 118
+[1181](4,0,18)~(4,1,18) below: 495 1097 above: 423
+[1182](8,1,141)~(8,3,141) below: 517 above: => Can be disintegrated
+[1183](8,4,287)~(9,4,287) below: 557 above: 42 344
+[1184](3,3,249)~(3,3,252) below: 460 above: 1132
+[1185](2,4,306)~(2,6,306) below: 162 above: => Can be disintegrated
+[1186](6,1,234)~(7,1,234) below: 663 above: => Can be disintegrated
+[1187](6,9,73)~(8,9,73) below: 467 above: 290
+[1188](5,5,28)~(5,7,28) below: 317 above: 631
+[1189](2,8,103)~(4,8,103) below: 414 above: 122
+[1190](3,0,5)~(3,0,7) below: 1058 above: 420
+[1191](7,4,157)~(7,5,157) below: 328 above: 324 905
+[1192](5,1,112)~(6,1,112) below: 461 584 above: => Can be disintegrated
+[1193](5,7,128)~(7,7,128) below: 114 above: 919
+[1194](9,1,66)~(9,3,66) below: 843 above: 840
+[1195](1,0,169)~(1,1,169) below: 74 above: => Can be disintegrated
+[1196](0,4,59)~(2,4,59) below: 778 above: 266 1145
+[1197](1,1,212)~(1,2,212) below: 810 above: => Can be disintegrated
+[1198](6,7,240)~(6,9,240) below: 71 above: 568
+[1199](4,3,46)~(4,6,46) below: 127 above: 481 1160
+[1200](4,4,117)~(5,4,117) below: 243 above: 918
+[1201](0,0,105)~(2,0,105) below: 373 above: 1157
+[1202](4,7,124)~(4,9,124) below: 911 above: 376 505
+[1203](8,6,76)~(8,7,76) below: 146 above: => Can be disintegrated
+[1204](1,6,25)~(1,6,27) below: 801 above: 866
+[1205](4,6,78)~(4,9,78) below: 1028 above: 198 269
+[1206](2,7,134)~(4,7,134) below: 376 834 above: => Can be disintegrated
+[1207](0,4,229)~(2,4,229) below: 439 above: => Can be disintegrated
+[1208](4,0,273)~(4,2,273) below: 36 972 above: 53 730
+[1209](0,8,161)~(2,8,161) below: 500 above: 33 384
+[1210](9,5,28)~(9,8,28) below: 1149 above: 1108
+result part 1: 393
+Elapsed time: 0.396000 seconds
+[0001](1,1,288)~(4,1,288) below: 474 above: 63
+[0002](4,3,302)~(4,5,302) below: 12 483 691 above: 444 496 => Would cause 7 bricks to fall
+[0003](3,2,71)~(5,2,71) below: 218 above:
+[0004](5,0,290)~(5,2,290) below: 121 above: 63 101 => Would cause 1 bricks to fall
+[0005](2,6,182)~(5,6,182) below: 510 1055 above: 261 => Would cause 20 bricks to fall
+[0006](2,8,66)~(5,8,66) below: 692 above: 668 => Would cause 15 bricks to fall
+[0007](6,6,113)~(6,6,115) below: 493 above:
+[0008](0,2,23)~(0,6,23) below: 242 above: 522 832 => Would cause 12 bricks to fall
+[0009](3,7,118)~(5,7,118) below: 34 above: 141 303 => Would cause 2 bricks to fall
+[0010](7,5,203)~(8,5,203) below: 139 above: 544 => Would cause 14 bricks to fall
+[0011](9,4,69)~(9,5,69) below: 840 above: 679 => Would cause 3 bricks to fall
+[0012](4,3,300)~(7,3,300) below: 1118 above: 2 948
+[0013](2,0,85)~(2,1,85) below: 1013 above: 808 => Would cause 18 bricks to fall
+[0014](6,2,167)~(6,4,167) below: 366 above: 21 585 => Would cause 339 bricks to fall
+[0015](1,2,2)~(1,4,2) below: 727 above: 657 => Would cause 1 bricks to fall
+[0016](0,0,7)~(0,0,10) below: 1158 above: 955
+[0017](5,0,63)~(6,0,63) below: 89 above:
+[0018](4,2,187)~(4,4,187) below: 559 above: 48 433 583
+[0019](6,1,61)~(8,1,61) below: 187 above: 289 => Would cause 1 bricks to fall
+[0020](2,0,277)~(3,0,277) below: 1052 above:
+[0021](6,0,169)~(6,2,169) below: 14 above: 311 1163 => Would cause 337 bricks to fall
+[0022](6,1,249)~(6,3,249) below: 647 above: 318 => Would cause 1 bricks to fall
+[0023](1,1,294)~(1,3,294) below: 743 above:
+[0024](3,4,177)~(5,4,177) below: 820 above: 321 868 => Would cause 72 bricks to fall
+[0025](0,0,55)~(0,3,55) below: 847 above: 717 => Would cause 1 bricks to fall
+[0026](6,3,15)~(8,3,15) below: 1036 above: 372 => Would cause 1 bricks to fall
+[0027](6,4,234)~(8,4,234) below: 582 above:
+[0028](2,4,47)~(2,4,49) below: 578 above:
+[0029](6,5,296)~(8,5,296) below: 937 above: 694 => Would cause 2 bricks to fall
+[0030](4,4,22)~(6,4,22) below: 242 above:
+[0031](9,1,304)~(9,2,304) below: 533 above:
+[0032](4,5,54)~(6,5,54) below: 145 above: 498 552 => Would cause 879 bricks to fall
+[0033](1,6,164)~(1,8,164) below: 815 1209 above: 1035 => Would cause 6 bricks to fall
+[0034](5,6,117)~(5,7,117) below: 243 above: 9 246 => Would cause 8 bricks to fall
+[0035](6,6,216)~(8,6,216) below: 978 above: 813 1068 => Would cause 4 bricks to fall
+[0036](4,2,270)~(4,4,270) below: 902 above: 126 1208 => Would cause 22 bricks to fall
+[0037](1,2,154)~(3,2,154) below: 251 above:
+[0038](7,4,173)~(7,5,173) below: 658 above: 820 => Would cause 75 bricks to fall
+[0039](8,7,135)~(9,7,135) below: 43 above:
+[0040](4,2,109)~(4,4,109) below: 828 above: 619
+[0041](0,8,295)~(1,8,295) below: 764 above: 234 => Would cause 1 bricks to fall
+[0042](9,4,289)~(9,6,289) below: 1183 above: 1018 => Would cause 1 bricks to fall
+[0043](8,6,134)~(8,9,134) below: 543 above: 39 => Would cause 1 bricks to fall
+[0044](4,8,288)~(6,8,288) below: 864 above: 689 => Would cause 16 bricks to fall
+[0045](8,0,282)~(8,2,282) below: 1011 above:
+[0046](9,8,251)~(9,9,251) below: 741 above: 800 => Would cause 1 bricks to fall
+[0047](8,1,249)~(8,3,249) below: 647 above: 494 1063 => Would cause 5 bricks to fall
+[0048](2,3,190)~(4,3,190) below: 18 607 above: 107 627 => Would cause 2 bricks to fall
+[0049](1,9,38)~(3,9,38) below: 984 above: 1064 => Would cause 1 bricks to fall
+[0050](9,6,73)~(9,9,73) below: 928 above: 146 209 896 => Would cause 6 bricks to fall
+[0051](8,6,176)~(8,8,176) below: 361 above:
+[0052](6,1,283)~(6,2,283) below: 1011 above:
+[0053](4,0,275)~(7,0,275) below: 1208 above: 710 992 => Would cause 13 bricks to fall
+[0054](3,1,72)~(6,1,72) below: 218 above: 961 => Would cause 3 bricks to fall
+[0055](4,2,12)~(4,4,12) below: 525 567 above: 223 => Would cause 1050 bricks to fall
+[0056](6,7,218)~(8,7,218) below: 1068 above: 435 => Would cause 1 bricks to fall
+[0057](0,4,214)~(0,7,214) below: 492 above: 150 => Would cause 5 bricks to fall
+[0058](2,3,212)~(2,5,212) below: 1176 above: 592 => Would cause 5 bricks to fall
+[0059](0,5,211)~(1,5,211) below: 534 704 above: 492
+[0060](0,6,66)~(0,9,66) below: 763 above: 888 => Would cause 1 bricks to fall
+[0061](0,0,212)~(0,2,212) below: 482 above: 938 => Would cause 1 bricks to fall
+[0062](0,7,36)~(0,8,36) below: 485 above:
+[0063](3,1,293)~(5,1,293) below: 1 4 above: 1033 => Would cause 1 bricks to fall
+[0064](7,6,167)~(9,6,167) below: 687 above: 637 658 993 => Would cause 85 bricks to fall
+[0065](5,4,6)~(5,6,6) below: 954 above: 224 567 => Would cause 65 bricks to fall
+[0066](6,3,95)~(8,3,95) below: 449 above: 425 850
+[0067](3,4,3)~(4,4,3) below: above:
+[0068](5,7,205)~(5,8,205) below: 412 above: 165 => Would cause 3 bricks to fall
+[0069](4,0,84)~(4,1,84) below: 1013 above:
+[0070](5,4,245)~(7,4,245) below: 1026 above: 698 => Would cause 1 bricks to fall
+[0071](6,6,237)~(6,9,237) below: 171 above: 1198 => Would cause 4 bricks to fall
+[0072](4,9,14)~(6,9,14) below: 297 above:
+[0073](2,4,291)~(5,4,291) below: 587 above: 302 1009 => Would cause 47 bricks to fall
+[0074](0,1,166)~(2,1,166) below: 830 above: 807 1195 => Would cause 2 bricks to fall
+[0075](1,0,13)~(3,0,13) below: 420 above: 495 882 => Would cause 2 bricks to fall
+[0076](4,1,231)~(4,5,231) below: 359 above: 623 930 => Would cause 239 bricks to fall
+[0077](5,9,211)~(8,9,211) below: 936 above:
+[0078](4,6,23)~(7,6,23) below: 310 above: 317 755 1149 => Would cause 38 bricks to fall
+[0079](2,3,273)~(4,3,273) below: 126 above: 1091 => Would cause 20 bricks to fall
+[0080](6,5,46)~(7,5,46) below: 926 above: 296 772 => Would cause 915 bricks to fall
+[0081](4,7,61)~(4,9,61) below: 487 above: 451 => Would cause 797 bricks to fall
+[0082](6,6,37)~(6,9,37) below: 204 above: 841 => Would cause 9 bricks to fall
+[0083](1,3,60)~(4,3,60) below: 452 above: 219 368 506 => Would cause 12 bricks to fall
+[0084](7,7,32)~(9,7,32) below: 1108 above: 1142 => Would cause 2 bricks to fall
+[0085](3,5,221)~(3,7,221) below: 1143 above: 822 => Would cause 16 bricks to fall
+[0086](1,4,285)~(1,5,285) below: 550 above:
+[0087](2,4,267)~(4,4,267) below: 626 above: 902 => Would cause 24 bricks to fall
+[0088](2,5,23)~(2,7,23) below: 801 above:
+[0089](6,0,61)~(7,0,61) below: 187 above: 17 112 => Would cause 2 bricks to fall
+[0090](4,1,121)~(4,4,121) below: 918 above: 666 911 => Would cause 613 bricks to fall
+[0091](5,8,43)~(5,8,43) below: 298 above: 590 => Would cause 1 bricks to fall
+[0092](5,5,35)~(8,5,35) below: 204 above: 594 842 => Would cause 5 bricks to fall
+[0093](6,5,237)~(6,5,240) below: 732 above: 1026 => Would cause 3 bricks to fall
+[0094](0,1,159)~(2,1,159) below: 299 above:
+[0095](6,7,70)~(9,7,70) below: 164 above: 928 => Would cause 8 bricks to fall
+[0096](6,6,52)~(6,9,52) below: 455 above: 228
+[0097](0,2,79)~(0,2,81) below: 889 above: 524 => Would cause 3 bricks to fall
+[0098](6,6,187)~(6,7,187) below: 981 above:
+[0099](1,0,235)~(2,0,235) below: 157 above:
+[0100](0,8,243)~(0,8,245) below: 959 above: 818 => Would cause 1 bricks to fall
+[0101](5,2,291)~(6,2,291) below: 4 above:
+[0102](6,5,104)~(6,6,104) below: 480 above: 541 1175 => Would cause 689 bricks to fall
+[0103](3,4,50)~(3,7,50) below: 695 above: 225 453 => Would cause 7 bricks to fall
+[0104](1,3,276)~(1,3,279) below: 1111 above:
+[0105](7,2,251)~(7,2,253) below: 647 above:
+[0106](7,2,60)~(9,2,60) below: 291 above: 1008
+[0107](2,0,193)~(2,3,193) below: 48 above:
+[0108](9,3,34)~(9,4,34) below: 1054 above: 932 => Would cause 5 bricks to fall
+[0109](0,2,150)~(2,2,150) below: 723 above: 251
+[0110](3,0,113)~(6,0,113) below: 229 above: 973 => Would cause 3 bricks to fall
+[0111](9,3,58)~(9,5,58) below: 552 above: 197 => Would cause 1 bricks to fall
+[0112](7,0,62)~(9,0,62) below: 89 above:
+[0113](2,0,288)~(4,0,288) below: 474 above: 953 => Would cause 3 bricks to fall
+[0114](5,6,126)~(5,7,126) below: 432 above: 1193 => Would cause 2 bricks to fall
+[0115](3,6,158)~(5,6,158) below: 879 above:
+[0116](3,1,218)~(3,3,218) below: 910 above: 909 => Would cause 2 bricks to fall
+[0117](0,6,56)~(0,7,56) below: 913 above: 486
+[0118](2,7,94)~(3,7,94) below: 1180 above: 414
+[0119](0,8,94)~(3,8,94) below: 811 above: 720 917 => Would cause 4 bricks to fall
+[0120](1,0,292)~(2,0,292) below: 953 above:
+[0121](4,2,287)~(6,2,287) below: 180 above: 4 => Would cause 2 bricks to fall
+[0122](2,8,106)~(4,8,106) below: 1189 above: 750 => Would cause 1 bricks to fall
+[0123](1,5,137)~(1,7,137) below: 1029 above: 238 => Would cause 1 bricks to fall
+[0124](8,4,201)~(8,6,201) below: 708 above: 737 => Would cause 1 bricks to fall
+[0125](6,3,114)~(7,3,114) below: 619 above: 362 => Would cause 1 bricks to fall
+[0126](3,3,271)~(5,3,271) below: 36 above: 79 => Would cause 21 bricks to fall
+[0127](4,3,43)~(7,3,43) below: 196 above: 1199 => Would cause 13 bricks to fall
+[0128](1,7,214)~(1,9,214) below: 135 above: 716 => Would cause 5 bricks to fall
+[0129](1,8,98)~(1,9,98) below: 917 above: 1032 => Would cause 1 bricks to fall
+[0130](0,8,73)~(3,8,73) below: 767 above: 230
+[0131](0,9,288)~(3,9,288) below: 484 above:
+[0132](7,2,103)~(8,2,103) below: 514 above:
+[0133](6,1,225)~(6,3,225) below: 182 above: 1039 => Would cause 282 bricks to fall
+[0134](3,8,209)~(3,9,209) below: 1159 above:
+[0135](1,9,210)~(1,9,213) below: 770 above: 128 => Would cause 6 bricks to fall
+[0136](3,0,80)~(6,0,80) below: 199 above: 1013 => Would cause 21 bricks to fall
+[0137](4,3,100)~(6,3,100) below: 469 above:
+[0138](5,4,82)~(5,6,82) below: 1137 above: 454 => Would cause 750 bricks to fall
+[0139](4,5,201)~(7,5,201) below: 797 above: 10 1101 => Would cause 46 bricks to fall
+[0140](6,9,190)~(9,9,190) below: 791 above: 573 => Would cause 2 bricks to fall
+[0141](4,6,121)~(4,8,121) below: 9 above: 911
+[0142](2,8,21)~(2,9,21) below: 349 above: 1144 => Would cause 4 bricks to fall
+[0143](6,1,19)~(7,1,19) below: 722 above: 1005 => Would cause 10 bricks to fall
+[0144](1,5,40)~(1,7,40) below: 653 above: 603 => Would cause 15 bricks to fall
+[0145](4,4,53)~(4,7,53) below: 455 above: 32 => Would cause 880 bricks to fall
+[0146](6,7,75)~(9,7,75) below: 50 above: 1203 => Would cause 1 bricks to fall
+[0147](8,0,134)~(8,2,134) below: 476 above:
+[0148](6,6,145)~(6,9,145) below: 848 above: 176 => Would cause 1 bricks to fall
+[0149](2,5,287)~(6,5,287) below: 643 above: 190 1088 => Would cause 1 bricks to fall
+[0150](0,4,216)~(0,7,216) below: 57 above: 673 1102 => Would cause 4 bricks to fall
+[0151](2,6,285)~(2,9,285) below: 399 above: 354 864 => Would cause 25 bricks to fall
+[0152](5,0,2)~(5,1,2) below: above: 598 => Would cause 11 bricks to fall
+[0153](0,2,72)~(2,2,72) below: 688 above: 1128 => Would cause 8 bricks to fall
+[0154](1,4,251)~(1,4,252) below: 645 above:
+[0155](3,5,280)~(6,5,280) below: 240 above: 1012 1134 => Would cause 58 bricks to fall
+[0156](6,1,2)~(7,1,2) below: above:
+[0157](0,0,234)~(3,0,234) below: 951 above: 99 => Would cause 1 bricks to fall
+[0158](0,3,170)~(0,6,170) below: 1035 above: 941 => Would cause 4 bricks to fall
+[0159](7,8,114)~(7,8,114) below: 762 above:
+[0160](0,1,53)~(0,3,53) below: 974 above: 847 => Would cause 3 bricks to fall
+[0161](9,0,16)~(9,0,19) below: 331 above:
+[0162](2,5,305)~(4,5,305) below: 1092 above: 1185 => Would cause 1 bricks to fall
+[0163](0,0,21)~(2,0,21) below: 955 above: 1000
+[0164](6,5,66)~(6,8,66) below: 715 above: 95 => Would cause 9 bricks to fall
+[0165](5,8,208)~(5,9,208) below: 68 above: 398 => Would cause 2 bricks to fall
+[0166](5,4,69)~(5,6,69) below: 1003 above: 967
+[0167](3,1,44)~(4,1,44) below: 406 above:
+[0168](4,9,31)~(5,9,31) below: 1171 above:
+[0169](3,5,213)~(3,5,216) below: 189 above: 419 => Would cause 19 bricks to fall
+[0170](7,3,22)~(7,3,25) below: 702 above: 306 => Would cause 2 bricks to fall
+[0171](4,8,234)~(7,8,234) below: 623 above: 71 => Would cause 5 bricks to fall
+[0172](2,1,13)~(2,4,13) below: 641 1139 above:
+[0173](7,0,241)~(9,0,241) below: 639 above: 1047 => Would cause 1 bricks to fall
+[0174](4,4,76)~(4,7,76) below: 809 above: 1028 => Would cause 762 bricks to fall
+[0175](3,5,156)~(4,5,156) below: 728 above:
+[0176](6,8,146)~(9,8,146) below: 148 above:
+[0177](6,0,37)~(6,2,37) below: 707 above: 347 731 => Would cause 2 bricks to fall
+[0178](5,6,1)~(5,8,1) below: above: 463 954 => Would cause 4 bricks to fall
+[0179](2,4,30)~(4,4,30) below: 960 above: 602 => Would cause 4 bricks to fall
+[0180](2,2,284)~(4,2,284) below: 1065 above: 121 474 => Would cause 15 bricks to fall
+[0181](2,2,39)~(5,2,39) below: 511 above: 196 769 => Would cause 49 bricks to fall
+[0182](6,1,220)~(6,1,222) below: 201 above: 133 => Would cause 283 bricks to fall
+[0183](6,5,19)~(9,5,19) below: 852 above: 310
+[0184](5,9,217)~(8,9,217) below: 998 above: 758 1095 => Would cause 2 bricks to fall
+[0185](9,0,141)~(9,4,141) below: 1017 above:
+[0186](5,3,233)~(5,3,234) below: 268 above:
+[0187](6,0,60)~(6,1,60) below: 313 above: 19 89 => Would cause 5 bricks to fall
+[0188](6,5,4)~(9,5,4) below: 322 above:
+[0189](3,5,210)~(3,6,210) below: 910 above: 169 => Would cause 20 bricks to fall
+[0190](5,5,290)~(5,7,290) below: 149 above:
+[0191](1,6,275)~(3,6,275) below: 1111 above: 240 854 => Would cause 100 bricks to fall
+[0192](5,3,62)~(5,5,62) below: 452 above: 471 => Would cause 1 bricks to fall
+[0193](1,2,96)~(1,4,96) below: 604 above:
+[0194](5,0,197)~(8,0,197) below: 1004 above: 232 => Would cause 1 bricks to fall
+[0195](7,4,22)~(8,4,22) below: 547 above:
+[0196](5,1,40)~(5,3,40) below: 181 above: 127 406 => Would cause 16 bricks to fall
+[0197](9,3,61)~(9,5,61) below: 111 above: 1008
+[0198](4,9,80)~(5,9,80) below: 1205 above: 1089 => Would cause 3 bricks to fall
+[0199](5,0,78)~(7,0,78) below: 300 above: 136 => Would cause 22 bricks to fall
+[0200](5,8,10)~(8,8,10) below: 224 above: 297 => Would cause 58 bricks to fall
+[0201](5,1,217)~(6,1,217) below: 1112 above: 182 => Would cause 284 bricks to fall
+[0202](2,1,27)~(2,3,27) below: 885 above: 382 => Would cause 60 bricks to fall
+[0203](4,2,209)~(4,4,209) below: 565 above:
+[0204](6,5,34)~(6,6,34) below: 631 above: 82 92 => Would cause 16 bricks to fall
+[0205](4,1,243)~(4,3,243) below: 1001 above: 979 1072 1178 => Would cause 224 bricks to fall
+[0206](2,9,196)~(2,9,198) below: 437 above:
+[0207](8,5,62)~(8,8,62) below: 713 above: 632 => Would cause 7 bricks to fall
+[0208](2,1,61)~(2,1,63) below: 212 above: 506
+[0209](9,9,75)~(9,9,77) below: 50 above:
+[0210](1,2,84)~(1,5,84) below: 475 above:
+[0211](5,2,249)~(5,2,251) below: 979 above: 1138 => Would cause 7 bricks to fall
+[0212](2,1,58)~(5,1,58) below: 988 above: 208 1042 => Would cause 2 bricks to fall
+[0213](0,8,4)~(1,8,4) below: 247 above: 374 877
+[0214](7,8,183)~(9,8,183) below: 999 above:
+[0215](7,2,281)~(7,2,282) below: 1011 above:
+[0216](0,3,267)~(2,3,267) below: 626 above: 1140 => Would cause 109 bricks to fall
+[0217](8,4,70)~(8,5,70) below: 315 above: 325
+[0218](4,1,69)~(4,4,69) below: 1003 above: 3 54 375 => Would cause 6 bricks to fall
+[0219](1,3,63)~(1,5,63) below: 83 above: 434 => Would cause 8 bricks to fall
+[0220](2,4,216)~(2,7,216) below: 592 above: 235 258 => Would cause 3 bricks to fall
+[0221](9,8,78)~(9,8,80) below: 896 above: 674 => Would cause 1 bricks to fall
+[0222](2,2,293)~(2,2,295) below: 1082 above:
+[0223](4,0,14)~(4,2,14) below: 55 above: 495 1094 1097 => Would cause 1049 bricks to fall
+[0224](5,5,9)~(5,8,9) below: 65 above: 200 693 859 => Would cause 60 bricks to fall
+[0225](2,6,53)~(3,6,53) below: 103 above:
+[0226](3,1,5)~(3,3,5) below: 1058 above: 586 => Would cause 2 bricks to fall
+[0227](7,5,119)~(7,6,119) below: 897 above: 1067 => Would cause 2 bricks to fall
+[0228](6,7,54)~(8,7,54) below: 96 945 above: 265 333 => Would cause 16 bricks to fall
+[0229](3,0,111)~(5,0,111) below: 584 above: 110 => Would cause 4 bricks to fall
+[0230](2,7,75)~(2,8,75) below: 130 706 above:
+[0231](1,3,71)~(1,5,71) below: 257 above: 940 => Would cause 5 bricks to fall
+[0232](5,0,199)~(7,0,199) below: 194 above:
+[0233](9,7,303)~(9,9,303) below: 685 above:
+[0234](0,7,297)~(0,9,297) below: 41 above:
+[0235](2,4,217)~(2,5,217) below: 220 above: 1121
+[0236](0,0,151)~(3,0,151) below: 403 above: 281 => Would cause 2 bricks to fall
+[0237](2,0,117)~(3,0,117) below: 873 above:
+[0238](1,5,138)~(1,7,138) below: 123 above:
+[0239](6,4,299)~(8,4,299) below: 561 above: 824 => Would cause 2 bricks to fall
+[0240](3,4,277)~(3,6,277) below: 191 above: 155 267 771 => Would cause 97 bricks to fall
+[0241](7,0,87)~(9,0,87) below: 745 above:
+[0242](0,4,20)~(4,4,20) below: 424 above: 8 30 960 1141 => Would cause 43 bricks to fall
+[0243](5,4,114)~(5,6,114) below: 1110 above: 34 1200 => Would cause 672 bricks to fall
+[0244](3,4,88)~(3,6,88) below: 678 above: 811 => Would cause 15 bricks to fall
+[0245](5,6,195)~(5,9,195) below: 304 above:
+[0246](5,6,119)~(5,6,121) below: 34 above: 432 => Would cause 4 bricks to fall
+[0247](0,8,1)~(0,9,1) below: above: 213 672 => Would cause 1 bricks to fall
+[0248](2,6,192)~(4,6,192) below: 443 above: 804 806 => Would cause 17 bricks to fall
+[0249](2,2,278)~(2,4,278) below: 1091 above: 513 826 => Would cause 18 bricks to fall
+[0250](4,2,177)~(7,2,177) below: 844 above: 542 712 922 => Would cause 333 bricks to fall
+[0251](1,1,153)~(1,3,153) below: 109 407 above: 37 299 => Would cause 5 bricks to fall
+[0252](1,5,303)~(1,8,303) below: 528 above:
+[0253](0,9,148)~(1,9,148) below: 734 above: 696 => Would cause 2 bricks to fall
+[0254](5,7,19)~(8,7,19) below: 852 above: 310 655 => Would cause 1 bricks to fall
+[0255](3,9,184)~(5,9,184) below: 479 above: 1040 => Would cause 3 bricks to fall
+[0256](4,1,263)~(5,1,263) below: 508 above: 392 => Would cause 1 bricks to fall
+[0257](1,4,68)~(1,6,68) below: 434 above: 231 => Would cause 6 bricks to fall
+[0258](2,6,218)~(2,8,218) below: 220 above: 863 => Would cause 1 bricks to fall
+[0259](3,3,183)~(3,5,183) below: 510 above: 589 607 1071 => Would cause 4 bricks to fall
+[0260](5,2,137)~(6,2,137) below: 686 above:
+[0261](3,6,185)~(4,6,185) below: 5 above: 443 => Would cause 19 bricks to fall
+[0262](0,2,4)~(0,3,4) below: 735 above: 1158 => Would cause 2 bricks to fall
+[0263](2,6,204)~(2,7,204) below: 855 above:
+[0264](1,3,53)~(2,3,53) below: 898 above: 798 => Would cause 10 bricks to fall
+[0265](8,6,56)~(8,9,56) below: 228 above: 572 776 => Would cause 1 bricks to fall
+[0266](2,4,61)~(2,7,61) below: 1196 above: 519 763 => Would cause 4 bricks to fall
+[0267](3,6,280)~(3,9,280) below: 240 above: 399 484 => Would cause 30 bricks to fall
+[0268](5,0,230)~(5,3,230) below: 490 above: 186 401 996 => Would cause 6 bricks to fall
+[0269](4,8,80)~(5,8,80) below: 1205 above: 1060 => Would cause 1 bricks to fall
+[0270](1,8,289)~(2,8,289) below: 864 above: 764
+[0271](1,5,279)~(1,7,279) below: 854 above:
+[0272](0,3,124)~(3,3,124) below: 410 above:
+[0273](5,3,148)~(5,4,148) below: 408 above:
+[0274](3,8,191)~(3,9,191) below: 1123 above:
+[0275](7,1,200)~(7,3,200) below: 799 above:
+[0276](3,7,244)~(6,7,244) below: 312 above: 901 => Would cause 1 bricks to fall
+[0277](4,3,210)~(4,5,210) below: 630 above:
+[0278](2,7,141)~(4,7,141) below: 591 above:
+[0279](2,6,135)~(2,8,135) below: 893 above: 876 => Would cause 9 bricks to fall
+[0280](1,4,45)~(1,5,45) below: 603 above: 578 => Would cause 10 bricks to fall
+[0281](1,0,152)~(3,0,152) below: 236 above: 588 => Would cause 1 bricks to fall
+[0282](4,2,104)~(5,2,104) below: 963 above: 828 => Would cause 10 bricks to fall
+[0283](5,4,205)~(5,6,205) below: 1101 above: 630 836 => Would cause 28 bricks to fall
+[0284](5,6,279)~(5,7,279) below: 381 above: 1126 => Would cause 1 bricks to fall
+[0285](0,6,33)~(0,8,33) below: 794 above: 485 => Would cause 5 bricks to fall
+[0286](1,0,90)~(1,3,90) below: 808 above: 523 604 => Would cause 16 bricks to fall
+[0287](8,1,255)~(8,1,258) below: 404 above: 327 => Would cause 1 bricks to fall
+[0288](1,2,30)~(1,4,30) below: 382 above: 332 => Would cause 53 bricks to fall
+[0289](6,1,62)~(6,2,62) below: 19 above:
+[0290](8,9,74)~(8,9,75) below: 1187 above: 462 => Would cause 8 bricks to fall
+[0291](7,2,59)~(7,5,59) below: 552 above: 106 => Would cause 1 bricks to fall
+[0292](7,2,134)~(7,3,134) below: 476 above: 987 => Would cause 594 bricks to fall
+[0293](2,5,154)~(3,5,154) below: 867 above: 369 => Would cause 1 bricks to fall
+[0294](1,0,273)~(1,2,273) below: 972 above: 466 1052 => Would cause 3 bricks to fall
+[0295](4,3,75)~(6,3,75) below: 409 above:
+[0296](6,4,48)~(6,7,48) below: 80 above: 455 => Would cause 884 bricks to fall
+[0297](6,8,13)~(6,9,13) below: 200 above: 72 975 => Would cause 57 bricks to fall
+[0298](5,7,41)~(5,9,41) below: 841 above: 91 558 773 => Would cause 5 bricks to fall
+[0299](1,1,156)~(3,1,156) below: 251 above: 94 478 => Would cause 3 bricks to fall
+[0300](7,0,77)~(7,3,77) below: 365 above: 199 => Would cause 23 bricks to fall
+[0301](6,1,184)~(8,1,184) below: 529 above: 307 => Would cause 1 bricks to fall
+[0302](5,4,292)~(7,4,292) below: 73 above: 853 937 => Would cause 13 bricks to fall
+[0303](3,6,120)~(3,8,120) below: 9 above:
+[0304](4,9,192)~(5,9,192) below: 791 above: 245 788 => Would cause 5 bricks to fall
+[0305](2,7,275)~(4,7,275) below: 520 above: 381 => Would cause 3 bricks to fall
+[0306](7,3,28)~(7,5,28) below: 170 above: 512 => Would cause 1 bricks to fall
+[0307](6,1,185)~(8,1,185) below: 301 above:
+[0308](1,8,223)~(1,9,223) below: 716 above: 985 => Would cause 1 bricks to fall
+[0309](5,5,72)~(6,5,72) below: 967 above: 409 => Would cause 31 bricks to fall
+[0310](6,5,22)~(6,8,22) below: 183 254 356 above: 78 => Would cause 39 bricks to fall
+[0311](6,2,171)~(6,2,172) below: 21 above: 844 => Would cause 335 bricks to fall
+[0312](3,5,239)~(3,8,239) below: 827 above: 276 1117 => Would cause 3 bricks to fall
+[0313](6,1,59)~(6,3,59) below: 982 above: 187 => Would cause 6 bricks to fall
+[0314](3,1,13)~(3,4,13) below: 345 above:
+[0315](8,3,67)~(8,6,67) below: 632 above: 217 428 => Would cause 4 bricks to fall
+[0316](6,3,279)~(8,3,279) below: 1044 above: 884 => Would cause 1 bricks to fall
+[0317](5,6,25)~(5,6,26) below: 78 above: 1188 => Would cause 19 bricks to fall
+[0318](5,3,250)~(6,3,250) below: 22 above:
+[0319](4,7,264)~(7,7,264) below: 635 above:
+[0320](9,7,252)~(9,7,255) below: 518 above:
+[0321](3,4,179)~(3,5,179) below: 24 above: 510 => Would cause 12 bricks to fall
+[0322](8,5,3)~(8,8,3) below: above: 188 954 => Would cause 1 bricks to fall
+[0323](2,3,71)~(2,5,71) below: 688 above:
+[0324](6,5,158)~(8,5,158) below: 625 1191 above:
+[0325](8,5,72)~(8,6,72) below: 217 428 above: 634 => Would cause 1 bricks to fall
+[0326](9,4,195)~(9,7,195) below: 1081 above: 1024
+[0327](6,1,260)~(8,1,260) below: 287 above:
+[0328](6,5,154)~(8,5,154) below: 416 above: 625 1191 => Would cause 528 bricks to fall
+[0329](7,4,284)~(7,6,284) below: 1012 above: 1103 => Would cause 2 bricks to fall
+[0330](0,9,91)~(2,9,91) below: 675 above: 438 612 => Would cause 2 bricks to fall
+[0331](7,0,15)~(9,0,15) below: 1155 above: 161 => Would cause 1 bricks to fall
+[0332](1,0,33)~(1,2,33) below: 288 above: 511 862 => Would cause 52 bricks to fall
+[0333](6,7,56)~(7,7,56) below: 228 above: 994 => Would cause 13 bricks to fall
+[0334](0,2,222)~(0,2,225) below: 768 above:
+[0335](7,4,183)~(7,4,187) below: 564 above: 751 => Would cause 63 bricks to fall
+[0336](9,6,40)~(9,8,40) below: 932 above: 574 => Would cause 1 bricks to fall
+[0337](7,5,270)~(7,7,270) below: 725 above: 870 915 => Would cause 1 bricks to fall
+[0338](8,7,67)~(8,9,67) below: 632 above:
+[0339](7,8,21)~(9,8,21) below: 852 above:
+[0340](0,5,77)~(0,7,77) below: 1070 above: 1165 => Would cause 1 bricks to fall
+[0341](3,5,262)~(6,5,262) below: 1161 above: 516 635 => Would cause 16 bricks to fall
+[0342](8,9,298)~(8,9,298) below: 633 above: 685 => Would cause 2 bricks to fall
+[0343](6,6,243)~(7,6,243) below: 568 above:
+[0344](8,4,289)~(8,7,289) below: 1183 above:
+[0345](3,1,12)~(3,4,12) below: 1139 above: 314 => Would cause 1 bricks to fall
+[0346](9,0,183)~(9,2,183) below: 529 above:
+[0347](6,2,39)~(6,5,39) below: 177 515 above: 926 995 => Would cause 917 bricks to fall
+[0348](9,1,281)~(9,4,281) below: 1011 above: 557 646 => Would cause 6 bricks to fall
+[0349](2,8,19)~(4,8,19) below: 473 above: 142 => Would cause 5 bricks to fall
+[0350](6,1,34)~(9,1,34) below: 1043 above: 721 783 => Would cause 3 bricks to fall
+[0351](0,1,76)~(0,3,76) below: 1128 above: 536 889 => Would cause 6 bricks to fall
+[0352](2,7,291)~(3,7,291) below: 611 1088 above: 765 => Would cause 2 bricks to fall
+[0353](3,3,206)~(3,4,206) below: 779 above:
+[0354](0,6,288)~(2,6,288) below: 151 above: 532 1088 => Would cause 1 bricks to fall
+[0355](3,2,101)~(6,2,101) below: 429 above: 963 => Would cause 12 bricks to fall
+[0356](6,6,19)~(9,6,19) below: 852 above: 310
+[0357](4,9,197)~(4,9,199) below: 437 above:
+[0358](5,0,234)~(5,0,236) below: 996 above:
+[0359](4,4,228)~(6,4,228) below: 1039 above: 76 1151 => Would cause 267 bricks to fall
+[0360](6,5,115)~(9,5,115) below: 605 above: 857 => Would cause 1 bricks to fall
+[0361](8,5,173)~(8,7,173) below: 993 above: 51 => Would cause 1 bricks to fall
+[0362](6,3,115)~(7,3,115) below: 125 above: 897
+[0363](2,7,196)~(4,7,196) below: 788 804 above: 595 855 => Would cause 19 bricks to fall
+[0364](4,5,56)~(4,5,59) below: 498 above: 487 => Would cause 843 bricks to fall
+[0365](6,2,75)~(9,2,75) below: 409 above: 300 1078 => Would cause 28 bricks to fall
+[0366](6,4,165)~(8,4,165) below: 1150 above: 14 687 1074 => Would cause 521 bricks to fall
+[0367](0,3,156)~(0,6,156) below: 684 above: 956 1059 => Would cause 22 bricks to fall
+[0368](3,2,63)~(3,4,63) below: 83 above: 539 829 => Would cause 2 bricks to fall
+[0369](1,5,155)~(2,5,155) below: 293 above:
+[0370](3,7,27)~(3,9,27) below: 1144 above: 562 739 => Would cause 2 bricks to fall
+[0371](0,4,152)~(2,4,152) below: 723 above: 684 1045 => Would cause 25 bricks to fall
+[0372](7,3,17)~(7,3,18) below: 26 above: 702
+[0373](0,0,100)~(0,0,102) below: 1119 above: 1201 => Would cause 4 bricks to fall
+[0374](0,7,5)~(0,8,5) below: 213 719 above: 733 => Would cause 1 bricks to fall
+[0375](4,4,72)~(4,4,73) below: 218 above:
+[0376](4,6,126)~(4,8,126) below: 1202 above: 457 1206 => Would cause 2 bricks to fall
+[0377](3,2,54)~(3,5,54) below: 453 above: 988 => Would cause 4 bricks to fall
+[0378](6,4,267)~(8,4,267) below: 516 above: 615 => Would cause 4 bricks to fall
+[0379](4,0,152)~(4,0,154) below: 681 above:
+[0380](6,6,288)~(7,6,288) below: 1103 above:
+[0381](3,7,276)~(6,7,276) below: 305 above: 284 => Would cause 2 bricks to fall
+[0382](1,2,28)~(4,2,28) below: 202 above: 288 662 => Would cause 59 bricks to fall
+[0383](4,6,85)~(4,8,85) below: 1098 above:
+[0384](0,8,164)~(0,9,164) below: 1209 above: 651 883 => Would cause 6 bricks to fall
+[0385](4,7,5)~(4,8,5) below: 463 above:
+[0386](7,0,141)~(7,0,143) below: 865 above:
+[0387](2,6,266)~(3,6,266) below: 821 above: 1057
+[0388](8,4,114)~(9,4,114) below: 605 above: 775 => Would cause 1 bricks to fall
+[0389](0,7,62)~(0,9,62) below: 486 above:
+[0390](7,4,93)~(8,4,93) below: 449 above:
+[0391](3,7,72)~(4,7,72) below: 636 above: 706 809 => Would cause 774 bricks to fall
+[0392](5,0,264)~(5,2,264) below: 256 above:
+[0393](0,7,223)~(2,7,223) below: 716 above: 1170 => Would cause 1 bricks to fall
+[0394](7,7,44)~(8,7,44) below: 670 above:
+[0395](3,0,293)~(6,0,293) below: 953 above:
+[0396](2,2,19)~(2,3,19) below: 784 above: 700 885 => Would cause 63 bricks to fall
+[0397](1,1,100)~(3,1,100) below: 1062 above: 1041 => Would cause 1 bricks to fall
+[0398](5,7,209)~(5,8,209) below: 165 above: 1080 => Would cause 1 bricks to fall
+[0399](0,8,283)~(3,8,283) below: 267 above: 151 620 => Would cause 27 bricks to fall
+[0400](5,2,24)~(6,2,24) below: 549 above: 803 => Would cause 1 bricks to fall
+[0401](5,2,235)~(7,2,235) below: 268 663 above:
+[0402](0,1,19)~(2,1,19) below: 882 above:
+[0403](3,0,149)~(3,2,149) below: 906 above: 236 => Would cause 3 bricks to fall
+[0404](8,1,252)~(8,1,254) below: 494 above: 287 => Would cause 2 bricks to fall
+[0405](9,5,269)~(9,5,270) below: 971 above:
+[0406](4,1,43)~(5,1,43) below: 196 above: 167 => Would cause 1 bricks to fall
+[0407](1,3,152)~(4,3,152) below: 723 above: 251 785 => Would cause 8 bricks to fall
+[0408](5,2,145)~(5,5,145) below: 757 above: 273 575 906 => Would cause 589 bricks to fall
+[0409](6,2,73)~(6,5,73) below: 309 above: 295 365 => Would cause 30 bricks to fall
+[0410](3,2,122)~(3,5,122) below: 918 above: 272 468 => Would cause 22 bricks to fall
+[0411](9,7,2)~(9,9,2) below: above:
+[0412](5,7,202)~(8,7,202) below: 595 above: 68 838 1084 => Would cause 15 bricks to fall
+[0413](6,2,53)~(6,2,55) below: 521 above: 982 => Would cause 8 bricks to fall
+[0414](2,6,100)~(2,8,100) below: 118 720 above: 422 1189 => Would cause 5 bricks to fall
+[0415](6,6,138)~(7,6,138) below: 1169 above:
+[0416](5,5,151)~(8,5,151) below: 575 above: 328 867 => Would cause 529 bricks to fall
+[0417](1,1,79)~(1,3,79) below: 477 above: 475 => Would cause 2 bricks to fall
+[0418](5,3,298)~(9,3,298) below: 937 above: 1085 => Would cause 3 bricks to fall
+[0419](3,5,219)~(3,7,219) below: 169 above: 1143 => Would cause 18 bricks to fall
+[0420](1,0,10)~(3,0,10) below: 1190 above: 75 => Would cause 3 bricks to fall
+[0421](1,2,42)~(3,2,42) below: 769 above: 899 => Would cause 18 bricks to fall
+[0422](0,7,101)~(2,7,101) below: 414 above: 440 => Would cause 1 bricks to fall
+[0423](4,0,21)~(4,0,21) below: 1181 above: 1000
+[0424](3,3,19)~(3,6,19) below: 1031 above: 242 => Would cause 44 bricks to fall
+[0425](7,1,98)~(7,3,98) below: 66 949 above: 514 => Would cause 2 bricks to fall
+[0426](0,8,152)~(2,8,152) below: 696 above:
+[0427](1,3,261)~(4,3,261) below: 1161 above: 456 508 => Would cause 172 bricks to fall
+[0428](7,6,68)~(9,6,68) below: 315 above: 325
+[0429](6,0,99)~(6,2,99) below: 469 571 above: 355 677 => Would cause 14 bricks to fall
+[0430](0,0,94)~(0,3,94) below: 523 above:
+[0431](0,5,303)~(0,7,303) below: 528 above:
+[0432](5,6,123)~(5,9,123) below: 246 above: 114 505 => Would cause 3 bricks to fall
+[0433](0,4,188)~(4,4,188) below: 18 1071 above: 705 => Would cause 1 bricks to fall
+[0434](1,4,65)~(1,6,65) below: 219 above: 257 => Would cause 7 bricks to fall
+[0435](8,7,219)~(8,9,219) below: 56 above:
+[0436](1,7,208)~(1,9,208) below: 1159 above: 770 => Would cause 8 bricks to fall
+[0437](2,9,195)~(4,9,195) below: 788 above: 206 357 => Would cause 2 bricks to fall
+[0438](1,9,92)~(2,9,92) below: 330 above:
+[0439](0,4,227)~(0,6,227) below: 1121 above: 1069 1207 => Would cause 2 bricks to fall
+[0440](1,7,102)~(1,8,102) below: 422 above:
+[0441](1,0,50)~(3,0,50) below: 1166 above:
+[0442](7,6,183)~(8,6,183) below: 555 above: 981 => Would cause 13 bricks to fall
+[0443](3,6,186)~(3,6,189) below: 261 above: 248 => Would cause 18 bricks to fall
+[0444](4,1,304)~(4,3,304) below: 2 above: 450 958 => Would cause 6 bricks to fall
+[0445](7,2,129)~(9,2,129) below: 895 above: 476 => Would cause 604 bricks to fall
+[0446](4,5,33)~(4,6,33) below: 602 above:
+[0447](9,7,91)~(9,7,92) below: 887 above:
+[0448](9,3,40)~(9,5,40) below: 932 above: 1023 => Would cause 1 bricks to fall
+[0449](7,1,92)~(7,4,92) below: 1116 above: 66 390 949 => Would cause 726 bricks to fall
+[0450](2,1,305)~(4,1,305) below: 444 above:
+[0451](4,7,63)~(4,9,63) below: 81 above: 692 718 => Would cause 796 bricks to fall
+[0452](1,3,59)~(5,3,59) below: 498 above: 83 192 => Would cause 15 bricks to fall
+[0453](3,5,51)~(5,5,51) below: 103 above: 377 => Would cause 5 bricks to fall
+[0454](3,4,85)~(6,4,85) below: 138 above: 554 678 1177 => Would cause 749 bricks to fall
+[0455](4,7,50)~(7,7,50) below: 296 above: 96 145 754 945 => Would cause 883 bricks to fall
+[0456](0,3,262)~(3,3,262) below: 427 above: 821 => Would cause 168 bricks to fall
+[0457](0,8,128)~(4,8,128) below: 376 above: 1107 => Would cause 1 bricks to fall
+[0458](6,6,292)~(6,8,292) below: 689 above: 729 886 => Would cause 8 bricks to fall
+[0459](6,1,27)~(9,1,27) below: 527 above: 488 => Would cause 6 bricks to fall
+[0460](3,3,247)~(3,3,248) below: 1178 above: 1184 => Would cause 197 bricks to fall
+[0461](6,1,108)~(6,3,108) below: 828 above: 619 1192
+[0462](8,6,79)~(8,9,79) below: 290 above: 577 1153 => Would cause 7 bricks to fall
+[0463](4,7,3)~(6,7,3) below: 178 above: 385 1156 => Would cause 3 bricks to fall
+[0464](2,2,302)~(2,4,302) below: 872 above:
+[0465](6,9,176)~(9,9,176) below: 1016 above: 986 => Would cause 1 bricks to fall
+[0466](1,1,274)~(3,1,274) below: 294 above:
+[0467](4,9,71)~(6,9,71) below: 576 above: 1187 => Would cause 10 bricks to fall
+[0468](1,5,125)~(3,5,125) below: 410 above: 1022 => Would cause 20 bricks to fall
+[0469](6,2,98)~(6,4,98) below: 850 above: 137 429 923 => Would cause 695 bricks to fall
+[0470](5,0,8)~(8,0,8) below: 598 above: 802 1162 => Would cause 9 bricks to fall
+[0471](5,1,64)~(5,3,64) below: 192 above:
+[0472](1,3,222)~(3,3,222) below: 909 above:
+[0473](2,8,17)~(5,8,17) below: 975 above: 349 => Would cause 6 bricks to fall
+[0474](2,0,287)~(2,3,287) below: 180 above: 1 113 1082 => Would cause 9 bricks to fall
+[0475](1,2,82)~(1,2,82) below: 417 above: 210 => Would cause 1 bricks to fall
+[0476](6,2,132)~(8,2,132) below: 445 above: 147 292 686 => Would cause 603 bricks to fall
+[0477](1,3,76)~(1,5,76) below: 940 above: 417 740 => Would cause 3 bricks to fall
+[0478](3,1,157)~(4,1,157) below: 299 above: 747 => Would cause 1 bricks to fall
+[0479](3,7,183)~(3,9,183) below: 510 above: 255 1113 => Would cause 5 bricks to fall
+[0480](6,6,103)~(7,6,103) below: 923 above: 102 => Would cause 690 bricks to fall
+[0481](4,2,48)~(4,4,48) below: 1199 above: 521 898 => Would cause 10 bricks to fall
+[0482](0,2,211)~(0,3,211) below: 786 above: 61 => Would cause 2 bricks to fall
+[0483](2,5,299)~(4,5,299) below: 1118 above: 2 782 872 => Would cause 6 bricks to fall
+[0484](3,9,281)~(3,9,283) below: 267 above: 131 => Would cause 1 bricks to fall
+[0485](0,7,35)~(0,9,35) below: 285 above: 62 984 => Would cause 4 bricks to fall
+[0486](0,7,61)~(0,9,61) below: 117 714 above: 389 => Would cause 1 bricks to fall
+[0487](4,4,60)~(4,7,60) below: 364 above: 81 703 => Would cause 842 bricks to fall
+[0488](5,1,29)~(8,1,29) below: 459 above: 1043 => Would cause 5 bricks to fall
+[0489](5,0,136)~(6,0,136) below: 686 above: 865 => Would cause 4 bricks to fall
+[0490](5,3,227)~(7,3,227) below: 1039 above: 268 => Would cause 7 bricks to fall
+[0491](1,5,24)~(1,5,27) below: 1141 above:
+[0492](0,4,213)~(0,6,213) below: 59 786 above: 57 => Would cause 6 bricks to fall
+[0493](6,6,112)~(6,8,112) below: 1135 above: 7 => Would cause 1 bricks to fall
+[0494](8,1,250)~(8,2,250) below: 47 above: 404 => Would cause 3 bricks to fall
+[0495](3,0,16)~(5,0,16) below: 75 223 1155 above: 1181
+[0496](3,4,305)~(5,4,305) below: 2 782 above:
+[0497](4,2,309)~(4,4,309) below: 958 above: 580 => Would cause 1 bricks to fall
+[0498](4,3,55)~(4,5,55) below: 32 above: 364 452 => Would cause 860 bricks to fall
+[0499](9,7,245)~(9,7,247) below: 1114 above: 741 => Would cause 7 bricks to fall
+[0500](0,8,159)~(0,8,159) below: 1059 above: 1209 => Would cause 8 bricks to fall
+[0501](6,0,182)~(8,0,182) below: 616 above: 553 => Would cause 1 bricks to fall
+[0502](0,4,54)~(0,5,54) below: 849 above: 913 => Would cause 6 bricks to fall
+[0503](2,7,43)~(4,7,43) below: 507 above:
+[0504](7,4,177)~(7,5,177) below: 820 above: 1027
+[0505](3,9,127)~(7,9,127) below: 432 1202 above: 1174 => Would cause 17 bricks to fall
+[0506](2,1,64)~(2,3,64) below: 83 208 above: 539
+[0507](3,5,42)~(3,8,42) below: 841 above: 503 => Would cause 1 bricks to fall
+[0508](4,1,262)~(4,3,262) below: 427 above: 256 => Would cause 2 bricks to fall
+[0509](4,0,237)~(4,2,237) below: 930 above: 1001 => Would cause 226 bricks to fall
+[0510](3,5,180)~(3,7,180) below: 321 above: 5 259 479 => Would cause 11 bricks to fall
+[0511](1,2,36)~(2,2,36) below: 332 above: 181 => Would cause 50 bricks to fall
+[0512](5,3,30)~(8,3,30) below: 306 above:
+[0513](1,4,282)~(3,4,282) below: 249 771 above: 550
+[0514](7,1,101)~(7,3,101) below: 425 above: 132 => Would cause 1 bricks to fall
+[0515](3,4,36)~(6,4,36) below: 900 above: 347
+[0516](6,3,265)~(6,5,265) below: 341 above: 378 971 => Would cause 13 bricks to fall
+[0517](8,1,139)~(8,4,139) below: 987 above: 1182 => Would cause 1 bricks to fall
+[0518](9,6,251)~(9,7,251) below: 741 above: 320 831 => Would cause 3 bricks to fall
+[0519](2,4,64)~(2,6,64) below: 266 above:
+[0520](3,6,272)~(3,9,272) below: 1057 above: 305 => Would cause 4 bricks to fall
+[0521](4,2,50)~(7,2,50) below: 481 above: 413 => Would cause 9 bricks to fall
+[0522](0,4,25)~(0,6,25) below: 8 above: 640 1010 => Would cause 9 bricks to fall
+[0523](0,0,92)~(3,0,92) below: 286 above: 430 812 => Would cause 13 bricks to fall
+[0524](0,2,87)~(2,2,87) below: 97 above: 970 => Would cause 2 bricks to fall
+[0525](4,3,2)~(4,3,5) below: above: 55
+[0526](0,0,112)~(0,0,113) below: 942 above:
+[0527](5,1,24)~(7,1,24) below: 1005 above: 459 => Would cause 7 bricks to fall
+[0528](0,6,301)~(2,6,301) below: 760 above: 252 431 => Would cause 2 bricks to fall
+[0529](7,1,182)~(9,1,182) below: 616 above: 301 346 => Would cause 3 bricks to fall
+[0530](9,7,209)~(9,9,209) below: 701 936 above: 924 => Would cause 1 bricks to fall
+[0531](9,4,235)~(9,7,235) below: 709 above: 846 => Would cause 13 bricks to fall
+[0532](0,4,290)~(0,6,290) below: 354 above: 814
+[0533](9,0,303)~(9,2,303) below: 1085 above: 31 => Would cause 1 bricks to fall
+[0534](1,5,201)~(1,8,201) below: 793 above: 59 683 => Would cause 12 bricks to fall
+[0535](2,2,204)~(2,2,205) below: 946 above: 565 => Would cause 2 bricks to fall
+[0536](0,3,78)~(0,4,78) below: 351 740 above:
+[0537](0,4,162)~(2,4,162) below: 956 above: 1148 => Would cause 1 bricks to fall
+[0538](4,2,16)~(6,2,16) below: 1094 above: 784 1049 => Would cause 66 bricks to fall
+[0539](2,3,65)~(3,3,65) below: 368 506 above: 1099 => Would cause 12 bricks to fall
+[0540](2,3,205)~(2,3,208) below: 779 above: 1176 => Would cause 7 bricks to fall
+[0541](3,5,106)~(6,5,106) below: 102 above: 1093 => Would cause 681 bricks to fall
+[0542](6,2,180)~(6,3,180) below: 250 above: 947 => Would cause 1 bricks to fall
+[0543](8,8,133)~(8,9,133) below: 851 above: 43 => Would cause 2 bricks to fall
+[0544](7,5,204)~(8,5,204) below: 10 above: 1046 => Would cause 13 bricks to fall
+[0545](7,9,44)~(7,9,45) below: 773 above:
+[0546](7,0,11)~(7,3,11) below: 1162 above: 1036 1155 => Would cause 6 bricks to fall
+[0547](8,4,19)~(9,4,19) below: 852 above: 195 => Would cause 1 bricks to fall
+[0548](6,4,196)~(8,4,196) below: 711 above: 708 799 => Would cause 5 bricks to fall
+[0549](5,2,21)~(5,3,21) below: 702 above: 400 => Would cause 2 bricks to fall
+[0550](1,0,284)~(1,4,284) below: 513 826 above: 86 787 => Would cause 2 bricks to fall
+[0551](6,2,126)~(6,4,126) below: 1129 above: 656 895 1073 => Would cause 610 bricks to fall
+[0552](6,5,55)~(9,5,55) below: 32 above: 111 291 572 790 => Would cause 17 bricks to fall
+[0553](6,0,184)~(8,0,184) below: 501 above:
+[0554](5,4,88)~(5,4,90) below: 454 above:
+[0555](6,6,182)~(8,6,182) below: 736 above: 442 => Would cause 14 bricks to fall
+[0556](2,3,2)~(2,5,2) below: above: 774 => Would cause 6 bricks to fall
+[0557](9,4,284)~(9,6,284) below: 348 above: 1183 => Would cause 4 bricks to fall
+[0558](5,5,42)~(5,7,42) below: 298 above:
+[0559](4,2,184)~(7,2,184) below: 616 above: 18 777 => Would cause 321 bricks to fall
+[0560](5,9,295)~(7,9,295) below: 1109 above: 907
+[0561](7,4,296)~(7,4,296) below: 937 above: 239 => Would cause 3 bricks to fall
+[0562](1,8,28)~(3,8,28) below: 370 above: 742 => Would cause 1 bricks to fall
+[0563](1,5,86)~(1,8,86) below: 1168 above: 675 => Would cause 4 bricks to fall
+[0564](7,3,180)~(7,5,180) below: 922 1027 above: 335 => Would cause 64 bricks to fall
+[0565](1,2,207)~(4,2,207) below: 535 above: 203 => Would cause 1 bricks to fall
+[0566](2,4,8)~(2,6,8) below: 774 above: 1087 1139 => Would cause 4 bricks to fall
+[0567](4,4,9)~(5,4,9) below: 65 above: 55 859
+[0568](6,6,242)~(6,8,242) below: 1198 above: 343 1056 => Would cause 2 bricks to fall
+[0569](5,4,106)~(6,4,106) below: 881 above:
+[0570](1,7,295)~(3,7,295) below: 765 above:
+[0571](5,1,98)~(6,1,98) below: 850 above: 429
+[0572](8,5,58)~(8,7,58) below: 265 552 above: 713 => Would cause 9 bricks to fall
+[0573](7,9,193)~(9,9,193) below: 140 above: 690 => Would cause 1 bricks to fall
+[0574](9,7,41)~(9,8,41) below: 336 above:
+[0575](2,5,148)~(5,5,148) below: 408 above: 416 723 => Would cause 580 bricks to fall
+[0576](2,9,70)~(4,9,70) below: 668 above: 467 => Would cause 11 bricks to fall
+[0577](6,7,80)~(9,7,80) below: 462 above: 861 => Would cause 4 bricks to fall
+[0578](0,4,46)~(2,4,46) below: 280 above: 28 849 => Would cause 9 bricks to fall
+[0579](2,3,98)~(2,3,101) below: 1077 above:
+[0580](4,4,312)~(4,7,312) below: 497 above:
+[0581](8,2,306)~(8,4,306) below: 948 above:
+[0582](7,3,232)~(7,5,232) below: 1151 above: 27 732 => Would cause 6 bricks to fall
+[0583](3,2,188)~(6,2,188) below: 18 777 above: 1066 => Would cause 317 bricks to fall
+[0584](5,0,110)~(5,2,110) below: 828 above: 229 1192 => Would cause 5 bricks to fall
+[0585](4,4,168)~(6,4,168) below: 14 above:
+[0586](2,1,7)~(4,1,7) below: 226 above: 641 => Would cause 1 bricks to fall
+[0587](4,4,290)~(7,4,290) below: 781 above: 73 => Would cause 48 bricks to fall
+[0588](2,0,155)~(2,0,157) below: 281 above:
+[0589](1,5,185)~(3,5,185) below: 259 above:
+[0590](3,8,46)~(5,8,46) below: 91 above:
+[0591](4,6,140)~(4,8,140) below: 1169 above: 278 610 1076 => Would cause 4 bricks to fall
+[0592](2,2,214)~(2,5,214) below: 58 above: 220 => Would cause 4 bricks to fall
+[0593](1,4,55)~(1,4,55) below: 798 above: 778 => Would cause 8 bricks to fall
+[0594](7,5,38)~(7,6,38) below: 92 above: 1014 => Would cause 3 bricks to fall
+[0595](3,7,199)~(5,7,199) below: 363 above: 412 => Would cause 16 bricks to fall
+[0596](3,8,309)~(3,8,311) below: 796 above:
+[0597](2,4,295)~(2,6,295) below: 1009 above: 816
+[0598](5,0,5)~(5,1,5) below: 152 above: 470 => Would cause 10 bricks to fall
+[0599](0,5,249)~(0,6,249) below: 746 above:
+[0600](5,1,196)~(5,3,196) below: 682 above:
+[0601](0,0,81)~(0,0,83) below: 889 above:
+[0602](4,4,32)~(4,6,32) below: 179 above: 446 900 => Would cause 3 bricks to fall
+[0603](1,4,43)~(1,7,43) below: 144 above: 280 748 904 => Would cause 14 bricks to fall
+[0604](1,2,93)~(1,4,93) below: 286 above: 193 => Would cause 1 bricks to fall
+[0605](8,4,113)~(8,6,113) below: 1075 above: 360 388 => Would cause 4 bricks to fall
+[0606](7,6,187)~(7,9,187) below: 981 above: 791 => Would cause 10 bricks to fall
+[0607](1,3,184)~(3,3,184) below: 259 above: 48 890 => Would cause 1 bricks to fall
+[0608](1,6,239)~(1,9,239) below: 1007 above: 629 875 1154 => Would cause 8 bricks to fall
+[0609](6,6,60)~(7,6,60) below: 790 above:
+[0610](3,8,142)~(4,8,142) below: 591 above: 977 => Would cause 1 bricks to fall
+[0611](3,6,290)~(3,8,290) below: 864 above: 352 764 814
+[0612](0,8,92)~(0,9,92) below: 330 above:
+[0613](8,6,273)~(8,8,273) below: 915 above: 1100 => Would cause 1 bricks to fall
+[0614](4,4,239)~(7,4,239) below: 617 above:
+[0615](8,2,269)~(8,4,269) below: 378 above: 638 650 => Would cause 3 bricks to fall
+[0616](7,0,181)~(7,2,181) below: 922 above: 501 529 559 => Would cause 328 bricks to fall
+[0617](3,4,236)~(5,4,236) below: 780 above: 614 => Would cause 1 bricks to fall
+[0618](0,1,27)~(0,3,27) below: 832 above:
+[0619](4,3,113)~(6,3,113) below: 40 461 1110 above: 125 => Would cause 2 bricks to fall
+[0620](0,7,284)~(0,9,284) below: 399 above:
+[0621](1,1,80)~(4,1,80) below: 1164 above:
+[0622](6,6,298)~(6,8,298) below: 1152 above:
+[0623](4,5,233)~(4,8,233) below: 76 above: 171 780 819 => Would cause 10 bricks to fall
+[0624](9,5,67)~(9,5,67) below: 843 above:
+[0625](8,2,156)~(8,5,156) below: 328 above: 324 934 => Would cause 1 bricks to fall
+[0626](2,2,266)~(2,4,266) below: 821 above: 87 216 789 => Would cause 158 bricks to fall
+[0627](3,3,193)~(3,3,196) below: 48 above:
+[0628](6,3,22)~(6,3,23) below: 702 above:
+[0629](1,6,242)~(1,7,242) below: 608 above: 746 => Would cause 2 bricks to fall
+[0630](3,5,207)~(5,5,207) below: 283 above: 277 910 => Would cause 26 bricks to fall
+[0631](5,6,31)~(6,6,31) below: 1188 above: 204 => Would cause 17 bricks to fall
+[0632](8,3,65)~(8,7,65) below: 207 above: 315 338 => Would cause 6 bricks to fall
+[0633](8,7,297)~(8,9,297) below: 729 above: 342 1006 => Would cause 4 bricks to fall
+[0634](8,3,73)~(8,5,73) below: 325 above:
+[0635](5,5,263)~(5,7,263) below: 341 above: 319 => Would cause 1 bricks to fall
+[0636](4,6,70)~(4,7,70) below: 795 above: 391 => Would cause 775 bricks to fall
+[0637](9,5,170)~(9,6,170) below: 64 above:
+[0638](8,4,271)~(8,7,271) below: 615 above: 915 1015 => Would cause 1 bricks to fall
+[0639](9,0,240)~(9,2,240) below: 676 above: 173 => Would cause 2 bricks to fall
+[0640](0,6,28)~(0,8,28) below: 522 above: 794 => Would cause 7 bricks to fall
+[0641](2,1,8)~(2,3,8) below: 586 above: 172
+[0642](2,8,61)~(3,8,61) below: 714 above:
+[0643](6,4,284)~(6,5,284) below: 1012 above: 149 781 => Would cause 52 bricks to fall
+[0644](9,3,77)~(9,5,77) below: 679 above: 969 => Would cause 1 bricks to fall
+[0645](0,4,248)~(1,4,248) below: 665 above: 154 => Would cause 1 bricks to fall
+[0646](9,1,283)~(9,3,283) below: 348 above:
+[0647](6,2,248)~(8,2,248) below: 979 above: 22 47 105 => Would cause 9 bricks to fall
+[0648](3,1,167)~(3,1,169) below: 830 above:
+[0649](7,6,9)~(9,6,9) below: 980 above:
+[0650](6,2,270)~(9,2,270) below: 615 above:
+[0651](0,9,167)~(1,9,167) below: 384 above:
+[0652](2,6,138)~(2,9,138) below: 876 above:
+[0653](1,7,36)~(1,7,37) below: 866 above: 144 => Would cause 16 bricks to fall
+[0654](6,4,89)~(6,6,89) below: 990 above:
+[0655](5,7,20)~(5,9,20) below: 254 above:
+[0656](6,4,127)~(6,6,127) below: 551 above:
+[0657](1,1,4)~(1,2,4) below: 15 above:
+[0658](7,4,170)~(7,6,170) below: 64 above: 38 => Would cause 76 bricks to fall
+[0659](8,7,86)~(8,9,86) below: 1153 above:
+[0660](5,1,307)~(5,3,307) below: 958 above: 1019 => Would cause 1 bricks to fall
+[0661](1,1,262)~(1,2,262) below: 878 above: 1021 => Would cause 1 bricks to fall
+[0662](4,1,29)~(4,3,29) below: 382 above: 707 => Would cause 4 bricks to fall
+[0663](7,1,232)~(7,2,232) below: 952 above: 401 1186 => Would cause 1 bricks to fall
+[0664](9,5,240)~(9,7,240) below: 846 above: 766 => Would cause 11 bricks to fall
+[0665](0,2,247)~(0,5,247) below: 921 above: 645 1172 => Would cause 3 bricks to fall
+[0666](4,2,122)~(6,2,122) below: 90 above: 1129 => Would cause 612 bricks to fall
+[0667](5,2,1)~(8,2,1) below: above: 968 => Would cause 1 bricks to fall
+[0668](2,7,69)~(2,9,69) below: 6 above: 576 767 => Would cause 14 bricks to fall
+[0669](0,0,207)~(0,3,207) below: 1086 above: 704 738 835 => Would cause 291 bricks to fall
+[0670](7,6,42)~(7,8,42) below: 1014 above: 394 => Would cause 1 bricks to fall
+[0671](8,4,210)~(8,5,210) below: 1046 above: 978 => Would cause 11 bricks to fall
+[0672](0,9,4)~(3,9,4) below: 247 871 above: 877
+[0673](0,5,219)~(1,5,219) below: 150 above: 768 => Would cause 2 bricks to fall
+[0674](9,8,83)~(9,8,85) below: 221 above:
+[0675](1,7,89)~(1,9,89) below: 563 above: 330 => Would cause 3 bricks to fall
+[0676](9,2,235)~(9,2,237) below: 709 above: 639 => Would cause 3 bricks to fall
+[0677](6,0,101)~(6,0,104) below: 429 above:
+[0678](2,4,86)~(4,4,86) below: 454 above: 244 => Would cause 16 bricks to fall
+[0679](9,5,71)~(9,5,74) below: 11 above: 644 => Would cause 2 bricks to fall
+[0680](9,1,195)~(9,3,195) below: 1081 above: 1024
+[0681](4,0,150)~(4,2,150) below: 906 above: 379 => Would cause 1 bricks to fall
+[0682](5,2,193)~(5,4,193) below: 1066 above: 600 => Would cause 1 bricks to fall
+[0683](1,6,204)~(1,8,204) below: 534 above: 1159 => Would cause 11 bricks to fall
+[0684](0,4,154)~(0,6,154) below: 371 above: 367 => Would cause 23 bricks to fall
+[0685](6,9,300)~(9,9,300) below: 342 above: 233 => Would cause 1 bricks to fall
+[0686](6,0,134)~(6,2,134) below: 476 above: 260 489 => Would cause 6 bricks to fall
+[0687](7,4,166)~(7,7,166) below: 366 above: 64 => Would cause 86 bricks to fall
+[0688](2,1,70)~(2,3,70) below: 1099 above: 153 323 => Would cause 10 bricks to fall
+[0689](6,7,290)~(6,9,290) below: 44 above: 458 1109 => Would cause 15 bricks to fall
+[0690](6,9,196)~(7,9,196) below: 573 above:
+[0691](4,4,299)~(5,4,299) below: 1118 above: 2
+[0692](4,8,65)~(4,8,65) below: 451 above: 6 => Would cause 16 bricks to fall
+[0693](4,7,10)~(5,7,10) below: 224 above:
+[0694](7,5,298)~(7,7,298) below: 29 above: 964 => Would cause 1 bricks to fall
+[0695](3,2,47)~(3,5,47) below: 899 above: 103 898 => Would cause 8 bricks to fall
+[0696](0,7,151)~(0,9,151) below: 253 above: 426 => Would cause 1 bricks to fall
+[0697](0,2,51)~(1,2,51) below: 1166 above: 974 => Would cause 5 bricks to fall
+[0698](5,4,247)~(7,4,247) below: 70 above:
+[0699](7,2,191)~(7,5,191) below: 751 above: 711 752 929 => Would cause 61 bricks to fall
+[0700](2,3,22)~(4,3,22) below: 396 above:
+[0701](6,8,208)~(9,8,208) below: 833 above: 530 912 => Would cause 1 bricks to fall
+[0702](5,3,20)~(7,3,20) below: 372 1049 above: 170 549 628 => Would cause 7 bricks to fall
+[0703](4,5,64)~(5,5,64) below: 487 above: 825 => Would cause 10 bricks to fall
+[0704](0,3,209)~(0,6,209) below: 669 793 above: 59 786 => Would cause 4 bricks to fall
+[0705](2,4,190)~(2,5,190) below: 433 above:
+[0706](1,7,73)~(3,7,73) below: 391 above: 230 1168 => Would cause 9 bricks to fall
+[0707](3,2,35)~(6,2,35) below: 662 above: 177 => Would cause 3 bricks to fall
+[0708](8,3,198)~(8,5,198) below: 548 above: 124 => Would cause 2 bricks to fall
+[0709](9,1,233)~(9,4,233) below: 1151 above: 531 676 => Would cause 18 bricks to fall
+[0710](7,0,276)~(7,0,276) below: 53 above:
+[0711](6,4,193)~(8,4,193) below: 699 above: 548 => Would cause 6 bricks to fall
+[0712](3,2,178)~(5,2,178) below: 250 above:
+[0713](8,5,60)~(8,7,60) below: 572 above: 207 => Would cause 8 bricks to fall
+[0714](0,8,58)~(3,8,58) below: 913 above: 486 642 => Would cause 1 bricks to fall
+[0715](6,5,64)~(6,7,64) below: 839 above: 164 => Would cause 10 bricks to fall
+[0716](1,5,220)~(1,8,220) below: 128 above: 308 393 => Would cause 4 bricks to fall
+[0717](0,0,56)~(0,0,56) below: 25 above:
+[0718](4,5,67)~(4,7,67) below: 451 above: 795 => Would cause 777 bricks to fall
+[0719](0,5,3)~(0,7,3) below: 735 above: 374
+[0720](2,8,97)~(4,8,97) below: 119 above: 414
+[0721](7,0,36)~(7,1,36) below: 350 above: 939 => Would cause 1 bricks to fall
+[0722](5,1,17)~(6,1,17) below: 1097 above: 143 => Would cause 11 bricks to fall
+[0723](2,2,149)~(2,5,149) below: 575 above: 109 371 407 867 => Would cause 42 bricks to fall
+[0724](4,1,128)~(4,2,128) below: 895 above: 805 => Would cause 1 bricks to fall
+[0725](6,5,268)~(7,5,268) below: 971 above: 337 => Would cause 2 bricks to fall
+[0726](0,3,133)~(0,5,133) below: 792 above:
+[0727](1,0,1)~(1,2,1) below: above: 15 => Would cause 2 bricks to fall
+[0728](4,5,153)~(4,5,155) below: 867 above: 175 => Would cause 1 bricks to fall
+[0729](6,8,295)~(8,8,295) below: 458 above: 633 => Would cause 5 bricks to fall
+[0730](2,2,275)~(4,2,275) below: 1208 above:
+[0731](6,1,40)~(8,1,40) below: 177 above: 744 995 => Would cause 1 bricks to fall
+[0732](5,5,234)~(7,5,234) below: 582 above: 93 => Would cause 4 bricks to fall
+[0733](0,7,8)~(0,9,8) below: 374 above:
+[0734](1,9,146)~(4,9,146) below: 848 above: 253 1125 => Would cause 4 bricks to fall
+[0735](0,3,1)~(0,5,1) below: above: 262 719 => Would cause 4 bricks to fall
+[0736](6,4,181)~(6,6,181) below: 1055 above: 555 => Would cause 15 bricks to fall
+[0737](7,4,203)~(8,4,203) below: 124 above:
+[0738](0,0,209)~(1,0,209) below: 669 above:
+[0739](3,5,28)~(3,7,28) below: 370 801 above:
+[0740](0,4,77)~(2,4,77) below: 477 1128 above: 536
+[0741](9,7,248)~(9,9,248) below: 499 above: 46 518 => Would cause 6 bricks to fall
+[0742](1,8,31)~(1,9,31) below: 562 above:
+[0743](0,2,291)~(1,2,291) below: 1082 above: 23 869 => Would cause 1 bricks to fall
+[0744](7,0,43)~(7,2,43) below: 731 above:
+[0745](9,0,84)~(9,2,84) below: 943 above: 241 => Would cause 1 bricks to fall
+[0746](0,6,243)~(1,6,243) below: 629 above: 599 => Would cause 1 bricks to fall
+[0747](4,1,159)~(4,1,161) below: 478 above:
+[0748](1,6,45)~(1,6,48) below: 603 above: 1083 => Would cause 1 bricks to fall
+[0749](6,3,62)~(6,5,62) below: 790 above:
+[0750](2,7,107)~(2,9,107) below: 122 above:
+[0751](7,4,190)~(9,4,190) below: 335 above: 699 => Would cause 62 bricks to fall
+[0752](7,2,193)~(9,2,193) below: 699 above: 1081 => Would cause 4 bricks to fall
+[0753](4,2,256)~(5,2,256) below: 1138 above: 856 => Would cause 1 bricks to fall
+[0754](5,6,53)~(5,7,53) below: 455 above:
+[0755](4,6,26)~(4,7,26) below: 78 above: 1171 => Would cause 2 bricks to fall
+[0756](3,1,256)~(3,2,256) below: 1138 above: 878 => Would cause 3 bricks to fall
+[0757](5,3,139)~(5,3,142) below: 987 above: 408 => Would cause 590 bricks to fall
+[0758](7,9,220)~(7,9,222) below: 184 above:
+[0759](1,2,195)~(4,2,195) below: 1051 above: 1120 => Would cause 309 bricks to fall
+[0760](2,6,300)~(4,6,300) below: 1118 above: 528 933 => Would cause 7 bricks to fall
+[0761](7,8,217)~(9,8,217) below: 998 above:
+[0762](7,7,112)~(7,8,112) below: 1135 above: 159 => Would cause 1 bricks to fall
+[0763](0,7,65)~(2,7,65) below: 266 above: 60 => Would cause 2 bricks to fall
+[0764](1,8,292)~(3,8,292) below: 270 611 above: 41 => Would cause 2 bricks to fall
+[0765](1,7,294)~(3,7,294) below: 352 above: 570 => Would cause 1 bricks to fall
+[0766](9,3,241)~(9,6,241) below: 664 above: 1114 => Would cause 10 bricks to fall
+[0767](0,8,70)~(2,8,70) below: 668 above: 130 => Would cause 1 bricks to fall
+[0768](0,2,220)~(0,5,220) below: 673 above: 334 => Would cause 1 bricks to fall
+[0769](2,2,40)~(3,2,40) below: 181 above: 421 => Would cause 19 bricks to fall
+[0770](1,8,209)~(1,9,209) below: 436 above: 135 => Would cause 7 bricks to fall
+[0771](3,4,278)~(3,4,279) below: 240 above: 513
+[0772](7,5,49)~(7,5,50) below: 80 above: 945
+[0773](4,9,42)~(7,9,42) below: 298 above: 545 => Would cause 1 bricks to fall
+[0774](1,5,5)~(2,5,5) below: 556 above: 566 => Would cause 5 bricks to fall
+[0775](8,2,117)~(8,4,117) below: 388 above:
+[0776](5,8,58)~(8,8,58) below: 265 above:
+[0777](5,1,186)~(5,3,186) below: 559 above: 583 1173 => Would cause 1 bricks to fall
+[0778](1,4,58)~(1,5,58) below: 593 above: 1196 => Would cause 7 bricks to fall
+[0779](1,3,204)~(3,3,204) below: 1147 above: 353 540 => Would cause 9 bricks to fall
+[0780](4,3,235)~(4,5,235) below: 623 above: 617 => Would cause 2 bricks to fall
+[0781](4,4,287)~(6,4,287) below: 643 above: 587 => Would cause 49 bricks to fall
+[0782](3,3,300)~(3,5,300) below: 483 above: 496 1092
+[0783](9,0,37)~(9,1,37) below: 350 above:
+[0784](1,2,17)~(4,2,17) below: 538 above: 396 => Would cause 64 bricks to fall
+[0785](3,3,155)~(3,3,157) below: 407 above: 1079 => Would cause 7 bricks to fall
+[0786](0,2,210)~(0,4,210) below: 704 above: 482 492 => Would cause 3 bricks to fall
+[0787](0,3,285)~(1,3,285) below: 550 above:
+[0788](4,7,194)~(4,9,194) below: 304 above: 363 437 => Would cause 3 bricks to fall
+[0789](2,2,269)~(3,2,269) below: 626 above:
+[0790](6,4,57)~(6,6,57) below: 552 above: 609 749 => Would cause 2 bricks to fall
+[0791](4,9,189)~(7,9,189) below: 606 above: 140 304 => Would cause 9 bricks to fall
+[0792](0,5,132)~(1,5,132) below: 916 above: 726 1029 => Would cause 4 bricks to fall
+[0793](0,5,198)~(3,5,198) below: 1127 above: 534 704 => Would cause 13 bricks to fall
+[0794](0,8,30)~(0,9,30) below: 640 above: 285 => Would cause 6 bricks to fall
+[0795](4,5,69)~(4,7,69) below: 718 above: 636 967 => Would cause 776 bricks to fall
+[0796](2,8,306)~(4,8,306) below: 933 above: 596 => Would cause 1 bricks to fall
+[0797](5,5,195)~(5,5,198) below: 929 above: 139 => Would cause 47 bricks to fall
+[0798](1,3,54)~(1,4,54) below: 264 above: 593 => Would cause 9 bricks to fall
+[0799](7,3,199)~(7,4,199) below: 548 above: 275 => Would cause 1 bricks to fall
+[0800](9,8,254)~(9,9,254) below: 46 above:
+[0801](1,6,22)~(3,6,22) below: 1141 above: 88 739 1204 => Would cause 20 bricks to fall
+[0802](5,0,11)~(6,0,11) below: 470 above:
+[0803](5,2,26)~(5,4,26) below: 400 above:
+[0804](3,4,194)~(3,7,194) below: 248 above: 363
+[0805](2,2,129)~(4,2,129) below: 724 above:
+[0806](2,4,195)~(2,6,195) below: 248 above: 1127 => Would cause 15 bricks to fall
+[0807](2,1,169)~(2,4,169) below: 74 above:
+[0808](1,1,87)~(2,1,87) below: 13 above: 286 => Would cause 17 bricks to fall
+[0809](4,5,75)~(4,7,75) below: 391 above: 174 => Would cause 763 bricks to fall
+[0810](0,1,211)~(1,1,211) below: 835 above: 1197 => Would cause 1 bricks to fall
+[0811](3,6,90)~(3,8,90) below: 244 above: 119 1136 1180 => Would cause 14 bricks to fall
+[0812](2,0,94)~(2,2,94) below: 523 above: 1077 => Would cause 11 bricks to fall
+[0813](7,6,217)~(8,6,217) below: 35 above:
+[0814](0,6,291)~(3,6,291) below: 532 611 1088 above: 1124 => Would cause 1 bricks to fall
+[0815](0,6,159)~(1,6,159) below: 1090 above: 33
+[0816](2,4,296)~(5,4,296) below: 597 853 above: 1118 => Would cause 27 bricks to fall
+[0817](7,9,206)~(9,9,206) below: 838 above: 936 => Would cause 2 bricks to fall
+[0818](0,8,248)~(2,8,248) below: 100 above:
+[0819](4,6,235)~(4,6,237) below: 623 above:
+[0820](5,4,175)~(7,4,175) below: 38 above: 24 504 => Would cause 74 bricks to fall
+[0821](2,3,265)~(2,6,265) below: 456 above: 387 626 1030 => Would cause 167 bricks to fall
+[0822](3,7,222)~(3,9,222) below: 85 above: 827 => Would cause 15 bricks to fall
+[0823](0,1,173)~(0,3,173) below: 941 above: 860 => Would cause 2 bricks to fall
+[0824](8,3,301)~(8,5,301) below: 239 above: 892 948 => Would cause 1 bricks to fall
+[0825](5,4,65)~(5,7,65) below: 703 above: 1003 => Would cause 9 bricks to fall
+[0826](1,2,280)~(4,2,280) below: 249 above: 550 1065 => Would cause 17 bricks to fall
+[0827](2,8,237)~(4,8,237) below: 822 above: 312 1007 => Would cause 14 bricks to fall
+[0828](3,2,107)~(6,2,107) below: 282 above: 40 461 584 => Would cause 9 bricks to fall
+[0829](3,0,66)~(3,2,66) below: 368 above: 925 => Would cause 1 bricks to fall
+[0830](1,1,165)~(3,1,165) below: 962 above: 74 648 => Would cause 4 bricks to fall
+[0831](9,4,253)~(9,6,253) below: 518 above: 1020 => Would cause 1 bricks to fall
+[0832](0,2,24)~(0,3,24) below: 8 above: 618 => Would cause 1 bricks to fall
+[0833](6,7,205)~(6,9,205) below: 1084 above: 701 => Would cause 2 bricks to fall
+[0834](2,4,131)~(2,7,131) below: 1022 above: 1037 1206 => Would cause 12 bricks to fall
+[0835](0,1,210)~(4,1,210) below: 669 above: 810 1002 => Would cause 289 bricks to fall
+[0836](4,6,208)~(7,6,208) below: 283 above: 1105
+[0837](5,4,274)~(8,4,274) below: 902 1015 above: 1044 => Would cause 3 bricks to fall
+[0838](8,7,203)~(8,9,203) below: 412 above: 817 931 => Would cause 4 bricks to fall
+[0839](6,7,63)~(7,7,63) below: 994 above: 715 => Would cause 11 bricks to fall
+[0840](9,1,68)~(9,4,68) below: 1194 above: 11 908 => Would cause 5 bricks to fall
+[0841](3,8,40)~(6,8,40) below: 82 above: 298 507 => Would cause 8 bricks to fall
+[0842](8,3,36)~(8,5,36) below: 92 above:
+[0843](9,2,64)~(9,5,64) below: 1008 above: 624 1194 => Would cause 8 bricks to fall
+[0844](6,2,175)~(7,2,175) below: 311 above: 250 => Would cause 334 bricks to fall
+[0845](5,9,142)~(7,9,142) below: 1053 above: 848 880 => Would cause 9 bricks to fall
+[0846](9,7,237)~(9,8,237) below: 531 above: 664 => Would cause 12 bricks to fall
+[0847](0,2,54)~(1,2,54) below: 160 above: 25 => Would cause 2 bricks to fall
+[0848](2,9,144)~(6,9,144) below: 845 above: 148 734 => Would cause 7 bricks to fall
+[0849](0,4,49)~(0,4,51) below: 578 above: 502 => Would cause 7 bricks to fall
+[0850](6,1,97)~(6,4,97) below: 66 949 above: 469 571 => Would cause 719 bricks to fall
+[0851](5,9,132)~(8,9,132) below: 1174 above: 543 1050 => Would cause 15 bricks to fall
+[0852](8,4,18)~(8,8,18) below: 975 above: 183 254 339 356 547 => Would cause 47 bricks to fall
+[0853](4,4,294)~(5,4,294) below: 302 above: 816
+[0854](1,6,278)~(1,8,278) below: 191 above: 271 => Would cause 1 bricks to fall
+[0855](2,7,199)~(2,7,201) below: 363 above: 263 => Would cause 1 bricks to fall
+[0856](4,1,258)~(4,2,258) below: 753 above:
+[0857](7,5,116)~(7,6,116) below: 360 above: 897
+[0858](5,7,300)~(5,8,300) below: 1152 above:
+[0859](5,4,10)~(5,5,10) below: 224 567 above: 903 997 => Would cause 2 bricks to fall
+[0860](0,2,175)~(0,6,175) below: 823 above: 914 => Would cause 1 bricks to fall
+[0861](7,7,83)~(9,7,83) below: 577 above: 1104 => Would cause 3 bricks to fall
+[0862](1,0,36)~(1,1,36) below: 332 above:
+[0863](2,6,220)~(2,8,220) below: 258 above:
+[0864](2,8,287)~(5,8,287) below: 151 above: 44 270 611 => Would cause 22 bricks to fall
+[0865](6,0,138)~(9,0,138) below: 489 above: 386 1017 => Would cause 3 bricks to fall
+[0866](1,6,34)~(1,8,34) below: 1204 above: 653 => Would cause 17 bricks to fall
+[0867](2,5,152)~(5,5,152) below: 416 723 above: 293 728 879 => Would cause 6 bricks to fall
+[0868](5,4,179)~(5,7,179) below: 24 above: 1055 => Would cause 17 bricks to fall
+[0869](0,2,297)~(0,3,297) below: 743 1034 above: 1106 => Would cause 1 bricks to fall
+[0870](7,7,273)~(7,8,273) below: 337 above:
+[0871](2,9,1)~(5,9,1) below: above: 672
+[0872](2,2,301)~(2,5,301) below: 483 above: 464 1092 => Would cause 1 bricks to fall
+[0873](2,0,115)~(4,0,115) below: 973 above: 237 => Would cause 1 bricks to fall
+[0874](8,4,179)~(8,7,179) below: 1027 above: 999 => Would cause 2 bricks to fall
+[0875](0,9,242)~(1,9,242) below: 608 above:
+[0876](2,6,136)~(4,6,136) below: 279 above: 652 1169 => Would cause 8 bricks to fall
+[0877](1,8,5)~(1,9,5) below: 213 672 above:
+[0878](1,1,259)~(3,1,259) below: 756 above: 661 => Would cause 2 bricks to fall
+[0879](5,5,155)~(5,7,155) below: 867 above: 115 => Would cause 1 bricks to fall
+[0880](7,9,145)~(9,9,145) below: 845 above:
+[0881](3,4,103)~(6,4,103) below: 923 above: 569 => Would cause 1 bricks to fall
+[0882](2,0,16)~(2,3,16) below: 75 above: 402 955 => Would cause 1 bricks to fall
+[0883](0,8,166)~(0,8,169) below: 384 above: 935 => Would cause 4 bricks to fall
+[0884](6,3,282)~(7,3,282) below: 316 above:
+[0885](2,2,22)~(2,2,25) below: 396 above: 202 => Would cause 61 bricks to fall
+[0886](5,7,294)~(7,7,294) below: 458 above: 907 1130 => Would cause 1 bricks to fall
+[0887](9,6,89)~(9,8,89) below: 1104 above: 447 => Would cause 1 bricks to fall
+[0888](0,4,69)~(0,6,69) below: 60 above:
+[0889](0,0,78)~(0,2,78) below: 351 above: 97 601 => Would cause 5 bricks to fall
+[0890](1,1,187)~(1,3,187) below: 607 above:
+[0891](3,6,3)~(3,8,3) below: above:
+[0892](8,5,304)~(8,5,307) below: 824 above:
+[0893](2,4,133)~(2,6,133) below: 1037 above: 279 => Would cause 10 bricks to fall
+[0894](2,6,80)~(2,6,82) below: 1028 above: 966 => Would cause 1 bricks to fall
+[0895](4,2,127)~(7,2,127) below: 551 above: 445 724 => Would cause 607 bricks to fall
+[0896](7,8,76)~(9,8,76) below: 50 above: 221 => Would cause 2 bricks to fall
+[0897](7,3,118)~(7,5,118) below: 362 857 above: 227 => Would cause 3 bricks to fall
+[0898](1,3,50)~(4,3,50) below: 481 695 above: 264 => Would cause 11 bricks to fall
+[0899](1,2,45)~(3,2,45) below: 421 above: 695 1166 => Would cause 17 bricks to fall
+[0900](3,4,34)~(5,4,34) below: 602 above: 515 => Would cause 1 bricks to fall
+[0901](4,7,245)~(6,7,245) below: 276 above:
+[0902](2,4,269)~(5,4,269) below: 87 above: 36 837 => Would cause 23 bricks to fall
+[0903](4,5,13)~(5,5,13) below: 859 above:
+[0904](1,7,44)~(1,8,44) below: 603 above:
+[0905](7,2,160)~(7,4,160) below: 1191 above: 1150 => Would cause 523 bricks to fall
+[0906](3,2,148)~(6,2,148) below: 408 above: 403 681 => Would cause 6 bricks to fall
+[0907](5,7,296)~(5,9,296) below: 560 886 above: 1152 => Would cause 3 bricks to fall
+[0908](8,1,69)~(9,1,69) below: 840 above:
+[0909](3,0,221)~(3,4,221) below: 116 above: 472 1121 => Would cause 1 bricks to fall
+[0910](3,3,209)~(3,6,209) below: 630 above: 116 189 => Would cause 24 bricks to fall
+[0911](4,4,122)~(4,7,122) below: 90 141 above: 1202 => Would cause 4 bricks to fall
+[0912](6,8,209)~(7,8,209) below: 701 above:
+[0913](0,5,55)~(0,8,55) below: 502 above: 117 714 => Would cause 5 bricks to fall
+[0914](0,6,176)~(1,6,176) below: 860 above:
+[0915](6,6,272)~(8,6,272) below: 337 638 above: 613 => Would cause 2 bricks to fall
+[0916](1,3,130)~(1,5,130) below: 1022 above: 792 => Would cause 5 bricks to fall
+[0917](1,8,95)~(1,9,95) below: 119 above: 129 => Would cause 2 bricks to fall
+[0918](3,4,120)~(6,4,120) below: 1200 above: 90 410 => Would cause 637 bricks to fall
+[0919](7,6,129)~(7,8,129) below: 1193 above:
+[0920](6,5,9)~(6,7,9) below: 1156 above:
+[0921](0,3,245)~(1,3,245) below: 1178 above: 665 => Would cause 4 bricks to fall
+[0922](7,0,179)~(7,3,179) below: 250 above: 564 616 => Would cause 329 bricks to fall
+[0923](6,4,101)~(6,6,101) below: 469 above: 480 881 => Would cause 693 bricks to fall
+[0924](9,8,212)~(9,9,212) below: 530 above:
+[0925](2,0,69)~(4,0,69) below: 829 above:
+[0926](6,5,40)~(6,5,43) below: 347 above: 80 => Would cause 916 bricks to fall
+[0927](7,2,23)~(9,2,23) below: 1005 above:
+[0928](8,7,72)~(9,7,72) below: 95 above: 50 => Would cause 7 bricks to fall
+[0929](4,5,193)~(7,5,193) below: 699 above: 797 => Would cause 48 bricks to fall
+[0930](4,1,233)~(4,1,235) below: 76 above: 509 => Would cause 227 bricks to fall
+[0931](7,7,205)~(8,7,205) below: 838 above:
+[0932](9,3,37)~(9,6,37) below: 108 above: 336 448 => Would cause 4 bricks to fall
+[0933](3,6,303)~(3,9,303) below: 760 above: 796 1167 => Would cause 3 bricks to fall
+[0934](8,2,158)~(8,2,159) below: 625 above:
+[0935](0,7,170)~(0,9,170) below: 883 above: 950 957 => Would cause 3 bricks to fall
+[0936](7,9,207)~(9,9,207) below: 817 above: 77 530 => Would cause 1 bricks to fall
+[0937](7,3,295)~(7,5,295) below: 302 above: 29 418 561 => Would cause 11 bricks to fall
+[0938](0,1,215)~(0,3,215) below: 61 above:
+[0939](7,0,39)~(7,1,39) below: 721 above:
+[0940](1,4,73)~(1,4,73) below: 231 above: 477 => Would cause 4 bricks to fall
+[0941](0,3,171)~(0,5,171) below: 158 above: 823 => Would cause 3 bricks to fall
+[0942](0,0,108)~(0,0,109) below: 1157 above: 526 => Would cause 1 bricks to fall
+[0943](9,0,81)~(9,2,81) below: 1078 above: 745 => Would cause 2 bricks to fall
+[0944](6,6,109)~(6,8,109) below: 1175 above: 1135 => Would cause 5 bricks to fall
+[0945](7,5,51)~(7,8,51) below: 455 772 above: 228 1146 => Would cause 1 bricks to fall
+[0946](0,2,201)~(2,2,201) below: 1120 above: 535 1086 1147 => Would cause 307 bricks to fall
+[0947](6,3,182)~(6,3,184) below: 542 above:
+[0948](6,3,304)~(8,3,304) below: 12 824 above: 581 => Would cause 1 bricks to fall
+[0949](6,1,94)~(7,1,94) below: 449 above: 425 850
+[0950](0,9,173)~(2,9,173) below: 935 above: 991 => Would cause 1 bricks to fall
+[0951](2,0,233)~(4,0,233) below: 996 above: 157 => Would cause 2 bricks to fall
+[0952](6,1,229)~(8,1,229) below: 1039 above: 663 983 => Would cause 3 bricks to fall
+[0953](2,0,290)~(3,0,290) below: 113 above: 120 395 => Would cause 2 bricks to fall
+[0954](5,6,5)~(8,6,5) below: 178 322 above: 65 980 => Would cause 68 bricks to fall
+[0955](0,0,18)~(2,0,18) below: 16 882 above: 163 => Would cause 1 bricks to fall
+[0956](0,4,159)~(0,4,160) below: 367 above: 537 => Would cause 2 bricks to fall
+[0957](0,7,171)~(0,7,173) below: 935 above:
+[0958](4,2,306)~(6,2,306) below: 444 above: 497 660 => Would cause 4 bricks to fall
+[0959](0,8,241)~(2,8,241) below: 1154 above: 100 => Would cause 2 bricks to fall
+[0960](3,4,23)~(3,4,27) below: 242 above: 179 => Would cause 5 bricks to fall
+[0961](2,1,74)~(4,1,74) below: 54 above: 1164 => Would cause 2 bricks to fall
+[0962](3,1,162)~(3,3,162) below: 1079 above: 830 => Would cause 5 bricks to fall
+[0963](3,2,102)~(6,2,102) below: 355 above: 282 => Would cause 11 bricks to fall
+[0964](7,6,301)~(7,6,302) below: 694 above:
+[0965](0,0,1)~(0,1,1) below: above:
+[0966](0,6,88)~(2,6,88) below: 894 above:
+[0967](3,5,70)~(5,5,70) below: 166 795 above: 309 => Would cause 32 bricks to fall
+[0968](5,2,3)~(8,2,3) below: 667 above:
+[0969](9,3,78)~(9,3,80) below: 644 above:
+[0970](0,2,88)~(3,2,88) below: 524 above: 1038 => Would cause 1 bricks to fall
+[0971](6,5,266)~(9,5,266) below: 516 above: 405 725 => Would cause 4 bricks to fall
+[0972](1,1,271)~(4,1,271) below: 1140 above: 294 1208 => Would cause 4 bricks to fall
+[0973](4,0,114)~(5,0,114) below: 110 above: 873 => Would cause 2 bricks to fall
+[0974](0,2,52)~(2,2,52) below: 697 above: 160 => Would cause 4 bricks to fall
+[0975](5,8,15)~(8,8,15) below: 297 above: 473 852 => Would cause 55 bricks to fall
+[0976](9,2,179)~(9,4,179) below: 1027 above:
+[0977](4,8,144)~(4,8,144) below: 610 above:
+[0978](8,5,213)~(8,7,213) below: 671 above: 35 998 => Would cause 10 bricks to fall
+[0979](3,2,246)~(6,2,246) below: 205 above: 211 647 => Would cause 18 bricks to fall
+[0980](7,6,6)~(9,6,6) below: 954 above: 649 => Would cause 1 bricks to fall
+[0981](6,6,186)~(7,6,186) below: 442 above: 98 606 => Would cause 12 bricks to fall
+[0982](5,2,56)~(8,2,56) below: 413 above: 313 => Would cause 7 bricks to fall
+[0983](8,0,230)~(8,2,230) below: 952 above:
+[0984](0,9,37)~(1,9,37) below: 485 above: 49 => Would cause 2 bricks to fall
+[0985](1,9,225)~(1,9,225) below: 308 above:
+[0986](7,9,177)~(8,9,177) below: 465 above:
+[0987](5,3,136)~(8,3,136) below: 292 above: 517 757 => Would cause 593 bricks to fall
+[0988](3,1,56)~(3,4,56) below: 377 above: 212 => Would cause 3 bricks to fall
+[0989](8,6,124)~(8,6,126) below: 1067 above:
+[0990](6,4,88)~(6,6,88) below: 1177 above: 654 => Would cause 1 bricks to fall
+[0991](2,9,175)~(2,9,177) below: 950 above:
+[0992](6,0,278)~(6,2,278) below: 53 above: 1011 => Would cause 11 bricks to fall
+[0993](8,6,170)~(8,9,170) below: 64 above: 361 1115 => Would cause 6 bricks to fall
+[0994](7,7,58)~(7,7,61) below: 333 above: 839 => Would cause 12 bricks to fall
+[0995](6,1,41)~(6,2,41) below: 347 731 above:
+[0996](4,0,232)~(6,0,232) below: 268 above: 358 951 => Would cause 4 bricks to fall
+[0997](5,1,13)~(5,4,13) below: 859 above: 1097
+[0998](8,7,216)~(8,9,216) below: 978 above: 184 761 => Would cause 4 bricks to fall
+[0999](8,7,182)~(8,9,182) below: 874 above: 214 => Would cause 1 bricks to fall
+[1000](2,0,22)~(5,0,22) below: 163 423 above:
+[1001](2,2,240)~(4,2,240) below: 509 above: 205 => Would cause 225 bricks to fall
+[1002](2,1,213)~(3,1,213) below: 835 above: 1112 => Would cause 286 bricks to fall
+[1003](3,4,66)~(5,4,66) below: 825 above: 166 218 => Would cause 8 bricks to fall
+[1004](4,0,194)~(6,0,194) below: 1051 above: 194 => Would cause 2 bricks to fall
+[1005](7,0,22)~(7,2,22) below: 143 above: 527 927 => Would cause 9 bricks to fall
+[1006](8,6,300)~(8,8,300) below: 633 above:
+[1007](0,8,238)~(2,8,238) below: 827 above: 608 => Would cause 9 bricks to fall
+[1008](9,2,62)~(9,4,62) below: 106 197 above: 843 => Would cause 9 bricks to fall
+[1009](0,4,293)~(3,4,293) below: 73 above: 597 1034 => Would cause 2 bricks to fall
+[1010](0,5,27)~(0,5,29) below: 522 above:
+[1011](6,2,280)~(9,2,280) below: 992 above: 45 52 215 348 => Would cause 10 bricks to fall
+[1012](6,5,282)~(8,5,282) below: 155 above: 329 643 => Would cause 56 bricks to fall
+[1013](2,0,83)~(5,0,83) below: 136 above: 13 69 => Would cause 20 bricks to fall
+[1014](7,5,39)~(7,7,39) below: 594 above: 670 => Would cause 2 bricks to fall
+[1015](8,4,273)~(9,4,273) below: 638 above: 837
+[1016](8,9,173)~(9,9,173) below: 1115 above: 465 => Would cause 2 bricks to fall
+[1017](9,0,140)~(9,2,140) below: 865 above: 185 => Would cause 1 bricks to fall
+[1018](9,1,290)~(9,4,290) below: 42 above:
+[1019](5,2,308)~(5,3,308) below: 660 above:
+[1020](7,6,256)~(9,6,256) below: 831 above:
+[1021](1,1,263)~(3,1,263) below: 661 above:
+[1022](0,5,128)~(2,5,128) below: 468 above: 834 916 => Would cause 19 bricks to fall
+[1023](9,3,42)~(9,4,42) below: 448 above:
+[1024](9,1,198)~(9,4,198) below: 326 680 above:
+[1025](7,5,246)~(9,5,246) below: 1114 above:
+[1026](6,4,242)~(6,5,242) below: 93 above: 70 => Would cause 2 bricks to fall
+[1027](7,4,178)~(9,4,178) below: 504 1048 above: 564 874 976 => Would cause 4 bricks to fall
+[1028](2,6,77)~(5,6,77) below: 174 above: 894 1137 1205 => Would cause 761 bricks to fall
+[1029](1,5,135)~(1,7,135) below: 792 above: 123 => Would cause 2 bricks to fall
+[1030](2,5,268)~(4,5,268) below: 821 above: 1057
+[1031](3,3,16)~(4,3,16) below: 1094 above: 424 => Would cause 45 bricks to fall
+[1032](0,9,100)~(1,9,100) below: 129 above:
+[1033](5,1,294)~(8,1,294) below: 63 above:
+[1034](0,3,295)~(0,5,295) below: 1009 above: 869
+[1035](0,6,167)~(2,6,167) below: 33 above: 158 => Would cause 5 bricks to fall
+[1036](7,1,12)~(7,4,12) below: 546 above: 26 => Would cause 2 bricks to fall
+[1037](2,3,132)~(2,4,132) below: 834 above: 893 => Would cause 11 bricks to fall
+[1038](1,2,89)~(1,4,89) below: 970 above:
+[1039](6,1,226)~(6,4,226) below: 133 above: 359 490 952 => Would cause 281 bricks to fall
+[1040](3,9,186)~(5,9,186) below: 255 above: 1123 => Would cause 2 bricks to fall
+[1041](1,1,102)~(1,2,102) below: 397 above:
+[1042](4,0,61)~(4,2,61) below: 212 above:
+[1043](6,0,32)~(6,2,32) below: 488 above: 350 => Would cause 4 bricks to fall
+[1044](7,2,276)~(7,4,276) below: 837 above: 316 => Would cause 2 bricks to fall
+[1045](1,4,155)~(2,4,155) below: 371 above:
+[1046](6,5,207)~(8,5,207) below: 544 above: 671 1105 => Would cause 12 bricks to fall
+[1047](8,0,244)~(9,0,244) below: 173 above:
+[1048](8,4,168)~(8,4,172) below: 1074 above: 1027
+[1049](5,2,18)~(5,4,18) below: 538 above: 702
+[1050](4,9,135)~(6,9,135) below: 851 above: 1053 => Would cause 11 bricks to fall
+[1051](4,0,193)~(4,2,193) below: 1066 above: 759 1004 => Would cause 313 bricks to fall
+[1052](0,0,275)~(2,0,275) below: 294 above: 20 => Would cause 1 bricks to fall
+[1053](6,9,137)~(6,9,140) below: 1050 above: 845 => Would cause 10 bricks to fall
+[1054](9,4,33)~(9,5,33) below: 1108 above: 108 => Would cause 6 bricks to fall
+[1055](4,6,180)~(7,6,180) below: 868 above: 5 736 => Would cause 16 bricks to fall
+[1056](6,8,245)~(6,8,248) below: 568 above:
+[1057](3,5,269)~(3,7,269) below: 387 1030 above: 520 => Would cause 5 bricks to fall
+[1058](3,0,2)~(3,3,2) below: above: 226 1190 => Would cause 8 bricks to fall
+[1059](0,6,157)~(0,8,157) below: 367 above: 500 1090 => Would cause 18 bricks to fall
+[1060](5,8,81)~(6,8,81) below: 269 above:
+[1061](3,5,2)~(4,5,2) below: above:
+[1062](2,1,98)~(2,2,98) below: 1077 above: 397 => Would cause 2 bricks to fall
+[1063](7,3,250)~(9,3,250) below: 47 above:
+[1064](1,9,41)~(3,9,41) below: 49 above:
+[1065](4,1,281)~(4,3,281) below: 826 above: 180 => Would cause 16 bricks to fall
+[1066](3,2,190)~(6,2,190) below: 583 above: 682 1051 => Would cause 316 bricks to fall
+[1067](7,6,121)~(9,6,121) below: 227 above: 989 => Would cause 1 bricks to fall
+[1068](6,5,217)~(6,8,217) below: 35 above: 56 => Would cause 2 bricks to fall
+[1069](0,6,230)~(0,6,233) below: 439 above:
+[1070](0,7,76)~(0,8,76) below: 1168 above: 340 => Would cause 2 bricks to fall
+[1071](1,4,184)~(3,4,184) below: 259 above: 433
+[1072](4,1,246)~(5,1,246) below: 205 above:
+[1073](5,3,129)~(7,3,129) below: 551 above:
+[1074](8,1,166)~(8,4,166) below: 366 above: 1048 => Would cause 1 bricks to fall
+[1075](6,5,111)~(9,5,111) below: 1093 above: 605 => Would cause 5 bricks to fall
+[1076](4,6,141)~(4,6,143) below: 591 above:
+[1077](2,0,96)~(2,3,96) below: 812 above: 579 1062 1119 => Would cause 10 bricks to fall
+[1078](8,2,78)~(9,2,78) below: 365 above: 943 => Would cause 3 bricks to fall
+[1079](2,3,159)~(4,3,159) below: 785 above: 962 => Would cause 6 bricks to fall
+[1080](5,8,212)~(5,8,215) below: 398 above:
+[1081](9,1,194)~(9,4,194) below: 752 above: 326 680 => Would cause 3 bricks to fall
+[1082](1,2,290)~(3,2,290) below: 474 above: 222 743 => Would cause 3 bricks to fall
+[1083](1,6,50)~(1,7,50) below: 748 above:
+[1084](6,6,204)~(6,8,204) below: 412 above: 833 => Would cause 3 bricks to fall
+[1085](9,2,301)~(9,5,301) below: 418 above: 533 => Would cause 2 bricks to fall
+[1086](0,1,204)~(0,2,204) below: 946 above: 669 => Would cause 292 bricks to fall
+[1087](2,5,11)~(2,7,11) below: 566 above:
+[1088](2,5,289)~(2,7,289) below: 149 354 above: 352 814
+[1089](3,9,81)~(4,9,81) below: 198 above: 1098 => Would cause 2 bricks to fall
+[1090](0,5,158)~(0,6,158) below: 1059 above: 815 => Would cause 1 bricks to fall
+[1091](2,3,275)~(2,4,275) below: 79 above: 249 => Would cause 19 bricks to fall
+[1092](2,5,304)~(3,5,304) below: 782 872 above: 162 => Would cause 2 bricks to fall
+[1093](5,5,108)~(7,5,108) below: 541 above: 1075 1110 => Would cause 680 bricks to fall
+[1094](4,2,15)~(4,3,15) below: 223 above: 538 1031 => Would cause 1048 bricks to fall
+[1095](5,9,220)~(5,9,223) below: 184 above:
+[1096](7,6,28)~(7,7,28) below: 1149 above:
+[1097](4,1,15)~(6,1,15) below: 223 997 above: 722 1181 => Would cause 12 bricks to fall
+[1098](4,7,83)~(4,9,83) below: 1089 above: 383 => Would cause 1 bricks to fall
+[1099](2,3,68)~(2,5,68) below: 539 above: 688 => Would cause 11 bricks to fall
+[1100](7,6,276)~(8,6,276) below: 613 above:
+[1101](5,3,203)~(5,6,203) below: 139 above: 283 => Would cause 29 bricks to fall
+[1102](0,6,219)~(0,8,219) below: 150 above:
+[1103](6,6,287)~(7,6,287) below: 329 above: 380 => Would cause 1 bricks to fall
+[1104](9,7,86)~(9,8,86) below: 861 above: 887 => Would cause 2 bricks to fall
+[1105](6,4,209)~(6,7,209) below: 836 1046 above:
+[1106](0,2,298)~(0,3,298) below: 869 above:
+[1107](4,8,129)~(6,8,129) below: 457 above:
+[1108](9,5,30)~(9,7,30) below: 1210 above: 84 1054 => Would cause 10 bricks to fall
+[1109](6,9,292)~(9,9,292) below: 689 above: 560 => Would cause 1 bricks to fall
+[1110](5,3,111)~(5,6,111) below: 1093 above: 243 619 => Would cause 673 bricks to fall
+[1111](1,3,273)~(1,6,273) below: 1140 above: 104 191 => Would cause 102 bricks to fall
+[1112](2,1,215)~(5,1,215) below: 1002 above: 201 => Would cause 285 bricks to fall
+[1113](2,7,184)~(5,7,184) below: 479 above:
+[1114](9,3,243)~(9,7,243) below: 766 above: 499 1025 => Would cause 9 bricks to fall
+[1115](8,9,171)~(9,9,171) below: 993 above: 1016 => Would cause 3 bricks to fall
+[1116](7,1,89)~(7,4,89) below: 1177 above: 449 => Would cause 727 bricks to fall
+[1117](3,8,241)~(3,8,244) below: 312 above:
+[1118](4,3,298)~(4,6,298) below: 816 above: 12 483 691 760 => Would cause 26 bricks to fall
+[1119](0,0,99)~(2,0,99) below: 1077 above: 373 => Would cause 5 bricks to fall
+[1120](2,0,198)~(2,2,198) below: 759 above: 946 => Would cause 308 bricks to fall
+[1121](0,4,224)~(3,4,224) below: 235 909 above: 439 => Would cause 3 bricks to fall
+[1122](5,3,1)~(6,3,1) below: above:
+[1123](3,9,188)~(3,9,190) below: 1040 above: 274 => Would cause 1 bricks to fall
+[1124](0,6,293)~(0,6,293) below: 814 above:
+[1125](2,9,147)~(4,9,147) below: 734 above:
+[1126](5,6,280)~(5,7,280) below: 284 above:
+[1127](0,5,197)~(2,5,197) below: 806 above: 793 => Would cause 14 bricks to fall
+[1128](0,2,74)~(0,5,74) below: 153 above: 351 740 => Would cause 7 bricks to fall
+[1129](6,1,124)~(6,3,124) below: 666 above: 551 => Would cause 611 bricks to fall
+[1130](6,6,295)~(6,7,295) below: 886 above:
+[1131](6,4,1)~(8,4,1) below: above:
+[1132](3,2,257)~(3,5,257) below: 1184 above: 1161 => Would cause 195 bricks to fall
+[1133](8,6,29)~(8,9,29) below: 1149 above:
+[1134](4,5,283)~(5,5,283) below: 155 above:
+[1135](5,8,111)~(7,8,111) below: 944 above: 493 762 => Would cause 4 bricks to fall
+[1136](3,6,93)~(5,6,93) below: 811 above:
+[1137](5,6,79)~(7,6,79) below: 1028 above: 138 => Would cause 751 bricks to fall
+[1138](3,2,254)~(5,2,254) below: 211 above: 753 756 => Would cause 6 bricks to fall
+[1139](2,4,10)~(3,4,10) below: 566 above: 172 345 => Would cause 2 bricks to fall
+[1140](1,1,270)~(1,3,270) below: 216 above: 972 1111 => Would cause 108 bricks to fall
+[1141](1,4,21)~(1,7,21) below: 242 above: 491 801 => Would cause 22 bricks to fall
+[1142](7,7,34)~(9,7,34) below: 84 above: 1179 => Would cause 1 bricks to fall
+[1143](3,6,220)~(3,9,220) below: 419 above: 85 => Would cause 17 bricks to fall
+[1144](2,9,24)~(3,9,24) below: 142 above: 370 => Would cause 3 bricks to fall
+[1145](1,4,60)~(1,6,60) below: 1196 above:
+[1146](7,8,52)~(7,9,52) below: 945 above:
+[1147](1,1,203)~(1,3,203) below: 946 above: 779 => Would cause 10 bricks to fall
+[1148](1,4,163)~(1,4,163) below: 537 above:
+[1149](6,6,26)~(9,6,26) below: 78 above: 1096 1133 1210 => Would cause 14 bricks to fall
+[1150](6,4,163)~(7,4,163) below: 905 above: 366 => Would cause 522 bricks to fall
+[1151](6,4,230)~(9,4,230) below: 359 above: 582 709 => Would cause 26 bricks to fall
+[1152](4,8,297)~(7,8,297) below: 907 above: 622 858 => Would cause 2 bricks to fall
+[1153](8,9,81)~(8,9,84) below: 462 above: 659 => Would cause 1 bricks to fall
+[1154](0,8,240)~(2,8,240) below: 608 above: 959 => Would cause 3 bricks to fall
+[1155](5,0,14)~(7,0,14) below: 546 above: 331 495 => Would cause 2 bricks to fall
+[1156](6,7,6)~(7,7,6) below: 463 above: 920 => Would cause 1 bricks to fall
+[1157](0,0,106)~(0,2,106) below: 1201 above: 942 => Would cause 2 bricks to fall
+[1158](0,0,5)~(0,2,5) below: 262 above: 16 => Would cause 1 bricks to fall
+[1159](1,8,207)~(4,8,207) below: 683 above: 134 436 => Would cause 10 bricks to fall
+[1160](4,5,48)~(5,5,48) below: 1199 above:
+[1161](3,3,260)~(3,6,260) below: 1132 above: 341 427 => Would cause 194 bricks to fall
+[1162](7,0,9)~(7,2,9) below: 470 above: 546 => Would cause 7 bricks to fall
+[1163](6,0,170)~(6,0,171) below: 21 above:
+[1164](3,1,77)~(6,1,77) below: 961 above: 621 => Would cause 1 bricks to fall
+[1165](0,5,80)~(0,5,82) below: 340 above:
+[1166](1,0,48)~(1,2,48) below: 899 above: 441 697 => Would cause 7 bricks to fall
+[1167](3,7,304)~(3,7,306) below: 933 above:
+[1168](0,7,75)~(1,7,75) below: 706 above: 563 1070 => Would cause 8 bricks to fall
+[1169](4,6,137)~(6,6,137) below: 876 above: 415 591 => Would cause 6 bricks to fall
+[1170](2,5,226)~(2,7,226) below: 393 above:
+[1171](4,7,28)~(4,9,28) below: 755 above: 168 => Would cause 1 bricks to fall
+[1172](0,0,248)~(0,2,248) below: 665 above:
+[1173](5,0,188)~(5,1,188) below: 777 above:
+[1174](3,9,130)~(5,9,130) below: 505 above: 851 => Would cause 16 bricks to fall
+[1175](6,6,106)~(7,6,106) below: 102 above: 944 => Would cause 6 bricks to fall
+[1176](2,3,210)~(2,6,210) below: 540 above: 58 => Would cause 6 bricks to fall
+[1177](6,4,87)~(8,4,87) below: 454 above: 990 1116 => Would cause 730 bricks to fall
+[1178](1,3,244)~(4,3,244) below: 205 above: 460 921 => Would cause 203 bricks to fall
+[1179](8,6,37)~(8,9,37) below: 1142 above:
+[1180](2,7,91)~(3,7,91) below: 811 above: 118 => Would cause 1 bricks to fall
+[1181](4,0,18)~(4,1,18) below: 495 1097 above: 423 => Would cause 1 bricks to fall
+[1182](8,1,141)~(8,3,141) below: 517 above:
+[1183](8,4,287)~(9,4,287) below: 557 above: 42 344 => Would cause 3 bricks to fall
+[1184](3,3,249)~(3,3,252) below: 460 above: 1132 => Would cause 196 bricks to fall
+[1185](2,4,306)~(2,6,306) below: 162 above:
+[1186](6,1,234)~(7,1,234) below: 663 above:
+[1187](6,9,73)~(8,9,73) below: 467 above: 290 => Would cause 9 bricks to fall
+[1188](5,5,28)~(5,7,28) below: 317 above: 631 => Would cause 18 bricks to fall
+[1189](2,8,103)~(4,8,103) below: 414 above: 122 => Would cause 2 bricks to fall
+[1190](3,0,5)~(3,0,7) below: 1058 above: 420 => Would cause 4 bricks to fall
+[1191](7,4,157)~(7,5,157) below: 328 above: 324 905 => Would cause 524 bricks to fall
+[1192](5,1,112)~(6,1,112) below: 461 584 above:
+[1193](5,7,128)~(7,7,128) below: 114 above: 919 => Would cause 1 bricks to fall
+[1194](9,1,66)~(9,3,66) below: 843 above: 840 => Would cause 6 bricks to fall
+[1195](1,0,169)~(1,1,169) below: 74 above:
+[1196](0,4,59)~(2,4,59) below: 778 above: 266 1145 => Would cause 6 bricks to fall
+[1197](1,1,212)~(1,2,212) below: 810 above:
+[1198](6,7,240)~(6,9,240) below: 71 above: 568 => Would cause 3 bricks to fall
+[1199](4,3,46)~(4,6,46) below: 127 above: 481 1160 => Would cause 12 bricks to fall
+[1200](4,4,117)~(5,4,117) below: 243 above: 918 => Would cause 638 bricks to fall
+[1201](0,0,105)~(2,0,105) below: 373 above: 1157 => Would cause 3 bricks to fall
+[1202](4,7,124)~(4,9,124) below: 911 above: 376 505 => Would cause 3 bricks to fall
+[1203](8,6,76)~(8,7,76) below: 146 above:
+[1204](1,6,25)~(1,6,27) below: 801 above: 866 => Would cause 18 bricks to fall
+[1205](4,6,78)~(4,9,78) below: 1028 above: 198 269 => Would cause 6 bricks to fall
+[1206](2,7,134)~(4,7,134) below: 376 834 above:
+[1207](0,4,229)~(2,4,229) below: 439 above:
+[1208](4,0,273)~(4,2,273) below: 36 972 above: 53 730 => Would cause 15 bricks to fall
+[1209](0,8,161)~(2,8,161) below: 500 above: 33 384 => Would cause 7 bricks to fall
+[1210](9,5,28)~(9,8,28) below: 1149 above: 1108 => Would cause 11 bricks to fall
+result part 2: 58440
+Elapsed time: 0.572000 seconds
