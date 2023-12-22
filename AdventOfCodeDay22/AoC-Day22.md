@@ -113,8 +113,6 @@ Figure how the blocks will settle based on the snapshot. Once they've settled, c
 
 Your puzzle answer was 393.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 Disintegrating bricks one at a time isn't going to be fast enough. While it might sound dangerous, what you really need is a chain reaction.
 
@@ -127,3 +125,7 @@ Disintegrating brick F would cause only 1 other brick, G, to fall.
 Disintegrating any other brick would cause no other bricks to fall. So, in this example, the sum of the number of other bricks that would fall as a result of disintegrating each brick is 7.
 
 For each brick, determine how many other bricks would fall if that brick were disintegrated. What is the sum of the number of other bricks that would fall?
+
+Your puzzle answer was 58440.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
